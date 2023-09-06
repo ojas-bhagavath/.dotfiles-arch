@@ -1,5 +1,6 @@
 zsh/.config/zsh/plugins/
 zsh/.config/zsh/.zcompdump
+qutebrowser/.config/qutebrowser/autoconfig.yml
 qutebrowser/.config/qutebrowser/__pycache__/
 qutebrowser/.config/qutebrowser/bookmarks/
 qutebrowser/.config/qutebrowser/greasemonkey/
