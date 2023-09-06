@@ -87,14 +87,14 @@
 )
 
 (deflisten workspaces 
-    :initial "[]" "scripts/get-workspaces"
+    :initial "[]" "$HOME/.scripts/eww.get-workspaces"
 )
 (deflisten current_workspace 
-    :initial "1" "scripts/get-active-workspace"
+    :initial "1" "$HOME/.scripts/eww.get-active-workspace"
 )
 (defwidget workspaces []
     (eventbox   
-        :onscroll "scripts/change-active-workspace {}"
+        :onscroll "$HOME/.scripts/eww.change-active-workspace {}"
         :orientation "v"
         (box    
             :space-evenly false
@@ -119,7 +119,7 @@
 
 (defwidget bluetooth []
     (eventbox
-        :onclick "scripts/bluetooth power"
+        :onclick "$HOME/.scripts/eww.bluetooth power"
         :onrightclick "blueman-manager &"
         :onhover "${eww} update bluetooth-poll=true"
         :onhoverlost "sleep 15s && ${eww} update bluetooth-poll=false"
@@ -134,13 +134,13 @@
 (defpoll bluetooth-icon
     :interval "3s"
     :run-while bluetooth-poll
-    "scripts/bluetooth icon"
+    "$HOME/.scripts/eww.bluetooth icon"
 )
 
 
 (defwidget volume []
     (eventbox
-        :onscroll "scripts/sound {}"
+        :onscroll "$HOME/.scripts/eww.sound {}"
         :onclick "amixer -q set Master toggle"
         :onrightclick "pavucontrol &"
         :onhover "${eww} update volume-poll=true"
@@ -169,17 +169,17 @@
 (defpoll volume-icon
     :interval "200ms"
     :run-while volume-poll
-    "scripts/sound icon"
+    "$HOME/.scripts/eww.sound icon"
 )
 (defpoll volume-percent
     :interval "200ms"
     :run-while volume-poll
-    "scripts/sound percent"
+    "$HOME/.scripts/eww.sound percent"
 )
 
 (defwidget bright []
     (eventbox
-        :onscroll "scripts/brightness {}"
+        :onscroll "$HOME/.scripts/eww.brightness {}"
         :onclick "brightnessctl set 2%"
         :onhover "${eww} update brightness-poll=true"
         :onhoverlost "${eww} update brightness-poll=false"
@@ -207,12 +207,12 @@
 (defpoll brightness-icon
     :interval "200ms"
     :run-while brightness-poll
-    "scripts/brightness icon"
+    "$HOME/.scripts/eww.brightness icon"
 )
 (defpoll brightness-percent
     :interval "200ms"
     :run-while brightness-poll
-    "scripts/brightness percent"
+    "$HOME/.scripts/eww.brightness percent"
 )
 
 (defwidget battery []
@@ -260,21 +260,21 @@
 (defvar timerem false)
 (defpoll battery-icon
     :interval "10s"
-    "scripts/battery icon"
+    "$HOME/.scripts/eww.battery icon"
 )
 (defpoll battery-percent
     :interval "10s"
-    "scripts/battery percent"
+    "$HOME/.scripts/eww.battery percent"
 )
 (defpoll time_rem
     :interval "10s"
     :run-while timerem
-    "scripts/battery timerem"
+    "$HOME/.scripts/eww.battery timerem"
 )
 (defpoll timerem_unit
     :interval "10s"
     :runwhile timerem
-    "scripts/battery unit"
+    "$HOME/.scripts/eww.battery unit"
 )
 
 (defwidget cal []
