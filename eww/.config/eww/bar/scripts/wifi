@@ -1,0 +1,15 @@
+#!/bin/bash
+
+essid=$(iwconfig wlo1 | grep ESSID | awk -F ':' '{print $2}')
+
+cur=$(iwconfig wlo1 | grep Link | awk '{print $2}' | awk -F '=' '{print $2}' | awk -F '/' '{print $1}')
+max=$(iwconfig wlo1 | grep Link | awk '{print $2}' | awk -F '=' '{print $2}' | awk -F '/' '{print $2}')
+per="$((100*cur/max))"
+
+# if [ "$essid" = "off/any" ]; then
+#     echo "Not Connected"
+#  else
+#     echo "$per"
+# fi
+
+echo "Hello"

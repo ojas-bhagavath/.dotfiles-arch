@@ -1,0 +1,394 @@
+(defvar eww "eww -c $HOME/.config/eww/bar")
+(defvar terminal "foot")
+
+(defwindow bar
+    :monitor 0
+    :geometry (geometry 
+        :x "0%"
+        :y "0%"
+        :width "48px"
+        :height "1080px"
+        :anchor "center left")
+    :stacking "fg"
+    :reserve (struts :distance "48px" :side "left")
+    :exclusive true
+    :windowtype "dock"
+    :wm-ignore false
+    (eww_bar)
+)
+
+(defwidget eww_bar []
+    (box
+        :class "eww_bar"
+        :orientation "v"
+        :space-evenly true
+        :vexpand true
+        (box
+            :class "top"
+            :orientation "v"
+            :space-evenly false
+            (launcher)
+            (workspaces)
+        )
+        (box
+            :class "bottom"
+            :valign "end"
+            :orientation "v"
+            :space-evenly false
+            :spacing 5;
+            (updates)
+            (bluetooth)
+            (volume)
+            (bright)
+            (battery)
+            (cal)
+            (power)
+        )
+    )
+)
+
+(defwidget launcher []
+    (eventbox
+        :onclick "pkill rofi || rofi -show run &"
+        :onrightclick "pkill rofi || rofi -show drun &"
+        (box
+            :orientation "v"
+            :halign "center"
+            :class "launcher"
+            "󰊠"
+        )
+    )
+)
+
+(defwidget updates []
+    (eventbox
+        :onclick "${terminal} -e yay &"
+        :onhover "${eww} update checkupdates=false"
+        :onhoverlost "${eww} update checkupdates=true"
+        (box
+            :orientation "v"
+            :class "updates"
+            :space-evenly false
+            :spacing 2
+            (box
+                :orientation "v"
+                :class "updates-icon"
+                "󰮯"
+            )
+            updates
+        )
+    )
+)
+(defvar checkupdates true)
+(defpoll updates
+    :interval "600s"
+    :run-while checkupdates
+    "checkupdates-with-aur | wc -l"
+)
+
+(deflisten workspaces 
+    :initial "[]" "scripts/get-workspaces"
+)
+(deflisten current_workspace 
+    :initial "1" "scripts/get-active-workspace"
+)
+(defwidget workspaces []
+    (eventbox   
+        :onscroll "scripts/change-active-workspace {}"
+        :orientation "v"
+        (box    
+            :space-evenly false
+            :orientation "v"         
+            (label 
+                :text "${workspaces}${current_workspace}"
+                :visible false)
+            (for workspace in workspaces
+                (eventbox 
+                    :onclick "hyprctl dispatch workspace ${workspace.id}"
+                    (box
+                        :class "workspace-entry ${workspace.id == current_workspace ? "current" : ""} ${workspace.windows > 0 ? "occupied" : "empty"}"
+                        (label 
+                            :text "${workspace.id}"
+                        )
+                    )
+                )
+            )
+        )
+    )
+)
+
+(defwidget bluetooth []
+    (eventbox
+        :onclick "scripts/bluetooth power"
+        :onrightclick "blueman-manager &"
+        :onhover "${eww} update bluetooth-poll=true"
+        :onhoverlost "sleep 15s && ${eww} update bluetooth-poll=false"
+        (box
+            :class "bluetooth"
+            :orientation "v"
+            bluetooth-icon
+        )
+    )
+)
+(defvar bluetooth-poll false)
+(defpoll bluetooth-icon
+    :interval "3s"
+    :run-while bluetooth-poll
+    "scripts/bluetooth icon"
+)
+
+
+(defwidget volume []
+    (eventbox
+        :onscroll "scripts/sound {}"
+        :onclick "amixer -q set Master toggle"
+        :onrightclick "pavucontrol &"
+        :onhover "${eww} update volume-poll=true"
+        :onhoverlost "${eww} update volume-poll=false"
+        (box
+            :orientation "v"
+            :class "volume"
+            :space-evenly false
+            :spacing -2
+            (box
+                :class "volume-icon"
+                volume-icon
+            )
+            (box
+                :class "volume-percent"
+                :orientation "h"
+                :space-evenly false
+                :halign "center"
+                volume-percent
+                "%"
+            )
+        )
+    )
+)
+(defvar volume-poll false)
+(defpoll volume-icon
+    :interval "200ms"
+    :run-while volume-poll
+    "scripts/sound icon"
+)
+(defpoll volume-percent
+    :interval "200ms"
+    :run-while volume-poll
+    "scripts/sound percent"
+)
+
+(defwidget bright []
+    (eventbox
+        :onscroll "scripts/brightness {}"
+        :onclick "brightnessctl set 2%"
+        :onhover "${eww} update brightness-poll=true"
+        :onhoverlost "${eww} update brightness-poll=false"
+        (box
+            :orientation "v"
+            :class "brightness"
+            :space-evenly false
+            :spacing -2
+            (box
+                :class "brightness-icon"
+                brightness-icon
+            )
+            (box
+                :class "brightness-percent"
+                :orientation "h"
+                :space-evenly false
+                :halign "center"
+                brightness-percent
+                "%"
+            )
+        )
+    )
+)
+(defvar brightness-poll false)
+(defpoll brightness-icon
+    :interval "200ms"
+    :run-while brightness-poll
+    "scripts/brightness icon"
+)
+(defpoll brightness-percent
+    :interval "200ms"
+    :run-while brightness-poll
+    "scripts/brightness percent"
+)
+
+(defwidget battery []
+    (eventbox
+        :orientation "v"
+        :onhover "${eww} update timerem=true"
+        :onhoverlost "${eww} update timerem=false"
+        (box
+            :orientation "v"
+            :class "battery"
+            :space-evenly false
+            :spacing 2
+            (box
+                :orientation "v"
+                (box
+                    :class "battery-icon"
+                    battery-icon
+                )
+                (box
+                    :class "battery-percent"
+                    :orientation "h"
+                    :space-evenly false
+                    :halign "center"
+                    battery-percent
+                    "%"
+                )
+            )
+            (revealer
+                :transition "slideup"
+                :reveal timerem
+                :duration "600ms"
+                (box
+                    :orienation "v"
+                    :class "timerem"
+                    :space-evenly false
+                    :halign "center"
+                    time_rem
+                    timerem_unit
+
+                )
+            )
+        )
+    )
+)
+(defvar timerem false)
+(defpoll battery-icon
+    :interval "10s"
+    "scripts/battery icon"
+)
+(defpoll battery-percent
+    :interval "10s"
+    "scripts/battery percent"
+)
+(defpoll time_rem
+    :interval "10s"
+    :run-while timerem
+    "scripts/battery timerem"
+)
+(defpoll timerem_unit
+    :interval "10s"
+    :runwhile timerem
+    "scripts/battery unit"
+)
+
+(defwidget cal []
+    (eventbox
+        :onhover "${eww} update cal=true"
+        :onhoverlost "${eww} update cal=false"
+        (box
+            :orientation "v"
+            :vexpand false
+            :class "cal"
+            :space-evenly false
+            :valign "end"
+            (box
+                :orientation "v"
+                (box
+                    :class "cal-hour"
+                    cal-hour
+                )
+                (box
+                    :class "cal-minute"
+                    cal-minute
+                )
+            )
+            (revealer
+                :transition "slideup"
+                :reveal cal
+                :duration "600ms"
+                (box
+                    :orientation "v"
+                    :space-evenly false
+                    :class "date"
+                    (box
+                        :class "cal-day"
+                        cal-day
+                    )
+                    (box
+                        :class "cal-date"
+                        cal-date
+                    )
+                    (box
+                        :class "cal-month"
+                        cal-month
+                    )
+                    (box
+                        :class "cal-year"
+                        cal-year
+                    )
+                )
+            )
+        )
+    )
+)
+(defvar cal false)
+(defpoll cal-day
+    :interval "1h"
+    "date +%a | awk '{print toupper($0)}'"
+)
+(defpoll cal-date
+    :interval "1h"
+    "date +%d"
+)
+(defpoll cal-month
+    :interval "1h"
+    "date +%b | awk '{print toupper($0)}'"
+)
+(defpoll cal-year
+    :interval "1h"
+    "date +%Y"
+)
+(defpoll cal-hour
+    :interval "1s"
+    "date +%H"
+)
+(defpoll cal-minute
+    :interval "1s"
+    "date +%M"
+)
+
+
+(defwidget power []
+    (eventbox
+        :onhover "${eww} update power=true"
+        :onhoverlost "${eww} update power=false"
+        (box
+            :orientation "v"
+            :vexpand false
+            :class "power-menu"
+            :space-evenly false
+            :valign "end"
+            (revealer
+                :transition "slideup"
+                :reveal power
+                :duration "600ms"
+                (box
+                    :orientation "v"
+                    :space-evenly false
+                    (button
+                        :class "button-logout"
+                        :onclick "hyprctl dispatch exit"
+                        ""
+                    )
+                    (button
+                        :class "button-reboot"
+                        :onclick "reboot"
+                        ""
+                    )
+                )
+            )
+            (button
+                :class "button-power"
+                :onclick "poweroff"
+                ""
+            )
+        )
+    )
+)
+(defvar power false)

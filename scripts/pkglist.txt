@@ -1,0 +1,528 @@
+# This is a list of packages to be installed along with description. Do go through the list and comment out the things that you do not need before running installations.sh
+# A package for power management
+acpi
+
+# A package to enable calls to acpi
+acpi_call
+
+# An important package for OS and Power Management related configs.
+acpid
+
+# A no-bullshit terminal emulator
+alacritty
+
+# An alternative implementation of Linux sound support
+alsa-lib
+
+#Additional ALSA plugins
+alsa-plugins
+
+# A tool to transfer files to and from Android
+android-file-transfer
+
+# Tools required for audio control/management
+alsa-utils
+
+# ArchWiki, but in the terminal, for when internet is down
+arch-wiki-lite
+
+# Minimal package set to define a basic Arch Linux installation
+base
+
+# Basic tools to build Arch Linux packages
+base-devel
+
+# cat, but with wings
+bat
+
+# A bibliography management tool for LaTeX
+biber
+
+# A utility to clean shit from your PC
+bleachbit
+
+# A bluetooth manager
+blueman
+
+# Daemons for the bluetooth protocol stack
+bluez
+
+# Development and debugging utilities for the bluetooth protocol stack
+bluez-utils
+
+# Lightweight brightness control tool
+brightnessctl
+
+# A bloated system resource monitor
+btop
+
+# Btrfs filesystem utilities
+btrfs-progs
+
+# Check for available pacman and aur updates
+checkupdates-with-aur
+
+# C language family frontend for LLVM
+clang
+
+# Clipboard manager for Wayland
+cliphist
+
+# Cloudflare Warp Client
+cloudflare-warp-bin
+
+# A cross-platform open-source make system
+cmake
+
+# The Open Source build of Visual Studio Code (vscode) editor
+code
+
+# A tool for static C/C++ code analysis
+cppcheck
+
+# A tool to display dialog boxes from shell scripts
+dialog
+
+# DOS filesystem utilities
+dosfstools
+
+# Notification Daemon
+dunst
+
+# Linux user-space application to modify the EFI Boot Manager
+efibootmgr
+
+# A utility that runs arbitrary commands when files change
+entr
+
+# A powerful widget manager
+eww-wayland
+
+# ls replacement on fire
+exa
+
+# As the name says...
+exfat-utils
+
+# Complete solution to record, convert and stream audio and video
+ffmpeg
+
+# A utility to produce video thumbnails for Tubler
+ffmpegthumbnailer
+
+# A lossless audio codec
+flac
+
+# Enables installing flatpaks
+flatpak
+
+# Fuzzy finder
+fzf
+
+# A GNU Compiler Collection for C and C++
+gcc
+
+# A GNU Debugger
+gdb
+
+# A graphing utility
+geogebra
+
+# Internationalization library
+gettext
+
+# GNU Image Manipulation Program
+gimp
+
+# A neat version control system
+git
+
+# Gnome disk utility
+gnome-disk-utility
+
+# A utility for reporting the color of a pixel
+grabc
+
+# A screenshot utility for Hyprland
+grimblast-git
+
+# A neat bootloader
+grub
+
+# grub, but for btrfs
+grub-btrfs
+
+# Multimedia graph framework - pipewire plugin
+gst-plugin-pipewire
+
+# A utility that creates a virtual file system including a trash can 
+gvfs
+
+# Powerful alternative to xdg-utils written in Rust
+handlr
+
+# A wayland compositor/window manager
+hyprland
+
+# A wallpaper utility for wayland
+hyprpaper
+
+# A colorpicker for hyprland
+hyprpicker
+
+# An image viewing/manipulation program
+imagemagick
+
+# As the name says...
+intel-media-driver
+
+# Microcode update files for Intel CPUs
+intel-ucode
+
+# A codec related to jpeg
+jasper
+
+# A video editor
+kdenlive
+
+# A tool to work with PCBs
+kicad
+
+# A tui frontend for git
+lazygit
+
+# A neat TUI file manager written in GO
+lf
+
+# A featureful, general-purpose sound server (client library)
+libpulse
+
+# A fork of firefox focused on privacy and security 
+librewolf
+
+# VA-API implementation for Intel G45 and HD Graphics family
+libva-intel-driver
+
+# Tracks runtime library calls in dynamically linked programs
+ltrace
+
+# A fast programming language designed for extensibility of other applications
+lua
+
+# Deployment and management system for Lua modules
+luarocks
+
+# A neat tty login manager
+ly-git
+
+# GNU make utility to maintain groups of programs
+make
+
+# A utility to read man pages
+man-db
+
+# High productivity build system
+meson
+
+# An image viewer
+mirage
+
+# A collection of utilities to access MS-DOS disks
+mtools
+
+# A tui client for spotify
+ncspot
+
+# A CLI system information tool written in BASH that supports displaying images
+neofetch
+
+# A nightly build of neovim, a powerful text editor
+neovim
+
+# All the nerd fonts
+nerd-fonts-meta
+
+# As the name says...
+network-manager-applet
+
+# As the name says...
+networkmanager
+
+# A terminal based RSS feed reader
+newsboat
+
+# Small build system with a focus on speed
+ninja
+
+# A package manager for JavaScript
+npm
+
+# NTFS filesystem driver and utilities	
+ntfs-3g
+
+# A knowledge management application
+obsidian
+
+# resolv.conf management framework (resolvconf)
+openresolv
+
+# SSH protocol implementation for remote login, command execution and file transfer
+openssh
+
+# The Open Source toolkit for Secure Sockets Layer and Transport Layer Security
+openssl
+
+# Utility to detect other OSes on a set of drives
+os-prober
+
+# Command-line file archiver with high compression ratio
+p7zip
+
+# A document converter tool
+pandoc-cli
+
+# A robust password management system with Unix philosophy
+pass
+
+# OTP manager for pass
+pass-otp
+
+# A GUI utility for volume management
+pavucontrol
+
+# A utility required to natively view pdfs on browsers
+pdfjs
+
+# Phonon GStreamer backend for Qt5
+phonon-qt5-gstreamer
+
+# A low-latency audio/video router and processor
+pipewire
+
+# ALSA config for pipewire
+pipewire-alsa
+
+# Documentation of pipewire
+pipewire-docs
+
+# JACK support for pipewire
+pipewire-jack
+
+# PulseAudio replacement for pipewire
+pipewire-pulse
+
+# Easier media controls
+playerctl
+
+# polkit agent by kde
+polkit-kde-agent
+
+# Patched fonts for powerline
+powerline-fonts
+
+# A high level scripting language
+python
+
+# Brave's adblock library in Python
+python-adblock
+
+#A package for working with Adblock Plus filter rules. It can parse Adblock Plus filters and match URLs against them
+python-adblockparser
+
+# A tool for installing python packages
+python-pip
+
+# A package required for qute-pass
+python-tldextract
+
+# An open source torrent client
+qbittorrent
+
+# PipeWire Graph Qt GUI Interface
+qpwgraph
+
+# A GUI tool for pass
+qtpass
+
+# A highly customizable browser built around vim binds
+qutebrowser-git
+
+# Open-source tools to disasm, debug, analyze and manipulate binary files
+radare2
+
+# A fast and versatile file copying tool for remote and local files
+rclone
+
+# A Python 3 module and script to retrieve and filter the latest Pacman mirror list.
+reflector
+
+# A window switcher, application launcher and dmenu replacement
+rofi
+
+# A better file browser for rofi
+rofi-file-browser-extended-git
+
+# An object-oriented language for quick and easy programming
+ruby
+
+# Systems programming language focused on safety, speed and concurrency
+rustup
+
+# A tool to generate roff man pages
+scdoc
+
+# Shell script analysis tool
+shellcheck
+
+# Format shell programs
+shfmt
+
+# PDF viewer for research papers and technical books with vim keybinds.
+sioyek
+
+# A multipurpose relay tool
+socat
+
+# Command line interface for testing internet bandwidth using speedtest.net
+speedtest-cli
+
+# A proprietary music streaming service
+spotify
+
+# A cross platform prompt for various shells
+starship
+
+# A powerful symlink utility
+stow
+
+# A diagnostic, debugging and instructional userspace tracer
+strace
+
+# Sync files across devices
+syncthing
+
+# Utility used to store, backup, and transport files
+tar
+
+# A terminal timer
+termdown
+
+# LaTeX fundamental packages
+texlive
+
+# Texlive tools for non-Latin languages
+texlive-lang
+
+# Code searching tool similar to Ack, but faster
+the_silver_searcher
+
+# A tool to correct your mistakes with your reaction
+thefuck
+
+# A neat xfce file manager 
+thunar 
+
+# Archive plugin for thunar 
+thunar-archive-plugin 
+
+# Media tags plugin for thunar 
+thunar-media-tags-plugin 
+
+# A snapshotting utility
+timeshift
+
+# A utility to automatically take snapshots before system updates
+timeshift-autosnap
+
+# A power management utility
+tlp
+
+# Utility to access remote terminal
+tmate
+
+# A cli trash manager
+trash-cli
+
+# An awesome font
+ttf-font-awesome
+
+# Kannada font
+ttf-kannada-font
+
+# A utility to generate thumbnails for Thunar 
+tumbler
+
+# external disk management tool
+udiskie
+
+# A rar uncompression program
+unrar
+
+# A zip uncompression program
+unzip
+
+# Tool to help find memory-management problems in programs
+valgrind
+
+# The OG text editor
+vi
+
+# A simple media player
+vlc
+
+# A simple utility to control/obtain audio volume
+volumectl
+
+# A customizable top bar for wayland
+waybar
+
+# A display server protocol intended to be a successor of Xorg
+wayland
+
+# Tool for debugging wayland events
+wev
+
+# A file downloading utility
+wget
+
+# Tools allowing to manipulate the Wireless Extensions
+wireless_tools
+
+# Session / policy manager implementation for PipeWire
+wireplumber
+
+# Clipboard tool for wayland
+wl-clipboard
+
+# Screenrecord tool for wayland
+wl-screenrec
+
+# Some tools for wayland
+wlroots-git
+
+# A cross platform supplicant with support for wpa
+wpa_supplicant
+
+# A desktop portal for hyprland
+xdg-desktop-portal-hyprland-git
+
+# A fork of zenity - display graphical dialogs from shell scripts or command line
+yad
+
+# AUR helper written in go
+yay
+
+# A youtube-dl fork with additional features and fixes
+yt-dlp
+
+# A smarter cd replacement
+zoxide
+
+# Systemd unit generator for zram devices
+zram-generator
+
+# An advanced and programmable command interpreter for UNIX
+zsh
+
+# A ast real-time compression algorithm
+zstd

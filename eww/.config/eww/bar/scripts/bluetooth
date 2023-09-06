@@ -1,0 +1,31 @@
+#!/bin/bash
+
+powered=$(bluetoothctl show | grep Powered | awk '{print $2}')
+connected=$(bluetoothctl info | grep Connected | awk '{print $2}')
+
+power() {
+    if [ "$powered" = "yes" ]; then
+        bluetoothctl power off
+    elif [ "$powered" = "no" ]; then
+        bluetoothctl power on
+    else
+        exit
+    fi
+}
+
+icon() {
+    
+	[ "$connected" = "yes" ] && echo "󰂱" && exit
+
+    if [ "$powered" = "no" ]; then
+        icon="󰂲"
+    else 
+        icon="󰂰"
+    fi
+
+    echo "$icon"
+}
+
+[ "$1" = "icon" ] && icon && exit
+[ "$1" = "power" ] && power && exit
+exit

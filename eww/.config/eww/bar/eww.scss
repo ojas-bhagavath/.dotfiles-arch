@@ -1,0 +1,177 @@
+*{
+    all: unset;
+}
+
+$background: #1E1E2E;
+$foreground: #d6d6d6;
+
+$black: #181A1F;
+$red: #E86671;
+$green: #98C379;
+$yellow: #E5C07B;
+$blue: #61AFEF;
+$magenta: #C678DD;
+$cyan: #54AFBC;
+$white: #f7f7f7;
+
+.eww_bar {
+    background-color: $background;
+    padding: .3rem;
+    color: $foreground;
+}
+
+.launcher {
+    font-family: ProggyClean Nerd Font;
+    font-size: 30px;
+    padding: 8px 12px 10px 0px;
+    color: $blue;
+}
+
+.updates-icon {
+    font-family: ProggyClean Nerd Font;
+    font-size: 28px;
+    padding: 4px 12px 2px 0px;
+    background-color: $background;
+    color: $yellow;
+}
+.updates {
+    font-family: ProggyClean Nerd Font;
+    font-size: 28px;
+    padding: 0px 0px 2px 0px;
+    background-color: $background;
+    color: $yellow;
+}
+
+.workspace-entry {
+    background-color: $background;
+    border-radius: 5px;
+}
+
+.occupied {
+    background-color: $foreground;
+    padding: 12px 0px 12px 0px;
+    color: $background;
+    font-family: ProggyClean Nerd Font;
+    font-size: 24px;
+}
+.empty {
+    font-size: 0px
+}
+.current {
+    background-color: $red;
+    color: $foreground;
+    font-family: ProggyClean Nerd Font;
+    font-size: 24px;
+    padding: 12px 0px 12px 0px;
+}
+
+
+.bluetooth {
+    font-family: ProggyClean Nerd Font;
+    font-size: 28px;
+    padding: 10px 8px 10px 0px;
+    background-color: $blue;
+    color: $white;
+    border-radius: 5px;
+}
+
+.volume {
+    background-color: $magenta;
+    color: $background;
+    border-radius: 5px;
+}
+
+.brightness {
+    background-color: $yellow;
+    color: $background;
+    border-radius: 5px;
+}
+.brightness-icon {
+    font-size: 25px;
+    padding: 4px 4px 0px 0px;
+}
+
+.battery {
+    background-color: $black;
+    color: $foreground;
+    border-radius: 5px;
+}
+ .volume-icon {
+    font-size: 25px;
+}
+.brightness-percent, .volume-percent, .battery-percent {
+    font-family: ProggyClean Nerd Font;
+    font-size: 28px;
+}
+
+.battery-icon {
+    font-family: ProggyClean Nerd Font;
+    font-size: 28px;
+    padding: 6px 0px 0px 0px;
+}
+.timerem {
+    font-family: Hack Nerd Font;
+    font-size: 14px;
+    padding: 0px 0px 6px 0px;
+}
+
+.cal {
+    background-color: $foreground;
+    border-radius: 5px;
+}
+
+.cal-day, .cal-month,  {
+    font-family: ProggyClean Nerd Font;
+    font-size: 28px;
+    color: $background;
+}
+.cal-hour {
+    font-family: ProggyClean Nerd Font;
+    font-size: 32px;
+    padding: 2px 0px 0px 0px;
+    color: $background;
+}
+.cal-minute {
+    font-family: ProggyClean Nerd Font;
+    font-size: 32px;
+    padding: 0px 0px 2px 0px;
+    color: $background
+}
+.cal-date {
+    font-family: ProggyClean Nerd Font;
+    font-size: 36px;
+    color: $background;
+}
+.cal-year {
+    font-family: ProggyClean Nerd Font;
+    font-size: 24px;
+    padding: 0px 0px 2px 0px;
+    color: $background;
+}
+
+.power-menu {
+    background-color: $red;
+    border-radius: 5px;
+}
+.button-power {
+    font-family: ProggyClean Nerd Font;
+    font-size: 28px;
+    color: $white;
+    padding: 10px 8px 10px 0px;
+    border-radius: 5px;
+}
+.button-reboot {
+    font-family: ProggyClean Nerd Font;
+    font-size: 24px;
+    color: $white;
+    padding: 10px 4px 10px 6px;
+    border-radius: 5px;
+}
+
+.button-logout {
+    font-family: ProggyClean Nerd Font;
+    font-size: 24px;
+    color: $white;
+    padding: 10px 4px 10px 6px;
+    border-radius: 5px;
+}

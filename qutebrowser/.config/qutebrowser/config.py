@@ -1,0 +1,487 @@
+# Autoconfig 
+
+config.load_autoconfig(False)
+
+# Aliases
+
+c.aliases = {
+    "q": "close",
+    "qa": "quit",
+    "w": "session-save",
+    "wq": "quit --save",
+    "wqa": "quit --save",
+    "r": "reload",
+    "rr": "restart",
+}
+
+#Aitosave
+
+c.auto_save.interval = 15000
+c.auto_save.session = False
+
+# Backend
+c.backend = "webengine"
+
+# Command Bindings 
+c.bindings.commands = {
+    "normal": {
+        "A": "hint links spawn yt-dlp --prefer-ffmpeg --extract-audio --audio-format mp3 --audio-quality 0 -i --download-archive \"$HOME/YouTube/downloaded-audios.txt\" -o \"$HOME/YouTube/%(title)s.%(ext)s\" {hint-url}", 
+        "D": "hint links spawn yt-dlp -i --download-archive \"$HOME/YouTube/downloaded-videos.txt\" -o \"$HOME/YouTube/%(title)s.%(ext)s\" -f \"bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best\" {hint-url}",
+        "V": "hint links spawn librewolf {hint-url}", 
+        "ee": "spawn --userscript ~/.config/qutebrowser/qute-pass",
+        "ep": "spawn --userscript ~/.config/qutebrowser/qute-pass --password-only",
+        "eu": "spawn --userscript ~/.config/qutebrowser/qute-pass --username-only",
+        "eo": "spawn --userscript ~/.config/qutebrowser/qute-pass --otp-only", 
+    }
+}
+
+# Keymap Bindings 
+
+c.bindings.key_mappings = {
+    "<Ctrl-6>": "<Ctrl-^>",
+    "<Ctrl-Enter>": "<Ctrl-Return>",
+    "<Ctrl-I>": "<Tab>",
+    "<Ctrl-J>": "<Return>",
+    "<Ctrl-M>": "<Return>",
+    "<Ctrl-[>": "<Escape>",
+    "<Enter>": "<Return>",
+    "<Shift-Enter>": "<Return>",
+    "<Shift-Return>": "<Return>"
+}
+
+# Changelog 
+
+c.changelog_after_upgrade = "minor"
+
+# Colors 
+
+# Catppuccin Mocha Color Pallet:
+Rosewater = "#f5e0dc"
+Flamingo =  "#f2cdcd"
+Pink =      "#f5c2e7"
+Mauve =     "#cba6f7"
+Red =       "#f38ba8"
+Maroon =    "#eba0ac"
+Peach =     "#fab387"
+Yellow =    "#f9e2af"
+Green =     "#a6e3a1"
+Teal =      "#94e2d5"
+Sky =       "#89dceb"
+Sapphire =  "#74c7ec"
+Blue =      "#89b4fa"
+Lavendar =  "#b4befe"
+Text =      "#cdd6f4"
+Subtext1 =  "#bac2de"
+Subtext0 =  "#a6adc8"
+Overlay2 =  "#9399ba"
+Overlay1 =  "#7f849c"
+Overlay0 =  "#6c7086"
+Surface2 =  "#585b70"
+Surface1 =  "#45475a"
+Surface0 =  "#313244"
+Base =      "#1e1e2e"
+Mantle =    "#181825"
+Crust =     "#11111b"
+
+c.colors.completion.category.bg = Base
+c.colors.completion.category.border.bottom = Mantle
+c.colors.completion.category.border.top = Overlay2
+c.colors.completion.category.fg = Text
+c.colors.completion.even.bg = Base 
+c.colors.completion.odd.bg = Crust
+c.colors.completion.fg = Subtext0
+c.colors.completion.item.selected.bg = Surface2
+c.colors.completion.item.selected.border.bottom = Surface2
+c.colors.completion.item.selected.border.top = Surface2
+c.colors.completion.item.selected.fg = Text
+c.colors.completion.item.selected.match.fg = Rosewater
+c.colors.completion.match.fg = Rosewater
+c.colors.completion.scrollbar.bg = Crust
+c.colors.completion.scrollbar.fg = Surface2
+c.colors.downloads.bar.bg = Crust
+c.colors.downloads.error.bg = Red 
+c.colors.downloads.start.bg = Blue  
+c.colors.downloads.stop.bg = Green 
+c.colors.downloads.error.fg = Base  
+c.colors.downloads.start.fg = Base  
+c.colors.downloads.stop.fg = Base
+c.colors.downloads.system.bg = "rgb"
+c.colors.downloads.system.fg = "rgb"
+c.colors.hints.bg = Peach 
+c.colors.hints.fg = Mantle 
+c.colors.hints.match.fg = Subtext1 
+c.colors.keyhint.bg = Mantle
+c.colors.keyhint.fg = Text
+c.colors.keyhint.suffix.fg = Subtext1
+c.colors.messages.error.bg = Red 
+c.colors.messages.info.bg = Overlay0
+c.colors.messages.warning.bg = Peach 
+c.colors.messages.error.border = Mantle 
+c.colors.messages.info.border = Mantle
+c.colors.messages.warning.border = Mantle
+c.colors.messages.error.fg = Base
+c.colors.messages.info.fg = Text
+c.colors.messages.warning.fg = Base
+c.colors.prompts.bg = Mantle
+c.colors.prompts.border = Overlay0
+c.colors.prompts.fg = Text
+c.colors.prompts.selected.bg = Surface2
+c.colors.prompts.selected.fg = Rosewater
+c.colors.statusbar.caret.bg = Mauve
+c.colors.statusbar.caret.fg = Mantle
+c.colors.statusbar.caret.selection.bg = Mauve
+c.colors.statusbar.caret.selection.fg = Mantle
+c.colors.statusbar.command.bg = Mantle 
+c.colors.statusbar.command.fg = Subtext1
+c.colors.statusbar.command.private.bg = Teal 
+c.colors.statusbar.command.private.fg = Base
+c.colors.statusbar.insert.bg = Green
+c.colors.statusbar.insert.fg = Base
+c.colors.statusbar.normal.bg = Mantle 
+c.colors.statusbar.normal.fg = Text
+c.colors.statusbar.passthrough.bg = Blue 
+c.colors.statusbar.passthrough.fg = Base 
+c.colors.statusbar.private.bg = Teal 
+c.colors.statusbar.private.fg = Base
+c.colors.statusbar.progress.bg = Text
+c.colors.statusbar.url.error.fg = Red
+c.colors.statusbar.url.fg = Text 
+c.colors.statusbar.url.hover.fg = Sky 
+c.colors.statusbar.url.success.http.fg = Peach 
+c.colors.statusbar.url.success.https.fg = Green
+c.colors.statusbar.url.warn.fg = Yellow
+c.colors.tabs.bar.bg = Crust
+c.colors.tabs.even.bg = Surface2 
+c.colors.tabs.odd.bg = Surface2
+c.colors.tabs.even.fg = Text
+c.colors.tabs.odd.fg = Text 
+c.colors.tabs.selected.even.bg = Base 
+c.colors.tabs.selected.even.fg = Text 
+c.colors.tabs.selected.odd.bg = Base 
+c.colors.tabs.selected.odd.fg = Text
+c.colors.tabs.pinned.even.bg = Surface2 
+c.colors.tabs.pinned.odd.bg = Surface2
+c.colors.tabs.pinned.even.fg = Text 
+c.colors.tabs.pinned.odd.fg = Text
+c.colors.tabs.pinned.selected.even.bg = Base 
+c.colors.tabs.pinned.selected.even.fg = Text 
+c.colors.tabs.pinned.selected.odd.bg = Base 
+c.colors.tabs.pinned.selected.odd.fg = Text
+c.colors.tabs.indicator.error = Red
+c.colors.tabs.indicator.start = Blue
+c.colors.tabs.indicator.stop = Green 
+c.colors.tabs.indicator.system = "rgb" 
+c.colors.tooltip.bg = Mantle 
+c.colors.tooltip.fg = Text
+c.colors.contextmenu.menu.bg = Base
+c.colors.contextmenu.menu.fg = Text
+c.colors.contextmenu.disabled.bg = Mantle
+c.colors.contextmenu.disabled.fg = Overlay0
+c.colors.contextmenu.selected.bg = Overlay0
+c.colors.contextmenu.selected.fg = Rosewater
+
+# Completions
+
+c.completion.cmd_history_max_items = -1
+c.completion.delay = 0 
+c.completion.height = "50%"
+c.completion.min_chars = 1 
+c.completion.open_categories = ["searchengines", "quickmarks", "bookmarks", "history", "filesystem"]
+c.completion.quick = True 
+c.completion.scrollbar.padding = 4 
+c.completion.scrollbar.width = 12 
+c.completion.show = "always"
+c.completion.shrink = False
+c.completion.timestamp_format = "%d-%m-%Y %H:%M"
+c.completion.use_best_match = False
+c.completion.web_history.max_items = -1
+
+# Content 
+
+c.content.autoplay = True 
+c.content.blocking.adblock.lists = ["https://easylist.to/easylist/easylist.txt", "https://easylist.to/easylist/easyprivacy.txt"]
+c.content.blocking.enabled = True 
+c.content.blocking.hosts.block_subdomains = True 
+c.content.blocking.method = "both"
+c.content.cache.appcache = True 
+c.content.cache.maximum_pages = 12 
+c.content.canvas_reading = True 
+c.content.cookies.accept = "all"
+c.content.cookies.store = True 
+c.content.default_encoding = "utf-8"
+c.content.desktop_capture = "ask"
+c.content.dns_prefetch = True 
+c.content.frame_flattening = False 
+c.content.fullscreen.overlay_timeout = 3000 
+c.content.fullscreen.window = False
+c.content.geolocation = "ask"
+config.set('content.headers.accept_language', '', 'https://matchmaker.krunker.io/*')
+c.content.headers.do_not_track = True
+c.content.headers.referer = "same-domain"
+config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko) {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version}', 'https://web.whatsapp.com/')
+config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}; rv:90.0) Gecko/20100101 Firefox/90.0', 'https://accounts.google.com/*')
+config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99 Safari/537.36', 'https://*.slack.com/*')
+c.content.hyperlink_auditing = False
+c.content.images = True
+c.content.javascript.alert = True
+c.content.javascript.can_close_tabs = False
+c.content.javascript.can_open_tabs_automatically = False
+c.content.javascript.clipboard = "access"
+c.content.javascript.enabled = True
+c.content.javascript.log = {"error": "debug", "info": "debug", "unknown": "debug", "warning": "debug"}
+c.content.javascript.log_message.excludes = {"userscript:_qute_stylesheet": ["*Refused to apply inline style because it violates the following Content Security Policy directive: *"]} 
+c.content.javascript.log_message.levels = {"qute:*": ["error"], "userscript:*": ["error"], "userscript:GM-*": []} 
+c.content.javascript.modal_dialog = False
+c.content.javascript.prompt = True 
+c.content.local_content_can_access_file_urls = True 
+c.content.local_content_can_access_remote_urls = True 
+c.content.local_storage = True 
+c.content.media.audio_capture = "ask"
+c.content.media.audio_video_capture = "ask"
+c.content.media.video_capture = "ask"
+c.content.mouse_lock = "ask"
+c.content.mute = False 
+c.content.notifications.enabled = "ask"
+c.content.notifications.presenter = "auto"
+c.content.notifications.show_origin = True
+c.content.pdfjs = True
+c.content.persistent_storage = "ask"
+c.content.plugins = True
+c.content.prefers_reduced_motion = False
+c.content.print_element_backgrounds = True
+c.content.private_browsing = False 
+c.content.proxy = "system"
+c.content.proxy_dns_requests = True
+c.content.register_protocol_handler = "ask"
+c.content.site_specific_quirks.enabled = True
+c.content.tls.certificate_errors = "ask"
+c.content.unknown_url_scheme_policy = "allow-from-user-interaction"
+c.content.webgl = True
+c.content.webrtc_ip_handling_policy = "all-interfaces"
+c.content.xss_auditing = False
+
+# Downloads 
+
+c.downloads.location.prompt = True 
+c.downloads.location.remember = True 
+c.downloads.location.suggestion = "path"
+c.downloads.position = "top"
+c.downloads.prevent_mixed_content = False
+c.downloads.remove_finished = 30000
+
+# Editor
+
+c.editor.command = ["alacritty", "-e", "nvim", "{file}", "-c", "normal {line}G{column0}1"]
+c.editor.encoding = "utf-8"
+c.editor.remove_file = True
+
+# Fileselect
+
+c.fileselect.handler = 'default'
+
+# Fonts 
+c.fonts.default_family = "Hack Nerd Font"
+c.fonts.default_size = "13pt"
+c.fonts.completion.category = "bold default_size default_family"
+c.fonts.completion.entry = "default_size default_family"
+c.fonts.contextmenu = "default_size default_family"
+c.fonts.debug_console = "default_size default_family"
+c.fonts.downloads = "default_size default_family"
+c.fonts.hints = "default_size default_family"
+c.fonts.keyhint = "default_size default_family"
+c.fonts.messages.error = "default_size default_family"
+c.fonts.messages.info = "default_size default_family"
+c.fonts.messages.warning = "default_size default_family"
+c.fonts.prompts = "default_size default_family"
+c.fonts.statusbar = "default_size default_family"
+c.fonts.tabs.selected = "bold default_size default_family"
+c.fonts.tabs.unselected = "default_size default_family"
+c.fonts.tooltip = "default_size default_family"
+c.fonts.web.size.default = 16
+c.fonts.web.size.default_fixed = 13 
+c.fonts.web.size.minimum = 0 
+c.fonts.web.size.minimum_logical = 6 
+
+# Hints 
+
+c.hints.auto_follow = "unique-match"
+c.hints.auto_follow_timeout = 0 
+c.hints.border = "1px solid #1e1e2e"
+c.hints.chars = "asdfghjkl"
+c.hints.dictionary = "/usr/share/dict/words"
+c.hints.find_implementation = "python"
+c.hints.hide_unmatched_rapid_hints = True 
+c.hints.leave_on_load = True
+c.hints.min_chars = 1 
+c.hints.mode = "letter"
+c.hints.next_regexes = ["\\bnext\\b", "\\bmore\\b", "\\bnewer\\b", "\\b[>\u2192\u226b]\\b", "\\b(>>|\u00bb)\\b", "\\bcontinue\\b"]
+c.hints.padding = {"bottom": 0, "left": 3, "right": 3, "top": 0}
+c.hints.prev_regexes = ["\\bprev(ious)?\\b", "\\bback\\b", "\\bolder\\b", "\\b[<\u2190\u226a]\\b", "\\b(<<|\u00ab)\\b"]
+c.hints.radius = 3 
+c.hints.scatter = True 
+c.hints.uppercase = False
+
+# History
+
+c.history_gap_interval = 30 
+
+# Input 
+
+c.input.escape_quits_reporter = True
+c.input.forward_unbound_keys = "auto"
+c.input.insert_mode.auto_enter = True 
+c.input.insert_mode.auto_leave = True 
+c.input.insert_mode.auto_load = True 
+c.input.insert_mode.leave_on_load = True
+c.input.insert_mode.plugins = True 
+c.input.links_included_in_focus_chain = True
+c.input.match_counts = True
+c.input.media_keys = True
+c.input.mouse.back_forward_buttons = True 
+c.input.mouse.rocker_gestures = False
+c.input.partial_timeout = 0
+c.input.spatial_navigation = False
+
+# Keyhint 
+
+c.keyhint.delay = 300 
+c.keyhint.radius = 6 
+
+# Logging 
+
+c.logging.level.console = "info"
+c.logging.level.ram = "debug"
+
+# Messages 
+
+c.messages.timeout = 3000 
+
+# New Instance 
+
+c.new_instance_open_target = "tab-silent"
+c.new_instance_open_target_window = "last-focused"
+
+# Prompt 
+c.prompt.filebrowser = True 
+c.prompt.radius = 8
+
+# Qt 
+
+c.qt.chromium.experimental_web_platform_features = "auto"
+c.qt.chromium.low_end_device_mode = "auto"
+c.qt.chromium.process_model = "process-per-site-instance" 
+c.qt.force_software_rendering = "none"
+c.qt.highdpi = False 
+c.qt.workarounds.locale = False 
+c.qt.workarounds.remove_service_workers = False 
+
+# Scrolling 
+c.scrolling.bar = "overlay"
+c.scrolling.smooth = False
+
+# Search 
+c.search.ignore_case = "smart"
+c.search.incremental = True 
+c.search.wrap = True 
+c.search.wrap_messages = True 
+
+
+# Session 
+
+c.session.lazy_restore = True
+
+# Spellcheck 
+
+c.spellcheck.languages = ["en-US"]
+
+# Statusbar 
+c.statusbar.padding = {"bottom": 1, "left": 0, "right": 0, "top": 1}
+c.statusbar.position = "bottom"
+c.statusbar.show = "in-mode"
+c.statusbar.widgets = ["keypress", "search_match", "url", "scroll", "history", "tabs", "progress"]
+
+# Tabs 
+
+c.tabs.background = True 
+c.tabs.close_mouse_button = "middle"
+c.tabs.close_mouse_button_on_bar = "new-tab"
+c.tabs.favicons.scale = 1.0
+c.tabs.favicons.show = "always"
+c.tabs.focus_stack_size = 10 
+c.tabs.indicator.padding = {"bottom": 0, "left": 3, "right": 3, "top": 0}
+c.tabs.indicator.width = 4
+c.tabs.last_close = "close"
+c.tabs.max_width = 300 
+c.tabs.min_width = -1
+c.tabs.mode_on_change = "normal"
+c.tabs.mousewheel_switching = True 
+c.tabs.new_position.related = "next"
+c.tabs.new_position.stacking = True
+c.tabs.new_position.unrelated = "last"
+c.tabs.padding = {"bottom": 0, "left": 5, "right": 5, "top": 0}
+c.tabs.pinned.frozen = True 
+c.tabs.pinned.shrink = True 
+c.tabs.position = "top"
+c.tabs.select_on_remove = "next"
+c.tabs.show = "multiple"
+c.tabs.show_switching_delay = 10000
+c.tabs.tabs_are_windows = False 
+c.tabs.title.alignment = "left"
+c.tabs.title.elide = "right"
+c.tabs.title.format = "{audio} {current_title}"
+c.tabs.title.format_pinned = "{audio}"
+c.tabs.tooltips = True 
+c.tabs.undo_stack_size = 100 
+c.tabs.width = "15%"
+c.tabs.wrap = True
+
+# URL 
+
+c.url.auto_search = "naive"
+c.url.default_page = "file:///home/ojas/.config/qutebrowser/homepage/homepage.html"
+c.url.incdec_segments = ["path", "query"]
+c.url.open_base_url = True 
+c.url.searchengines = {
+    'DEFAULT': 'https://www.startpage.com/sp/search?query={}',
+    '1337x': 'https://1337x.to/search/{}/1/',
+    'am': 'https://www.amazon.in/s?k={}',
+    'aur': 'https://aur.archlinux.org/packages?O=0&K={}',
+    'aw': 'https://wiki.archlinux.org/index.php?search={}',
+    'abb': 'https://audiobookbay.is/?s={}&tt=1',
+    'cpp': 'https://www.learncpp.com/gsearch/?q={}',
+    'fh': 'https://flathub.org/apps/search?q={}',
+    'fk': 'https://www.flipkart.com/search?q={}',
+    'gh': 'https://github.com/search?q={}',
+    'goo': 'https://www.google.com/search?q={}',
+    'gp': 'https://groupprops.subwiki.org/w/index.php?search={}',
+    'gr': 'https://www.goodreads.com/search?q={}',
+    'l2u': 'https://www.unicodeit.net/?{}',
+    'lg': 'http://libgen.rs/search.php?req={}&sort=extension&sortmode=DESC',
+    'mn': 'https://metanumbers.com/{}',
+    'mse': 'https://math.stackexchange.com/search?q={}',
+    'oeis': 'https://oeis.org/search?q={}',
+    'pac': 'https://archlinux.org/packages/?sort=&q={}',
+    'pw': 'https://proofwiki.org/w/index.php?search={}',
+    'ri': 'https://www.reddit.com/search/?q={}',
+    'tpb': 'https://thepiratebay.org/search.php?q={}',
+    'wa': 'https://www.wolframalpha.com/input?i2d=true&i={}',
+    'wm': 'https://mathworld.wolfram.com/search/?query={}',
+    'wp': 'https://en.wikipedia.org/wiki/{}',
+    'yt': 'https://www.youtube.com/results?search_query={}',
+    'yts': 'https://yts.mx/browse-movies/{}/all/all/0/latest/0/all',
+}
+c.url.start_pages = "file:///home/ojas/.config/qutebrowser/homepage/homepage.html"
+c.url.yank_ignored_parameters = ["ref", "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "utm_name"]
+
+# Windows 
+
+c.window.hide_decoration = False
+c.window.title_format = "{perc}{current_title}{title_sep}qutebrowser"
+c.window.transparent = True 
+
+# Zoom 
+
+c.zoom.default = "130%"
+c.zoom.levels = ["25%", "33%", "50%", "67%", "75%", "90%", "100%", "110%", "125%", "150%", "175%", "200%", "250%", "300%", "400%", "500%"]
+c.zoom.mouse_divider = 512
+c.zoom.text_only = False

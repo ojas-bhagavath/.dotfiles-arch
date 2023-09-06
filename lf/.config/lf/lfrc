@@ -1,0 +1,31 @@
+set dirfirst true 
+set dironly false
+set dirpreviews true 
+set drawbox true 
+set hidden true
+set hiddenfiles '.*'
+set icons true 
+set ignorecase true 
+set ingoredia true 
+set incsearch true 
+set incfilter true 
+set mouse true 
+set number true 
+set numberfmt "\033[33m"
+set period 3
+set preview true 
+set ratio 1:2:3
+set relativenumber true 
+set scrolloff 4
+set selmode 'all'
+set sixel true
+set smartcase true 
+set tabstop 4
+set previewer "~/.config/lf/preview"
+
+cmd open ${{
+    case $(file --mime-type -Lb $f) in
+        text/*) foot -e nvim $fx;;
+        *) for f in $fx; do xdg-open $f > /dev/null 2> /dev/null & done;;
+    esac
+}}

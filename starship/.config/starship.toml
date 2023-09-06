@@ -1,0 +1,63 @@
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$git_metrics\
+$fill\
+$time\
+$line_break\
+$character"""
+
+[username]
+style_user = 'cyan bold'
+style_root = 'cyan bold'
+format = '[\[](bold blue)[$user]($style)[@](bold white)'
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = false
+format = '[$hostname](bold purple)[\]](bold blue) '
+disabled = false
+
+[fill]
+symbol = " "
+
+[directory]
+style = "bold yellow"
+read_only = " "
+truncation_length = 4
+truncate_to_repo = false
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+vicmd_symbol = "[❮](green)"
+
+[git_branch]
+symbol = ""
+format = "[$symbol $branch]($style) "
+style = "#f34f29"
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "cyan"
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "bright-black"
+
+[git_metrics]
+disabled = false
+added_style = 'bold green'
+deleted_style = 'bold red'
+format = '([+$added]($added_style))([-$deleted]($deleted_style) )'
+
+[time]
+disabled = false
+style = "white"
+format = "[$time]($style)"
+

@@ -1,0 +1,161 @@
+env:
+    TERM: xterm-256color
+
+# Colorscheme:
+import:
+ - ~/.config/alacritty/themes/catppuccin.yaml
+
+window:
+
+    dimensions:
+        columns: 132
+        lines: 43
+
+    position:
+        x: 0
+        y: 0
+
+    padding:
+        x: 6
+        y: 2 
+
+    decorations: full
+
+    opacity: 0.75
+
+    startup_mode: Windowed
+
+    title: Alacritty
+
+    dynamic_title: true
+
+    class:
+        instance: Alacritty
+        general: Alacritty
+
+    decorations_theme_variant: Dark
+
+
+
+scrolling:
+
+    history: 10000
+
+    multiplier: 3
+
+
+
+font:
+
+    normal: 
+
+        family: Hack Nerd Font 
+        style: Regular
+
+    bold:
+
+        family: Hack Nerd Font
+        style: Bold
+
+    italic: 
+
+        family: Hack Nerd Font
+        style: Italic
+
+    bold_italic:
+
+        family: Hack Nerd Font
+        style: Bold Italic
+
+    size: 16.0
+
+    offset:
+        x: 0 
+        y: 1
+
+    glyph_offset:
+        x: -1
+        y: -1
+
+    builtin_box_drawing: true
+
+    draw_bold_text_with_bright_colors: true
+
+
+transparent_background_colors: true
+
+
+
+bell:
+    animation: EaseOutExpo
+    duration: 1
+    color: '#ffffff'
+    command: None
+
+
+
+selection:
+    save_to_clipboard: false
+
+
+
+cursor:
+
+    style:
+
+        shape: Beam
+        blinking: On
+
+    vi_mode_style:
+
+        shape: Block
+        blinking: On
+
+    blink_interval: 1000
+
+    blink_timeout: 0
+
+    unfocused_hollow: true
+
+    thickness: 0.15
+
+live_config_reload: true
+
+
+shell:
+    program: /usr/bin/zsh
+
+
+
+mouse:
+
+    double_click: { threshold: 300 }
+    
+    triple_click: { threshold: 300 }
+
+    hidden_when_typing: true
+
+
+
+mouse_bindings:
+    - { mouse : Right,                              action: Copy                }
+    - { mouse : Middle,                             action: Paste               }
+    - { mouse : Middle, mods: Control,              action: PasteSelection      }
+
+
+
+key_bindings:
+    - { key : V,        mods : Control|Shift,       action : Paste              }
+    - { key : C,        mods : Control|Shift,       action : Copy               }
+    - { key : Equals,   mods : Control,             action : IncreaseFontSize   }
+    - { key : Minus,    mods : Control,             action : DecreaseFontSize   }
+    - { key : Key0,     mods : Control,             action : ResetFontSize      }
+    - { key : F11,      mods : None,                action : ToggleFullScreen   }
+    - { key : PageUp,   mods : None,                action : ScrollPageUp       }
+    - { key : PageDown, mods : None,                action : ScrollPageDown     }
+    - { key : W,        mods : Control,             action : Quit               }
+    # - { key : Home,     mods : None,                action : ScrollToTop        }
+    # - { key : End,      mods : None,                action : ScrollToBottom     } 
+    - { key : N,        mods : Control,             action : CreateNewWindow    }
+    - { key: Paste,                                 action: Paste               }
+    - { key: Copy,                                  action: Copy                }

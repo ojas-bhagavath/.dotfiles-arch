@@ -1,0 +1,25 @@
+configuration {
+    modi: "run,drun,file-browser-extended,ssh";
+    icon-theme: "Oranchelo";
+    show-icons: true;
+    terminal: "alacritty";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "  Apps ";
+    display-run: "  Run ";
+    display-file-browser-extended: "  Filebrowser";
+    display-ssh: "  SSH";
+    sidebar-mode: true;
+    application-fallback-icon: "";
+
+    filebrowser {
+        directories-first: true;
+        sorting-method: "name";
+        show-hidden: true;
+    }
+}
+
+@theme "soothe.rasi"
+
