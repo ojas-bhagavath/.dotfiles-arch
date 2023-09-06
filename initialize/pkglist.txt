@@ -8,9 +8,6 @@ acpi_call
 # An important package for OS and Power Management related configs.
 acpid
 
-# A no-bullshit terminal emulator
-alacritty
-
 # An alternative implementation of Linux sound support
 alsa-lib
 
@@ -22,9 +19,6 @@ android-file-transfer
 
 # Tools required for audio control/management
 alsa-utils
-
-# ArchWiki, but in the terminal, for when internet is down
-arch-wiki-lite
 
 # Minimal package set to define a basic Arch Linux installation
 base
@@ -58,6 +52,9 @@ btop
 
 # Btrfs filesystem utilities
 btrfs-progs
+
+# A tool that renders images on terminal 
+chafa 
 
 # Check for available pacman and aur updates
 checkupdates-with-aur
@@ -115,6 +112,9 @@ flac
 
 # Enables installing flatpaks
 flatpak
+
+# A neat terminal emulator for wayland with sixel support 
+foot
 
 # Fuzzy finder
 fzf
@@ -188,11 +188,8 @@ kdenlive
 # A tool to work with PCBs
 kicad
 
-# A tui frontend for git
-lazygit
-
 # A neat TUI file manager written in GO
-lf
+lf-sixel-git
 
 # A featureful, general-purpose sound server (client library)
 libpulse
@@ -200,8 +197,14 @@ libpulse
 # A fork of firefox focused on privacy and security 
 librewolf
 
+# A collection of tool to convert/view images to/in sixel format 
+libsexel
+
 # VA-API implementation for Intel G45 and HD Graphics family
 libva-intel-driver
+
+# A simple utility that uses libsixel to generate thumbnail previews on terminal 
+lsix-git
 
 # Tracks runtime library calls in dynamically linked programs
 ltrace
@@ -472,6 +475,9 @@ vlc
 
 # A simple utility to control/obtain audio volume
 volumectl
+
+# A simple tool to view slideshows in terminal using sixel 
+vv-sixel-git
 
 # A customizable top bar for wayland
 waybar

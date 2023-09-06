@@ -30,6 +30,7 @@ export TERM=alacritty
 export TERMINAL=alacritty
 export PATH=$HOME.local/bin:$PATH
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.scripts:$PATH"
 export GPG_TTY=$(tty)
 export SHELL=/bin/zsh
 
