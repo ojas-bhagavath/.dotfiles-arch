@@ -18,14 +18,6 @@ set ratio 1:2:3
 set relativenumber true 
 set scrolloff 4
 set selmode 'all'
-set sixel true
 set smartcase true 
 set tabstop 4
-set previewer "~/.config/lf/preview"
-
-cmd open ${{
-    case $(file --mime-type -Lb $f) in
-        text/*) foot -e nvim $fx;;
-        *) for f in $fx; do xdg-open $f > /dev/null 2> /dev/null & done;;
-    esac
-}}
+set previewer "~/.scripts/lf.preview"
