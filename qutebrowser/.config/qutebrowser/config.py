@@ -442,7 +442,7 @@ c.url.default_page = "file:///home/ojas/.config/qutebrowser/homepage/homepage.ht
 c.url.incdec_segments = ["path", "query"]
 c.url.open_base_url = True 
 c.url.searchengines = {
-    'DEFAULT': 'https://www.startpage.com/sp/search?query={}',
+    'DEFAULT': 'https://search.brave.com/search?q={}',
     '1337x': 'https://1337x.to/search/{}/1/',
     'am': 'https://www.amazon.in/s?k={}',
     'aur': 'https://aur.archlinux.org/packages?O=0&K={}',
