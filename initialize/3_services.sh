@@ -9,4 +9,5 @@ sudo systemctl enable tlp
 sudo systemctl enable reflector.timer
 sudo systemctl enable fstrim.timer
 sudo systemctl enable acpid
-
+sudo systemctl enable ntp.service 
+timedatectl set-ntp true
