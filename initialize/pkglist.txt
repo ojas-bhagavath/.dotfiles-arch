@@ -263,6 +263,9 @@ npm
 # NTFS filesystem driver and utilities	
 ntfs-3g
 
+# Network Time Protocol reference implementation
+ntp
+
 # A knowledge management application
 obsidian
 
