@@ -14,9 +14,6 @@ alsa-lib
 #Additional ALSA plugins
 alsa-plugins
 
-# A tool to transfer files to and from Android
-android-file-transfer
-
 # Tools required for audio control/management
 alsa-utils
 
@@ -198,7 +195,7 @@ libpulse
 librewolf
 
 # A collection of tool to convert/view images to/in sixel format 
-libsexel
+libsixel
 
 # VA-API implementation for Intel G45 and HD Graphics family
 libva-intel-driver
@@ -382,6 +379,9 @@ shellcheck
 
 # Format shell programs
 shfmt
+
+# Required for Android device mounting
+simple-mtpfs
 
 # PDF viewer for research papers and technical books with vim keybinds.
 sioyek
