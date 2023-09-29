@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo pacman -S $(comm -12 <(pacman -Slq | sort) <(awk NF $HOME/.dotfiles/scripts/pkglist.txt | awk !'/^#/' | sort)) --needed
+sudo pacman -S $(comm -12 <(pacman -Slq | sort) <(awk NF $HOME/.dotfiles/initialize/pkglist.txt | awk !'/^#/' | sort)) --needed
