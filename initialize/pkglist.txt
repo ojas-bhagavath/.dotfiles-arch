@@ -230,6 +230,15 @@ mtools
 # A tui client for spotify
 ncspot
 
+# A GUI file manager 
+nemo 
+
+# Compression-extraction utility for nemo 
+nemo-fileroller
+
+# Preview utility for nemo 
+nemo-preview 
+
 # A CLI system information tool written in BASH that supports displaying images
 neofetch
 
@@ -422,15 +431,6 @@ the_silver_searcher
 # A tool to correct your mistakes with your reaction
 thefuck
 
-# A neat xfce file manager 
-thunar 
-
-# Archive plugin for thunar 
-thunar-archive-plugin 
-
-# Media tags plugin for thunar 
-thunar-media-tags-plugin 
-
 # A snapshotting utility
 timeshift
 
@@ -452,7 +452,7 @@ ttf-font-awesome
 # Kannada font
 ttf-kannada-font
 
-# A utility to generate thumbnails for Thunar 
+# A utility to generate thumbnails 
 tumbler
 
 # external disk management tool
