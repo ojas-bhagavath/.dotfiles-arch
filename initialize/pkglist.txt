@@ -44,9 +44,6 @@ bluez-utils
 # Lightweight brightness control tool
 brightnessctl
 
-# A bloated system resource monitor
-btop
-
 # Btrfs filesystem utilities
 btrfs-progs
 
@@ -93,7 +90,7 @@ entr
 eww-wayland
 
 # ls replacement on fire
-exa
+eza
 
 # As the name says...
 exfat-utils
@@ -141,7 +138,7 @@ gnome-disk-utility
 grabc
 
 # A screenshot utility for Hyprland
-grimblast-git
+grimblast
 
 # A neat bootloader
 grub
@@ -192,7 +189,7 @@ lf-sixel-git
 libpulse
 
 # A fork of firefox focused on privacy and security 
-librewolf
+librewolf-bin
 
 # A collection of tool to convert/view images to/in sixel format 
 libsixel
@@ -507,13 +504,13 @@ wl-clipboard
 wl-screenrec
 
 # Some tools for wayland
-wlroots-git
+wlroots
 
 # A cross platform supplicant with support for wpa
 wpa_supplicant
 
 # A desktop portal for hyprland
-xdg-desktop-portal-hyprland-git
+xdg-desktop-portal-hyprland
 
 # A fork of zenity - display graphical dialogs from shell scripts or command line
 yad
