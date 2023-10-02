@@ -245,6 +245,9 @@ neofetch
 # A nightly build of neovim, a powerful text editor
 neovim
 
+# All the nerd-fonts 
+nerd-fonts 
+
 # All the nerd fonts
 nerd-fonts-meta
 
