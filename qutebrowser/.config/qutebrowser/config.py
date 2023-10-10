@@ -271,7 +271,7 @@ c.downloads.remove_finished = 30000
 
 # Editor
 
-c.editor.command = ["alacritty", "-e", "nvim", "{file}", "-c", "normal {line}G{column0}1"]
+c.editor.command = ["foot", "-e", "nvim", "{file}", "-c", "normal {line}G{column0}1"]
 c.editor.encoding = "utf-8"
 c.editor.remove_file = True
 

@@ -26,8 +26,9 @@ export ZDOTDIR=$HOME/.config/zsh/
 export XDG_CONFIG_HOME=$HOME/.config/
 export XDG_CACHE_HOME=$HOME/.cache/
 export XDG_DATA_HOME=$HOME/.local/share/ 
-export TERM=alacritty
-export TERMINAL=alacritty
+export TERM=foot
+export TERMINAL=foot
+export EDITOR=nvim
 export PATH=$HOME.local/bin:$PATH
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.scripts:$PATH"
@@ -63,10 +64,10 @@ zle -N down-line-or-beginning-search
 autoload -Uz colors && colors
 
 # Aliases
-alias :q="exit"
-alias la="exa --oneline --icons --git --group-directories-first --long --all"
-alias ls="ls"
-alias lf="lf"
+alias :q='exit'
+alias la='exa --oneline --icons --git --group-directories-first --long --all'
+alias wcc='warp-cli connect'
+alias wcd='warp-cli disconnect'
 alias tree="exa --tree"
 alias ytv='yt-dlp -i --download-archive "$HOME/YouTube/downloaded-videos.txt" -o "$HOME/YouTube/%(title)s.%(ext)s" -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best" '
 alias yta='yt-dlp --prefer-ffmpeg --extract-audio --audio-format mp3 --audio-quality 0 -i --download-archive "$HOME/YouTube/downloaded-audios.txt" -o "$HOME/YouTube/%(title)s.%(ext)s" '
