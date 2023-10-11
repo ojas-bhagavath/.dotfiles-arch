@@ -445,6 +445,7 @@ c.url.searchengines = {
     'DEFAULT': 'https://search.brave.com/search?q={}',
     '1337x': 'https://1337x.to/search/{}/1/',
     'am': 'https://www.amazon.in/s?k={}',
+    'at': 'https://academictorrents.com/browse.php?search={}',
     'aur': 'https://aur.archlinux.org/packages?O=0&K={}',
     'aw': 'https://wiki.archlinux.org/index.php?search={}',
     'abb': 'https://audiobookbay.is/?s={}&tt=1',
