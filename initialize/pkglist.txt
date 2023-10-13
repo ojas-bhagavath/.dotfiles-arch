@@ -257,9 +257,6 @@ network-manager-applet
 # As the name says...
 networkmanager
 
-# A terminal based RSS feed reader
-newsboat
-
 # Small build system with a focus on speed
 ninja
 
@@ -291,7 +288,7 @@ os-prober
 p7zip
 
 # A document converter tool
-pandoc-cli
+pandoc-bin
 
 # A robust password management system with Unix philosophy
 pass
