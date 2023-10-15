@@ -12,15 +12,15 @@ $line_break\
 $character"""
 
 [username]
-style_user = 'cyan bold'
-style_root = 'cyan bold'
-format = '[\[](bold blue)[$user]($style)[@](bold white)'
+style_user = 'red bold'
+style_root = 'red bold'
+format = '[\[](bold purple)[$user]($style)[@](bold green)'
 disabled = false
 show_always = true
 
 [hostname]
 ssh_only = false
-format = '[$hostname](bold purple)[\]](bold blue) '
+format = '[$hostname](bold blue)[\]](bold purple) '
 disabled = false
 
 [fill]
