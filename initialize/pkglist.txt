@@ -113,6 +113,9 @@ foot
 # Fuzzy finder
 fzf
 
+# A tool to manipulate srt files 
+gaupol
+
 # A GNU Compiler Collection for C and C++
 gcc
 
@@ -223,6 +226,9 @@ meson
 
 # An image viewer
 mirage
+
+# A tool to manipulate mkv files
+mkvtoolnix-gui
 
 # A collection of utilities to access MS-DOS disks
 mtools
