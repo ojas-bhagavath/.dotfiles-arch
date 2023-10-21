@@ -233,9 +233,6 @@ mkvtoolnix-gui
 # A collection of utilities to access MS-DOS disks
 mtools
 
-# A tui client for spotify
-ncspot
-
 # A GUI file manager 
 nemo 
 
@@ -475,6 +472,9 @@ valgrind
 
 # The OG text editor
 vi
+
+# A bulk file renaming utility that opens in vim/neovim 
+vimv-git
 
 # A simple media player
 vlc
