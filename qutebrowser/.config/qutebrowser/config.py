@@ -456,6 +456,7 @@ c.url.searchengines = {
     'goo': 'https://www.google.com/search?q={}',
     'gp': 'https://groupprops.subwiki.org/w/index.php?search={}',
     'gr': 'https://www.goodreads.com/search?q={}',
+    'imdb': 'https://www.imdb.com/find/?q={}',
     'l2u': 'https://www.unicodeit.net/?{}',
     'lg': 'http://libgen.rs/search.php?req={}&sort=extension&sortmode=DESC',
     'mn': 'https://metanumbers.com/{}',
