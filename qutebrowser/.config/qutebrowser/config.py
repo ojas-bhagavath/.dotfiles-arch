@@ -413,7 +413,7 @@ c.tabs.indicator.width = 4
 c.tabs.last_close = "close"
 c.tabs.max_width = 300 
 c.tabs.min_width = -1
-c.tabs.mode_on_change = "normal"
+c.tabs.mode_on_change = "restore"
 c.tabs.mousewheel_switching = True 
 c.tabs.new_position.related = "next"
 c.tabs.new_position.stacking = True
@@ -422,7 +422,7 @@ c.tabs.padding = {"bottom": 0, "left": 5, "right": 5, "top": 0}
 c.tabs.pinned.frozen = True 
 c.tabs.pinned.shrink = True 
 c.tabs.position = "top"
-c.tabs.select_on_remove = "last-used"
+c.tabs.select_on_remove = "next"
 c.tabs.show = "multiple"
 c.tabs.show_switching_delay = 10000
 c.tabs.tabs_are_windows = False 
@@ -464,6 +464,7 @@ c.url.searchengines = {
     'oeis': 'https://oeis.org/search?q={}',
     'pac': 'https://archlinux.org/packages/?sort=&q={}',
     'pw': 'https://proofwiki.org/w/index.php?search={}',
+    'qxr': 'https://1337x.to/search/{} qxr/1/',
     'ri': 'https://www.reddit.com/search/?q={}',
     'tpb': 'https://thepiratebay.org/search.php?q={}',
     'wa': 'https://www.wolframalpha.com/input?i2d=true&i={}',
