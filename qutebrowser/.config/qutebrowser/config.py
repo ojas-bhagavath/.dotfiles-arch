@@ -244,7 +244,7 @@ c.content.mute = False
 c.content.notifications.enabled = "ask"
 c.content.notifications.presenter = "auto"
 c.content.notifications.show_origin = True
-c.content.pdfjs = True
+c.content.pdfjs = False
 c.content.persistent_storage = "ask"
 c.content.plugins = True
 c.content.prefers_reduced_motion = False
@@ -459,6 +459,7 @@ c.url.searchengines = {
     'imdb': 'https://www.imdb.com/find/?q={}',
     'l2u': 'https://www.unicodeit.net/?{}',
     'lg': 'http://libgen.rs/search.php?req={}&sort=extension&sortmode=DESC',
+    'maps': 'https://www.google.com/maps/search/{}',
     'mn': 'https://metanumbers.com/{}',
     'mse': 'https://math.stackexchange.com/search?q={}',
     'oeis': 'https://oeis.org/search?q={}',
