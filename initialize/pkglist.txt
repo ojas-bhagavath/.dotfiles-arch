@@ -308,6 +308,9 @@ pavucontrol
 # A utility required to natively view pdfs on browsers
 pdfjs
 
+# A tool to manage PDF files 
+pdftk
+
 # Phonon GStreamer backend for Qt5
 phonon-qt5-gstreamer
 
