@@ -468,6 +468,7 @@ c.url.searchengines = {
     'qxr': 'https://1337x.to/search/{} qxr/1/',
     'ri': 'https://www.reddit.com/search/?q={}',
     'tpb': 'https://thepiratebay.org/search.php?q={}',
+    'tz2': 'https://torrentz2.nz/search?q={}',
     'wa': 'https://www.wolframalpha.com/input?i2d=true&i={}',
     'wm': 'https://mathworld.wolfram.com/search/?query={}',
     'wp': 'https://en.wikipedia.org/wiki/{}',
