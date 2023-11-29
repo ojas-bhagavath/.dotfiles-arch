@@ -450,6 +450,7 @@ c.url.searchengines = {
     'aw': 'https://wiki.archlinux.org/index.php?search={}',
     'abb': 'https://audiobookbay.is/?s={}&tt=1',
     'cpp': 'https://www.learncpp.com/gsearch/?q={}',
+    'disc': 'https://www.discogs.com/search?q={}&type=all',
     'fh': 'https://flathub.org/apps/search?q={}',
     'fk': 'https://www.flipkart.com/search?q={}',
     'gh': 'https://github.com/search?q={}',
