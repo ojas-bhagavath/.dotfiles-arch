@@ -422,7 +422,7 @@ c.tabs.padding = {"bottom": 0, "left": 5, "right": 5, "top": 0}
 c.tabs.pinned.frozen = True 
 c.tabs.pinned.shrink = True 
 c.tabs.position = "top"
-c.tabs.select_on_remove = "next"
+c.tabs.select_on_remove = "last-used"
 c.tabs.show = "multiple"
 c.tabs.show_switching_delay = 10000
 c.tabs.tabs_are_windows = False 
@@ -449,6 +449,7 @@ c.url.searchengines = {
     'aur': 'https://aur.archlinux.org/packages?O=0&K={}',
     'aw': 'https://wiki.archlinux.org/index.php?search={}',
     'abb': 'https://audiobookbay.is/?s={}&tt=1',
+    'bs': 'https://bitsearch.to/search?q={}',
     'cpp': 'https://www.learncpp.com/gsearch/?q={}',
     'disc': 'https://www.discogs.com/search?q={}&type=all',
     'fh': 'https://flathub.org/apps/search?q={}',
@@ -458,6 +459,7 @@ c.url.searchengines = {
     'gp': 'https://groupprops.subwiki.org/w/index.php?search={}',
     'gr': 'https://www.goodreads.com/search?q={}',
     'imdb': 'https://www.imdb.com/find/?q={}',
+    'jc141': 'https://1337x.to/search/{} jc141/1/',
     'l2u': 'https://www.unicodeit.net/?{}',
     'lg': 'http://libgen.rs/search.php?req={}&sort=extension&sortmode=DESC',
     'maps': 'https://www.google.com/maps/search/{}',
