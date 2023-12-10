@@ -27,6 +27,7 @@
             :class "top"
             :orientation "v"
             :space-evenly false
+            :spacing 5;
             (updates)
             (workspaces)
         )
