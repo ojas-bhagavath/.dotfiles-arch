@@ -27,7 +27,6 @@
             :class "top"
             :orientation "v"
             :space-evenly false
-            (launcher)
             (workspaces)
         )
         (box
@@ -47,15 +46,34 @@
     )
 )
 
-(defwidget launcher []
-    (eventbox
-        :onclick "pkill rofi || rofi -show run &"
-        :onrightclick "pkill rofi || rofi -show drun &"
-        (box
-            :orientation "v"
-            :halign "center"
-            :class "launcher"
-            "󰊠"
+(deflisten workspaces 
+    :initial "[]" "$HOME/.scripts/eww.get-workspaces"
+)
+(deflisten current_workspace 
+    :initial "1" "$HOME/.scripts/eww.get-active-workspace"
+)
+(defwidget workspaces []
+    (eventbox   
+        :onscroll "$HOME/.scripts/eww.change-active-workspace {}"
+        :onmiddleclick "pkill rofi || rofi -show run &"
+        :orientation "v"
+        (box    
+            :space-evenly false
+            :orientation "v"         
+            (label 
+                :text "${workspaces}${current_workspace}"
+                :visible false)
+            (for workspace in workspaces
+                (eventbox 
+                    :onclick "hyprctl dispatch workspace ${workspace.id}"
+                    (box
+                        :class "workspace-entry ${workspace.id == current_workspace ? "current" : ""} ${workspace.windows > 0 ? "occupied" : "empty"}"
+                        (label 
+                            :text "${workspace.id}"
+                        )
+                    )
+                )
+            )
         )
     )
 )
@@ -84,37 +102,6 @@
     :interval "600s"
     :run-while checkupdates
     "checkupdates-with-aur | wc -l"
-)
-
-(deflisten workspaces 
-    :initial "[]" "$HOME/.scripts/eww.get-workspaces"
-)
-(deflisten current_workspace 
-    :initial "1" "$HOME/.scripts/eww.get-active-workspace"
-)
-(defwidget workspaces []
-    (eventbox   
-        :onscroll "$HOME/.scripts/eww.change-active-workspace {}"
-        :orientation "v"
-        (box    
-            :space-evenly false
-            :orientation "v"         
-            (label 
-                :text "${workspaces}${current_workspace}"
-                :visible false)
-            (for workspace in workspaces
-                (eventbox 
-                    :onclick "hyprctl dispatch workspace ${workspace.id}"
-                    (box
-                        :class "workspace-entry ${workspace.id == current_workspace ? "current" : ""} ${workspace.windows > 0 ? "occupied" : "empty"}"
-                        (label 
-                            :text "${workspace.id}"
-                        )
-                    )
-                )
-            )
-        )
-    )
 )
 
 (defwidget bluetooth []
