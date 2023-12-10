@@ -27,6 +27,7 @@
             :class "top"
             :orientation "v"
             :space-evenly false
+            (updates)
             (workspaces)
         )
         (box
@@ -35,7 +36,6 @@
             :orientation "v"
             :space-evenly false
             :spacing 5;
-            (updates)
             (bluetooth)
             (volume)
             (bright)
