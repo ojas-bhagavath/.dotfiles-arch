@@ -470,6 +470,7 @@ c.url.searchengines = {
     'pw': 'https://proofwiki.org/w/index.php?search={}',
     'qxr': 'https://1337x.to/search/{} qxr/1/',
     'ri': 'https://www.reddit.com/search/?q={}',
+    'syn': 'https://www.thesaurus.com/browse/{}',
     'tpb': 'https://thepiratebay.org/search.php?q={}',
     'tz2': 'https://torrentz2.nz/search?q={}',
     'wa': 'https://www.wolframalpha.com/input?i2d=true&i={}',
