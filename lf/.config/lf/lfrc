@@ -2,7 +2,6 @@ set dirfirst true
 set dironly false
 set dirpreviews true 
 set drawbox true 
-set hidden true
 set hiddenfiles '.*'
 set icons true 
 set ignorecase true 

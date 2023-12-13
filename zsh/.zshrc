@@ -71,15 +71,18 @@ alias wcd='warp-cli disconnect'
 alias tree='exa --tree'
 
 function fzo {
-    find ~/. -type f | fzf | sed -e "s/.*/'&'/" | nohup xargs xdg-open
+    fil=$(find ~/. -type f | fzf)
+    nohup xdg-open "$fil" >/dev/null 2>&1 &
+    disown
+    exit
 }
 
 function ytv {
-    echo "$@" | xargs yt-dlp -i -o "$HOME/YouTube/%(title)s.%(ext)s" -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best"
+    yt-dlp -i -o "$HOME/YouTube/%(title)s.%(ext)s" -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best" "$@"
 }
 
 function yta {
-    echo "$@" | xargs yt-dlp --prefer-ffmpeg --extract-audio --audio-format mp3 --audio-quality 0 -i -o "$HOME/YouTube/%(title)s.%(ext)s"
+    yt-dlp --prefer-ffmpeg --extract-audio --audio-format mp3 --audio-quality 0 -i -o "$HOME/YouTube/%(title)s.%(ext)s" "$@"
 }
 
 function note {
