@@ -74,6 +74,7 @@ alias wcc='warp-cli connect'
 alias wcd='warp-cli disconnect'
 alias tree='exa --tree'
 
+
 function fzo {
     fil=$(find ~/. -type f | fzf)
     nohup xdg-open "$fil" >/dev/null 2>&1 &
@@ -87,6 +88,10 @@ function ytv {
 
 function yta {
     yt-dlp --prefer-ffmpeg --extract-audio --audio-format mp3 --audio-quality 0 -i -o "$HOME/YouTube/%(title)s.%(ext)s" "$@"
+}
+
+function ytf {
+    ytfzf -t -T wayland --features=hd "$@"
 }
 
 function take {
