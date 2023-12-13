@@ -34,6 +34,10 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.scripts:$PATH"
 export GPG_TTY=$(tty)
 export SHELL=/bin/zsh
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 
 # keybindings
 bindkey  "^[[H"   beginning-of-line
@@ -78,17 +82,11 @@ function fzo {
 }
 
 function ytv {
-    yt-dlp -i -o "$HOME/YouTube/%(title)s.%(ext)s" -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best" "$@"
+    yt-dlp -i -o "$HOME/YouTube/%(title)s.%(ext)s" -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best" --write-auto-subs --embed-subs --remux-video mkv "$@"
 }
 
 function yta {
     yt-dlp --prefer-ffmpeg --extract-audio --audio-format mp3 --audio-quality 0 -i -o "$HOME/YouTube/%(title)s.%(ext)s" "$@"
-}
-
-function note {
-    echo "date: $(date)" >> $HOME/note.txt
-    echo "$@" >> $HOME/note.txt
-    echo "" >> $HOME/note.txt
 }
 
 function take {
