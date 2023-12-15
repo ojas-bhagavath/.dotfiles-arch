@@ -233,11 +233,8 @@ neofetch
 # A powerful text editor
 neovim
 
-# All the nerd-fonts 
-nerd-fonts 
-
 # All the nerd fonts
-nerd-fonts-meta
+nerd-fonts
 
 # As the name says...
 network-manager-applet
@@ -468,7 +465,7 @@ wireplumber
 wl-clipboard
 
 # Screenrecord tool for wayland
-wl-screenrec
+#wl-screenrec
 
 # Some tools for wayland
 wlroots
