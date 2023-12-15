@@ -1,5 +1,5 @@
 configuration {
-    modi: "run,drun,file-browser-extended,ssh";
+    modi: "run,drun,ssh";
     icon-theme: "Oranchelo";
     show-icons: true;
     terminal: "foot";
@@ -9,7 +9,6 @@ configuration {
     hide-scrollbar: true;
     display-drun: "  Apps ";
     display-run: "  Run ";
-    display-file-browser-extended: "  Filebrowser";
     display-ssh: "  SSH";
     sidebar-mode: true;
     application-fallback-icon: "";
