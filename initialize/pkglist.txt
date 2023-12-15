@@ -68,9 +68,6 @@ cmake
 # The Open Source build of Visual Studio Code (vscode) editor
 code
 
-# A tool for static C/C++ code analysis
-cppcheck
-
 # A tool to display dialog boxes from shell scripts
 dialog
 
@@ -82,6 +79,9 @@ downgrade
 
 # Notification Daemon
 dunst
+
+# A software to tag mp3 files in bulk 
+easytag
 
 # Linux user-space application to modify the EFI Boot Manager
 efibootmgr
@@ -104,8 +104,14 @@ ffmpeg
 # A utility to produce video thumbnails for Tubler
 ffmpegthumbnailer
 
+# The fallback browser 
+firefox
+
 # A lossless audio codec
 flac
+
+# A tool to extract flac files in using CUE files
+flacon
 
 # Enables installing flatpaks
 flatpak
@@ -122,14 +128,8 @@ gaupol
 # A GNU Compiler Collection for C and C++
 gcc
 
-# A GNU Debugger
-gdb
-
 # A graphing utility
 geogebra
-
-# Internationalization library
-gettext
 
 # GNU Image Manipulation Program
 gimp
@@ -140,9 +140,6 @@ git
 # Gnome disk utility
 gnome-disk-utility
 
-# A utility for reporting the color of a pixel
-grabc
-
 # A screenshot utility for Hyprland
 grimblast
 
@@ -151,9 +148,6 @@ grub
 
 # grub, but for btrfs
 grub-btrfs
-
-# Multimedia graph framework - pipewire plugin
-gst-plugin-pipewire
 
 # A utility that creates a virtual file system including a trash can 
 gvfs
@@ -179,23 +173,14 @@ intel-media-driver
 # Microcode update files for Intel CPUs
 intel-ucode
 
-# A codec related to jpeg
-jasper
-
 # A video editor
 kdenlive
-
-# A tool to work with PCBs
-kicad
 
 # A neat TUI file manager written in GO
 lf-sixel-git
 
 # A featureful, general-purpose sound server (client library)
 libpulse
-
-# A fork of firefox focused on privacy and security 
-librewolf-bin
 
 # A collection of tool to convert/view images to/in sixel format 
 libsixel
@@ -206,17 +191,11 @@ libva-intel-driver
 # A simple utility that uses libsixel to generate thumbnail previews on terminal 
 lsix-git
 
-# Tracks runtime library calls in dynamically linked programs
-ltrace
-
 # A fast programming language designed for extensibility of other applications
 lua
 
-# Deployment and management system for Lua modules
-luarocks
-
 # A neat tty login manager
-ly-git
+ly
 
 # GNU make utility to maintain groups of programs
 make
@@ -230,8 +209,14 @@ meson
 # An image viewer
 mirage
 
+# Clean up and optimize mkv files 
+mkclean 
+
 # A tool to manipulate mkv files
 mkvtoolnix-gui
+
+# The OG media player
+mpv
 
 # A collection of utilities to access MS-DOS disks
 mtools
@@ -242,13 +227,10 @@ nemo
 # Compression-extraction utility for nemo 
 nemo-fileroller
 
-# Preview utility for nemo 
-nemo-preview 
-
 # A CLI system information tool written in BASH that supports displaying images
 neofetch
 
-# A nightly build of neovim, a powerful text editor
+# A powerful text editor
 neovim
 
 # All the nerd-fonts 
@@ -265,9 +247,6 @@ networkmanager
 
 # Small build system with a focus on speed
 ninja
-
-# A package manager for JavaScript
-npm
 
 # NTFS filesystem driver and utilities	
 ntfs-3g
@@ -308,9 +287,6 @@ pavucontrol
 # A utility required to natively view pdfs on browsers
 pdfjs
 
-# A tool to manage PDF files 
-pdftk
-
 # Phonon GStreamer backend for Qt5
 phonon-qt5-gstreamer
 
@@ -335,9 +311,6 @@ playerctl
 # polkit agent by kde
 polkit-kde-agent
 
-# Patched fonts for powerline
-powerline-fonts
-
 # A high level scripting language
 python
 
@@ -356,29 +329,17 @@ python-tldextract
 # An open source torrent client
 qbittorrent
 
-# PipeWire Graph Qt GUI Interface
-qpwgraph
-
 # A GUI tool for pass
 qtpass
 
 # A highly customizable browser built around vim binds
 qutebrowser-git
 
-# Open-source tools to disasm, debug, analyze and manipulate binary files
-radare2
-
-# A fast and versatile file copying tool for remote and local files
-rclone
-
 # A Python 3 module and script to retrieve and filter the latest Pacman mirror list.
 reflector
 
 # A window switcher, application launcher and dmenu replacement
 rofi
-
-# A better file browser for rofi
-rofi-file-browser-extended-git
 
 # An object-oriented language for quick and easy programming
 ruby
@@ -434,9 +395,6 @@ texlive
 # Texlive tools for non-Latin languages
 texlive-lang
 
-# Code searching tool similar to Ack, but faster
-the_silver_searcher
-
 # A tool to correct your mistakes with your reaction
 thefuck
 
@@ -472,9 +430,6 @@ unrar
 
 # A zip uncompression program
 unzip
-
-# Tool to help find memory-management problems in programs
-valgrind
 
 # The OG text editor
 vi
@@ -524,14 +479,14 @@ wpa_supplicant
 # A desktop portal for hyprland
 xdg-desktop-portal-hyprland
 
-# A fork of zenity - display graphical dialogs from shell scripts or command line
-yad
-
 # AUR helper written in go
 yay
 
 # A youtube-dl fork with additional features and fixes
 yt-dlp
+
+# A POSIX script to find and watch youtube videos from the terminal
+ytfzf
 
 # A smarter cd replacement
 zoxide
