@@ -1,0 +1,6 @@
+alias :q='exit'
+alias la='exa --oneline --icons --git --group-directories-first --long --all'
+alias wcc='warp-cli connect'
+alias wcd='warp-cli disconnect'
+alias tree='exa --tree'
+alias rm=trash

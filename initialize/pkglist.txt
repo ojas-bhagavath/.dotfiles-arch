@@ -141,7 +141,7 @@ git
 gnome-disk-utility
 
 # A screenshot utility for Hyprland
-grimblast
+grimblast-git
 
 # A neat bootloader
 grub
@@ -400,6 +400,9 @@ timeshift
 
 # A utility to automatically take snapshots before system updates
 timeshift-autosnap
+
+# A tool that gives easy to understand versions of the manual with example
+tldr
 
 # A power management utility
 tlp
