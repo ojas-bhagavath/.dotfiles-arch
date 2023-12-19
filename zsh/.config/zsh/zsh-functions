@@ -29,3 +29,16 @@ function zsh_add_completion() {
 	completion_file="$(basename "${completion_file_path}")"
 	if [ "$2" = true ] && compinit "${completion_file:1}"
 }
+
+function fzo {
+    fil=$(find ~/. -type f | fzf)
+    nohup xdg-open "$fil" >/dev/null 2>&1 &
+    disown
+    exit
+}
+
+function take {
+    mkdir -p $1
+    cd $1
+}
+
