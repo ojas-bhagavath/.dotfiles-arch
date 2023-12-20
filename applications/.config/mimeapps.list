@@ -1,0 +1,21 @@
+[Added Associations]
+application/pdf=sioyek.desktop;
+video/x-matroska=vlc.desktop;
+
+[Default Applications]
+application/pdf=sioyek.desktop;
+audio/*=foot-ncmpcpp.desktop;
+audio/flac=foot-ncmpcpp.desktop;
+audio/mp3=foot-ncmpcpp.desktop;
+image/*=nsxiv.desktop;
+image/jpeg=nsxiv.desktop;
+image/png=nsxiv.desktop;
+text/*=foot-nvim.desktop;
+video/mp4=mpv.desktop;
+video/x-matroska=mpv.desktop;
+vidio/*=mpv.desktop;
+x-scheme-handler/about=org.qutebrowser.qutebrowser.desktop;
+x-scheme-handler/http=org.qutebrowser.qutebrowser.desktop;
+x-scheme-handler/https=org.qutebrowser.qutebrowser.desktop;
+x-scheme-handler/terminal=org.codeberg.dnkl.foot.desktop;
+x-scheme-handler/unknown=org.qutebrowser.qutebrowser.desktop;
