@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cliphist list | fzf | cliphist decode | wl-copy
