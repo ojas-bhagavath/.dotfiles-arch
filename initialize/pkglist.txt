@@ -170,6 +170,9 @@ imagemagick
 # As the name says...
 intel-media-driver
 
+# Legacy API for hardware video acceleration on Intel GPUs (5th to 11th gen)
+intel-media-sdk
+
 # Microcode update files for Intel CPUs
 intel-ucode
 
@@ -188,9 +191,6 @@ libsixel
 # VA-API implementation for Intel G45 and HD Graphics family
 libva-intel-driver
 
-# A simple utility that uses libsixel to generate thumbnail previews on terminal 
-lsix-git
-
 # A fast programming language designed for extensibility of other applications
 lua
 
@@ -206,20 +206,26 @@ man-db
 # High productivity build system
 meson
 
-# An image viewer
-mirage
-
 # Clean up and optimize mkv files 
 mkclean 
 
 # A tool to manipulate mkv files
 mkvtoolnix-gui
 
+# A command line interface for mpd
+mpc
+
+# The OG audio player backend 
+mpd
+
 # The OG media player
 mpv
 
 # A collection of utilities to access MS-DOS disks
 mtools
+
+# A neat TUI frontend for mpd 
+ncmpcpp
 
 # A GUI file manager 
 nemo 
@@ -245,14 +251,14 @@ networkmanager
 # Small build system with a focus on speed
 ninja
 
+# A simple image viewer 
+nsxiv
+
 # NTFS filesystem driver and utilities	
 ntfs-3g
 
 # Network Time Protocol reference implementation
 ntp
-
-# A knowledge management application
-obsidian
 
 # resolv.conf management framework (resolvconf)
 openresolv
@@ -425,6 +431,9 @@ tumbler
 # external disk management tool
 udiskie
 
+# Command line util which allows to display images in combination with X11
+ueberzugpp
+
 # A rar uncompression program
 unrar
 
@@ -442,9 +451,6 @@ vlc
 
 # A simple utility to control/obtain audio volume
 volumectl
-
-# A simple tool to view slideshows in terminal using sixel 
-vv-sixel-git
 
 # A customizable top bar for wayland
 waybar
@@ -479,6 +485,8 @@ wpa_supplicant
 # A desktop portal for hyprland
 xdg-desktop-portal-hyprland
 
+# To replace xdg-open with handlr
+xdg-utils-handlr
 # AUR helper written in go
 yay
 
