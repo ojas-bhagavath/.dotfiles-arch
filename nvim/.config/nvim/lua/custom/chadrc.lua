@@ -3,7 +3,7 @@
  M.ui = {
     theme = "catppuccin",
     theme_toggle = { "catppuccin", "ayu_light" },
-    transparency = true,
+    transparency = false,
     tabufline = {
         lazyload = false,
     },
