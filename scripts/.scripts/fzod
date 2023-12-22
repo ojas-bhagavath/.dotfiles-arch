@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+fil=$(find ~/. -type f | fzf)
+lf "$fil"
+
