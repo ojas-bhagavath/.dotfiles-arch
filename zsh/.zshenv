@@ -18,10 +18,6 @@ export HISTFILE="$XDG_CACHE_HOME/.zhistory"
 export HISTSIZE=1000000
 export SAVEHIST=1000000
 
-# PATH
-export PATH="$HOME.local/bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$HOME/.scripts:$PATH"
 
 # FZF
 export FZF_DEFAULT_OPTS=" \
@@ -29,7 +25,7 @@ export FZF_DEFAULT_OPTS=" \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 
-# other stuff
+# Other Stuff
 export GPG_TTY=$(tty)
 export GNUPGHOME="$HOME"/.gnupg
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
@@ -40,3 +36,8 @@ export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export GOPATH="$XDG_DATA_HOME/go"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME/java"
+
+# PATH
+export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$CARGO_HOME/bin"
+export PATH="$PATH:$HOME/.scripts"
