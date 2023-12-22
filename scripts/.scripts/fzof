@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 fil=$(find ~/. -type f | fzf)
-setsid xdg-open "$fil" & pkill -n $!
+setsid handlr open "$fil" & pkill -n $!
