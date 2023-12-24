@@ -3,7 +3,7 @@ alias :q='exit'
 
 # General shell commands
 alias la='exa --oneline --icons --git --group-directories-first --long --all'
-alias tree='exa --tree'
+alias treee='exa --tree'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -iv'

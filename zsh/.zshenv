@@ -3,6 +3,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
+export DOTFILES="$HOME/.dotfiles"
 
 # terminal and editor specific variables
 export TERM="foot"
@@ -12,7 +13,6 @@ export EDITOR="$TERM nvim"
 export VISUAL="$TERM nvim"
 
 # zsh specific variables
-
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export HISTFILE="$XDG_CACHE_HOME/.zhistory"
 export HISTSIZE=1000000
@@ -28,7 +28,7 @@ export FZF_DEFAULT_OPTS=" \
 # Other Stuff
 export GPG_TTY=$(tty)
 export GNUPGHOME="$HOME"/.gnupg
-export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
+export PASSWORD_STORE_DIR="$HOME/.password-store"
 
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export WGETRC="$XDG_CONFIG_HOME/wgetrc"

@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 fil=$(find ~/. -type f | fzf)
 lf "$fil"

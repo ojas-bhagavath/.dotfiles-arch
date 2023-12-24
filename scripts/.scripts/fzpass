@@ -1,0 +1,27 @@
+#!/bin/bash
+
+file=$(find .password-store -type f | grep -vwE "(.git|.gitattributes|.gpg-id)" | cut -d'/' -f2- | sed -r 's/.{4}$//' | fzf)
+url=$(echo "$file" | awk -F '/' '{print $1}')
+uname=$(echo "$file" | awk -F '/' '{print $2}')
+
+action=$(cat <<EOF | fzf
+Username
+Password
+OTP
+URL
+EOF
+)
+
+if [ "$action" = "Username" ]; then
+    wl-copy "$uname"
+elif [ "$action" = "Password" ]; then
+    pass show "$file" -c
+    disown
+    sleep 5
+elif [ "$action" = "OTP" ]; then
+    $(pass otp "$file" | wl-copy)
+    exit
+elif [ "$action" = "URL" ]; then
+    wl-copy "$url"
+fi
+

@@ -9,6 +9,8 @@ executable () {
 }
 
 if selection=$( executable ); then
-  setsid "$selection" & pkill -n $!
+    setsid "$selection" & pkill -n $!
+else 
+    exec $( executable )
 fi
 

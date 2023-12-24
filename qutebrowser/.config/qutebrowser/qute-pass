@@ -73,7 +73,7 @@ def expanded_path(path):
 argument_parser = argparse.ArgumentParser(description=__doc__, usage=USAGE, epilog=EPILOG)
 argument_parser.add_argument('url', nargs='?', default=os.getenv('QUTE_URL'))
 argument_parser.add_argument('--password-store', '-p',
-                             default=expanded_path(os.getenv('PASSWORD_STORE_DIR', default='~/.local/share/pass')),
+                             default=expanded_path(os.getenv('PASSWORD_STORE_DIR', default='~/.password-store/')),
                              help='Path to your pass password-store (only used in pass-mode)', type=expanded_path)
 argument_parser.add_argument('--mode', '-M', choices=['pass', 'gopass'], default="pass",
                              help='Select mode [gopass] to use gopass instead of the standard pass.')
