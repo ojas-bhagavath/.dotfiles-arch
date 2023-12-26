@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # The following enables a few important services
 sudo systemctl enable NetworkManager
 sudo systemctl enable bluetooth
