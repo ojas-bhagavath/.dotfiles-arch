@@ -22,6 +22,7 @@ gtech https://gradapp.gatech.edu/apply/
 keep https://keep.google.com/u/0/
 li https://www.linkedin.com/in/ojas-bhagavath
 lre https://www.rexegg.com/
+lrx https://www.regular-expressions.info/tutorial.html
 m0 https://mail.google.com/mail/u/0/#inbox
 m1 https://mail.google.com/mail/u/1/#inbox
 m2 https://mail.google.com/mail/u/2/#inbox
@@ -33,13 +34,13 @@ mt https://monkeytype.com/
 nbhm https://www.imsc.res.in/~nbhm/
 net http://csirnet.nta.ac.in/
 nf https://www.nerdfonts.com/
-nwu https://shibboleth-idp.collegenet.com/idp/profile/SAML2/Redirect/SSO?SAMLRequest=fZLLbsIwEEV%2FJfIenAdPi0RKYVEkWhChXXRTOc4ULDl26nGa8vcNrwIbdpY9Pnfm2BPkpapYWrudXsN3Dei831JpZMeDmNRWM8NRItO8BGROsCx9WbCw67PKGmeEUcRLEcE6afTUaKxLsBnYHyngbb2Iyc65ChmlTdN0eVWpfQN5V5iS4k7muVHgdjT7X3YRDT1EhHS1zDbEm7U9Sc0P9CvrerUji6qlKQVb0OCO4HaLts19SQVn1BoKaUE4mmVL4s1nMfkM%2FH40igJRRDAYh8EoH%2FSKIPT5cCy4GPOgLUOsYa7Rce1iEvph1AnCTtDf%2BH0WRaw3%2FCDe6uzgSepC6u1jYfmpCNnzZrPqnMZ7B4vH0doCkkwO2tkx2N48xGMsv9gnycXPjec7M1wIU2tHJ%2FQm6JRasdeWPJ%2BtjJJi76VKmWZqgTuISUBocrpy%2F1eSPw%3D%3D&RelayState=https%3A%2F%2Fwww.applyweb.com%2Fshibboleth%2Fgatekeeper%3Fdest%3Dhttps%253A%252F%252Fwww.applyweb.com%252Fcgi-bin%252Fapplymenu%253Finstcode%253Dnugrad
+nwu https://www.applyweb.com/nugrad/index.ftl
 okstate https://grad.okstate.edu/apply/
 phd https://docs.google.com/spreadsheets/d/1IvA9vfrEfDPVvAUJqoAh6zUrZIOH7pxf_tsT5jN2MYs/edit#gid=1575051005
 phd! https://docs.google.com/spreadsheets/d/1PwUmoYSJtMzbVdt7butepDeIR0ohv2bXlMt8p_NESJM/edit#gid=0
 psu https://gradschool.psu.edu/graduate-admissions/how-to-apply/
 qs https://www.topuniversities.com/university-rankings/world-university-rankings/2024
-regex https://regex101.com/
+rgx https://regex101.com/
 sbi https://onlinesbi.sbi/
 st http://127.0.0.1:8384/
 tg https://web.telegram.org/a/
@@ -53,4 +54,3 @@ uwo https://student.uwo.ca/psc/grdappprd/EMPLOYEE/SA/c/WSA_AAWS_MENU.WSA_SCC_NUR
 vega https://vegamovies.boo/
 wh https://web.whatsapp.com
 wustl https://gradadmit.wustl.edu/apply/
-lrx https://www.regular-expressions.info/tutorial.html
