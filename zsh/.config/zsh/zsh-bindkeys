@@ -6,3 +6,5 @@ bindkey "^[[3;5~"     delete-word
 bindkey "^H"          backward-delete-word
 bindkey "^[[1;5C"     forward-word
 bindkey "^[[1;5D"     backward-word
+bindkey "^K"          history-substring-search-up
+bindkey "^J"          history-substring-search-down
