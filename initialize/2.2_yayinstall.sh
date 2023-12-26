@@ -1,4 +1,4 @@
 #!/bin/bash
-yay -S $(comm -12 <(yay -Slq | sort) <(awk NF $HOME/.dotfiles/initialize/pkglist.txt | awk !'/^#/' | sort)) --answerclean None --answerdiff None --needed
+yay -S $(sed "s/\s.*//g" pkglist.txt | sort) --answerclean All --answerdiff None --removemake --cleanafter --noredownload --sudo --sudoloop
 
 
