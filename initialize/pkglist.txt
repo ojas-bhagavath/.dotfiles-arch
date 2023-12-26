@@ -164,6 +164,9 @@ hyprpaper
 # A colorpicker for hyprland
 hyprpicker
 
+# A utility to edit id3v1 and id3v2 tags
+id3
+
 # An image viewing/manipulation program
 imagemagick
 
@@ -278,6 +281,9 @@ p7zip
 # A document converter tool
 pandoc-bin
 
+# A GNU tool to run processes in parallel
+parallel
+
 # A robust password management system with Unix philosophy
 pass
 
@@ -368,6 +374,9 @@ sioyek
 # A multipurpose relay tool
 socat
 
+# A sound proocessing tool
+sox
+
 # Command line interface for testing internet bandwidth using speedtest.net
 speedtest-cli
 
@@ -415,6 +424,9 @@ tlp
 
 # Utility to access remote terminal
 tmate
+
+# A tool to tag any file and access the tags
+tmsu
 
 # A cli trash manager
 trash-cli
