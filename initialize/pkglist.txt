@@ -97,6 +97,7 @@ pass								# A robust password management system with Unix philosophy
 pass-otp							# OTP manager for pass
 pavucontrol							# A GUI utility for volume management
 pdfjs								# A utility required to natively view pdfs on browsers
+perl-image-exiftool                 # A tool to read and rewrite EXIF information
 phonon-qt5-gstreamer				# Phonon GStreamer backend for Qt5
 pipewire							# A low-latency audio/video router and processor
 pipewire-alsa						# ALSA config for pipewire
