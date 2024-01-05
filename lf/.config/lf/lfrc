@@ -20,3 +20,6 @@ set selmode 'all'
 set smartcase true 
 set tabstop 4
 set previewer "~/.scripts/lf.preview"
+
+map A :push %mkdir<space>
+map a :push %touch<space>
