@@ -451,6 +451,7 @@ c.url.searchengines = {
     'abb': 'https://audiobookbay.is/?s={}&tt=1',
     'bs': 'https://bitsearch.to/search?q={}',
     'cpp': 'https://www.learncpp.com/gsearch/?q={}',
+    'ctan': 'https://ctan.org/search?phrase={}',
     'disc': 'https://www.discogs.com/search?q={}&type=all',
     'fh': 'https://flathub.org/apps/search?q={}',
     'fk': 'https://www.flipkart.com/search?q={}',
