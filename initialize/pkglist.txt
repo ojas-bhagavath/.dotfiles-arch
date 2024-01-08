@@ -15,6 +15,7 @@ bluez-utils							# Development and debugging utilities for the bluetooth protoc
 brightnessctl						# Lightweight brightness control tool
 btrfs-progs							# Btrfs filesystem utilities
 chafa								# A tool that renders images on terminal 
+checkbashisms                       # Check scripts for BASH specific syntax
 checkupdates-with-aur				# Check for available pacman and aur updates
 clang								# C language family frontend for LLVM
 cliphist							# Clipboard manager for Wayland
@@ -31,6 +32,7 @@ entr								# A utility that runs arbitrary commands when files change
 eww-wayland							# A powerful widget manager
 eza					                # ls replacement on fire
 exfat-utils							# As the name says...
+fd                                  # A fast find replacement
 ffmpeg								# Complete solution to record, convert and stream audio and video
 ffmpegthumbnailer					# A utility to produce video thumbnails for Tubler
 firefox								# The fallback browser 
@@ -55,6 +57,7 @@ hyprpaper							# A wallpaper utility for wayland
 hyprpicker							# A colorpicker for hyprland
 id3					                # A utility to edit id3v1 and id3v2 tags
 imagemagick							# An image viewing/manipulation program
+inkscape                            # A neat vector drawing utility
 intel-media-driver					# As the name says...
 intel-media-sdk						# Legacy API for hardware video acceleration on Intel GPUs (5th to 11th gen)
 intel-ucode							# Microcode update files for Intel CPUs
@@ -125,6 +128,7 @@ simple-mtpfs						# Required for Android device mounting
 sioyek								# PDF viewer for research papers and technical books with vim keybinds.
 socat								# A multipurpose relay tool
 sox					                # A sound proocessing tool
+speedread-git                           # A command line utility for speed reading
 speedtest-cli						# Command line interface for testing internet bandwidth using speedtest.net
 spotify								# A proprietary music streaming service
 starship							# A cross platform prompt for various shells
@@ -154,9 +158,11 @@ vi					                # The OG text editor
 vimv-git							# A bulk file renaming utility that opens in vim/neovim 
 vlc					                # A simple media player
 volumectl							# A simple utility to control/obtain audio volume
+vulcan-intel                        # Graphics driver
 waybar								# A customizable top bar for wayland
 wayland								# A display server protocol intended to be a successor of Xorg
 wev					                # Tool for debugging wayland events
+wf-recorder-git                     # Screen recording utility for wayland
 wget								# A file downloading utility
 wireless_tools						# Tools allowing to manipulate the Wireless Extensions
 wireplumber							# Session / policy manager implementation for PipeWire
