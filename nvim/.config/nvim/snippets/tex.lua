@@ -81,5 +81,12 @@ local mathfrak = s({ trig = "kk(%a)", regTrig = true }, {
 }, { condition = in_mathzone })
 table.insert(autosnippets, mathfrak)
 
+local mathscr = s({ trig = "ss(%a)", regTrig = true }, {
+  f(function(_, snip)
+    return "\\mathscr{" .. snip.captures[1] .. "}"
+  end),
+}, { condition = in_mathzone })
+table.insert(autosnippets, mathscr)
+
 -- Snippets go here!
 return snippets, autosnippets
