@@ -46,7 +46,8 @@ c.bindings.key_mappings = {
     "<Ctrl-[>": "<Escape>",
     "<Enter>": "<Return>",
     "<Shift-Enter>": "<Return>",
-    "<Shift-Return>": "<Return>"
+    "<Shift-Return>": "<Return>",
+    "r": "nop"
 }
 
 # Changelog 
