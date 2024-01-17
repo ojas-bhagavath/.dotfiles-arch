@@ -88,5 +88,12 @@ local mathscr = s({ trig = "ss(%a)", regTrig = true }, {
 }, { condition = in_mathzone })
 table.insert(autosnippets, mathscr)
 
+local hat = s({ trig = "hh(%a)", regTrig = true }, {
+  f(function(_, snip)
+    return "\\hat{" .. snip.captures[1] .. "}"
+  end),
+}, { condition = in_mathzone })
+table.insert(autosnippets, hat)
+
 -- Snippets go here!
 return snippets, autosnippets
