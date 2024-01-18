@@ -95,5 +95,26 @@ local hat = s({ trig = "hh(%a)", regTrig = true }, {
 }, { condition = in_mathzone })
 table.insert(autosnippets, hat)
 
+local bigp = s("bigp", {
+  c(1, {
+    fmt("\\left\\{{ {}\\right\\}}", {
+      i(1, ""),
+    }),
+    fmt("\\left({}\\right)", {
+      i(1, ""),
+    }),
+    fmt("\\left[{}\\right]", {
+      i(1, ""),
+    }),
+    fmt("\\left\\|{}\\right\\|", {
+      i(1, ""),
+    }),
+    fmt("\\left\\langle {}\\right\\rangle", {
+      i(1, ""),
+    }),
+  }),
+}, { condition = in_mathzone })
+table.insert(autosnippets, bigp)
+
 -- Snippets go here!
 return snippets, autosnippets
