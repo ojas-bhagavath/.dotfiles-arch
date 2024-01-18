@@ -97,19 +97,19 @@ table.insert(autosnippets, hat)
 
 local bigp = s("bigp", {
   c(1, {
-    fmt("\\left\\{{ {}\\right\\}}", {
+    fmt("\\left\\{{ {} \\right\\}}", {
       i(1, ""),
     }),
-    fmt("\\left({}\\right)", {
+    fmt("\\left( {} \\right)", {
       i(1, ""),
     }),
-    fmt("\\left[{}\\right]", {
+    fmt("\\left\\| {} \\right\\|", {
       i(1, ""),
     }),
-    fmt("\\left\\|{}\\right\\|", {
+    fmt("\\left[ {} \\right]", {
       i(1, ""),
     }),
-    fmt("\\left\\langle {}\\right\\rangle", {
+    fmt("\\left\\langle {} \\right\\rangle", {
       i(1, ""),
     }),
   }),
