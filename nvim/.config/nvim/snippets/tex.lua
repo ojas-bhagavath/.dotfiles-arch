@@ -103,6 +103,9 @@ local bigp = s("bigp", {
     fmt("\\left( {} \\right)", {
       i(1, ""),
     }),
+    fmt("\\left| {} \\right|", {
+      i(1, ""),
+    }),
     fmt("\\left\\| {} \\right\\|", {
       i(1, ""),
     }),
