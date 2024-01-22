@@ -1,4 +1,5 @@
 #!/bin/bash
 
-fil=$(find ~/. -type f | fzf)
-setsid handlr open "$fil" & pkill -n $!
+fil=$(find ~/. -type f | fzf --preview 'bat --style=numbers --color=always {}')
+setsid handlr open "$fil" &
+pkill -n $!

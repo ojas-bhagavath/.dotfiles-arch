@@ -60,4 +60,3 @@ format = '([+$added]($added_style))([-$deleted]($deleted_style) )'
 disabled = false
 style = "white"
 format = "[$time]($style)"
-
