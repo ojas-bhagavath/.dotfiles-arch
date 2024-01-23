@@ -5,6 +5,12 @@ return {
             filtered_items = {
                 visible = true,
             },
+            window = {
+                mappings = {
+                    ["l"] = "open",
+                    ["h"] = "navigate_up",
+                },
+            },
         },
     },
 }
