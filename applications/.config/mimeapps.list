@@ -1,21 +1,34 @@
 [Added Associations]
+application/epub+zip=userapp-sioyek-ZRTNG2.desktop;sioyek.desktop;
 application/pdf=sioyek.desktop;
+application/vnd.comicbook+zip=userapp-sioyek-BDKFH2.desktop;
+application/vnd.comicbook-rar=userapp-sioyek-E8VZH2.desktop;
+application/x-mimearchive=foot-nvim.desktop;
+text/plain=foot-nvim.desktop;
+text/x-tex=foot-nvim.desktop;
+video/mp4=vlc.desktop;
 video/x-matroska=vlc.desktop;
 
 [Default Applications]
-application/pdf=sioyek.desktop;
-audio/*=foot-ncmpcpp.desktop;
-audio/flac=foot-ncmpcpp.desktop;
-audio/mp3=foot-ncmpcpp.desktop;
+application/toml=nvim.desktop;
+application/vnd.comicbook+zip=userapp-sioyek-BDKFH2.desktop;
+application/vnd.comicbook-rar=userapp-sioyek-E8VZH2.desktop;
+application/x-mimearchive=foot-nvim.desktop;
+audio/*=vlc.desktop;
+audio/flac=vlc.desktop;
+audio/mp3=vlc.desktop;
+audio/mpeg=vlc.desktop;
 image/*=nsxiv.desktop;
 image/jpeg=nsxiv.desktop;
 image/png=nsxiv.desktop;
 text/*=foot-nvim.desktop;
-video/mp4=mpv.desktop;
-video/x-matroska=mpv.desktop;
+text/plain=foot-nvim.desktop;
+text/x-tex=foot-nvim.desktop;
+video/mp4=vlc.desktop;
+video/x-matroska=vlc.desktop;
 vidio/*=mpv.desktop;
 x-scheme-handler/about=org.qutebrowser.qutebrowser.desktop;
 x-scheme-handler/http=org.qutebrowser.qutebrowser.desktop;
 x-scheme-handler/https=org.qutebrowser.qutebrowser.desktop;
-x-scheme-handler/terminal=org.codeberg.dnkl.foot.desktop;
+x-scheme-handler/terminal=org.wezfurlong.wezterm.desktop;
 x-scheme-handler/unknown=org.qutebrowser.qutebrowser.desktop;
