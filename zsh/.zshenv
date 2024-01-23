@@ -6,8 +6,8 @@ export XDG_STATE_HOME="$HOME/.local/state"
 export DOTFILES="$HOME/.dotfiles"
 
 # terminal and editor specific variables
-export TERM="foot"
-export TERMINAL="foot"
+export TERM="wezterm"
+export TERMINAL="wezterm"
 export SHELL=/bin/zsh
 export EDITOR="$TERM nvim"
 export VISUAL="$TERM nvim"
@@ -42,3 +42,7 @@ export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME/java"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$CARGO_HOME/bin"
 export PATH="$PATH:$HOME/.scripts"
+
+# QT Stuff
+export QT_QPA_PLATFORMTHEME="qt5ct"
+export QT_STYLE_OVERRIDE="qt5ct"
