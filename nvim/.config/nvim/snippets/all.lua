@@ -14,17 +14,17 @@ local group = vim.api.nvim_create_augroup("Lua Snippets", { clear = true })
 -- The Snippets!
 
 local DVG = s("DVG", {
-  t("Davanagere"),
+    t("Davanagere"),
 })
 table.insert(snippets, DVG)
 
 local TVM = s("TVM", {
-  t("Thiruvananthapuram"),
+    t("Thiruvananthapuram"),
 })
 table.insert(snippets, TVM)
 
 local IISER = s("IISER", {
-  t("Indian Institute of Science Education and Research"),
+    t("Indian Institute of Science Education and Research"),
 })
 table.insert(snippets, IISER)
 

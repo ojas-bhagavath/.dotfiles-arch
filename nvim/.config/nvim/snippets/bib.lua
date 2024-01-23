@@ -15,9 +15,9 @@ local file_pattern = "*.bib"
 -- Snippets go here!
 
 local book = s(
-  "book",
-  fmt(
-    [[
+    "book",
+    fmt(
+        [[
 @book{{{},
     title = {{{}}},
     edition = {{{}}},
@@ -26,15 +26,15 @@ local book = s(
     publisher = {{{}}},
 }}
 ]],
-    {
-      i(1, ""),
-      i(2, ""),
-      i(3, ""),
-      i(4, ""),
-      i(5, ""),
-      i(6, ""),
-    }
-  )
+        {
+            i(1, ""),
+            i(2, ""),
+            i(3, ""),
+            i(4, ""),
+            i(5, ""),
+            i(6, ""),
+        }
+    )
 )
 table.insert(autosnippets, book)
 
