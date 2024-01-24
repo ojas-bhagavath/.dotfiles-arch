@@ -13,7 +13,7 @@ end
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
-config.color_scheme = "tokyonight_moon"
+config.color_scheme = "Tokyo Night Moon"
 config.font = wezterm.font("Hack Nerd Font")
 config.font_size = 16
 config.enable_scroll_bar = true
