@@ -1,3 +1,4 @@
+set hidden!
 set dirfirst true 
 set dironly false
 set dirpreviews true 
