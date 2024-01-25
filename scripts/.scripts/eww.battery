@@ -37,7 +37,7 @@ icon() {
 
 	fi
 	if [ "$icon" = "󰂎" ]; then
-		notify-send -a "Side Bar" -u critical "Battery Low" "Connect Charger"
+		notify-send -a "Your Sentient Laptop:" -u normal "Battery Low" "Please Connect Charger"
 	fi
 	echo "$icon"
 }
