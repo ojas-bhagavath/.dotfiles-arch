@@ -2,7 +2,7 @@ acpi								# A package for power management
 acpi_call							# A package to enable calls to acpi
 acpid								# An important package for OS and Power Management related configs.
 alsa-lib							# An alternative implementation of Linux sound support
-alsa-plugins						#Additional ALSA plugins
+alsa-plugins						# Additional ALSA plugins
 alsa-utils							# Tools required for audio control/management
 base								# Minimal package set to define a basic Arch Linux installation
 base-devel							# Basic tools to build Arch Linux packages
@@ -23,6 +23,7 @@ cloudflare-warp-bin					# Cloudflare Warp Client
 cmake								# A cross-platform open-source make system
 code								# The Open Source build of Visual Studio Code (vscode) editor
 dialog								# A tool to display dialog boxes from shell scripts
+dolphin                             # A GUI file manager by KDE
 dosfstools							# DOS filesystem utilities
 downgrade							# Bash script to downgrade packages 
 dunst								# Notification Daemon
@@ -30,8 +31,8 @@ easytag								# A software to tag mp3 files in bulk
 efibootmgr							# Linux user-space application to modify the EFI Boot Manager
 entr								# A utility that runs arbitrary commands when files change
 eww-wayland							# A powerful widget manager
-eza					                # ls replacement on fire
 exfat-utils							# As the name says...
+eza					                # ls replacement on fire
 fd                                  # A fast find replacement
 ffmpeg								# Complete solution to record, convert and stream audio and video
 ffmpegthumbnailer					# A utility to produce video thumbnails for Tubler
@@ -39,7 +40,6 @@ firefox								# The fallback browser
 flac								# A lossless audio codec
 flacon								# A tool to extract flac files in using CUE files
 flatpak								# Enables installing flatpaks
-foot								# A neat terminal emulator for wayland with sixel support 
 fzf					                # Fuzzy finder
 gaupol								# A tool to manipulate srt files 
 gcc					                # A GNU Compiler Collection for C and C++
@@ -78,8 +78,6 @@ mpd					                # The OG audio player backend
 mpv					                # The OG media player
 mtools								# A collection of utilities to access MS-DOS disks
 ncmpcpp								# A neat TUI frontend for mpd 
-nemo								# A GUI file manager 
-nemo-fileroller						# Compression-extraction utility for nemo 
 neofetch							# A CLI system information tool written in BASH that supports displaying images
 neovim								# A powerful text editor
 nerd-fonts							# All the nerd fonts
@@ -89,6 +87,7 @@ ninja								# Small build system with a focus on speed
 nsxiv								# A simple image viewer 
 ntfs-3g								# NTFS filesystem driver and utilities	
 ntp					                # Network Time Protocol reference implementation
+ocrmypdf                            # A tool to add an OCR text layer to scanned PDF files, allowing them to be searched
 openresolv							# resolv.conf management framework (resolvconf)
 openssh								# SSH protocol implementation for remote login, command execution and file transfer
 openssl								# The Open Source toolkit for Secure Sockets Layer and Transport Layer Security
@@ -111,10 +110,11 @@ playerctl			                # Easier media controls
 polkit-kde-agent					# polkit agent by kde
 python								# A high level scripting language
 python-adblock						# Brave's adblock library in Python
-python-adblockparser				#A package for working with Adblock Plus filter rules. It can parse Adblock Plus filters and match URLs against them
+python-adblockparser				# A package for working with Adblock Plus filter rules. It can parse Adblock Plus filters and match URLs against them
 python-pip							# A tool for installing python packages
 python-tldextract					# A package required for qute-pass
 qbittorrent							# An open source torrent client
+qt5ct                               # Qt5 Configuration Utility
 qtpass								# A GUI tool for pass
 qutebrowser-git						# A highly customizable browser built around vim binds
 reflector							# A Python 3 module and script to retrieve and filter the latest Pacman mirror list.
@@ -128,15 +128,17 @@ simple-mtpfs						# Required for Android device mounting
 sioyek								# PDF viewer for research papers and technical books with vim keybinds.
 socat								# A multipurpose relay tool
 sox					                # A sound proocessing tool
-speedread-git                           # A command line utility for speed reading
+speedread-git                       # A command line utility for speed reading
 speedtest-cli						# Command line interface for testing internet bandwidth using speedtest.net
 spotify								# A proprietary music streaming service
 starship							# A cross platform prompt for various shells
 stow								# A powerful symlink utility
 strace								# A diagnostic, debugging and instructional userspace tracer
+swaylock-effects-git                # Lock screen with effects for wayland
 syncthing							# Sync files across devices
 tar					                # Utility used to store, backup, and transport files
 termdown							# A terminal timer
+tesseract-data-eng                  # Tesseract OCR data (eng)
 texlive								# LaTeX fundamental packages
 texlive-lang						# Texlive tools for non-Latin languages
 thefuck								# A tool to correct your mistakes with your reaction
@@ -162,6 +164,7 @@ vulcan-intel                        # Graphics driver
 waybar								# A customizable top bar for wayland
 wayland								# A display server protocol intended to be a successor of Xorg
 wev					                # Tool for debugging wayland events
+wezterm                             # A neat modern terminal emulator written in rust, configured in lua
 wf-recorder-git                     # Screen recording utility for wayland
 wget								# A file downloading utility
 wireless_tools						# Tools allowing to manipulate the Wireless Extensions
