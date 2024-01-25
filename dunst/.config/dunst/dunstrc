@@ -321,8 +321,8 @@
     frame_color = "#c8d3f5"
 
 [urgency_critical]
-    background = "#2f334d"
-    foreground = "#c53b53"
+    background = "#222436"
+    foreground = "#c8d3f5"
     frame_color = "#c53b53"
     # Icon for notifications with critical urgency, uncomment to enable
     #default_icon = /path/to/icon
