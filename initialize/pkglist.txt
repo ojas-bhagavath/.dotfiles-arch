@@ -114,6 +114,7 @@ python-adblockparser				# A package for working with Adblock Plus filter rules. 
 python-pip							# A tool for installing python packages
 python-tldextract					# A package required for qute-pass
 qbittorrent							# An open source torrent client
+qpdf                                # A Content-Preserving PDF Transformation System
 qt5ct                               # Qt5 Configuration Utility
 qtpass								# A GUI tool for pass
 qutebrowser-git						# A highly customizable browser built around vim binds
