@@ -21,7 +21,6 @@ clang								# C language family frontend for LLVM
 cliphist							# Clipboard manager for Wayland
 cloudflare-warp-bin					# Cloudflare Warp Client
 cmake								# A cross-platform open-source make system
-code								# The Open Source build of Visual Studio Code (vscode) editor
 dialog								# A tool to display dialog boxes from shell scripts
 dolphin                             # A GUI file manager by KDE
 dosfstools							# DOS filesystem utilities
@@ -37,7 +36,6 @@ fd                                  # A fast find replacement
 ffmpeg								# Complete solution to record, convert and stream audio and video
 ffmpegthumbnailer					# A utility to produce video thumbnails for Tubler
 firefox								# The fallback browser 
-flac								# A lossless audio codec
 flacon								# A tool to extract flac files in using CUE files
 flatpak								# Enables installing flatpaks
 fzf					                # Fuzzy finder
@@ -84,6 +82,7 @@ nerd-fonts							# All the nerd fonts
 network-manager-applet              # As the name says...
 networkmanager						# As the name says...
 ninja								# Small build system with a focus on speed
+npm                                 # A package manager for JavaScript
 nsxiv								# A simple image viewer 
 ntfs-3g								# NTFS filesystem driver and utilities	
 ntp					                # Network Time Protocol reference implementation
@@ -119,6 +118,7 @@ qt5ct                               # Qt5 Configuration Utility
 qtpass								# A GUI tool for pass
 qutebrowser-git						# A highly customizable browser built around vim binds
 reflector							# A Python 3 module and script to retrieve and filter the latest Pacman mirror list.
+ripgrep                             # A search tool that combines the usability of ag with the raw speed of grep
 rofi								# A window switcher, application launcher and dmenu replacement
 ruby								# An object-oriented language for quick and easy programming
 rustup								# Systems programming language focused on safety, speed and concurrency
@@ -158,14 +158,13 @@ ueberzugpp							# Command line util which allows to display images in combinati
 unrar								# A rar uncompression program
 unzip								# A zip uncompression program
 vi					                # The OG text editor
-vimv-git							# A bulk file renaming utility that opens in vim/neovim 
 vlc					                # A simple media player
 volumectl							# A simple utility to control/obtain audio volume
 vulcan-intel                        # Graphics driver
 waybar								# A customizable top bar for wayland
 wayland								# A display server protocol intended to be a successor of Xorg
 wev					                # Tool for debugging wayland events
-wezterm                             # A neat modern terminal emulator written in rust, configured in lua
+wezterm-git                         # A neat modern terminal emulator written in rust, configured in lua
 wf-recorder-git                     # Screen recording utility for wayland
 wget								# A file downloading utility
 wireless_tools						# Tools allowing to manipulate the Wireless Extensions
