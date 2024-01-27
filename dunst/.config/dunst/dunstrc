@@ -318,7 +318,7 @@
 [urgency_normal]
     background = "#222436"
     foreground = "#c8d3f5"
-    frame_color = "#c8d3f5"
+    frame_color = "#FFC777"
 
 [urgency_critical]
     background = "#222436"

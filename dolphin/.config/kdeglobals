@@ -138,6 +138,9 @@ shadeSortColumn=true
 [KDE]
 contrast=4
 
+[PreviewSettings]
+MaximumRemoteSize=1073741824000
+
 [WM]
 activeBackground=34,36,54
 activeBlend=215,218,224
