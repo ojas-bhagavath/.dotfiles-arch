@@ -70,8 +70,8 @@ $white: #c8d3f5;
     font-family: ProggyClean Nerd Font;
     font-size: 28px;
     padding: 10px 8px 10px 0px;
-    background-color: $blue;
-    color: $white;
+    background-color: $green;
+    color: $blue;
     border-radius: 5px;
 }
 
@@ -92,7 +92,7 @@ $white: #c8d3f5;
 }
 
 .battery {
-    background-color: $black;
+    background-color: $background;
     color: $foreground;
     border-radius: 5px;
 }
