@@ -32,7 +32,7 @@ local beginend = s("oc", {
 })
 table.insert(snippets, beginend)
 
-local nextline = s("\\", {
+local nextline = s("\\ ", {
     t({ "\\", "" }),
 })
 table.insert(autosnippets, nextline)
