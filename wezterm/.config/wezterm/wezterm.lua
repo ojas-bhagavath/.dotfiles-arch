@@ -19,6 +19,7 @@ config.font_size = 16
 config.enable_scroll_bar = true
 config.hide_tab_bar_if_only_one_tab = true
 config.window_close_confirmation = "NeverPrompt"
+config.check_for_updates = false
 
 -- and finally, return the configuration to wezterm
 return config
