@@ -13,7 +13,7 @@ body {
 
 .greet {
     font-family: "Hack Nerd Font";
-    color: #fff;
+    color: #c8d3f5;
     font-size: 1.0rem;
     font-weight: 600;
     margin-top: 2rem;
@@ -34,7 +34,7 @@ body {
     font-size: 4.5rem;
     font-weight: 600;
     font-family: "Hack Nerd Font";
-    color: #fff;
+    color: #c8d3f5;
     margin-bottom: .25em;
     margin-top: 0em;
 }
@@ -42,7 +42,7 @@ body {
 #search {
     width: 1000px;
     height: 100px;
-    background-color: #fff;
+    background-color: #c8d3f5;
     display: none;
     position: absolute;
     margin-left: 13.5rem;
@@ -57,7 +57,7 @@ body {
     width: 100%;
     padding: .75em 1em;
     box-sizing: border-box;
-    background-color: #1e1e2e;
+    background-color: #222436;
     border: solid 0px #000000;
     font-family: "Hack Nerd Font";
     font-size: 2rem;
@@ -99,7 +99,7 @@ body {
 
 .bookmark-set{
     padding: 1em;
-    background-color: #11111b;
+    background-color: #1d1d2b;
     border-radius: 5px;
     font-family: "Hack Nerd Font";
     font-size: 1.0rem;
@@ -116,16 +116,16 @@ body {
     font-family: "Hack Nerd Font";
     font-size: 1.6rem;
     font-weight: 800;
-    color: #fff;
+    color: #c8d3f5;
     margin: 0em 0em .35em 0em;
 }
 .bookmark {
     text-decoration: none;
-    color: #8c8c8b;
+    color: #c8d3f5;
     display:block;
     margin: .4em 0em;
 }
 .bookmark:hover {
-    color: #fff;
+    color: #ff757f;
 }
 

@@ -1,9 +1,7 @@
 # Autoconfig 
-
 config.load_autoconfig(False)
 
 # Aliases
-
 c.aliases = {
     "q": "close",
     "qa": "quit",
@@ -14,8 +12,7 @@ c.aliases = {
     "rr": "restart",
 }
 
-#Aitosave
-
+#Autosave
 c.auto_save.interval = 15000
 c.auto_save.session = False
 
@@ -36,7 +33,6 @@ c.bindings.commands = {
 }
 
 # Keymap Bindings 
-
 c.bindings.key_mappings = {
     "<Ctrl-6>": "<Ctrl-^>",
     "<Ctrl-Enter>": "<Ctrl-Return>",
@@ -51,12 +47,10 @@ c.bindings.key_mappings = {
 }
 
 # Changelog 
-
 c.changelog_after_upgrade = "minor"
 
 # Colors 
-
-# Catppuccin Mocha Color Pallet:
+# Tokyonight Pallet:
 background =    "#222436"
 text =          "#c8d3f5"
 black0 =        "#1d1d2b"
@@ -69,7 +63,6 @@ magenta =       "#c099ff"
 cyan =          "#86e1fc"
 white0 =        "#828bb8"
 white1 =        "#c8d3f5"
-
 c.colors.completion.category.bg = background
 c.colors.completion.category.border.bottom = black0
 c.colors.completion.category.border.top = white0
@@ -168,7 +161,6 @@ c.colors.contextmenu.selected.bg = white0
 c.colors.contextmenu.selected.fg = red
 
 # Completions
-
 c.completion.cmd_history_max_items = -1
 c.completion.delay = 0 
 c.completion.height = "50%"
@@ -184,7 +176,6 @@ c.completion.use_best_match = False
 c.completion.web_history.max_items = -1
 
 # Content 
-
 c.content.autoplay = True 
 c.content.blocking.adblock.lists = ["https://easylist.to/easylist/easylist.txt", "https://easylist.to/easylist/easyprivacy.txt"]
 c.content.blocking.enabled = True 
@@ -248,7 +239,6 @@ c.content.webrtc_ip_handling_policy = "all-interfaces"
 c.content.xss_auditing = False
 
 # Downloads 
-
 c.downloads.location.prompt = True 
 c.downloads.location.remember = True 
 c.downloads.location.suggestion = "path"
@@ -257,13 +247,11 @@ c.downloads.prevent_mixed_content = False
 c.downloads.remove_finished = 30000
 
 # Editor
-
 c.editor.command = ["foot", "-e", "nvim", "{file}", "-c", "normal {line}G{column0}1"]
 c.editor.encoding = "utf-8"
 c.editor.remove_file = True
 
 # Fileselect
-
 c.fileselect.handler = 'default'
 
 # Fonts 
@@ -290,7 +278,6 @@ c.fonts.web.size.minimum = 0
 c.fonts.web.size.minimum_logical = 6 
 
 # Hints 
-
 c.hints.auto_follow = "unique-match"
 c.hints.auto_follow_timeout = 0 
 c.hints.border = "1px solid #1e1e2e"
@@ -309,11 +296,9 @@ c.hints.scatter = True
 c.hints.uppercase = False
 
 # History
-
 c.history_gap_interval = 30 
 
 # Input 
-
 c.input.escape_quits_reporter = True
 c.input.forward_unbound_keys = "auto"
 c.input.insert_mode.auto_enter = True 
@@ -330,21 +315,17 @@ c.input.partial_timeout = 0
 c.input.spatial_navigation = False
 
 # Keyhint 
-
 c.keyhint.delay = 300 
 c.keyhint.radius = 6 
 
 # Logging 
-
 c.logging.level.console = "info"
 c.logging.level.ram = "debug"
 
 # Messages 
-
 c.messages.timeout = 3000 
 
 # New Instance 
-
 c.new_instance_open_target = "tab-silent"
 c.new_instance_open_target_window = "last-focused"
 
@@ -353,7 +334,6 @@ c.prompt.filebrowser = True
 c.prompt.radius = 8
 
 # Qt 
-
 c.qt.chromium.experimental_web_platform_features = "auto"
 c.qt.chromium.low_end_device_mode = "auto"
 c.qt.chromium.process_model = "process-per-site-instance" 
@@ -374,11 +354,9 @@ c.search.wrap_messages = True
 
 
 # Session 
-
 c.session.lazy_restore = True
 
 # Spellcheck 
-
 c.spellcheck.languages = ["en-US"]
 
 # Statusbar 
@@ -388,7 +366,6 @@ c.statusbar.show = "in-mode"
 c.statusbar.widgets = ["keypress", "search_match", "url", "scroll", "history", "tabs", "progress"]
 
 # Tabs 
-
 c.tabs.background = True 
 c.tabs.close_mouse_button = "middle"
 c.tabs.close_mouse_button_on_bar = "new-tab"
@@ -415,7 +392,7 @@ c.tabs.show_switching_delay = 10000
 c.tabs.tabs_are_windows = False 
 c.tabs.title.alignment = "left"
 c.tabs.title.elide = "right"
-c.tabs.title.format = "{audio}{relative_index}{title_sep}{current_title}"
+c.tabs.title.format = "{audio}{index}{title_sep}{current_title}"
 c.tabs.title.format_pinned = "{audio}"
 c.tabs.tooltips = True 
 c.tabs.undo_stack_size = 100 
@@ -423,7 +400,6 @@ c.tabs.width = "15%"
 c.tabs.wrap = True
 
 # URL 
-
 c.url.auto_search = "naive"
 c.url.default_page = "file:///home/ojas/.config/qutebrowser/homepage/homepage.html"
 c.url.incdec_segments = ["path", "query"]
@@ -471,13 +447,11 @@ c.url.start_pages = "file:///home/ojas/.config/qutebrowser/homepage/homepage.htm
 c.url.yank_ignored_parameters = ["ref", "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "utm_name"]
 
 # Windows 
-
 c.window.hide_decoration = False
 c.window.title_format = "{perc}{current_title}{title_sep}qutebrowser"
 c.window.transparent = True 
 
 # Zoom 
-
 c.zoom.default = "130%"
 c.zoom.levels = ["25%", "33%", "50%", "67%", "75%", "90%", "100%", "110%", "125%", "150%", "175%", "200%", "250%", "300%", "400%", "500%"]
 c.zoom.mouse_divider = 512
