@@ -32,11 +32,6 @@ local beginend = s("oc", {
 })
 table.insert(snippets, beginend)
 
-local nextline = s("\\ ", {
-    t({ "\\", "" }),
-})
-table.insert(autosnippets, nextline)
-
 local frac = s("//", {
     t("\\frac{"),
     i(1, ""),
