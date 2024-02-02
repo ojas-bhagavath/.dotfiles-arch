@@ -14,7 +14,6 @@ bluez								# Daemons for the bluetooth protocol stack
 bluez-utils							# Development and debugging utilities for the bluetooth protocol stack
 brightnessctl						# Lightweight brightness control tool
 btrfs-progs							# Btrfs filesystem utilities
-chafa								# A tool that renders images on terminal 
 checkbashisms                       # Check scripts for BASH specific syntax
 checkupdates-with-aur				# Check for available pacman and aur updates
 clang								# C language family frontend for LLVM
@@ -59,8 +58,8 @@ inkscape                            # A neat vector drawing utility
 intel-media-driver					# As the name says...
 intel-media-sdk						# Legacy API for hardware video acceleration on Intel GPUs (5th to 11th gen)
 intel-ucode							# Microcode update files for Intel CPUs
+jq                                  # A commandline JSON parser
 kdenlive							# A video editor
-lf-sixel-git						# A neat TUI file manager written in GO
 libpulse							# A featureful, general-purpose sound server (client library)
 libsixel							# A collection of tool to convert/view images to/in sixel format 
 libva-intel-driver					# VA-API implementation for Intel G45 and HD Graphics family
@@ -107,6 +106,7 @@ pipewire-jack						# JACK support for pipewire
 pipewire-pulse						# PulseAudio replacement for pipewire
 playerctl			                # Easier media controls
 polkit-kde-agent					# polkit agent by kde
+poppler                             # PDF rendering library based on xpdf 3.0
 python								# A high level scripting language
 python-adblock						# Brave's adblock library in Python
 python-adblockparser				# A package for working with Adblock Plus filter rules. It can parse Adblock Plus filters and match URLs against them
@@ -154,7 +154,7 @@ ttf-font-awesome					# An awesome font
 ttf-kannada-font					# Kannada font
 tumbler								# A utility to generate thumbnails 
 udiskie								# external disk management tool
-ueberzugpp							# Command line util which allows to display images in combination with X11
+unarchiver                          # unar and lsar: Objective-C tools for uncompressing archive files
 unrar								# A rar uncompression program
 unzip								# A zip uncompression program
 vi					                # The OG text editor
@@ -175,6 +175,7 @@ wpa_supplicant						# A cross platform supplicant with support for wpa
 xdg-desktop-portal-hyprland         # A desktop portal for hyprland
 xdg-utils-handlr					# To replace xdg-open with handlr
 yay								    # AUR helper written in go
+yazi                                # A TUI file manager written in rust
 yt-dlp								# A youtube-dl fork with additional features and fixes
 ytfzf								# A POSIX script to find and watch youtube videos from the terminal
 zoxide								# A smarter cd replacement
