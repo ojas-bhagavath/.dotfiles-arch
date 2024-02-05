@@ -23,3 +23,4 @@ vim.keymap.set({ "i", "s" }, "<c-e>", function()
     end
 end, { silent = true })
 vim.keymap.set("n", "<leader>rs", "<cmd>source ~/.config/nvim/lua/plugins/luasnip.lua<CR>")
+vim.keymap.set("n", "<leader>o", "<cmd>Oil --float<CR>")
