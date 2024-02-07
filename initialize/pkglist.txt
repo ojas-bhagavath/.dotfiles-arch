@@ -145,8 +145,8 @@ texlive-lang						# Texlive tools for non-Latin languages
 thefuck								# A tool to correct your mistakes with your reaction
 timeshift							# A snapshotting utility
 timeshift-autosnap					# A utility to automatically take snapshots before system updates
-tldr								# A tool that gives easy to understand versions of the manual with example
 tlp					                # A power management utility
+tlrc								# A tool that gives easy to understand versions of the manual with example
 tmate								# Utility to access remote terminal
 tmsu								# A tool to tag any file and access the tags
 trash-cli							# A cli trash manager
