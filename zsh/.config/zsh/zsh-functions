@@ -50,3 +50,7 @@ function ya() {
     fi
     rm -f -- "$tmp"
 }
+
+function t2p {
+    echo $1 | entr pdflatex $1
+}
