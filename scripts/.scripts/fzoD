@@ -1,0 +1,5 @@
+#!/bin/bash
+
+fil=$(find ~/. -type f | fzf)
+dir=$(echo "$fil" | sed 's|\(.*\)/.*|\1|')
+dolphin "$dir"
