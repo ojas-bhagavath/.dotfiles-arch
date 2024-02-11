@@ -15,8 +15,8 @@ export VISUAL="$TERM -e nvim"
 # zsh specific variables
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export HISTFILE="$XDG_CACHE_HOME/.zhistory"
-export HISTSIZE=1000000
-export SAVEHIST=1000000
+export HISTSIZE=10000000
+export SAVEHIST=10000000
 
 
 # FZF

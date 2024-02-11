@@ -48,7 +48,7 @@ function ya() {
     if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
     cd -- "$cwd"
     fi
-    rm -f -- "$tmp"
+    \rm -f -- "$tmp"
 }
 
 function t2p {
