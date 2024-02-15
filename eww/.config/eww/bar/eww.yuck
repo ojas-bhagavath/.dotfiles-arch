@@ -360,6 +360,11 @@
                     :orientation "v"
                     :space-evenly false
                     (button
+                        :class "button-lock"
+                        :onclick "hyprctl dispatch exec swaylock"
+                        ""
+                    )
+                    (button
                         :class "button-logout"
                         :onclick "hyprctl dispatch exit"
                         ""

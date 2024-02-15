@@ -167,11 +167,17 @@ $white: #c8d3f5;
     padding: 10px 4px 10px 6px;
     border-radius: 5px;
 }
-
 .button-logout {
     font-family: ProggyClean Nerd Font;
     font-size: 24px;
     color: $white;
     padding: 10px 4px 10px 6px;
+    border-radius: 5px;
+}
+.button-lock {
+    font-family: ProggyClean Nerd Font;
+    font-size: 28px;
+    color: $white;
+    padding: 10px 8px 10px 0px;
     border-radius: 5px;
 }
