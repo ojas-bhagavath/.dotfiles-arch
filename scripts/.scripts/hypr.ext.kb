@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+EXTKB=$(hyprctl getoption input:kb_options | grep -o "swapescape")
+if [ "$EXTKB" = "swapescape" ]; then
+	hyprctl keyword "input:kb_options "
+	exit
+fi
+hyprctl reload
