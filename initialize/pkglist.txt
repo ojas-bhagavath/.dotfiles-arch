@@ -78,6 +78,7 @@ mpv					                # The OG media player
 mtools								# A collection of utilities to access MS-DOS disks
 ncmpcpp								# A neat TUI frontend for mpd 
 neofetch							# A CLI system information tool written in BASH that supports displaying images
+neovide                             # A GUI client for neovim written in rust
 neovim								# A powerful text editor
 nerd-fonts							# All the nerd fonts
 network-manager-applet              # As the name says...
