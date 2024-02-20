@@ -42,6 +42,8 @@ return {
         },
     },
 
+    { "echasnovski/mini.align", version = false },
+
     {
         "L3MON4D3/LuaSnip",
         build = (not jit.os:find("Windows"))

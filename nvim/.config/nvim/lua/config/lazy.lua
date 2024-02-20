@@ -216,3 +216,4 @@ require("oil").setup({
         },
     },
 })
+require("mini.align").setup({})
