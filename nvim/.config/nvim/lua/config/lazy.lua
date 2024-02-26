@@ -217,3 +217,10 @@ require("oil").setup({
     },
 })
 require("mini.align").setup({})
+require("telescope").setup({
+    pickers = {
+        find_files = {
+            hidden = true,
+        },
+    },
+})
