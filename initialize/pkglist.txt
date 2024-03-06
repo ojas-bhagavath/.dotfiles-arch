@@ -14,6 +14,7 @@ bluez                           # Daemons for the bluetooth protocol stack
 bluez-utils                     # Development and debugging utilities for the bluetooth protocol stack
 brightnessctl                   # Lightweight brightness control tool
 btrfs-progs                     # Btrfs filesystem utilities
+calibre                         # Ebook management application
 checkbashisms                   # Check scripts for BASH specific syntax
 checkupdates-with-aur           # Check for available pacman and aur updates
 clang                           # C language family frontend for LLVM
@@ -28,7 +29,7 @@ dunst                           # Notification Daemon
 easytag                         # A software to tag mp3 files in bulk 
 efibootmgr                      # Linux user-space application to modify the EFI Boot Manager
 entr                            # A utility that runs arbitrary commands when files change
-eww-wayland                     # A powerful widget manager
+eww                             # A powerful widget manager
 exfat-utils                     # As the name says...
 eza                             # ls replacement on fire
 fd                              # A fast find replacement
@@ -50,7 +51,9 @@ grub                            # A neat bootloader
 grub-btrfs                      # grub, but for btrfs
 gvfs                            # A utility that creates a virtual file system including a trash can 
 handlr                          # Powerful alternative to xdg-utils written in Rust
+hypridle                        # Idle daemon for hyprland
 hyprland                        # A wayland compositor/window manager
+hyprlock                        # Lock screen thing for hyprland
 hyprpaper                       # A wallpaper utility for wayland
 hyprpicker                      # A colorpicker for hyprland
 id3                             # A utility to edit id3v1 and id3v2 tags
@@ -100,6 +103,7 @@ pass                            # A robust password management system with Unix 
 pass-otp                        # OTP manager for pass
 pavucontrol                     # A GUI utility for volume management
 pdfjs                           # A utility required to natively view pdfs on browsers
+pdftk                           # Command-line tool for working with PDFs
 perl-image-exiftool             # A tool to read and rewrite EXIF information
 phonon-qt5-gstreamer            # Phonon GStreamer backend for Qt5
 pipewire                        # A low-latency audio/video router and processor
@@ -110,6 +114,7 @@ pipewire-pulse                  # PulseAudio replacement for pipewire
 playerctl                       # Easier media controls
 polkit-kde-agent                # polkit agent by kde
 poppler                         # PDF rendering library based on xpdf 3.0
+powertop                        # Optimize battery usage
 python                          # A high level scripting language
 python-adblock                  # Brave's adblock library in Python
 python-adblockparser            # A package for working with Adblock Plus filter rules. It can parse Adblock Plus filters and match URLs against them
@@ -138,7 +143,6 @@ spotify                         # A proprietary music streaming service
 starship                        # A cross platform prompt for various shells
 stow                            # A powerful symlink utility
 strace                          # A diagnostic, debugging and instructional userspace tracer
-swaylock-effects-git            # Lock screen with effects for wayland
 syncthing                       # Sync files across devices
 tar                             # Utility used to store, backup, and transport files
 termdown                        # A terminal timer
@@ -172,7 +176,7 @@ wf-recorder-git                 # Screen recording utility for wayland
 wget                            # A file downloading utility
 wireless_tools                  # Tools allowing to manipulate the Wireless Extensions
 wireplumber                     # Session / policy manager implementation for PipeWire
-wl-clipboard                    # Clipboard tool for wayland
+wl-clipboard-rs                 # Clipboard tool for wayland
 wlroots                         # Some tools for wayland
 wpa_supplicant                  # A cross platform supplicant with support for wpa
 xdg-desktop-portal-hyprland     # A desktop portal for hyprland
