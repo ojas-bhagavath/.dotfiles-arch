@@ -48,7 +48,6 @@ st http://127.0.0.1:8384/
 t0 https://www.amazon.in/gp/css/order-history?ref_=nav_AccountFlyout_orders
 t1 https://www.flipkart.com/account/orders?link=home_orders
 t2 https://www.etsy.com/?receipt_id=3200959980&show_shipping=1239470177532&from_email=shipping_notification&mutv=1kInXfIcTtymXxS3m1zxiYYUmveodACvJR20dIPN3BbWrCaGw8NMDJBpClm8g9xXdSdgPRS3xQ8PBxN-NwDHUh4tuHwnrOrRmou9WH0XJ8dn_HywLrdf1RUBMuebQZ4Vqo&ref=track_package&campaign_label=buyer_shipping_confirmation&utm_source=transactional&utm_campaign=buyer_shipping_confirmation_010170_1210277431360_0_0&utm_medium=email&email_sent=1707189853&euid=SQtdtxvW51wp7edwCQTub1VYSnBe&eaid=1061131780231&x_eaid=db3bc78c51&show_drawer=1
-t3 https://www.etsy.com/your/purchases/3203549231?show_shipping=1241354157080&from_email=shipping_notification&mutv=1kpZLVfjQuvcoLxn79xbetaIaeX_BsDauNSld5E9AkBNZMFhdgrqioGtiGdnJBRJUPfL6jGSV7ueOOmBT-elIhk8iEUPZGLNPTMwPaJTFtC2Z35M-_Hij2vGTO13vu67Fa&ref=track_package&campaign_label=buyer_shipping_confirmation&utm_source=transactional&utm_campaign=buyer_shipping_confirmation_010170_1210277431360_0_0&utm_medium=email&email_sent=1707852905&euid=3ZGk3D6KpTOzn7f46q14dmrHwIh0&eaid=1061131780231&x_eaid=db3bc78c51#shipments
 tg https://web.telegram.org/a/
 tifr https://www.tifr.res.in/~academics/gs_advertisement.php
 toefl https://v2.ereg.ets.org/ereg/public/jump?_p=TEL

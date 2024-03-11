@@ -436,6 +436,7 @@ c.url.searchengines = {
     'ri': 'https://www.reddit.com/search/?q={}',
     'syn': 'https://www.thesaurus.com/browse/{}',
     'tpb': 'https://thepiratebay.org/search.php?q={}',
+    'tmdb': 'https://www.themoviedb.org/search?query={}',
     'tz2': 'https://torrentz2.nz/search?q={}',
     'wa': 'https://www.wolframalpha.com/input?i2d=true&i={}',
     'wm': 'https://mathworld.wolfram.com/search/?query={}',
