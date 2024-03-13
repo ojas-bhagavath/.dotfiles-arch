@@ -176,7 +176,7 @@ wf-recorder-git                 # Screen recording utility for wayland
 wget                            # A file downloading utility
 wireless_tools                  # Tools allowing to manipulate the Wireless Extensions
 wireplumber                     # Session / policy manager implementation for PipeWire
-wl-clipboard-rs                 # Clipboard tool for wayland
+wl-clipboard                    # Clipboard tool for wayland
 wlroots                         # Some tools for wayland
 wpa_supplicant                  # A cross platform supplicant with support for wpa
 xdg-desktop-portal-hyprland     # A desktop portal for hyprland
