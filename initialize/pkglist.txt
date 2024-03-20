@@ -39,6 +39,7 @@ ffmpegthumbs                    # FFmpeg-based thumbnail creator for video files
 firefox                         # The fallback browser 
 flacon                          # A tool to extract flac files in using CUE files
 flatpak                         # Enables installing flatpaks
+foot                            # A neat terminal emulator for wayland
 fzf                             # Fuzzy finder
 gaupol                          # A tool to manipulate srt files 
 gcc                             # A GNU Compiler Collection for C and C++
@@ -171,7 +172,6 @@ vulcan-intel                    # Graphics driver
 waybar                          # A customizable top bar for wayland
 wayland                         # A display server protocol intended to be a successor of Xorg
 wev                             # Tool for debugging wayland events
-wezterm-git                     # A neat modern terminal emulator written in rust, configured in lua
 wf-recorder-git                 # Screen recording utility for wayland
 wget                            # A file downloading utility
 wireless_tools                  # Tools allowing to manipulate the Wireless Extensions
