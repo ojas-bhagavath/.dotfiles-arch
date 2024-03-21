@@ -73,6 +73,7 @@ keymap = [
 	{ on = [ "D" ],         run = [ "remove --permanently", "escape --visual --select" ], desc = "Permanently delete the files" },
 	{ on = [ "a" ],         run = "create",                                               desc = "Create a file or directory (ends with / for directories)" },
 	{ on = [ "r" ],         run = "rename --cursor=before_ext",                           desc = "Rename a file or directory" },
+	{ on = [ "R" ],         run = "rename --empty=stem --cursor=start",                   desc = "Rename a file and wait to paste a copied value" },
 	{ on = [ ";" ],         run = "shell",                                                desc = "Run a shell command" },
 	{ on = [ ":" ],         run = "shell --block",                                        desc = "Run a shell command (block the UI until the command finishes)" },
 	{ on = [ "." ],         run = "hidden toggle",                                        desc = "Toggle the visibility of hidden files" },
@@ -196,7 +197,7 @@ keymap = [
 keymap = [
 	{ on = [ "<C-q>" ],   run = "close",          desc = "Cancel input" },
 	{ on = [ "<Enter>" ], run = "close --submit", desc = "Submit the input" },
-	{ on = [ "<Esc>" ],   run = "escape",         desc = "Go back the normal mode, or cancel input" },
+	{ on = [ "<Esc>" ],   run = "close",         desc = "Cancel input" },
 
 	# Mode
 	{ on = [ "i" ], run = "insert",                              desc = "Enter insert mode" },

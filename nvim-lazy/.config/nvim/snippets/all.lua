@@ -28,4 +28,9 @@ local IISER = s("IISER", {
 })
 table.insert(snippets, IISER)
 
+local address = s("address", {
+    t("3650, 4th main, 9th cross, SS Layout, B Block, Davanagere, Karnataka 577004, India"),
+})
+table.insert(snippets, address)
+
 return snippets, autosnippets
