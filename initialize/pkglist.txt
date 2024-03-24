@@ -40,6 +40,7 @@ firefox                         # The fallback browser
 flacon                          # A tool to extract flac files in using CUE files
 flatpak                         # Enables installing flatpaks
 foot                            # A neat terminal emulator for wayland
+fuzzel                          # A rofi/dmenu like application launcher for wayland
 fzf                             # Fuzzy finder
 gaupol                          # A tool to manipulate srt files 
 gcc                             # A GNU Compiler Collection for C and C++
@@ -128,7 +129,6 @@ qtpass                          # A GUI tool for pass
 qutebrowser-git                 # A highly customizable browser built around vim binds
 reflector                       # A Python 3 module and script to retrieve and filter the latest Pacman mirror list.
 ripgrep                         # A search tool that combines the usability of ag with the raw speed of grep
-rofi                            # A window switcher, application launcher and dmenu replacement
 ruby                            # An object-oriented language for quick and easy programming
 rustup                          # Systems programming language focused on safety, speed and concurrency
 scdoc                           # A tool to generate roff man pages
