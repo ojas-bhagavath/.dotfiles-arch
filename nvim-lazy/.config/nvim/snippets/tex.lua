@@ -16,21 +16,56 @@ local in_mathzone = function()
     return vim.fn["vimtex#syntax#in_mathzone"]() == 1
 end
 -- Snippets go here!
-
-local beginend = s("oc", {
-    t("\\begin{"),
-    i(1, ""),
-    t("}["),
-    i(2, ""),
-    t({ "]", "" }),
-    t("    "),
-    i(3, ""),
-    t({ "", "" }),
-    t("\\end{"),
-    rep(1),
-    t({ "}", "" }),
+--
+local pou = s("pou", {
+    c(1, {
+        fmt("partition of unity {}", {
+            i(1, ""),
+        }),
+        fmt("Partition of Unity {}", {
+            i(1, ""),
+        }),
+    }),
 })
-table.insert(snippets, beginend)
+table.insert(autosnippets, pou)
+
+local openclose = s("oc", {
+    c(1, {
+
+        fmt(
+            [[
+\begin{{{}}}[{}]
+    {}
+\end{{{}}}
+\vspace{{0.5cm}}
+{}
+]],
+            {
+                i(1, ""),
+                i(2, ""),
+                i(3, ""),
+                rep(1),
+                i(4, ""),
+            }
+        ),
+        fmt(
+            [[
+\begin{{{}}}[{}]
+    {}
+\end{{{}}}
+{}
+]],
+            {
+                i(1, ""),
+                i(2, ""),
+                i(3, ""),
+                rep(1),
+                i(4, ""),
+            }
+        ),
+    }),
+})
+table.insert(snippets, openclose)
 
 local frac = s("//", {
     t("\\frac{"),
@@ -56,7 +91,7 @@ local sup = s({ trig = "^", wordTrig = false }, {
 table.insert(autosnippets, sup)
 
 local wrt = s("wrt", {
-    t("with respect to"),
+    t("with respect to "),
 })
 table.insert(autosnippets, wrt)
 
