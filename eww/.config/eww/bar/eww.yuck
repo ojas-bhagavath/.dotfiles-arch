@@ -169,6 +169,8 @@
     (eventbox
         :onscroll "$HOME/.scripts/eww.brightness {}"
         :onclick "brightnessctl set 2%"
+        :onrightclick "brightnessctl set 9%"
+        :onmiddleclick "brightnessctl set 16%"
         :onhover "${eww} update brightness-poll=true"
         :onhoverlost "${eww} update brightness-poll=false"
         (box
