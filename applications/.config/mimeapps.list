@@ -1,13 +1,7 @@
-[Added Associations]
-application/epub+zip=sioyek.desktop;
-application/pdf=sioyek.desktop;
-text/plain=neovide.desktop;
-video/mp4=vlc.desktop;
-video/x-matroska=vlc.desktop;
-
 [Default Applications]
+application/pdf=sioyek.desktop;
 application/toml=neovide.desktop;
-application/x-desktop=neovide.desktop;
+application/x-shellscript=org.codeberg.dnkl.foot.desktop;
 audio/*=vlc.desktop;
 audio/flac=vlc.desktop;
 audio/mp3=vlc.desktop;
@@ -15,12 +9,15 @@ audio/mpeg=vlc.desktop;
 image/*=nsxiv.desktop;
 image/jpeg=nsxiv.desktop;
 image/png=nsxiv.desktop;
+text/*=neovide.desktop;
 text/plain=neovide.desktop;
+text/x-bibtex=neovide.desktop;
+text/x-tex=neovide.desktop;
 video/mp4=vlc.desktop;
 video/x-matroska=vlc.desktop;
-vidio/*=mpv.desktop;
+vidio/*=vlc.desktop;
 x-scheme-handler/about=org.qutebrowser.qutebrowser.desktop;
 x-scheme-handler/http=org.qutebrowser.qutebrowser.desktop;
 x-scheme-handler/https=org.qutebrowser.qutebrowser.desktop;
-x-scheme-handler/terminal=org.wezfurlong.wezterm.desktop;
+x-scheme-handler/terminal=org.codeberg.dnkl.foot.desktop;
 x-scheme-handler/unknown=org.qutebrowser.qutebrowser.desktop;
