@@ -53,11 +53,11 @@ grub                            # A neat bootloader
 grub-btrfs                      # grub, but for btrfs
 gvfs                            # A utility that creates a virtual file system including a trash can 
 handlr                          # Powerful alternative to xdg-utils written in Rust
-hypridle                        # Idle daemon for hyprland
-hyprland                        # A wayland compositor/window manager
-hyprlock                        # Lock screen thing for hyprland
-hyprpaper                       # A wallpaper utility for wayland
-hyprpicker                      # A colorpicker for hyprland
+hypridle-git                    # Idle daemon for hyprland
+hyprland-git                    # A wayland compositor/window manager
+hyprlock-git                    # Lock screen thing for hyprland
+hyprpaper-git                   # A wallpaper utility for wayland
+hyprpicker-git                  # A colorpicker for hyprland
 id3                             # A utility to edit id3v1 and id3v2 tags
 imagemagick                     # An image viewing/manipulation program
 inkscape                        # A neat vector drawing utility
@@ -179,7 +179,7 @@ wireplumber                     # Session / policy manager implementation for Pi
 wl-clipboard                    # Clipboard tool for wayland
 wlroots                         # Some tools for wayland
 wpa_supplicant                  # A cross platform supplicant with support for wpa
-xdg-desktop-portal-hyprland     # A desktop portal for hyprland
+xdg-desktop-portal-hyprland-git # A desktop portal for hyprland
 xdg-utils-handlr                # To replace xdg-open with handlr
 yay                             # AUR helper written in go
 yazi                            # A TUI file manager written in rust
