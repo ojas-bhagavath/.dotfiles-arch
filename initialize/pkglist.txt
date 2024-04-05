@@ -185,6 +185,7 @@ yay                             # AUR helper written in go
 yazi                            # A TUI file manager written in rust
 yt-dlp                          # A youtube-dl fork with additional features and fixes
 ytfzf                           # A POSIX script to find and watch youtube videos from the terminal
+zip                             # Compressor/archiver for creating and modifying zipfiles
 zoxide                          # A smarter cd replacement
 zram-generator                  # Systemd unit generator for zram devices
 zsh                             # An advanced and programmable command interpreter for UNIX
