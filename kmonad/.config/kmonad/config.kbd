@@ -26,12 +26,12 @@
     ml (tap-hold-next-release 500 l lalt)
     m; (tap-hold-next-release 500 ; rmet)
 
-    l1 (layer-switch 1)
-    l2 (layer-switch 2)
+    l1 (layer-switch std)
+    l2 (layer-switch mod)
 )
 
 
-(deflayer 1
+(deflayer std
   @l2  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12   prnt    del
   grv   1    2    3    4    5    6    7    8    9    0    -    =         bspc       home
   tab     q    w    e    r    t    y    u    i    o    p    [    ]   \              pgup
@@ -41,11 +41,11 @@
 )
 
 
-(deflayer 2
+(deflayer mod
   @l1   f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12   prnt    del
   grv   1    2    3    4    5    6    7    8    9    0    -    =         bspc       home
   tab   q    w    e    r    t    y    u    i    o    p    [    ]   \                pgup
   esc @ma  @ms  @md  @mf   g    h   @mj  @mk  @ml  @m;   '     ret                  pgdn
-  lsft  z    x    c    v    b    n    m    ,    .    /          rsft                 end                      up
-  lctl    lmet lalt           spc            ralt  cmp  rctl                                left    down    right
+  XX    z    x    c    v    b    n    m    ,    .    /          XX                  end                      up
+  XX    XX XX           spc            XX  XX  XX                                left    down    right
 )
