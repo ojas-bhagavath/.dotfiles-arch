@@ -230,7 +230,7 @@ c.content.print_element_backgrounds = True
 c.content.private_browsing = False
 c.content.proxy = "system"
 c.content.proxy_dns_requests = True
-c.content.register_protocol_handler = "ask"
+c.content.register_protocol_handler: True
 c.content.site_specific_quirks.enabled = True
 c.content.tls.certificate_errors = "ask"
 c.content.unknown_url_scheme_policy = "allow-from-user-interaction"
@@ -241,7 +241,7 @@ c.content.xss_auditing = False
 # Downloads
 c.downloads.location.prompt = True
 c.downloads.location.remember = True
-c.downloads.location.suggestion = "path"
+c.downloads.location.suggestion = "both"
 c.downloads.position = "top"
 c.downloads.prevent_mixed_content = False
 c.downloads.remove_finished = 30000
@@ -441,6 +441,7 @@ c.url.searchengines = {
     'tpb': 'https://thepiratebay.org/search.php?q={}',
     'tmdb': 'https://www.themoviedb.org/search?query={}',
     'tz2': 'https://torrentz2.nz/search?q={}',
+    'ud': 'https://www.urbandictionary.com/define.php?term={}',
     'wa': 'https://www.wolframalpha.com/input?i2d=true&i={}',
     'wm': 'https://mathworld.wolfram.com/search/?query={}',
     'wp': 'https://en.wikipedia.org/wiki/{}',
