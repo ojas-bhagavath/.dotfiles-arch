@@ -1,7 +1,24 @@
 return {
-    { "stevearc/oil.nvim" },
+    {
+        "stevearc/oil.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+    },
 
-    { "NvChad/nvim-colorizer.lua" },
+    {
+        "NvChad/nvim-colorizer.lua",
+        opts = {
+            filetypes = { "*" },
+            user_default_options = {
+                names = false,
+                RRGGBBAA = true,
+                AARRGGBB = true,
+                rgb_fn = true,
+                hsl_fn = true,
+                css = true,
+                css_fn = true,
+            },
+        },
+    },
 
     {
         "LazyVim/LazyVim",
@@ -52,7 +69,9 @@ return {
         dependencies = {
             "rafamadriz/friendly-snippets",
             config = function()
-                require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/snippets/" })
+                require("luasnip.loaders.from_lua").load({
+                    paths = "~/.config/nvim/snippets/",
+                })
             end,
         },
         opts = {
@@ -68,8 +87,7 @@ return {
     {
         "nvimdev/dashboard-nvim",
         opts = function()
-            local logo = [[
-  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠔⣨⣼⣽⣿⣿⣯⣙⣛⠯⣿⣥⣒⡢⢄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            local logo = [[  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠔⣨⣼⣽⣿⣿⣯⣙⣛⠯⣿⣥⣒⡢⢄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⣴⣶⣿⡿⠟⠛⠛⠛⠛⠻⡿⣾⣶⣝⣿⣿⣶⣮⣖⣤⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⢪⣾⣿⡟⠉⠀⠀⠀⠀⠀⠀⠀⠰⢉⡛⢿⣯⣿⣾⣷⣻⣾⢿⣮⣕⠦⡀⠀⠀⠀⠀⠀⠀⠀⠀
   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣡⣿⣿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠐⢿⣯⣿⣷⣿⡽⣿⣳⣿⣻⣬⣦⡀⠀⠀⠀⠀⠀⠀

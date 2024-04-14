@@ -37,6 +37,9 @@ export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export GOPATH="$XDG_DATA_HOME/go"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME/java"
+export STACK_ROOT="$XDG_DATA_HOME"/stack
+export STACK_XDG=1
+export PARALLEL_HOME="$XDG_CONFIG_HOME"/parallel 
 
 # PATH
 export PATH="$PATH:$HOME/.local/bin"

@@ -241,7 +241,7 @@ c.content.xss_auditing = False
 # Downloads
 c.downloads.location.prompt = True
 c.downloads.location.remember = True
-c.downloads.location.suggestion = "both"
+c.downloads.location.suggestion = "path"
 c.downloads.position = "top"
 c.downloads.prevent_mixed_content = False
 c.downloads.remove_finished = 30000
