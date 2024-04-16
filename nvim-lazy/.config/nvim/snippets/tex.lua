@@ -37,7 +37,7 @@ local openclose = s("oc", {
 \begin{{{}}}[{}]
     {}
 \end{{{}}}
-\vspace{{0.5cm}}
+\vspace{{0.3cm}}
 {}
 ]],
             {

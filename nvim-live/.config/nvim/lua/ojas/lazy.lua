@@ -11,4 +11,15 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({ import = "ojas.plugins" })
+require("lazy").setup("ojas.plugins", {
+	install = {
+		colorscheme = { "tokyonight-moon", "default" },
+	},
+	checker = {
+		enabled = true,
+		notify = false,
+	},
+	change_detection = {
+		notify = false,
+	},
+})

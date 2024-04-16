@@ -3,7 +3,7 @@ return {
     event = "VeryLazy",
     init = function()
         vim.o.timeout = true
-        vim.o.timeoutlen = 500
+        vim.o.timeoutlen = 200
     end,
     opts = {
         plugins = { spelling = true },
@@ -12,7 +12,7 @@ return {
         local wk = require("which-key")
         wk.register({
             ["<leader>b"] = {
-                name = "+buffer",
+                name = "+buffers",
             },
             ["<leader>c"] = {
                 name = "+code",
@@ -23,8 +23,11 @@ return {
             ["<leader>g"] = {
                 name = "+git",
             },
+            ["<leader>q"] = {
+                name = "+sessions",
+            },
             ["<leader>s"] = {
-                name = "+split",
+                name = "+splits",
             },
             ["<leader>t"] = {
                 name = "+tabs",

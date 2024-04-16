@@ -24,6 +24,15 @@ return {
                 find_files = {
                     hidden = true,
                 },
+                oldfiles = {
+                    hidden = true,
+                },
+                live_grep = {
+                    hidden = true,
+                },
+                grep_string = {
+                    hidden = true,
+                },
             },
         })
         telescope.load_extension("fzf")
