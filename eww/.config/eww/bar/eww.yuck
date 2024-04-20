@@ -1,5 +1,5 @@
 (defvar eww "eww -c $HOME/.config/eww/bar")
-(defvar terminal "foot -e")
+(defvar terminal "wezterm -e")
 
 (defwindow bar
     :monitor 0
