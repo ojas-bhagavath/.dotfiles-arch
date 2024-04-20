@@ -17,17 +17,25 @@ local in_mathzone = function()
 end
 -- Snippets go here!
 --
+local nbd = s("nbd", {
+    t("neighborhood"),
+})
+table.insert(autosnippets, nbd)
+
+local Nbd = s("Nbd", {
+    t("Neighborhood"),
+})
+table.insert(autosnippets, Nbd)
+
 local pou = s("pou", {
-    c(1, {
-        fmt("partition of unity {}", {
-            i(1, ""),
-        }),
-        fmt("Partition of Unity {}", {
-            i(1, ""),
-        }),
-    }),
+    t("partition of unity"),
 })
 table.insert(autosnippets, pou)
+
+local PoU = s("PoU", {
+    t("Partition of Unity"),
+})
+table.insert(autosnippets, PoU)
 
 local openclose = s("oc", {
     c(1, {
