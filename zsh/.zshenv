@@ -46,9 +46,5 @@ export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$CARGO_HOME/bin"
 export PATH="$PATH:$HOME/.scripts"
 
-# QT Stuff
-export QT_QPA_PLATFORMTHEME="qt5ct"
-export QT_STYLE_OVERRIDE="qt5ct"
-
 export OPENER=handlr
 . "/home/ojas/.local/share/cargo/env"
