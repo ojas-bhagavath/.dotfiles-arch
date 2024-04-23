@@ -125,6 +125,7 @@ python-tldextract               # A package required for qute-pass
 qbittorrent                     # An open source torrent client
 qpdf                            # A Content-Preserving PDF Transformation System
 qt5ct                           # Qt5 Configuration Utility
+qt6ct                           # Qt6 Configuration Utility
 qtpass                          # A GUI tool for pass
 qutebrowser-git                 # A highly customizable browser built around vim binds
 reflector                       # A Python 3 module and script to retrieve and filter the latest Pacman mirror list.
@@ -154,10 +155,12 @@ thefuck                         # A tool to correct your mistakes with your reac
 timeshift                       # A snapshotting utility
 timeshift-autosnap              # A utility to automatically take snapshots before system updates
 tlp                             # A power management utility
+tlpui                           # A GUI frontend for tlp
 tlrc                            # A tool that gives easy to understand versions of the manual with example
 tmate                           # Utility to access remote terminal
 tmsu                            # A tool to tag any file and access the tags
 trash-cli                       # A cli trash manager
+tree-sitter-cli                 # CLI tool for developing, testing, and using Tree-sitter parsers
 ttf-font-awesome                # An awesome font
 ttf-kannada-font                # Kannada font
 tumbler                         # A utility to generate thumbnails 
