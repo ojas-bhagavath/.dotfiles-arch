@@ -42,18 +42,15 @@ local openclose = s("oc", {
 
         fmt(
             [[
-\begin{{{}}}[{}]
+\begin{{{}}}{{{}}}
     {}
 \end{{{}}}
-\vspace{{0.3cm}}
-{}
 ]],
             {
                 i(1, ""),
                 i(2, ""),
                 i(3, ""),
                 rep(1),
-                i(4, ""),
             }
         ),
         fmt(
@@ -61,6 +58,7 @@ local openclose = s("oc", {
 \begin{{{}}}[{}]
     {}
 \end{{{}}}
+\vspace{{0.3cm}}
 {}
 ]],
             {
