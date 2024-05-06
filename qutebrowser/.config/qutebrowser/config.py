@@ -63,6 +63,7 @@ magenta =       "#c099ff"
 cyan =          "#86e1fc"
 white0 =        "#828bb8"
 white1 =        "#c8d3f5"
+
 c.colors.completion.category.bg = background
 c.colors.completion.category.border.bottom = black0
 c.colors.completion.category.border.top = white0
@@ -259,7 +260,7 @@ c.fileselect.single_file.command = ["foot", "-e", "--title=menu", "yazi", "--cho
 
 # Fonts
 c.fonts.default_family = "Hack Nerd Font"
-c.fonts.default_size = "13pt"
+c.fonts.default_size = "14pt"
 c.fonts.completion.category = "bold default_size default_family"
 c.fonts.completion.entry = "default_size default_family"
 c.fonts.contextmenu = "default_size default_family"
@@ -271,8 +272,8 @@ c.fonts.messages.error = "default_size default_family"
 c.fonts.messages.info = "default_size default_family"
 c.fonts.messages.warning = "default_size default_family"
 c.fonts.prompts = "default_size default_family"
-c.fonts.statusbar = "default_size default_family"
-c.fonts.tabs.selected = "bold default_size default_family"
+c.fonts.statusbar = "bold default_size default_family"
+c.fonts.tabs.selected = "italic bold default_size default_family"
 c.fonts.tabs.unselected = "default_size default_family"
 c.fonts.tooltip = "default_size default_family"
 c.fonts.web.size.default = 16

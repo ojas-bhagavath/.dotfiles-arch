@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cd ~/.dotfiles/
+cd ~/.dotfiles/ || exit
 stow -D nvim-lazy
 stow nvim-live

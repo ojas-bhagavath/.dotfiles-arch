@@ -150,6 +150,7 @@ tar                             # Utility used to store, backup, and transport f
 termdown                        # A terminal timer
 tesseract-data-eng              # Tesseract OCR data (eng)
 texlive                         # LaTeX fundamental packages
+texlive-doc                     # All the TeX documentation
 texlive-lang                    # Texlive tools for non-Latin languages
 thefuck                         # A tool to correct your mistakes with your reaction
 timeshift                       # A snapshotting utility
