@@ -47,4 +47,3 @@ export PATH="$PATH:$CARGO_HOME/bin"
 export PATH="$PATH:$HOME/.scripts"
 
 export OPENER=handlr
-. "/home/ojas/.local/share/cargo/env"

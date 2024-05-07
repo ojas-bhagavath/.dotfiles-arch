@@ -37,7 +37,6 @@ ffmpeg                          # Complete solution to record, convert and strea
 ffmpegthumbnailer               # A utility to produce video thumbnails for yazi
 ffmpegthumbs                    # FFmpeg-based thumbnail creator for video files in Dolphin
 firefox                         # The fallback browser 
-flacon                          # A tool to extract flac files in using CUE files
 flatpak                         # Enables installing flatpaks
 foot                            # A neat terminal emulator for wayland
 fuzzel                          # A rofi/dmenu like application launcher for wayland
@@ -141,7 +140,6 @@ socat                           # A multipurpose relay tool
 sox                             # A sound proocessing tool
 speedread-git                   # A command line utility for speed reading
 speedtest-cli                   # Command line interface for testing internet bandwidth using speedtest.net
-spotify                         # A proprietary music streaming service
 starship                        # A cross platform prompt for various shells
 stow                            # A powerful symlink utility
 strace                          # A diagnostic, debugging and instructional userspace tracer
@@ -172,7 +170,6 @@ unzip                           # A zip uncompression program
 vi                              # The OG text editor
 vlc                             # A simple media player
 volumectl                       # A simple utility to control/obtain audio volume
-vulcan-intel                    # Graphics driver
 waybar                          # A customizable top bar for wayland
 wayland                         # A display server protocol intended to be a successor of Xorg
 wev                             # Tool for debugging wayland events
