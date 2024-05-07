@@ -1,9 +1,6 @@
 [Added Associations]
-application/pdf=sioyek-3.desktop;sioyek-2.desktop;
-video/x-matroska=vlc-3.desktop;
 
 [Default Applications]
-application/pdf=sioyek-3.desktop;
 application/toml=neovide.desktop;
 application/x-shellscript=org.codeberg.dnkl.foot.desktop;
 audio/*=vlc.desktop;
@@ -14,11 +11,11 @@ image/*=nsxiv.desktop;
 image/jpeg=nsxiv.desktop;
 image/png=nsxiv.desktop;
 text/*=neovide.desktop;
+text/html=org.qutebrowser.qutebrowser.desktop;
 text/plain=neovide.desktop;
 text/x-bibtex=neovide.desktop;
 text/x-tex=neovide.desktop;
 video/mp4=vlc.desktop;
-video/x-matroska=vlc-3.desktop;
 vidio/*=vlc.desktop;
 x-scheme-handler/about=org.qutebrowser.qutebrowser.desktop;
 x-scheme-handler/http=org.qutebrowser.qutebrowser.desktop;
