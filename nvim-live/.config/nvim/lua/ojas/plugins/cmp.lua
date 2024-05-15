@@ -12,20 +12,12 @@ return {
                 build = "make install_jsregexp",
             },
             "saadparwaiz1/cmp_luasnip",
-            "rafamadriz/friendly-snippets",
             "onsails/lspkind.nvim",
-            "windwp/nvim-autopairs",
         },
         config = function()
-            local cmp_autopairs = require("nvim-autopairs.completion.cmp")
             local cmp = require("cmp")
             local luasnip = require("luasnip")
             local lspkind = require("lspkind")
-
-            require("nvim-autopairs").setup()
-
-            -- Integrate nvim-autopairs with cmp
-            cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 
             -- Load snippets
             require("luasnip.loaders.from_vscode").lazy_load()

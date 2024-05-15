@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd ~/Stuff/Websites/ || exit
+website=$(ls | fzf --header="Saved Websites")
+
+cd "$website" || exit
+xdg-open index.html &

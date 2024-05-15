@@ -16,5 +16,5 @@ alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 
 # YouTube
 alias ytf="ytfzf -t -T wayland --features=hd,subtitles"
-alias ytv="yt-dlp -i -o \"$HOME/Stuff/Video/YouTube/%(title)s.%(ext)s\" -f \"bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best\" --write-auto-subs --embed-subs"
-alias yta="yt-dlp --prefer-ffmpeg --extract-audio --audio-format mp3 --audio-quality 0 -i -o \"$HOME/Stuff/Audio/YouTube/%(title)s.%(ext)s\""
+alias ytv="yt-dlp -i -o \"$HOME/Stuff/Videos/YouTube/%(title)s.%(ext)s\" -f \"bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best\" --write-auto-subs --embed-subs"
+alias yta="yt-dlp --prefer-ffmpeg --extract-audio --audio-format mp3 --audio-quality 0 -i -o \"$HOME/Stuff/Audios/YouTube/%(title)s.%(ext)s\""

@@ -149,7 +149,8 @@ keymap = [
 	{ on = [ "g", "s" ],       run = "cd ~/Stuff/",   desc = "Go to the Stuff directory" },
 	{ on = [ "g", "b" ],       run = "cd ~/Stuff/Books/",   desc = "Go to the Books directory" },
 	{ on = [ "g", "p" ],       run = "cd ~/Stuff/Pictures/",   desc = "Go to the Pictures directory" },
-	{ on = [ "g", "v" ],       run = "cd ~/Stuff/Video/",   desc = "Go to the Videos directory" },
+	{ on = [ "g", "v" ],       run = "cd ~/Stuff/Videos/",   desc = "Go to the Videos directory" },
+	{ on = [ "g", "w" ],       run = "cd ~/Stuff/Websites/",   desc = "Go to the Videos directory" },
 	{ on = [ "g", "D" ],       run = "cd ~/Stuff/Docs/documents/",   desc = "Go to the documents directory" },
 
 	# Help

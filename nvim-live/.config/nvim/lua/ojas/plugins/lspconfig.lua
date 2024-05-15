@@ -168,6 +168,7 @@ return {
             formatters_by_ft = {
                 lua = { "stylua" },
                 tex = { "latexindent" },
+                html = { "htmlbeautifier" },
             },
         },
     },
