@@ -13,10 +13,12 @@ export EDITOR="neovide"
 export VISUAL="neovide"
 
 # zsh specific variables
-export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-export HISTFILE="$XDG_CACHE_HOME/.zhistory"
-export HISTSIZE=10000000
-export SAVEHIST=10000000
+ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+HISTFILE="$XDG_CACHE_HOME/.zhistory"
+HISTSIZE=10000000
+SAVEHIST=10000000
+HISTDUP=erase
+
 
 
 # FZF

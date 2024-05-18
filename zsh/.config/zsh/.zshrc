@@ -22,3 +22,4 @@ source "$ZDOTDIR/zsh-cursor"
 # Misc
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+eval "$(fzf --zsh)"
