@@ -199,6 +199,7 @@ rules = [
     { name = "*.vue"  , text = "󰡄" },
 
     # Text
+    { name = "*.bib" , text = "" },
     { name = "*.conf", text = "" },
     { name = "*.ini" , text = "" },
     { name = "*.json", text = "" },
