@@ -141,177 +141,178 @@ footer  = { fg = "black", bg = "white" }
 [filetype]
 
 rules = [
-	# Images
-	{ mime = "image/*", fg = "cyan" },
+    # Images
+    { mime = "image/*", fg = "cyan" },
 
-	# Videos
-	{ mime = "video/*", fg = "yellow" },
-	{ mime = "audio/*", fg = "yellow" },
+    # Videos
+    { mime = "video/*", fg = "yellow" },
+    { mime = "audio/*", fg = "yellow" },
 
-	# Archives
-	{ mime = "application/zip",             fg = "blue" },
-	{ mime = "application/gzip",            fg = "blue" },
-	{ mime = "application/x-tar",           fg = "blue" },
-	{ mime = "application/x-bzip",          fg = "blue" },
-	{ mime = "application/x-bzip2",         fg = "blue" },
-	{ mime = "application/x-7z-compressed", fg = "blue" },
-	{ mime = "application/x-rar",           fg = "blue" },
-	{ mime = "application/xz",              fg = "blue" },
+    # Archives
+    { mime = "application/zip",             fg = "blue" },
+    { mime = "application/gzip",            fg = "blue" },
+    { mime = "application/x-tar",           fg = "blue" },
+    { mime = "application/x-bzip",          fg = "blue" },
+    { mime = "application/x-bzip2",         fg = "blue" },
+    { mime = "application/x-7z-compressed", fg = "blue" },
+    { mime = "application/x-rar",           fg = "blue" },
+    { mime = "application/xz",              fg = "blue" },
 
-	# Documents
-	{ mime = "application/doc",   fg = "green" },
-	{ mime = "application/pdf",   fg = "green" },
-	{ mime = "application/rtf",   fg = "green" },
-	{ mime = "application/vnd.*", fg = "green" },
+    # Documents
+    { mime = "application/doc",   fg = "green" },
+    { mime = "application/pdf",   fg = "green" },
+    { mime = "application/rtf",   fg = "green" },
+    { mime = "application/vnd.*", fg = "green" },
 
-	# Fallback
-	# { name = "*", fg = "white" },
-	{ name = "*/", fg = "magenta" }
+    # Fallback
+    # { name = "*", fg = "white" },
+    { name = "*/", fg = "magenta" }
 ]
 
 [icon]
 
 rules = [
-	# Programming
-	{ name = "*.c"    , text = "" },
-	{ name = "*.cpp"  , text = "" },
-	{ name = "*.css"  , text = "" },
-	{ name = "*.fish" , text = "" },
-	{ name = "*.go"   , text = "" },
-	{ name = "*.h"    , text = "" },
-	{ name = "*.hpp"  , text = "" },
-	{ name = "*.html" , text = "" },
-	{ name = "*.java" , text = "" },
-	{ name = "*.js"   , text = "" },
-	{ name = "*.jsx"  , text = "" },
-	{ name = "*.lua"  , text = "" },
-	{ name = "*.nix"  , text = "" },
-	{ name = "*.php"  , text = "" },
-	{ name = "*.py"   , text = "" },
-	{ name = "*.rb"   , text = "" },
-	{ name = "*.rs"   , text = "" },
-	{ name = "*.scss" , text = "" },
-	{ name = "*.sh"   , text = "" },
-	{ name = "*.swift", text = "" },
-	{ name = "*.ts"   , text = "" },
-	{ name = "*.tsx"  , text = "" },
-	{ name = "*.vim"  , text = "" },
-	{ name = "*.vue"  , text = "󰡄" },
+    # Programming
+    { name = "*.c"    , text = "" },
+    { name = "*.cpp"  , text = "" },
+    { name = "*.css"  , text = "" },
+    { name = "*.fish" , text = "" },
+    { name = "*.go"   , text = "" },
+    { name = "*.h"    , text = "" },
+    { name = "*.hpp"  , text = "" },
+    { name = "*.html" , text = "" },
+    { name = "*.java" , text = "" },
+    { name = "*.js"   , text = "" },
+    { name = "*.jsx"  , text = "" },
+    { name = "*.lua"  , text = "" },
+    { name = "*.nix"  , text = "" },
+    { name = "*.php"  , text = "" },
+    { name = "*.py"   , text = "" },
+    { name = "*.rb"   , text = "" },
+    { name = "*.rs"   , text = "" },
+    { name = "*.scss" , text = "" },
+    { name = "*.sh"   , text = "" },
+    { name = "*.swift", text = "" },
+    { name = "*.ts"   , text = "" },
+    { name = "*.tsx"  , text = "" },
+    { name = "*.vim"  , text = "" },
+    { name = "*.vue"  , text = "󰡄" },
 
-	# Text
-	{ name = "*.conf", text = "" },
-	{ name = "*.ini" , text = "" },
-	{ name = "*.json", text = "" },
-	{ name = "*.md" ,  text = "" },
-	{ name = "*.toml", text = "" },
-	{ name = "*.txt",  text = "" },
-	{ name = "*.yaml", text = "" },
-	{ name = "*.yml" , text = "" },
+    # Text
+    { name = "*.conf", text = "" },
+    { name = "*.ini" , text = "" },
+    { name = "*.json", text = "" },
+    { name = "*.md" ,  text = "" },
+    { name = "*.tex" , text = "" },
+    { name = "*.toml", text = "" },
+    { name = "*.txt",  text = "" },
+    { name = "*.yaml", text = "" },
+    { name = "*.yml" , text = "" },
 
-	# Archives
-	{ name = "*.7z" , text = "" },
-	{ name = "*.bz2", text = "" },
-	{ name = "*.gz" , text = "" },
-	{ name = "*.rar", text = "" },
-	{ name = "*.tar", text = "" },
-	{ name = "*.xz" , text = "" },
-	{ name = "*.zip", text = "" },
+    # Archives
+    { name = "*.7z" , text = "" },
+    { name = "*.bz2", text = "" },
+    { name = "*.gz" , text = "" },
+    { name = "*.rar", text = "" },
+    { name = "*.tar", text = "" },
+    { name = "*.xz" , text = "" },
+    { name = "*.zip", text = "" },
 
-	# Images
-	{ name = "*.HEIC", text = "" },
-	{ name = "*.avif", text = "" },
-	{ name = "*.bmp" , text = "" },
-	{ name = "*.gif" , text = "" },
-	{ name = "*.ico" , text = "" },
-	{ name = "*.jpeg", text = "" },
-	{ name = "*.jpg" , text = "" },
-	{ name = "*.png" , text = "" },
-	{ name = "*.svg" , text = "" },
-	{ name = "*.webp", text = "" },
+    # Images
+    { name = "*.HEIC", text = "" },
+    { name = "*.avif", text = "" },
+    { name = "*.bmp" , text = "" },
+    { name = "*.gif" , text = "" },
+    { name = "*.ico" , text = "" },
+    { name = "*.jpeg", text = "" },
+    { name = "*.jpg" , text = "" },
+    { name = "*.png" , text = "" },
+    { name = "*.svg" , text = "" },
+    { name = "*.webp", text = "" },
 
-	# Movies
-	{ name = "*.avi" , text = "" },
-	{ name = "*.mkv" , text = "" },
-	{ name = "*.mov" , text = "" },
-	{ name = "*.mp4" , text = "" },
-	{ name = "*.webm", text = "" },
+    # Movies
+    { name = "*.avi" , text = "" },
+    { name = "*.mkv" , text = "" },
+    { name = "*.mov" , text = "" },
+    { name = "*.mp4" , text = "" },
+    { name = "*.webm", text = "" },
 
-	# Audio
-	{ name = "*.aac" , text = "" },
-	{ name = "*.flac", text = "" },
-	{ name = "*.m4a" , text = "" },
-	{ name = "*.mp3" , text = "" },
-	{ name = "*.ogg" , text = "" },
-	{ name = "*.wav" , text = "" },
+    # Audio
+    { name = "*.aac" , text = "" },
+    { name = "*.flac", text = "" },
+    { name = "*.m4a" , text = "" },
+    { name = "*.mp3" , text = "" },
+    { name = "*.ogg" , text = "" },
+    { name = "*.wav" , text = "" },
 
-	# Documents
-	{ name = "*.csv" , text = "" },
-	{ name = "*.doc" , text = "" },
-	{ name = "*.doct", text = "" },
-	{ name = "*.docx", text = "" },
-	{ name = "*.dot" , text = "" },
-	{ name = "*.ods" , text = "" },
-	{ name = "*.ots" , text = "" },
-	{ name = "*.pdf" , text = "" },
-	{ name = "*.pom" , text = "" },
-	{ name = "*.pot" , text = "" },
-	{ name = "*.potx", text = "" },
-	{ name = "*.ppm" , text = "" },
-	{ name = "*.ppmx", text = "" },
-	{ name = "*.pps" , text = "" },
-	{ name = "*.ppsx", text = "" },
-	{ name = "*.ppt" , text = "" },
-	{ name = "*.pptx", text = "" },
-	{ name = "*.xlc" , text = "" },
-	{ name = "*.xlm" , text = "" },
-	{ name = "*.xls" , text = "" },
-	{ name = "*.xlsm", text = "" },
-	{ name = "*.xlsx", text = "" },
-	{ name = "*.xlt" , text = "" },
+    # Documents
+    { name = "*.csv" , text = "" },
+    { name = "*.doc" , text = "" },
+    { name = "*.doct", text = "" },
+    { name = "*.docx", text = "" },
+    { name = "*.dot" , text = "" },
+    { name = "*.ods" , text = "" },
+    { name = "*.ots" , text = "" },
+    { name = "*.pdf" , text = "" },
+    { name = "*.pom" , text = "" },
+    { name = "*.pot" , text = "" },
+    { name = "*.potx", text = "" },
+    { name = "*.ppm" , text = "" },
+    { name = "*.ppmx", text = "" },
+    { name = "*.pps" , text = "" },
+    { name = "*.ppsx", text = "" },
+    { name = "*.ppt" , text = "" },
+    { name = "*.pptx", text = "" },
+    { name = "*.xlc" , text = "" },
+    { name = "*.xlm" , text = "" },
+    { name = "*.xls" , text = "" },
+    { name = "*.xlsm", text = "" },
+    { name = "*.xlsx", text = "" },
+    { name = "*.xlt" , text = "" },
 
-	# Lockfiles
-	{ name = "*.lock", text = "" },
+    # Lockfiles
+    { name = "*.lock", text = "" },
 
-	# Misc
-	{ name = "*.bin", text = "" },
-	{ name = "*.exe", text = "" },
-	{ name = "*.pkg", text = "" },
+    # Misc
+    { name = "*.bin", text = "" },
+    { name = "*.exe", text = "" },
+    { name = "*.pkg", text = "" },
 
-	# Dotfiles
-	{ name = ".DS_Store"     , text = "" },
-	{ name = ".bashprofile"  , text = "" },
-	{ name = ".bashrc"       , text = "" },
-	{ name = ".gitattributes", text = "" },
-	{ name = ".gitignore"    , text = "" },
-	{ name = ".gitmodules"   , text = "" },
-	{ name = ".vimrc"        , text = "" },
-	{ name = ".zprofile"     , text = "" },
-	{ name = ".zshenv"       , text = "" },
-	{ name = ".zshrc"        , text = "" },
+    # Dotfiles
+    { name = ".DS_Store"     , text = "" },
+    { name = ".bashprofile"  , text = "" },
+    { name = ".bashrc"       , text = "" },
+    { name = ".gitattributes", text = "" },
+    { name = ".gitignore"    , text = "" },
+    { name = ".gitmodules"   , text = "" },
+    { name = ".vimrc"        , text = "" },
+    { name = ".zprofile"     , text = "" },
+    { name = ".zshenv"       , text = "" },
+    { name = ".zshrc"        , text = "" },
 
-	# Named files
-	{ name = "COPYING"      , text = "󰿃" },
-	{ name = "Containerfile", text = "󰡨" },
-	{ name = "Dockerfile"   , text = "󰡨" },
-	{ name = "LICENSE"      , text = "󰿃" },
+    # Named files
+    { name = "COPYING"      , text = "󰿃" },
+    { name = "Containerfile", text = "󰡨" },
+    { name = "Dockerfile"   , text = "󰡨" },
+    { name = "LICENSE"      , text = "󰿃" },
 
-	# Directories
-	{ name = ".config/"    , text = "" },
-	{ name = ".git/"       , text = "" },
-	{ name = "Desktop/"    , text = "" },
-	{ name = "Development/", text = "" },
-	{ name = "Documents/"  , text = "" },
-	{ name = "Downloads/"  , text = "" },
-	{ name = "Library/"    , text = "" },
-	{ name = "Movies/"     , text = "" },
-	{ name = "Music/"      , text = "" },
-	{ name = "Pictures/"   , text = "" },
-	{ name = "Public/"     , text = "" },
-	{ name = "Videos/"     , text = "" },
+    # Directories
+    { name = ".config/"    , text = "" },
+    { name = ".git/"       , text = "" },
+    { name = "Desktop/"    , text = "" },
+    { name = "Development/", text = "" },
+    { name = "Documents/"  , text = "" },
+    { name = "Downloads/"  , text = "" },
+    { name = "Library/"    , text = "" },
+    { name = "Movies/"     , text = "" },
+    { name = "Music/"      , text = "" },
+    { name = "Pictures/"   , text = "" },
+    { name = "Public/"     , text = "" },
+    { name = "Videos/"     , text = "" },
 
-	# Default
-	{ name = "*" , text = "" },
-	{ name = "*/", text = "" },
+    # Default
+    { name = "*" , text = "" },
+    { name = "*/", text = "" },
 ]
 
 # : }}}

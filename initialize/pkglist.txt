@@ -32,7 +32,7 @@ entr                            # A utility that runs arbitrary commands when fi
 eww                             # A powerful widget manager
 exfat-utils                     # As the name says...
 eza                             # ls replacement on fire
-fastfetch                       # 	Like Neofetch, but much faster because written in C
+fastfetch                       # Like Neofetch, but much faster because written in C
 fd                              # A fast find replacement
 ffmpeg                          # Complete solution to record, convert and stream audio and video
 ffmpegthumbnailer               # A utility to produce video thumbnails for yazi
@@ -66,7 +66,6 @@ intel-media-sdk                 # Legacy API for hardware video acceleration on 
 intel-ucode                     # Microcode update files for Intel CPUs
 jq                              # A commandline JSON parser
 kdegraphics-thumbnailers        # Thumbnailer for various graphic formats, including PDFs in Dolphin
-kdenlive                        # A video editor
 libpulse                        # A featureful, general-purpose sound server (client library)
 libsixel                        # A collection of tool to convert/view images to/in sixel format 
 libva-intel-driver              # VA-API implementation for Intel G45 and HD Graphics family

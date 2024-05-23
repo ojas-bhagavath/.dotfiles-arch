@@ -2,4 +2,5 @@
 
 cd ~/.dotfiles/ || exit
 stow -D nvim-lazy
+stow -D nvim-kick
 stow nvim-live
