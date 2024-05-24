@@ -1,6 +1,0 @@
-#!/bin/bash
-
-cd ~/.dotfiles/ || exit
-stow -D nvim-live
-stow -D nvim-lazy
-stow nvim-kick
