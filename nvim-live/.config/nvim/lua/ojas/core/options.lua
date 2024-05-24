@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
+vim.g.maplocalleader = " "
 vim.g.autoformat = true
 vim.g.markdown_recommended_style = 0
 
@@ -17,8 +17,9 @@ vim.opt.fillchars = { foldopen = "", foldclose = "", fold = " ", foldsep =
 vim.opt.foldlevel = 99
 vim.opt.formatoptions = "jcroqlnt"
 vim.opt.grepprg = "rg --vimgrep"
+vim.opt.hlsearch = true
 vim.opt.ignorecase = true
-vim.opt.inccommand = "nosplit"
+vim.opt.inccommand = "split"
 vim.opt.laststatus = 3
 vim.opt.list = true
 vim.opt.mouse = "a"
