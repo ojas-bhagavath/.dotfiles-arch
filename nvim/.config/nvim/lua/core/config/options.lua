@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+vim.g.maplocalleader = "//"
 vim.g.autoformat = true
 vim.g.markdown_recommended_style = 0
 
