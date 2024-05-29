@@ -145,6 +145,7 @@ keymap = [
 	{ on = [ "g", "h" ],       run = "cd ~",             desc = "Go to the home directory" },
 	{ on = [ "g", "c" ],       run = "cd ~/.config/",     desc = "Go to the config directory" },
 	{ on = [ "g", "." ],       run = "cd ~/.dotfiles/",     desc = "Go to the dotfiles directory" },
+	{ on = [ "g", "n" ],       run = "cd ~/.config/nvim/",     desc = "Go to the dotfiles directory" },
 	{ on = [ "g", "d" ],       run = "cd ~/Downloads/",   desc = "Go to the downloads directory" },
 	{ on = [ "g", "s" ],       run = "cd ~/Stuff/",   desc = "Go to the Stuff directory" },
 	{ on = [ "g", "b" ],       run = "cd ~/Stuff/Books/",   desc = "Go to the Books directory" },
@@ -163,7 +164,6 @@ keymap = [
 	{ on = [ "<Esc>" ], run = "close", desc = "Hide the task manager" },
 	{ on = [ "<C-q>" ], run = "close", desc = "Hide the task manager" },
 	{ on = [ "w" ],     run = "close", desc = "Hide the task manager" },
-
 	{ on = [ "k" ], run = "arrow -1", desc = "Move cursor up" },
 	{ on = [ "j" ], run = "arrow 1",  desc = "Move cursor down" },
 
