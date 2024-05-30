@@ -274,6 +274,9 @@ rules = [
     # Lockfiles
     { name = "*.lock", text = "" },
 
+    # Encrypted files
+    { name = "*.gpg", text = "" },
+
     # Misc
     { name = "*.bin", text = "" },
     { name = "*.exe", text = "" },
