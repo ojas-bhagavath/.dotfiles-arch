@@ -28,13 +28,13 @@ vim.opt.numberwidth = 2
 vim.opt.pumblend = 10
 vim.opt.pumheight = 10
 vim.opt.relativenumber = true
-vim.opt.scrolloff = 4
+vim.opt.scrolloff = 8
 vim.opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize", "help", "globals", "skiprtp", "folds" }
 vim.opt.shiftround = true
 vim.opt.shiftwidth = 4
 vim.opt.shortmess:append({ W = true, I = true, c = true, C = true })
 vim.opt.showmode = false
-vim.opt.sidescrolloff = 4
+vim.opt.sidescrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.smartcase = true
 vim.opt.smartindent = true

@@ -2,7 +2,7 @@ return {
     "echasnovski/mini.files",
     version = false,
     dependencies = { "nvim-tree/nvim-web-devicons" },
-    -- event = "VeryLazy",
+    event = "VeryLazy",
     opts = {
         mappings = {
             go_in = "L",
