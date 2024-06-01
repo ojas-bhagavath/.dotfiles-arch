@@ -18,7 +18,7 @@ return {
             theme = "doom",
             hide = {
                 bufferline = true,
-                statusline = false,
+                statusline = true,
             },
             config = {
                 disable_move = true,
