@@ -1,5 +1,5 @@
-require "core.config"
-require "core.lazy"
+require("core.config")
+require("core.lazy")
 
 if vim.g.neovide then
     vim.o.guifont = "Hack Nerd Font:h16"
