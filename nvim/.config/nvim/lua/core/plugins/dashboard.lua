@@ -50,7 +50,7 @@ return {
                     },
                     {
                         action = function()
-                            MiniFiles.open(vim.fn.expand("$HOME/.dotfiles/"), false)
+                            require("yazi").yazi(nil, vim.fn.expand("$HOME/.dotfiles/"))
                         end,
                         desc = " Dotfiles",
                         icon = " ",
@@ -58,7 +58,7 @@ return {
                     },
                     {
                         action = function()
-                            MiniFiles.open(vim.fn.expand("$HOME/.config/nvim/"), false)
+                            require("yazi").yazi(nil, vim.fn.expand("$HOME/.config/nvim/"))
                         end,
                         desc = " Neovim Config",
                         icon = " ",
