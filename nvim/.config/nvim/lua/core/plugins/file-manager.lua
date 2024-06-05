@@ -3,7 +3,6 @@ return {
     dependencies = {
         "nvim-lua/plenary.nvim",
     },
-    event = "VeryLazy",
     keys = {
         -- 👇 in this section, choose your own keymappings!
         {
@@ -22,8 +21,10 @@ return {
             desc = "Open the file manager in nvim's working directory",
         },
     },
-    ---@type YaziConfig
     opts = {
-        open_for_directories = false,
+        open_for_directories = true,
     },
+    config = function()
+        require("yazi").setup()
+    end,
 }
