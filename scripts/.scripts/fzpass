@@ -4,7 +4,8 @@ file=$(find .password-store -type f | grep -vwE "(.git|.gitattributes|.gpg-id)" 
 url=$(echo "$file" | awk -F '/' '{print $1}')
 uname=$(echo "$file" | awk -F '/' '{print $2}')
 
-action=$(cat <<EOF | fzf
+action=$(
+    cat <<EOF | fzf
 Username
 Password
 OTP
@@ -24,4 +25,3 @@ elif [ "$action" = "OTP" ]; then
 elif [ "$action" = "URL" ]; then
     wl-copy "$url"
 fi
-

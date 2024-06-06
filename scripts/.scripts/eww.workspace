@@ -1,48 +1,48 @@
 #!/bin/bash
 
-hyprspaces () {
-ws1=1
-ws2=2
-ws3=3
-ws4=4
-ws5=5
-ws6=6
-ws7=7
-ws8=8
-ws9=9
-ws10=0
+hyprspaces() {
+    ws1=1
+    ws2=2
+    ws3=3
+    ws4=4
+    ws5=5
+    ws6=6
+    ws7=7
+    ws8=8
+    ws9=9
+    ws10=0
 
-# Unoccupied
+    # Unoccupied
 
-un="0"
+    un="0"
 
-# check if Occupied
+    # check if Occupied
 
-o1=$(hyprctl workspaces -j | grep name | grep -o "$ws1")
-o2=$(hyprctl workspaces -j | grep name | grep -o "$ws2")
-o3=$(hyprctl workspaces -j | grep name | grep -o "$ws3")
-o4=$(hyprctl workspaces -j | grep name | grep -o "$ws4")
-o5=$(hyprctl workspaces -j | grep name | grep -o "$ws5")
-o6=$(hyprctl workspaces -j | grep name | grep -o "$ws6")
-o7=$(hyprctl workspaces -j | grep name | grep -o "$ws7")
-o8=$(hyprctl workspaces -j | grep name | grep -o "$ws8")
-o9=$(hyprctl workspaces -j | grep name | grep -o "$ws9")
-o10=$(hyprctl workspaces -j | grep name | grep -o "$ws10")
+    o1=$(hyprctl workspaces -j | grep name | grep -o "$ws1")
+    o2=$(hyprctl workspaces -j | grep name | grep -o "$ws2")
+    o3=$(hyprctl workspaces -j | grep name | grep -o "$ws3")
+    o4=$(hyprctl workspaces -j | grep name | grep -o "$ws4")
+    o5=$(hyprctl workspaces -j | grep name | grep -o "$ws5")
+    o6=$(hyprctl workspaces -j | grep name | grep -o "$ws6")
+    o7=$(hyprctl workspaces -j | grep name | grep -o "$ws7")
+    o8=$(hyprctl workspaces -j | grep name | grep -o "$ws8")
+    o9=$(hyprctl workspaces -j | grep name | grep -o "$ws9")
+    o10=$(hyprctl workspaces -j | grep name | grep -o "$ws10")
 
-# check if Focused
+    # check if Focused
 
-f1=$(hyprctl activeworkspace -j | grep name | grep -o "$ws1")
-f2=$(hyprctl activeworkspace -j | grep name | grep -o "$ws2")
-f3=$(hyprctl activeworkspace -j | grep name | grep -o "$ws3")
-f4=$(hyprctl activeworkspace -j | grep name | grep -o "$ws4")
-f5=$(hyprctl activeworkspace -j | grep name | grep -o "$ws5")
-f6=$(hyprctl activeworkspace -j | grep name | grep -o "$ws6")
-f7=$(hyprctl activeworkspace -j | grep name | grep -o "$ws7")
-f8=$(hyprctl activeworkspace -j | grep name | grep -o "$ws8")
-f9=$(hyprctl activeworkspace -j | grep name | grep -o "$ws9")
-f10=$(hyprctl activeworkspace -j | grep name | grep -o "$ws10")
+    f1=$(hyprctl activeworkspace -j | grep name | grep -o "$ws1")
+    f2=$(hyprctl activeworkspace -j | grep name | grep -o "$ws2")
+    f3=$(hyprctl activeworkspace -j | grep name | grep -o "$ws3")
+    f4=$(hyprctl activeworkspace -j | grep name | grep -o "$ws4")
+    f5=$(hyprctl activeworkspace -j | grep name | grep -o "$ws5")
+    f6=$(hyprctl activeworkspace -j | grep name | grep -o "$ws6")
+    f7=$(hyprctl activeworkspace -j | grep name | grep -o "$ws7")
+    f8=$(hyprctl activeworkspace -j | grep name | grep -o "$ws8")
+    f9=$(hyprctl activeworkspace -j | grep name | grep -o "$ws9")
+    f10=$(hyprctl activeworkspace -j | grep name | grep -o "$ws10")
 
-echo "
+    echo "
     (eventbox
 	:onclick \"hyprctl dispatch workspace 1\"
 	(box
@@ -139,5 +139,5 @@ echo "
 
 hyprspaces
 socat -u UNIX-CONNECT:/tmp/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock - | while read -r line; do
-hyprspaces
+    hyprspaces
 done

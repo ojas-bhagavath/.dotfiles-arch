@@ -1,16 +1,16 @@
 #!/bin/bash
 
 list=$(echo $PATH | tr ":" "\n")
-executable () {
-    for i in $list; do 
-        ls "$i" 
-    done\
-        | sort -u | fzf
+executable() {
+    for i in $list; do
+        ls "$i"
+    done |
+        sort -u | fzf
 }
 
-if selection=$( executable ); then
-    setsid "$selection" & pkill -n $!
-else 
-    exec $( executable )
+if selection=$(executable); then
+    setsid "$selection" &
+    pkill -n $!
+else
+    exec $(executable)
 fi
-

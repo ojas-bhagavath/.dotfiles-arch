@@ -14,12 +14,12 @@ power() {
 }
 
 icon() {
-    
-	[ "$connected" = "yes" ] && echo "󰂱" && exit
+
+    [ "$connected" = "yes" ] && echo "󰂱" && exit
 
     if [ "$powered" = "no" ]; then
         icon="󰂲"
-    else 
+    else
         icon="󰂰"
     fi
 

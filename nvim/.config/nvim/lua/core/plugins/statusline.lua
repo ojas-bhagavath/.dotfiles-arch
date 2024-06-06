@@ -1,6 +1,6 @@
 return {
     "nvim-lualine/lualine.nvim",
-    event = { "VeryLazy" },
+    event = { "BufReadPost", "BufWritePost", "BufNewFile" },
     opts = {
         options = {
             component_separators = "",

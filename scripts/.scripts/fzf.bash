@@ -16,19 +16,18 @@ function usage() {
 
 select_only=0
 
-while getopts "s" o
-do
+while getopts "s" o; do
     case "${o}" in
-        s)
-            select_only=1
-            ;;
-        *)
-            usage
-            ;;
+    s)
+        select_only=1
+        ;;
+    *)
+        usage
+        ;;
     esac
 done
 
-shift $((OPTIND-1))
+shift $((OPTIND - 1))
 query="$@"
 
 res=$(candidate_selector_fzf "$query")
