@@ -21,5 +21,6 @@ source "$ZDOTDIR/zsh-cursor"
 
 # Misc
 eval "$(starship init zsh)"
+ # eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/config.omp.json)"
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
