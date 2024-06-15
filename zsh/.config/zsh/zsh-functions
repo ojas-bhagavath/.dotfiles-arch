@@ -39,6 +39,7 @@ function zsh_add_completion() {
 
 function take {
     mkdir -p $1
+    echo "$2"
     cd $1
 }
 

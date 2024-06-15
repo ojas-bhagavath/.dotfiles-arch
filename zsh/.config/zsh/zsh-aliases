@@ -6,7 +6,6 @@ alias la='exa --oneline --icons --git --group-directories-first --long --all'
 alias treee='exa --tree'
 alias cp='cp -iv'
 alias mv='mv -iv'
-alias rm='rm -iv'
 
 # Cloudflare Warp
 alias wcc='warp-cli connect'
@@ -16,5 +15,7 @@ alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 
 # YouTube
 alias ytf="ytfzf -t -T wayland --features=hd,subtitles"
-alias ytv="yt-dlp -i -o \"$HOME/Stuff/Videos/YouTube/%(title)s.%(ext)s\" -f \"bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best\" --write-auto-subs --embed-subs --embed-chapters --embed-metadata --embed-thumbnail"
-alias yta="yt-dlp --prefer-ffmpeg --extract-audio --audio-format mp3 --audio-quality  0 -i -o \"$HOME/Stuff/Audios/YouTube/%(title)s.%(ext)s\" --embed-metadata --embed-thumbnail"
+alias ytv="yt-dlp -i -o \"$HOME/Stuff/Videos/YouTube/%(playlist_index)s - %(title)s.%(ext)s\" -f \"bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best\" --write-auto-subs --embed-subs --embed-chapters --embed-metadata --embed-thumbnail"
+alias yta="yt-dlp --prefer-ffmpeg --extract-audio --audio-format mp3 --audio-quality  0 -i -o \"$HOME/Stuff/Videos/YouTube/%(playlist_index)s - %(title)s.%(ext)s\" --embed-metadata --embed-thumbnail"
+
+alias rm='trash -iv'
