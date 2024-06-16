@@ -34,7 +34,6 @@ export GNUPGHOME="$HOME"/.gnupg
 export PASSWORD_STORE_DIR="$HOME/.password-store"
 
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
-export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export GOPATH="$XDG_DATA_HOME/go"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
