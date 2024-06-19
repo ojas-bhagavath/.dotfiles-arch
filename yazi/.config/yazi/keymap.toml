@@ -154,6 +154,7 @@ keymap = [
 	{ on = [ "g", "v" ],       run = "cd ~/Stuff/Videos/",   desc = "Go to the Videos directory" },
 	{ on = [ "g", "w" ],       run = "cd ~/Stuff/Websites/",   desc = "Go to the Videos directory" },
 	{ on = [ "g", "D" ],       run = "cd ~/Stuff/Docs/documents/",   desc = "Go to the documents directory" },
+	{ on = [ "g", "t" ],       run = "cd ~/.local/share/Trash/files/",   desc = "Go to the documents directory" },
 
 	# Help
 	{ on = [ "~" ], run = "help", desc = "Open help" },
