@@ -1,14 +1,14 @@
 # Completions:
 source "$ZDOTDIR/zsh-completions"
+#
+# Functions:
+source "$ZDOTDIR/zsh-functions"
 
 # Aliases:
 source "$ZDOTDIR/zsh-aliases"
 
 # Keybinds:
 source "$ZDOTDIR/zsh-bindkeys"
-
-# Functions:
-source "$ZDOTDIR/zsh-functions"
 
 # Options:
 source "$ZDOTDIR/zsh-options"
