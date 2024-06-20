@@ -155,6 +155,8 @@ keymap = [
 	{ on = [ "g", "w" ],       run = "cd ~/Stuff/Websites/",   desc = "Go to the Videos directory" },
 	{ on = [ "g", "D" ],       run = "cd ~/Stuff/Docs/documents/",   desc = "Go to the documents directory" },
 	{ on = [ "g", "t" ],       run = "cd ~/.local/share/Trash/files/",   desc = "Go to the documents directory" },
+	{ on = [ "g", "m" ],       run = "cd /run/media/$USER",   desc = "Go to the mount directory" },
+    { on = [ "g", "<Space>" ], run = "cd --interactive", desc = "Go to a directory interactively" },
 
 	# Help
 	{ on = [ "~" ], run = "help", desc = "Open help" },
