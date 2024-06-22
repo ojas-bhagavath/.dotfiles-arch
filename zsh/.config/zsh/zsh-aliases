@@ -4,9 +4,10 @@ alias :q='exit'
 # General shell commands
 alias la='exa --oneline --icons --git --group-directories-first --long --all'
 alias treee='exa --tree'
-alias cp='cp -iv'
 alias mv='mv -iv'
+alias cp='cp -iv'
 alias rm='trash -iv'
+alias cd='z'
 
 # Cloudflare Warp
 alias wcc='warp-cli connect'

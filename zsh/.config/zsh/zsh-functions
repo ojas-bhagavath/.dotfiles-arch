@@ -43,16 +43,17 @@ function take {
     cd $1
 }
 
-unalias=rm
 function yy() {
+    unalias rm cd
 	local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
 	yazi "$@" --cwd-file="$tmp"
 	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
 		cd -- "$cwd"
 	fi
 	rm -f -- "$tmp"
+    alias cd='z'
+    alias rm='trash -iv'
 }
-alias rm='trash -iv'
 
 function t2p {
     echo $1 | entr pdflatex $1
