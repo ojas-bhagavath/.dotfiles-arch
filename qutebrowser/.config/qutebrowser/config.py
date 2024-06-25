@@ -249,15 +249,15 @@ c.downloads.prevent_mixed_content = False
 c.downloads.remove_finished = 30000
 
 # Editor
-c.editor.command = ["foot", "-e", "nvim", "{file}", "-c", "normal {line}G{column0}1"]
+c.editor.command = ["wezterm", "-e", "nvim", "{file}", "-c", "normal {line}G{column0}1"]
 c.editor.encoding = "utf-8"
 c.editor.remove_file = True
 
 # Fileselect
 c.fileselect.handler = 'external'
-c.fileselect.folder.command = ["foot", "-e", "--title=menu", "yazi", "--chooser-file={}"]
-c.fileselect.multiple_files.command = ["foot", "-e", "--title=menu", "yazi", "--chooser-file={}"]
-c.fileselect.single_file.command = ["foot", "-e", "--title=menu", "yazi", "--chooser-file={}"]
+c.fileselect.folder.command = ["wezterm", "-e", "yazi", "--chooser-file={}"]
+c.fileselect.multiple_files.command = ["wezterm", "-e", "yazi", "--chooser-file={}"]
+c.fileselect.single_file.command = ["wezterm", "-e", "yazi", "--chooser-file={}"]
 
 # Fonts
 c.fonts.default_family = "Hack Nerd Font"
@@ -421,6 +421,8 @@ c.url.searchengines = {
     'cpp': 'https://www.learncpp.com/gsearch/?q={}',
     'ctan': 'https://ctan.org/search?phrase={}',
     'disc': 'https://www.discogs.com/search?q={}&type=all',
+    'dnf': 'https://packages.fedoraproject.org/search?query={}',
+    'fd': 'https://search.f-droid.org/?q={}&lang=en',
     'fh': 'https://flathub.org/apps/search?q={}',
     'fk': 'https://www.flipkart.com/search?q={}',
     'gh': 'https://github.com/search?q={}',
@@ -434,6 +436,7 @@ c.url.searchengines = {
     'maps': 'https://www.google.com/maps/search/{}',
     'mn': 'https://metanumbers.com/{}',
     'mse': 'https://math.stackexchange.com/search?q={}',
+    'nix': 'https://search.nixos.org/packages?channel=24.05&from=0&size=50&sort=relevance&type=packages&query={}',
     'oeis': 'https://oeis.org/search?q={}',
     'pac': 'https://archlinux.org/packages/?sort=&q={}',
     'pw': 'https://proofwiki.org/w/index.php?search={}',
