@@ -412,6 +412,7 @@ c.url.open_base_url = True
 c.url.searchengines = {
     'DEFAULT': 'https://search.brave.com/search?q={}',
     '1337x': 'https://1337x.to/search/{}/1/',
+    'aa': 'https://annas-archive.org/search?q={}',
     'am': 'https://www.amazon.in/s?k={}',
     'at': 'https://academictorrents.com/browse.php?search={}',
     'aur': 'https://aur.archlinux.org/packages?O=0&K={}',
