@@ -61,16 +61,16 @@ function t2p {
 
 function ytv() {
     if [[ "$1" =~ playlist ]]; then
-        yt-dlp --ignore-errors --yes-playlist --continue --format "bestvideo*+bestaudio/best" --remux-video "mkv" --embed-subs --embed-thumbnail --embed-chapters --embed-metadata --download-archive="$HOME/.config/yt-dlp/archive.txt" --output="$HOME/Stuff/Videos/%(channel)s/%(playlist)s/%(playlist_index)s. %(title)s.%(ext)s" $1
+        yt-dlp --ignore-errors --yes-playlist --continue --format "bestvideo*+bestaudio/best" --remux-video "mkv" --embed-subs --embed-thumbnail --embed-chapters --embed-metadata --output="$HOME/Stuff/Videos/%(channel)s/%(playlist)s/%(playlist_index)s. %(title)s.%(ext)s" $1
     else
-        yt-dlp --ignore-errors --no-playlist --continue --format "bestvideo*+bestaudio/best" --remux-video "mkv" --embed-subs --embed-thumbnail --embed-chapters --embed-metadata --download-archive="$HOME/.config/yt-dlp/archive.txt" --output="$HOME/Stuff/Videos/%(channel)s/%(title)s.%(ext)s" $1
+        yt-dlp --ignore-errors --no-playlist --continue --format "bestvideo*+bestaudio/best" --remux-video "mkv" --embed-subs --embed-thumbnail --embed-chapters --embed-metadata --output="$HOME/Stuff/Videos/%(channel)s/%(title)s.%(ext)s" $1
     fi
 }
 
 function yta() {
     if [[ "$1" =~ playlist ]]; then
-        yt-dlp --ignore-errors --yes-playlist --continue --format "bestaudio*" --extract-audio --audio-format="mp3" --audio-quality=0 --embed-thumbnail --embed-metadata --download-archive="$HOME/.config/yt-dlp/archive.txt" --output="$HOME/Stuff/Audios/%(channel)s/%(playlist)s/%(playlist_index)s. %(title)s.%(ext)s" $1
+        yt-dlp --ignore-errors --yes-playlist --continue --format "bestaudio*" --extract-audio --audio-format="mp3" --audio-quality=0 --embed-thumbnail --embed-metadata --output="$HOME/Stuff/Audios/%(channel)s/%(playlist)s/%(playlist_index)s. %(title)s.%(ext)s" $1
     else
-        yt-dlp --ignore-errors --no-playlist --continue --format "bestaudio*" --extract-audio --audio-format="mp3" --audio-quality=0 --embed-thumbnail --embed-metadata --download-archive="$HOME/.config/yt-dlp/archive.txt" --output="$HOME/Stuff/Audios/%(channel)s/%(title)s.%(ext)s" $1
+        yt-dlp --ignore-errors --no-playlist --continue --format "bestaudio*" --extract-audio --audio-format="mp3" --audio-quality=0 --embed-thumbnail --embed-metadata  --output="$HOME/Stuff/Audios/%(channel)s/%(title)s.%(ext)s" $1
     fi
 }
