@@ -26,13 +26,13 @@ return {
                 center = {
                     {
                         action = "ene | startinsert",
-                        desc = " New file",
+                        desc = " New File",
                         icon = " ",
                         key = "n",
                     },
                     {
                         action = "Telescope find_files",
-                        desc = " Find File",
+                        desc = " Find Files",
                         icon = " ",
                         key = "f",
                     },
@@ -44,7 +44,7 @@ return {
                     },
                     {
                         action = "SessionManager load_last_session",
-                        desc = " Restore Session",
+                        desc = " Restore Last Session",
                         icon = " ",
                         key = "s",
                     },
@@ -52,7 +52,7 @@ return {
                         action = function()
                             require("yazi").yazi(nil, vim.fn.expand("$HOME/.dotfiles/"))
                         end,
-                        desc = " Dotfiles",
+                        desc = " Open Dotfiles",
                         icon = " ",
                         key = "d",
                     },
@@ -60,19 +60,19 @@ return {
                         action = function()
                             require("yazi").yazi(nil, vim.fn.expand("$HOME/.config/nvim/"))
                         end,
-                        desc = " Neovim Config",
+                        desc = " Configure Neovim",
                         icon = " ",
                         key = "c",
                     },
                     {
                         action = "Lazy",
-                        desc = " Lazy",
+                        desc = " Open Lazy",
                         icon = "󰒲 ",
                         key = "l",
                     },
                     {
                         action = "qa",
-                        desc = " Quit",
+                        desc = " Quit Neovim",
                         icon = " ",
                         key = "q",
                     },
