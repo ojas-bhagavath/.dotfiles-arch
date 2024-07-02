@@ -1,3 +1,3 @@
 #!/bin/sh
 
-yay -S $(sed "s/\s.*//g" pkglist.txt | sort)
+yay -S --needed $(sed "s/\s.*//g" pkglist.txt | sort)
