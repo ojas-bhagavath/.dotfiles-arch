@@ -7,7 +7,7 @@ local config = {}
 -- In newer versions of wezterm, use the config_builder which will
 -- help provide clearer error messages
 if wezterm.config_builder then
-	config = wezterm.config_builder()
+    config = wezterm.config_builder()
 end
 
 -- This is where you actually apply your config choices
@@ -16,6 +16,8 @@ end
 config.color_scheme = "Tokyo Night Moon"
 config.font = wezterm.font("Hack Nerd Font")
 config.font_size = 16
+config.initial_cols = 120
+config.initial_rows = 35
 config.enable_scroll_bar = true
 config.hide_tab_bar_if_only_one_tab = true
 config.window_close_confirmation = "NeverPrompt"
