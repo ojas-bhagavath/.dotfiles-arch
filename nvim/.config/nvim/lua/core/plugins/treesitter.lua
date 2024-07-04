@@ -16,6 +16,7 @@ return {
                 "javascript",
                 "json",
                 "gitignore",
+                "regex",
             },
             autoinstall = true,
             highlight = { enable = true },

@@ -18,6 +18,7 @@ fuzzel                          # A rofi/dmenu like application launcher for way
 fzf                             # Fuzzy finder
 gaupol                          # A tool to manipulate srt files 
 git                             # A neat version control system
+gnome-boxes                     # Virtualization service
 gtk2                            # Gives libgtk-x11 which is needed by pinentry-gtk-2 which is needed by gnupg sometimes
 gwenview                        # Image viewing utility by KDE
 httrack                         # Download entire websites
@@ -29,6 +30,7 @@ jq                              # A commandline JSON parser
 kdegraphics-thumbnailers        # Thumbnailer for various graphic formats, including PDFs in Dolphin
 libva-intel-driver              # VA-API implementation for Intel G45 and HD Graphics family
 lua                             # A fast programming language designed for extensibility of other applications
+luarocks                        # Optional dependency for lazy in nvim
 man-db                          # A utility to read man pages
 mkvtoolnix-gui                  # A tool to manipulate mkv files
 neovim                          # A powerful text editor
@@ -51,7 +53,7 @@ qbittorrent                     # An open source torrent client
 qpdf                            # A Content-Preserving PDF Transformation System
 qtpass                          # A GUI tool for pass
 qutebrowser                     # A highly customizable browser built around vim binds
-reflector                       # A Python 3 module and script to retrieve and filter the latest Pacman mirror list.
+reflector                       # A Python 3 module and script to retrieve and filter the latest Pacman mirror list
 ripgrep                         # A search tool that combines the usability of ag with the raw speed of grep
 scdoc                           # A tool to generate roff man pages
 sddm                            # Display manager (login manager) by KDE
@@ -63,6 +65,7 @@ speedtest-cli                   # Command line interface for testing internet ba
 starship                        # A cross platform prompt for various shells
 stow                            # A powerful symlink utility
 syncthing                       # Sync files across devices
+syncthingtray-qt6               # A tray application for syncthing written in Qt
 termdown                        # A terminal timer
 texlive                         # LaTeX fundamental packages
 texlive-lang                    # Texlive tools for non-Latin languages
