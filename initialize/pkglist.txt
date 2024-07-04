@@ -19,6 +19,7 @@ fzf                             # Fuzzy finder
 gaupol                          # A tool to manipulate srt files 
 git                             # A neat version control system
 gnome-boxes                     # Virtualization service
+gnome-disk-utility              # As the name says
 gtk2                            # Gives libgtk-x11 which is needed by pinentry-gtk-2 which is needed by gnupg sometimes
 gwenview                        # Image viewing utility by KDE
 httrack                         # Download entire websites
@@ -36,6 +37,7 @@ mkvtoolnix-gui                  # A tool to manipulate mkv files
 neovim                          # A powerful text editor
 nerd-fonts                      # All the nerd fonts
 ntfs-3g                         # NTFS filesystem driver and utilities	
+obsidian                        # A neat markdown utility
 os-prober                       # Utility to detect other OSes on a set of drives
 p7zip                           # Command-line file archiver with high compression ratio
 pandoc-bin                      # A document converter tool
@@ -46,6 +48,7 @@ pdfjs                           # A utility required to natively view pdfs on br
 pdftk                           # Command-line tool for working with PDFs
 polkit-kde-agent                # polkit agent by kde
 poppler                         # PDF rendering library based on xpdf 3.0
+power-profiles-daemon            # To manage power profiles of the device
 python-adblock                  # Brave's adblock library in Python
 python-pip                      # A tool for installing python packages
 python-tldextract               # A package required for qute-pass
