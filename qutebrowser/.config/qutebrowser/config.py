@@ -450,7 +450,7 @@ c.url.searchengines = {
     'ud': 'https://www.urbandictionary.com/define.php?term={}',
     'wa': 'https://www.wolframalpha.com/input?i2d=true&i={}',
     'wm': 'https://mathworld.wolfram.com/search/?query={}',
-    'wp': 'https://en.wikipedia.org/wiki/{}',
+    'wp': 'https://www.wikiwand.com/en/{}',
     'yt': 'https://www.youtube.com/results?search_query={}',
     'yts': 'https://yts.mx/browse-movies/{}/all/all/0/latest/0/all',
 }

@@ -77,7 +77,7 @@ keymap = [
 	{ on = [ "R" ],         run = "rename --empty=stem --cursor=start",                   desc = "Rename a file and wait to paste a copied value" },
 	{ on = [ ";" ],         run = "shell --interactive",                                                desc = "Run a shell command" },
 	{ on = [ ":" ],         run = "shell --block --interactive",                                        desc = "Run a shell command (block the UI until the command finishes)" },
-	{ on = [ "<C-s>" ],     run = "shell \"$SHELL\" --block --confirm",                   desc = "Open shell here" },
+	{ on = [ "<C-s>" ],     run  = 'shell "$SHELL" --block --confirm',                   desc = "Open shell here" },
 	{ on = [ "." ],         run = "hidden toggle",                                        desc = "Toggle the visibility of hidden files" },
 	{ on = [ "s" ],         run = "search fd",                                            desc = "Search files by name using fd" },
 	{ on = [ "S" ],         run = "search rg",                                            desc = "Search files by content using ripgrep" },

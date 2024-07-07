@@ -1,0 +1,11 @@
+[General]
+LockSidebar=true
+ShowSidebar=true
+ShowWelcomeScreenOnStartup=false
+
+[MainWindow]
+StatusBar=Disabled
+ToolBarsMovable=Disabled
+
+[Preview]
+previewFileSizeLimit=2048
