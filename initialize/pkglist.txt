@@ -7,6 +7,7 @@ cloudflare-warp-bin             # Cloudflare Warp Client
 dolphin                         # A GUI file manager by KDE
 downgrade                       # Bash script to downgrade packages 
 entr                            # A utility that runs arbitrary commands when files change
+exfatprogs                      # exFAT filesystem userspace utilities for the Linux Kernel exfat drive
 eza                             # ls replacement on fire
 fd                              # A fast find replacement
 ffmpeg                          # Complete solution to record, convert and stream audio and video
@@ -34,6 +35,7 @@ lua                             # A fast programming language designed for exten
 luarocks                        # Optional dependency for lazy in nvim
 man-db                          # A utility to read man pages
 mkvtoolnix-gui                  # A tool to manipulate mkv files
+navi                            # A shell snippet engine
 neovim                          # A powerful text editor
 nerd-fonts                      # All the nerd fonts
 ntfs-3g                         # NTFS filesystem driver and utilities	
@@ -82,6 +84,7 @@ ttf-font-awesome                # An awesome font
 ttf-kannada-font                # Kannada font
 tumbler                         # A utility to generate thumbnails
 unarchiver                      # Required for archive preview in yazi
+vial-appimage                   # A configurator for vial-based keyboards
 vlc                             # A simple media player
 wezterm                         # A neat terminal emulator written in rust, configured in lua
 wget                            # A file downloading utility

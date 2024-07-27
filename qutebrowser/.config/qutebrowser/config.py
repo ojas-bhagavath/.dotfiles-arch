@@ -25,7 +25,8 @@ c.bindings.commands = {
         "A": "hint links spawn yt-dlp --prefer-ffmpeg --extract-audio --audio-format mp3 --audio-quality 0 -i --download-archive \"$HOME/YouTube/downloaded-audios.txt\" -o \"$HOME/YouTube/%(title)s.%(ext)s\" {hint-url}",
         "D": "hint links spawn yt-dlp -i --download-archive \"$HOME/YouTube/downloaded-videos.txt\" -o \"$HOME/YouTube/%(title)s.%(ext)s\" -f \"bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best\" {hint-url}",
         "V": "hint links spawn firefox {hint-url}",
-        "ee": "spawn --userscript ~/.config/qutebrowser/qute-pass",
+        "<Ctrl-Shift-O>": "cmd-set-text -s :open -p",
+        "<Ctrl-o>": "cmd-set-text -s :open -w",
         "ep": "spawn --userscript ~/.config/qutebrowser/qute-pass --password-only",
         "eu": "spawn --userscript ~/.config/qutebrowser/qute-pass --username-only",
         "eo": "spawn --userscript ~/.config/qutebrowser/qute-pass --otp-only",
@@ -367,7 +368,7 @@ c.spellcheck.languages = ["en-US"]
 # Statusbar
 c.statusbar.padding = {"bottom": 1, "left": 0, "right": 0, "top": 1}
 c.statusbar.position = "bottom"
-c.statusbar.show = "in-mode"
+c.statusbar.show = "always"
 c.statusbar.widgets = ["keypress", "search_match", "url", "scroll", "history", "tabs", "progress"]
 
 # Tabs
@@ -410,7 +411,7 @@ c.url.default_page = "file:///home/ojas/.config/qutebrowser/homepage/homepage.ht
 c.url.incdec_segments = ["path", "query"]
 c.url.open_base_url = True
 c.url.searchengines = {
-    'DEFAULT': 'https://www.google.com/search?q={}',
+    'DEFAULT': 'https://search.brave.com/search?q={}',
     '1337x': 'https://1337x.to/search/{}/1/',
     'aa': 'https://annas-archive.org/search?q={}',
     'abb': 'https://audiobookbay.is/?s={}&tt=1',
