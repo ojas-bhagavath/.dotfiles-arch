@@ -4,18 +4,15 @@ return {
     dependencies = {
         "rafamadriz/friendly-snippets",
         config = function()
-            require("luasnip.loaders.from_lua").load({
-                paths = "~/.config/nvim/lua/core/snippets/",
-            })
+            require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/snippets/" })
         end,
     },
-    keys = {},
-    config = function()
-        require("luasnip").setup({
-            history = true,
-            updateevents = "TextChanged,TextChangedI",
-            enable_autosnippets = true,
-            delete_check_events = "TextChanged",
-        })
-    end,
+    opts = {
+        history = true,
+        updateevents = "TextChanged,TextChangedI",
+        enable_autosnippets = true,
+        delete_check_events = "TextChanged",
+    },
+        -- stylua: ignore
+        keys = {},
 }

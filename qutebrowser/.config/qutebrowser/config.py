@@ -27,6 +27,7 @@ c.bindings.commands = {
         "V": "hint links spawn firefox {hint-url}",
         "<Ctrl-Shift-O>": "cmd-set-text -s :open -p",
         "<Ctrl-o>": "cmd-set-text -s :open -w",
+        "ee": "spawn --userscript ~/.config/qutebrowser/qute-pass",
         "ep": "spawn --userscript ~/.config/qutebrowser/qute-pass --password-only",
         "eu": "spawn --userscript ~/.config/qutebrowser/qute-pass --username-only",
         "eo": "spawn --userscript ~/.config/qutebrowser/qute-pass --otp-only",
@@ -454,7 +455,7 @@ c.url.searchengines = {
     'yt': 'https://www.youtube.com/results?search_query={}',
     'yts': 'https://yts.mx/browse-movies/{}/all/all/0/latest/0/all',
 }
-c.url.start_pages = "file:///home/ojas/.config/qutebrowser/homepage/homepage.html"
+c.url.start_pages = "https://monkeytype.com/"
 c.url.yank_ignored_parameters = ["ref", "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "utm_name"]
 
 # Windows

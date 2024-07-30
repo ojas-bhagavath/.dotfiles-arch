@@ -2,18 +2,22 @@ return { -- Autocompletion
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
     dependencies = {
+        "hrsh7th/cmp-buffer",
+        "hrsh7th/cmp-path",
         "L3MON4D3/LuaSnip",
         "saadparwaiz1/cmp_luasnip",
         "hrsh7th/cmp-nvim-lsp",
-        "hrsh7th/cmp-buffer",
-        "hrsh7th/cmp-path",
+        "onsails/lspkind.nvim",
     },
     config = function()
         -- See `:help cmp`
         local cmp = require("cmp")
         local luasnip = require("luasnip")
+        local lspkind = require("lspkind")
+        require("luasnip.loaders.from_vscode").lazy_load()
         luasnip.config.setup({})
         cmp.setup({
+            completion = { completeopt = "menu,menuone,preview,noselect" },
             snippet = {
                 expand = function(args)
                     luasnip.lsp_expand(args.body)
@@ -23,8 +27,6 @@ return { -- Autocompletion
                 completion = cmp.config.window.bordered(),
                 documentation = cmp.config.window.bordered(),
             },
-
-            completion = { completeopt = "menu,menuone,noinsert" },
 
             -- For an understanding of why these mappings were
             -- chosen, you will need to read `:help ins-completion`
