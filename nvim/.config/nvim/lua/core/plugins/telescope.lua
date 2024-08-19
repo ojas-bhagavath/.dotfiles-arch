@@ -35,7 +35,6 @@ return {
                 },
             },
         })
-        telescope.load_extension("fzf")
     end,
     keys = {
         { "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "fuzzy find files in cwd" },

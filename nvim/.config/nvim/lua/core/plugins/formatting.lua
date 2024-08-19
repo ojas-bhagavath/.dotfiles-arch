@@ -27,10 +27,10 @@ return {
             bash = { "shfmt" },
             html = { "htmlbeautifier" },
             lua = { "stylua" },
-            markdown = { "prettier" },
             python = { "isort", "black" },
             shell = { "shfmt" },
             tex = { "latexindent" },
+            markdown = { "prettier", "markdownlint-cli2", "markdown-toc" },
         },
     },
 }
