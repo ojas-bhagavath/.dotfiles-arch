@@ -4,6 +4,10 @@
 
 [manager]
 
+prepend_keymap = [
+  { on   = [ ".", "s" ], run  = "plugin what-size", desc = "Calc size of selection or cwd" },
+]
+
 keymap = [
 	{ on = [ "<Esc>" ], run = "escape",             desc = "Exit visual mode, clear selected, or cancel search" },
 	{ on = [ "q" ],     run = "quit",               desc = "Exit the process" },
@@ -78,7 +82,7 @@ keymap = [
 	{ on = [ ";" ],         run = "shell --interactive",                                                desc = "Run a shell command" },
 	{ on = [ ":" ],         run = "shell --block --interactive",                                        desc = "Run a shell command (block the UI until the command finishes)" },
 	{ on = [ "<C-s>" ],     run  = 'shell "$SHELL" --block --confirm',                   desc = "Open shell here" },
-	{ on = [ "." ],         run = "hidden toggle",                                        desc = "Toggle the visibility of hidden files" },
+	{ on = [ ".", "z" ],         run = "hidden toggle",                                        desc = "Toggle the visibility of hidden files" },
 	{ on = [ "s" ],         run = "search fd",                                            desc = "Search files by name using fd" },
 	{ on = [ "S" ],         run = "search rg",                                            desc = "Search files by content using ripgrep" },
 	{ on = [ "z" ],         run = "plugin zoxide",                                          desc = "Jump to a directory using zoxide" },

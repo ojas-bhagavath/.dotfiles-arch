@@ -1,0 +1,5 @@
+[plugin]
+deps = [{ use = "pirafrank/what-size", rev = "f08f7f2" }, { use = "Ape/mediainfo", rev = "c69314e" }]
+
+[flavor]
+deps = []
