@@ -22,7 +22,7 @@ return {
         t({ "\\", "" }),
     }),
 
-    s("//", {
+    s({ trig = "//", snippetType = "autosnippet" }, {
         t("\\frac{"),
         i(1, ""),
         t("}{"),
@@ -30,47 +30,47 @@ return {
         t("}"),
     }, { condition = in_mathzone }),
 
-    s({ trig = "_", wordTrig = false }, {
+    s({ trig = "_", wordTrig = false, snippetType = "autosnippet" }, {
         t("_{"),
         i(1, ""),
         t("}"),
     }, { condition = in_mathzone }),
 
-    s({ trig = "^", wordTrig = false }, {
+    s({ trig = "^", wordTrig = false, snippetType = "autosnippet" }, {
         t("^{"),
         i(1, ""),
         t("}"),
     }, { condition = in_mathzone }),
 
-    s("wrt", {
+    s({ trig = "wrt", snippetType = "autosnippet" }, {
         t("with respect to"),
     }),
 
-    s({ trig = "bb(%a)", regTrig = true }, {
+    s({ trig = "bb(%a)", regTrig = true, snippetType = "autosnippet" }, {
         f(function(_, snip)
             return "\\mathbb{" .. snip.captures[1] .. "}"
         end),
     }, { condition = in_mathzone }),
 
-    s({ trig = "cc(%a)", regTrig = true }, {
+    s({ trig = "cc(%a)", regTrig = true, snippetType = "autosnippet" }, {
         f(function(_, snip)
             return "\\mathcal{" .. snip.captures[1] .. "}"
         end),
     }, { condition = in_mathzone }),
 
-    s({ trig = "kk(%a)", regTrig = true }, {
+    s({ trig = "kk(%a)", regTrig = true, snippetType = "autosnippet" }, {
         f(function(_, snip)
             return "\\mathfrak{" .. snip.captures[1] .. "}"
         end),
     }, { condition = in_mathzone }),
 
-    s({ trig = "ss(%a)", regTrig = true }, {
+    s({ trig = "ss(%a)", regTrig = true, snippetType = "autosnippet" }, {
         f(function(_, snip)
             return "\\mathscr{" .. snip.captures[1] .. "}"
         end),
     }, { condition = in_mathzone }),
 
-    s({ trig = "hh(%a)", regTrig = true }, {
+    s({ trig = "hh(%a)", regTrig = true, snippetType = "autosnippet" }, {
         f(function(_, snip)
             return "\\hat{" .. snip.captures[1] .. "}"
         end),
