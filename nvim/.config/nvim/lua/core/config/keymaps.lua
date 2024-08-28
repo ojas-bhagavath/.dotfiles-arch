@@ -1,8 +1,8 @@
 local map = vim.keymap.set
 
 -- jk for escape
-map({ "i", "v", "x" }, "jk", "<ESC>", { silent = true, nowait = true })
-map({ "i", "v", "x" }, "kj", "<ESC>", { silent = true, nowait = true })
+map({ "i", "v" }, "jk", "<ESC>", { silent = true, nowait = true })
+map({ "i", "v" }, "kj", "<ESC>", { silent = true, nowait = true })
 
 -- better up/down
 map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
