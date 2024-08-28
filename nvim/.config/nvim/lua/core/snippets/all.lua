@@ -5,7 +5,7 @@ return {
     s({ trig = "TVM" }, {
         t("Thiruvananthapuram"),
     }),
-    s({ trig = "IISER" }, {
+    s({ trig = "IISER", snippetType = "autosnippet" }, {
         t("Indian Institute of Science Education and Research"),
     }),
     s({ trig = "IIT" }, {

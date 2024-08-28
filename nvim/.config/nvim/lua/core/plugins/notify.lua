@@ -10,7 +10,7 @@ return {
         },
     },
     opts = {
-        level = 3,
+        -- level = 3,
         stages = "static",
         timeout = 3000,
         max_height = function()

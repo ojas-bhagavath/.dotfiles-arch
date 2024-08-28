@@ -1,6 +1,7 @@
 return {
     "L3MON4D3/LuaSnip",
     version = "v2.*",
+    dependencies = { "rafamadriz/friendly-snippets" },
     build = "make install_jsregexp",
     lazy = true,
     config = function()
@@ -31,9 +32,10 @@ return {
         local parse = require("luasnip.util.parser").parse_snippet
         local ms = ls.multi_snippet
         local k = require("luasnip.nodes.key_indexer").new_key
-        ls.config.set_config({
+        ls.config.setup({
+            history = true,
+            updateevents = "TextChanged,TextChangedI",
             enable_autosnippets = true,
-            enable_autosnippet = true,
         })
         require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/lua/core/snippets/" })
     end,
