@@ -1,5 +1,5 @@
 [plugin]
-deps = [{ use = "pirafrank/what-size", rev = "f08f7f2" }, { use = "Ape/mediainfo", rev = "c69314e" }, { use = "yazi-rs/plugins:max-preview", rev = "b659791" }, { use = "Rolv-Apneseth/starship", rev = "20d5a4d" }]
+deps = [{ use = "Rolv-Apneseth/starship", rev = "20d5a4d" }, { use = "yazi-rs/plugins:max-preview", rev = "b659791" }, { use = "pirafrank/what-size", rev = "f08f7f2" }]
 
 [flavor]
 deps = []
