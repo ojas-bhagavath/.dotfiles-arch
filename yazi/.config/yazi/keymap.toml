@@ -3,12 +3,14 @@
 "$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
 
 [manager]
-
 prepend_keymap = [
   { on = [
     ".",
     "s",
   ], run = "plugin what-size", desc = "Calc size of selection or cwd" },
+  { on = [
+    "M",
+  ], run = "plugin --sync max-preview", desc = "Maximize or restore preview" },
 ]
 
 keymap = [
