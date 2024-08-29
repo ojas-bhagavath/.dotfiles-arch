@@ -4,6 +4,7 @@ return {
     build = "make install_jsregexp",
     lazy = true,
     config = function()
+        -- Local variables
         local ls = require("luasnip")
         local s = ls.snippet
         local sn = ls.snippet_node
@@ -31,11 +32,32 @@ return {
         local parse = require("luasnip.util.parser").parse_snippet
         local ms = ls.multi_snippet
         local k = require("luasnip.nodes.key_indexer").new_key
-        ls.config.setup({
+
+        -- Options
+        ls.setup({
             history = true,
             updateevents = "TextChanged,TextChangedI",
             enable_autosnippets = true,
         })
+
+        -- Lua snippets path
         require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/lua/core/snippets/" })
+
+        -- Keybinds
+        vim.keymap.set({ "i" }, "<C-l>", function()
+            if ls.expand_or_locally_jumpable() then
+                ls.expand_or_jump()
+            end
+        end, { silent = true })
+        vim.keymap.set({ "i", "s" }, "<C-h>", function()
+            if ls.locally_jumpable(-1) then
+                ls.jump(-1)
+            end
+        end, { silent = true })
+        vim.keymap.set({ "i", "s" }, "<C-o>", function()
+            if ls.choice_active() then
+                ls.change_choice(1)
+            end
+        end, { silent = true })
     end,
 }
