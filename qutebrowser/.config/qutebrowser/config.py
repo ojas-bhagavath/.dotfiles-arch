@@ -1,5 +1,5 @@
 # Autoconfig
-config.load_autoconfig(False)
+config.load_autoconfig()
 
 # Aliases
 c.aliases = {
