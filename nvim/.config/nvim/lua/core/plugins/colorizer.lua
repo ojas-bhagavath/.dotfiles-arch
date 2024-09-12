@@ -16,4 +16,7 @@ return {
         },
         buftypes = {},
     },
+    keys = {
+        { "<leader>oC", mode = "n", "<cmd>ColorizerToggle<cr>", desc = "Toggle Colorizer" },
+    },
 }

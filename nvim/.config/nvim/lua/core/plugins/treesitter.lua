@@ -11,6 +11,7 @@ return {
                 "vim",
                 "vimdoc",
                 "markdown",
+                "markdown_inline",
                 "html",
                 "css",
                 "javascript",

@@ -5,10 +5,9 @@ return {
     config = function()
         require("nvim-autopairs").setup()
         local npairs = require("nvim-autopairs")
-        local Rule = require("nvim-autopairs.rule")
+        local rule = require("nvim-autopairs.rule")
         npairs.add_rules({
-            Rule("$", "$", { "tex", "latex" }),
-            Rule("$", "$", { "markdown" }),
+            rule("$", "$", { "tex", "latex", "markdown" }),
         })
     end,
 }

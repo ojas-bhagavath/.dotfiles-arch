@@ -44,7 +44,7 @@ return {
         require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/lua/core/snippets/" })
 
         -- Keybinds
-        vim.keymap.set({ "i" }, "<C-l>", function()
+        vim.keymap.set({ "i", "s" }, "<C-l>", function()
             if ls.expand_or_locally_jumpable() then
                 ls.expand_or_jump()
             end
@@ -60,4 +60,10 @@ return {
             end
         end, { silent = true })
     end,
+    vim.keymap.set(
+        "n",
+        "<leader>rs",
+        '<cmd>lua require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/lua/core/snippets/"})<CR>',
+        { desc = "Reload Snippets" }
+    ),
 }

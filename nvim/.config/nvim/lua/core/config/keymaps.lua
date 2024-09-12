@@ -17,11 +17,11 @@ map("n", "<leader>se", "<C-w>=", { desc = "Make Splits Equal Size" })
 map("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close Current Split" })
 
 -- tab management
-map("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open New Tab" })
-map("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close Current Tab" })
-map("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go To Next Tab" })
-map("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go To Prev Tab" })
-map("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open Current Buffer in a New Tab" })
+map("n", "<leader><tab>o", "<cmd>tabnew<CR>", { desc = "Open New Tab" })
+map("n", "<leader><tab>x", "<cmd>tabclose<CR>", { desc = "Close Current Tab" })
+map("n", "<leader><tab>n", "<cmd>tabn<CR>", { desc = "Go To Next Tab" })
+map("n", "<leader><tab>p", "<cmd>tabp<CR>", { desc = "Go To Prev Tab" })
+map("n", "<leader><tab>f", "<cmd>tabnew %<CR>", { desc = "Open Current Buffer in a New Tab" })
 
 -- move to window using the <ctrl> hjkl keys
 -- map("n", "<C-h>", "<C-w>h", { desc = "Go to Left Window", remap = true })
@@ -71,7 +71,13 @@ map("i", ";", ";<c-g>u")
 -- map("v", ">", ">gv")
 
 -- lazy
-map("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy" })
+map("n", "<leader>la", "<cmd>Lazy<cr>", { desc = "Lazy" })
+map("n", "<leader>ls", "<cmd>Lazy sync<cr>", { desc = "Lazy Sync" })
+
+-- options
+map("n", "<leader>on", "<cmd>set nu!<cr>", { desc = "Toggle Line Number" })
+map("n", "<leader>oN", "<cmd>set rnu!<cr>", { desc = "Toggle Relative Number" })
+map("n", "<leader>ow", "<cmd>set wrap!<cr>", { desc = "Toggle Wrap" })
 
 -- -- diagnostic
 -- local diagnostic_goto = function(next, severity)
