@@ -21,7 +21,7 @@ return {
         end),
     }, { condition = in_mathzone }),
 
-    s({ trig = "(%S+)~", regTrig = true, snippetType = "autosnippet" }, {
+    s({ trig = "(%S+)tild", regTrig = true, snippetType = "autosnippet" }, {
         f(function(_, snip)
             return "\\widetilde{" .. snip.captures[1] .. "}"
         end),
