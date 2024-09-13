@@ -3,24 +3,29 @@ return {
     event = { "BufReadPost", "BufWritePost", "BufNewFile" },
     opts = {
         options = {
-            component_separators = "",
-            section_separators = { left = "", right = "" },
+            icons_enabled = true,
             globalstatus = true,
             disabled_filetypes = { statusline = { "dashboard", "alpha", "starter" } },
+            component_separators = "",
+            section_separators = { left = "", right = "" },
         },
+
         sections = {
-            lualine_a = { { "mode", separator = { left = "" }, right_padding = 2 } },
-            lualine_b = {},
-            lualine_c = { "buffers" },
-            lualine_x = {
+            lualine_a = {
                 {
-                    require("noice").api.statusline.mode.get,
-                    cond = require("noice").api.statusline.mode.has,
+                    "mode",
+                    fmt = function(str)
+                        return str:sub(1, 3)
+                    end,
+                    separator = { right = "", left = "" },
                 },
             },
-            lualine_y = {},
+            lualine_b = { "filename" },
+            lualine_c = { "buffers" },
+            lualine_x = { "searchcount" },
+            lualine_y = { "filetype" },
             lualine_z = {
-                { "datetime", style = "%H:%M", separator = { right = "" }, left_padding = 2 },
+                { "datetime", style = "%H:%M", separator = { right = "", left = "" } },
             },
         },
     },
