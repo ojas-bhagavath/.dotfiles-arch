@@ -31,6 +31,10 @@ c.bindings.commands = {
         "ep": "spawn --userscript ~/.config/qutebrowser/qute-pass --password-only",
         "eu": "spawn --userscript ~/.config/qutebrowser/qute-pass --username-only",
         "eo": "spawn --userscript ~/.config/qutebrowser/qute-pass --otp-only",
+        "]b": "tab-next",
+        "[b": "tab-prev",
+        "]B": "tab-move +",
+        "[B": "tab-move -",
     }
 }
 
