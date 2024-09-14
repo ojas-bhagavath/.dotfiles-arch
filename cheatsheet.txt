@@ -1,3 +1,0 @@
-for j in *.mkv; do
-    ffmpeg -i $j -attach $j.jpg -metadata:s:t:0 mimetype=image/jpeg -c copy $j.mkv;
-done
