@@ -20,7 +20,7 @@ return {
                     separator = { right = "", left = "" },
                 },
             },
-            lualine_b = { "filename" },
+            lualine_b = { "diff" },
             lualine_c = { "buffers" },
             lualine_x = { "searchcount" },
             lualine_y = { "filetype" },

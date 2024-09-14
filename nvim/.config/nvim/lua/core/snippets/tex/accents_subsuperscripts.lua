@@ -44,4 +44,10 @@ return {
             return "\\underline{" .. snip.captures[1] .. "}"
         end),
     }, { condition = in_mathzone }),
+
+    s({ trig = "^", wordTrig = false, snippetType = "autosnippet" }, fmta("^{<>}", { i(1) }), { condition = in_mathzone }),
+    s({ trig = "_", wordTrig = false, snippetType = "autosnippet" }, fmta("_{<>}", { i(1) }), { condition = in_mathzone }),
+    s({ trig = "'", wordTrig = false, snippetType = "autosnippet" }, t("^{\\prime}"), { condition = in_mathzone }),
+    s({ trig = "deg", wordTrig = false, snippetType = "autosnippet" }, t("^{\\circ}"), { condition = in_mathzone }),
+    s({ trig = "inv", wordTrig = false, snippetType = "autosnippet" }, t("^{-1}"), { condition = in_mathzone }),
 }
