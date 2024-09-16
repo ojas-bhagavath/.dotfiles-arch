@@ -8,6 +8,9 @@ config_version: 2
 settings:
   content.desktop_capture:
     https://meet.google.com: true
+  content.geolocation:
+    https://www.airindia.com: false
+    https://www.asus.com: false
   content.media.audio_capture:
     https://meet.google.com: true
   content.media.audio_video_capture:
@@ -15,6 +18,9 @@ settings:
   content.media.video_capture:
     https://meet.google.com: true
   content.notifications.enabled:
+    https://calendar.google.com: false
+    https://meet.google.com: true
     https://web.telegram.org: false
   content.register_protocol_handler:
+    https://calendar.google.com?cid=%25s: true
     https://mail.google.com?extsrc=mailto&url=%25s: true
