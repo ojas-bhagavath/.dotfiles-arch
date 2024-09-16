@@ -432,6 +432,10 @@ keymap = [
   ], run = "cd ~/Stuff/LaTeX/", desc = "Go to the LaTeX directory" },
   { on = [
     "g",
+    "P",
+  ], run = "cd ~/Stuff/LaTeX/Applications/PhD 2025/", desc = "Go to the LaTeX directory" },
+  { on = [
+    "g",
     "v",
   ], run = "cd ~/Stuff/Videos/", desc = "Go to the Videos directory" },
   { on = [
