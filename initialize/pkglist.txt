@@ -70,7 +70,7 @@ speedtest-cli                   # Command line interface for testing internet ba
 starship                        # A cross platform prompt for various shells
 stow                            # A powerful symlink utility
 syncthing                       # Sync files across devices
-syncthingtray-qt6               # A tray application for syncthing written in Qt
+syncthingtray-git               # A tray application for syncthing
 termdown                        # A terminal timer
 texlive                         # LaTeX fundamental packages
 texlive-lang                    # Texlive tools for non-Latin languages
