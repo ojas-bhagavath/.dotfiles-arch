@@ -433,6 +433,7 @@ c.url.searchengines = {
     'fh': 'https://flathub.org/apps/search?q={}',
     'fk': 'https://www.flipkart.com/search?q={}',
     'gh': 'https://github.com/search?q={}',
+    'goo': 'https://google.com/search?q={}',
     'gp': 'https://groupprops.subwiki.org/w/index.php?search={}',
     'gr': 'https://www.goodreads.com/search?q={}',
     'imdb': 'https://www.imdb.com/find/?q={}',
