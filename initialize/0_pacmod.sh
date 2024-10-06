@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # This adds a few lines at a particular place /etc/pacman.conf
 sudo cp -f src/pacman.conf /etc/pacman.conf 
