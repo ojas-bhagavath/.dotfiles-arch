@@ -469,7 +469,7 @@ c.window.title_format = "{perc}{current_title}{title_sep}qutebrowser"
 c.window.transparent = True
 
 # Zoom
-c.zoom.default = "130%"
+c.zoom.default = "100%"
 c.zoom.levels = ["25%", "33%", "50%", "67%", "75%", "90%", "100%", "110%", "125%", "150%", "175%", "200%", "250%", "300%", "400%", "500%"]
 c.zoom.mouse_divider = 512
 c.zoom.text_only = False
