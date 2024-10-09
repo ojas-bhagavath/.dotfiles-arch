@@ -267,7 +267,7 @@ c.fileselect.single_file.command = ["foot", "-e", "yazi", "--chooser-file={}"]
 
 # Fonts
 c.fonts.default_family = "Hack Nerd Font"
-c.fonts.default_size = "14pt"
+c.fonts.default_size = "16pt"
 c.fonts.completion.category = "bold default_size default_family"
 c.fonts.completion.entry = "default_size default_family"
 c.fonts.contextmenu = "default_size default_family"
@@ -469,7 +469,7 @@ c.window.title_format = "{perc}{current_title}{title_sep}qutebrowser"
 c.window.transparent = True
 
 # Zoom
-c.zoom.default = "100%"
+c.zoom.default = "125%"
 c.zoom.levels = ["25%", "33%", "50%", "67%", "75%", "90%", "100%", "110%", "125%", "150%", "175%", "200%", "250%", "300%", "400%", "500%"]
 c.zoom.mouse_divider = 512
 c.zoom.text_only = False
