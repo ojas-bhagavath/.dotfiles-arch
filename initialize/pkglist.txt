@@ -30,14 +30,17 @@ intel-media-sdk                 # Legacy API for hardware video acceleration on 
 intel-ucode                     # Microcode update files for Intel CPUs
 jq                              # A commandline JSON parser
 kdegraphics-thumbnailers        # Thumbnailer for various graphic formats, including PDFs in Dolphin
+lazygit                         # A tui interface for git
 libva-intel-driver              # VA-API implementation for Intel G45 and HD Graphics family
 lua                             # A fast programming language designed for extensibility of other applications
 luarocks                        # Optional dependency for lazy in nvim
 man-db                          # A utility to read man pages
 mkvtoolnix-gui                  # A tool to manipulate mkv files
-navi                            # A shell snippet engine
+mpv                             # The OG video player
 neovim                          # A powerful text editor
 nerd-fonts                      # All the nerd fonts
+newsboat                        # An OP TUI RSS feed reader
+nodejs                          # I/O for javascript, is needed for certain neovim package builds
 ntfs-3g                         # NTFS filesystem driver and utilities	
 obsidian                        # A neat markdown utility
 os-prober                       # Utility to detect other OSes on a set of drives
@@ -83,6 +86,7 @@ tree-sitter-cli                 # CLI tool for developing, testing, and using Tr
 ttf-font-awesome                # An awesome font
 ttf-kannada-font                # Kannada font
 tumbler                         # A utility to generate thumbnails
+ueberzugpp                      # A program that allows drawing images on terminals
 unarchiver                      # Required for archive preview in yazi
 vial-appimage                   # A configurator for vial-based keyboards
 vlc                             # A simple media player
@@ -91,5 +95,6 @@ wget                            # A file downloading utility
 wl-clipboard                    # Clipboard tool for wayland
 yazi                            # A TUI file manager written in rust
 yt-dlp                          # A youtube-dl fork with additional features and fixes
+ytfzf                           # Play youtube videos from terminal
 zoxide                          # A smarter cd replacement
 zsh                             # An advanced and programmable command interpreter for UNIX
