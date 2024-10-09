@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 fil=$(find ~/. -type f | fzf)
 dir=$(echo "$fil" | sed 's|\(.*\)/.*|\1|')
