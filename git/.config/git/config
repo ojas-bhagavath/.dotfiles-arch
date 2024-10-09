@@ -1,7 +1,7 @@
 [user]
 	name = Ojas Bhagavath
 	email = ojas.bhagavath@gmail.com
-	signingkey = B5FF68893BE90B6C6BA8882302657438A3317B96
+	signingkey = 39DD2253AFE24F727C22A47643C923C55C4C46D2
 [init]
 	defaultBranch = main
 [commit]
