@@ -1,0 +1,2 @@
+browser "xdg-open %u"
+include ~/.config/newsboat/dark
