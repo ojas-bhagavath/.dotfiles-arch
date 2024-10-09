@@ -45,3 +45,4 @@ export PARALLEL_HOME="$XDG_CONFIG_HOME"/parallel
 # PATH
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$CARGO_HOME/bin"
+export PATH="$PATH:$HOME/.scripts/"
