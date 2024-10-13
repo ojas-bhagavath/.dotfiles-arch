@@ -1,2 +1,4 @@
-browser "xdg-open %u"
+auto-reload yes
+cache-file "~/.local/share/newsboat/cache.db"
+browser "qutebrowser %u"
 include ~/.config/newsboat/dark
