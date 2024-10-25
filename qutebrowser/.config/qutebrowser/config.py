@@ -12,7 +12,7 @@ c.aliases = {
     "rr": "restart",
 }
 
-#Autosave
+# Autosave
 c.auto_save.interval = 15000
 c.auto_save.session = False
 
@@ -22,8 +22,8 @@ c.backend = "webengine"
 # Command Bindings
 c.bindings.commands = {
     "normal": {
-        "A": "hint links spawn yt-dlp --prefer-ffmpeg --extract-audio --audio-format mp3 --audio-quality 0 -i --download-archive \"$HOME/YouTube/downloaded-audios.txt\" -o \"$HOME/YouTube/%(title)s.%(ext)s\" {hint-url}",
-        "D": "hint links spawn yt-dlp -i --download-archive \"$HOME/YouTube/downloaded-videos.txt\" -o \"$HOME/YouTube/%(title)s.%(ext)s\" -f \"bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best\" {hint-url}",
+        "A": 'hint links spawn yt-dlp --prefer-ffmpeg --extract-audio --audio-format mp3 --audio-quality 0 -i --download-archive "$HOME/YouTube/downloaded-audios.txt" -o "$HOME/YouTube/%(title)s.%(ext)s" {hint-url}',
+        "D": 'hint links spawn yt-dlp -i --download-archive "$HOME/YouTube/downloaded-videos.txt" -o "$HOME/YouTube/%(title)s.%(ext)s" -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best" {hint-url}',
         "V": "hint links spawn firefox {hint-url}",
         "<Ctrl-Shift-O>": "cmd-set-text -s :open -p",
         "<Ctrl-o>": "cmd-set-text -s :open -w",
@@ -49,7 +49,7 @@ c.bindings.key_mappings = {
     "<Enter>": "<Return>",
     "<Shift-Enter>": "<Return>",
     "<Shift-Return>": "<Return>",
-    "r": "nop"
+    "r": "nop",
 }
 
 # Changelog
@@ -57,18 +57,18 @@ c.changelog_after_upgrade = "minor"
 
 # Colors
 # Tokyonight Pallet:
-background =    "#222436"
-text =          "#c8d3f5"
-black0 =        "#1d1d2b"
-black1 =        "#444a73"
-red =           "#ff757f"
-green =         "#c3e88d"
-yellow =        "#ffc777"
-blue =          "#82aaff"
-magenta =       "#c099ff"
-cyan =          "#86e1fc"
-white0 =        "#828bb8"
-white1 =        "#c8d3f5"
+background = "#222436"
+text = "#c8d3f5"
+black0 = "#1d1d2b"
+black1 = "#444a73"
+red = "#ff757f"
+green = "#c3e88d"
+yellow = "#ffc777"
+blue = "#82aaff"
+magenta = "#c099ff"
+cyan = "#86e1fc"
+white0 = "#828bb8"
+white1 = "#c8d3f5"
 
 c.colors.completion.category.bg = background
 c.colors.completion.category.border.bottom = black0
@@ -93,9 +93,9 @@ c.colors.contextmenu.selected.bg = white0
 c.colors.contextmenu.selected.fg = red
 c.colors.downloads.bar.bg = black0
 c.colors.downloads.error.bg = red
-c.colors.downloads.error.fg = background 
-c.colors.downloads.start.bg = blue 
-c.colors.downloads.start.fg = background 
+c.colors.downloads.error.fg = background
+c.colors.downloads.start.bg = blue
+c.colors.downloads.start.fg = background
 c.colors.downloads.stop.bg = green
 c.colors.downloads.stop.fg = background
 c.colors.downloads.system.bg = "rgb"
@@ -173,7 +173,13 @@ c.completion.cmd_history_max_items = -1
 c.completion.delay = 0
 c.completion.height = "50%"
 c.completion.min_chars = 1
-c.completion.open_categories = ["searchengines", "quickmarks", "bookmarks", "history", "filesystem"]
+c.completion.open_categories = [
+    "searchengines",
+    "quickmarks",
+    "bookmarks",
+    "history",
+    "filesystem",
+]
 c.completion.quick = True
 c.completion.scrollbar.padding = 4
 c.completion.scrollbar.width = 12
@@ -185,7 +191,10 @@ c.completion.web_history.max_items = -1
 
 # Content
 c.content.autoplay = True
-c.content.blocking.adblock.lists = ["https://easylist.to/easylist/easylist.txt", "https://easylist.to/easylist/easyprivacy.txt"]
+c.content.blocking.adblock.lists = [
+    "https://easylist.to/easylist/easylist.txt",
+    "https://easylist.to/easylist/easyprivacy.txt",
+]
 c.content.blocking.enabled = True
 c.content.blocking.hosts.block_subdomains = True
 c.content.blocking.method = "both"
@@ -201,12 +210,24 @@ c.content.frame_flattening = False
 c.content.fullscreen.overlay_timeout = 3000
 c.content.fullscreen.window = False
 c.content.geolocation = "ask"
-config.set('content.headers.accept_language', '', 'https://matchmaker.krunker.io/*')
+config.set("content.headers.accept_language", "", "https://matchmaker.krunker.io/*")
 c.content.headers.do_not_track = True
 c.content.headers.referer = "same-domain"
-config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko) {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version}', 'https://web.whatsapp.com/')
-config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}; rv:90.0) Gecko/20100101 Firefox/90.0', 'https://accounts.google.com/*')
-config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99 Safari/537.36', 'https://*.slack.com/*')
+config.set(
+    "content.headers.user_agent",
+    "Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko) {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version}",
+    "https://web.whatsapp.com/",
+)
+config.set(
+    "content.headers.user_agent",
+    "Mozilla/5.0 ({os_info}; rv:90.0) Gecko/20100101 Firefox/90.0",
+    "https://accounts.google.com/*",
+)
+config.set(
+    "content.headers.user_agent",
+    "Mozilla/5.0 ({os_info}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99 Safari/537.36",
+    "https://*.slack.com/*",
+)
 c.content.hyperlink_auditing = False
 c.content.images = True
 c.content.javascript.alert = True
@@ -214,9 +235,22 @@ c.content.javascript.can_close_tabs = False
 c.content.javascript.can_open_tabs_automatically = False
 c.content.javascript.clipboard = "access"
 c.content.javascript.enabled = True
-c.content.javascript.log = {"error": "debug", "info": "debug", "unknown": "debug", "warning": "debug"}
-c.content.javascript.log_message.excludes = {"userscript:_qute_stylesheet": ["*Refused to apply inline style because it violates the following Content Security Policy directive: *"]}
-c.content.javascript.log_message.levels = {"qute:*": ["error"], "userscript:*": ["error"], "userscript:GM-*": []}
+c.content.javascript.log = {
+    "error": "debug",
+    "info": "debug",
+    "unknown": "debug",
+    "warning": "debug",
+}
+c.content.javascript.log_message.excludes = {
+    "userscript:_qute_stylesheet": [
+        "*Refused to apply inline style because it violates the following Content Security Policy directive: *"
+    ]
+}
+c.content.javascript.log_message.levels = {
+    "qute:*": ["error"],
+    "userscript:*": ["error"],
+    "userscript:GM-*": [],
+}
 c.content.javascript.modal_dialog = False
 c.content.javascript.prompt = True
 c.content.local_content_can_access_file_urls = True
@@ -260,7 +294,7 @@ c.editor.encoding = "utf-8"
 c.editor.remove_file = True
 
 # Fileselect
-c.fileselect.handler = 'external'
+c.fileselect.handler = "external"
 c.fileselect.folder.command = ["foot", "-e", "yazi", "--chooser-file={}"]
 c.fileselect.multiple_files.command = ["foot", "-e", "yazi", "--chooser-file={}"]
 c.fileselect.single_file.command = ["foot", "-e", "yazi", "--chooser-file={}"]
@@ -299,9 +333,22 @@ c.hints.hide_unmatched_rapid_hints = True
 c.hints.leave_on_load = True
 c.hints.min_chars = 1
 c.hints.mode = "letter"
-c.hints.next_regexes = ["\\bnext\\b", "\\bmore\\b", "\\bnewer\\b", "\\b[>\u2192\u226b]\\b", "\\b(>>|\u00bb)\\b", "\\bcontinue\\b"]
+c.hints.next_regexes = [
+    "\\bnext\\b",
+    "\\bmore\\b",
+    "\\bnewer\\b",
+    "\\b[>\u2192\u226b]\\b",
+    "\\b(>>|\u00bb)\\b",
+    "\\bcontinue\\b",
+]
 c.hints.padding = {"bottom": 0, "left": 3, "right": 3, "top": 0}
-c.hints.prev_regexes = ["\\bprev(ious)?\\b", "\\bback\\b", "\\bolder\\b", "\\b[<\u2190\u226a]\\b", "\\b(<<|\u00ab)\\b"]
+c.hints.prev_regexes = [
+    "\\bprev(ious)?\\b",
+    "\\bback\\b",
+    "\\bolder\\b",
+    "\\b[<\u2190\u226a]\\b",
+    "\\b(<<|\u00ab)\\b",
+]
 c.hints.radius = 3
 c.hints.scatter = True
 c.hints.uppercase = False
@@ -374,7 +421,15 @@ c.spellcheck.languages = ["en-US"]
 c.statusbar.padding = {"bottom": 1, "left": 0, "right": 0, "top": 1}
 c.statusbar.position = "bottom"
 c.statusbar.show = "always"
-c.statusbar.widgets = ["keypress", "search_match", "url", "scroll", "history", "tabs", "progress"]
+c.statusbar.widgets = [
+    "keypress",
+    "search_match",
+    "url",
+    "scroll",
+    "history",
+    "tabs",
+    "progress",
+]
 
 # Tabs
 c.tabs.background = True
@@ -416,52 +471,61 @@ c.url.default_page = "file:///home/ojas/.config/qutebrowser/homepage/homepage.ht
 c.url.incdec_segments = ["path", "query"]
 c.url.open_base_url = True
 c.url.searchengines = {
-    'DEFAULT': 'https://search.brave.com/search?q={}',
-    '1337x': 'https://1337x.to/search/{}/1/',
-    'aa': 'https://annas-archive.org/search?q={}',
-    'abb': 'https://audiobookbay.is/?s={}&tt=1',
-    'am': 'https://www.amazon.in/s?k={}',
-    'at': 'https://academictorrents.com/browse.php?search={}',
-    'aur': 'https://aur.archlinux.org/packages?O=0&K={}',
-    'aw': 'https://wiki.archlinux.org/index.php?search={}',
-    'bs': 'https://bitsearch.to/search?q={}',
-    'cpp': 'https://www.learncpp.com/gsearch/?q={}',
-    'ctan': 'https://ctan.org/search?phrase={}',
-    'disc': 'https://www.discogs.com/search?q={}&type=all',
-    'dnf': 'https://packages.fedoraproject.org/search?query={}',
-    'fd': 'https://search.f-droid.org/?q={}&lang=en',
-    'fh': 'https://flathub.org/apps/search?q={}',
-    'fk': 'https://www.flipkart.com/search?q={}',
-    'gh': 'https://github.com/search?q={}',
-    'goo': 'https://google.com/search?q={}',
-    'gp': 'https://groupprops.subwiki.org/w/index.php?search={}',
-    'gr': 'https://www.goodreads.com/search?q={}',
-    'imdb': 'https://www.imdb.com/find/?q={}',
-    'jc141': 'https://1337x.to/search/{} jc141/1/',
-    'l2u': 'https://www.unicodeit.net/?{}',
-    'lg': 'http://libgen.rs/search.php?req={}&sort=extension&sortmode=DESC',
-    'maps': 'https://www.google.com/maps/search/{}',
-    'mn': 'https://metanumbers.com/{}',
-    'mse': 'https://math.stackexchange.com/search?q={}',
-    'nix': 'https://search.nixos.org/packages?channel=24.05&from=0&size=50&sort=relevance&type=packages&query={}',
-    'oeis': 'https://oeis.org/search?q={}',
-    'pac': 'https://archlinux.org/packages/?sort=&q={}',
-    'pw': 'https://proofwiki.org/w/index.php?search={}',
-    'qxr': 'https://1337x.to/search/{} qxr/1/',
-    'ri': 'https://www.reddit.com/search/?q={}',
-    'syn': 'https://www.thesaurus.com/browse/{}',
-    'tmdb': 'https://www.themoviedb.org/search?query={}',
-    'tpb': 'https://thepiratebay.org/search.php?q={}',
-    'tz2': 'https://torrentz2.nz/search?q={}',
-    'ud': 'https://www.urbandictionary.com/define.php?term={}',
-    'wa': 'https://www.wolframalpha.com/input?i2d=true&i={}',
-    'wm': 'https://mathworld.wolfram.com/search/?query={}',
-    'wp': 'https://www.wikiwand.com/en/{}',
-    'yt': 'https://www.youtube.com/results?search_query={}',
-    'yts': 'https://yts.mx/browse-movies/{}/all/all/0/latest/0/all',
+    "DEFAULT": "https://search.brave.com/search?q={}",
+    "1337x": "https://1337x.to/search/{}/1/",
+    "aa": "https://annas-archive.org/search?q={}",
+    "abb": "https://audiobookbay.is/?s={}&tt=1",
+    "am": "https://www.amazon.in/s?k={}",
+    "at": "https://academictorrents.com/browse.php?search={}",
+    "aur": "https://aur.archlinux.org/packages?O=0&K={}",
+    "aw": "https://wiki.archlinux.org/index.php?search={}",
+    "bs": "https://bitsearch.to/search?q={}",
+    "cpp": "https://www.learncpp.com/gsearch/?q={}",
+    "ctan": "https://ctan.org/search?phrase={}",
+    "disc": "https://www.discogs.com/search?q={}&type=all",
+    "dnf": "https://packages.fedoraproject.org/search?query={}",
+    "fd": "https://search.f-droid.org/?q={}&lang=en",
+    "fh": "https://flathub.org/apps/search?q={}",
+    "fk": "https://www.flipkart.com/search?q={}",
+    "gh": "https://github.com/search?q={}",
+    "goo": "https://google.com/search?q={}",
+    "gp": "https://groupprops.subwiki.org/w/index.php?search={}",
+    "gr": "https://www.goodreads.com/search?q={}",
+    "imdb": "https://www.imdb.com/find/?q={}",
+    "jc141": "https://1337x.to/search/{} jc141/1/",
+    "l2u": "https://www.unicodeit.net/?{}",
+    "lg": "http://libgen.li/index.php?req={}&order=extension&ordermode=desc",
+    "maps": "https://www.google.com/maps/search/{}",
+    "mn": "https://metanumbers.com/{}",
+    "mse": "https://math.stackexchange.com/search?q={}",
+    "nix": "https://search.nixos.org/packages?channel=24.05&from=0&size=50&sort=relevance&type=packages&query={}",
+    "oeis": "https://oeis.org/search?q={}",
+    "pac": "https://archlinux.org/packages/?sort=&q={}",
+    "pw": "https://proofwiki.org/w/index.php?search={}",
+    "qxr": "https://1337x.to/search/{} qxr/1/",
+    "ri": "https://www.reddit.com/search/?q={}",
+    "syn": "https://www.thesaurus.com/browse/{}",
+    "tmdb": "https://www.themoviedb.org/search?query={}",
+    "tpb": "https://thepiratebay.org/search.php?q={}",
+    "tz2": "https://torrentz2.nz/search?q={}",
+    "ud": "https://www.urbandictionary.com/define.php?term={}",
+    "wa": "https://www.wolframalpha.com/input?i2d=true&i={}",
+    "wm": "https://mathworld.wolfram.com/search/?query={}",
+    "wp": "https://www.wikiwand.com/en/{}",
+    "yt": "https://www.youtube.com/results?search_query={}",
+    "ytm": "https://music.youtube.com/search?q={}",
+    "yts": "https://yts.mx/browse-movies/{}/all/all/0/latest/0/all",
 }
 c.url.start_pages = "https://monkeytype.com/"
-c.url.yank_ignored_parameters = ["ref", "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "utm_name"]
+c.url.yank_ignored_parameters = [
+    "ref",
+    "utm_source",
+    "utm_medium",
+    "utm_campaign",
+    "utm_term",
+    "utm_content",
+    "utm_name",
+]
 
 # Windows
 c.window.hide_decoration = False
@@ -470,6 +534,23 @@ c.window.transparent = True
 
 # Zoom
 c.zoom.default = "125%"
-c.zoom.levels = ["25%", "33%", "50%", "67%", "75%", "90%", "100%", "110%", "125%", "150%", "175%", "200%", "250%", "300%", "400%", "500%"]
+c.zoom.levels = [
+    "25%",
+    "33%",
+    "50%",
+    "67%",
+    "75%",
+    "90%",
+    "100%",
+    "110%",
+    "125%",
+    "150%",
+    "175%",
+    "200%",
+    "250%",
+    "300%",
+    "400%",
+    "500%",
+]
 c.zoom.mouse_divider = 512
 c.zoom.text_only = False
