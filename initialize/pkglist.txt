@@ -76,7 +76,7 @@ syncthing                       # Sync files across devices
 syncthingtray-qt6               # A tray application for syncthing
 termdown                        # A terminal timer
 texlive                         # LaTeX fundamental packages
-texlive-lang                    # Texlive tools for non-Latin languages
+texlive-langenglish             # Texlive tools for non-Latin languages
 thefuck                         # A tool to correct your mistakes with your reaction
 tlrc                            # A tool that gives easy to understand versions of the manual with example
 tmate                           # Utility to access remote terminal
