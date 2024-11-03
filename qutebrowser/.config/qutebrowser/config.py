@@ -479,6 +479,7 @@ c.url.searchengines = {
     "at": "https://academictorrents.com/browse.php?search={}",
     "aur": "https://aur.archlinux.org/packages?O=0&K={}",
     "aw": "https://wiki.archlinux.org/index.php?search={}",
+    "bb": "https://www.bigbasket.com/ps/?q={}",
     "bs": "https://bitsearch.to/search?q={}",
     "cpp": "https://www.learncpp.com/gsearch/?q={}",
     "ctan": "https://ctan.org/search?phrase={}",
