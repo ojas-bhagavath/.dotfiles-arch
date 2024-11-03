@@ -37,6 +37,7 @@ luarocks                        # Optional dependency for lazy in nvim
 man-db                          # A utility to read man pages
 mkvtoolnix-gui                  # A tool to manipulate mkv files
 mpv                             # The OG video player
+neovide                         # A graphical interface for neovide
 neovim                          # A powerful text editor
 nerd-fonts                      # All the nerd fonts
 newsboat                        # An OP TUI RSS feed reader
@@ -53,7 +54,7 @@ pdfjs                           # A utility required to natively view pdfs on br
 pdftk                           # Command-line tool for working with PDFs
 polkit-kde-agent                # polkit agent by kde
 poppler                         # PDF rendering library based on xpdf 3.0
-power-profiles-daemon            # To manage power profiles of the device
+power-profiles-daemon           # To manage power profiles of the device
 python-adblock                  # Brave's adblock library in Python
 python-pip                      # A tool for installing python packages
 python-tldextract               # A package required for qute-pass
@@ -86,6 +87,7 @@ tree-sitter-cli                 # CLI tool for developing, testing, and using Tr
 ttf-font-awesome                # An awesome font
 ttf-kannada-font                # Kannada font
 tumbler                         # A utility to generate thumbnails
+ueberzug                        # A program that allows drawing images on terminals
 ueberzugpp                      # A program that allows drawing images on terminals
 unarchiver                      # Required for archive preview in yazi
 vial-appimage                   # A configurator for vial-based keyboards
