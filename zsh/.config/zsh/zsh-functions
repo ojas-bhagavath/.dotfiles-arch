@@ -74,3 +74,9 @@ function yta() {
         yt-dlp --ignore-errors --no-playlist --continue --format "bestaudio*" --extract-audio --audio-format="mp3" --audio-quality=0 --embed-thumbnail --embed-metadata  --output="$HOME/Stuff/Audios/%(channel)s/%(title)s.%(ext)s" $1
     fi
 }
+
+function nvim {
+    neovide $1 &
+    disown neovide
+    exit
+}

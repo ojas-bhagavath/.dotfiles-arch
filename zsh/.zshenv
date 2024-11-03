@@ -9,8 +9,8 @@ export DOTFILES="$HOME/.dotfiles"
 export TERM="foot"
 export TERMINAL="foot"
 export SHELL=/bin/zsh
-export EDITOR="nvim"
-export VISUAL="nvim"
+export EDITOR="neovide"
+export VISUAL="neovide"
 
 # zsh specific variables
 ZDOTDIR="$XDG_CONFIG_HOME/zsh"

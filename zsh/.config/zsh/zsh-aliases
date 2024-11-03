@@ -17,4 +17,3 @@ alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 
 # YouTube
 alias ytf="ytfzf -t -T wayland --features=hd,subtitles"
-
