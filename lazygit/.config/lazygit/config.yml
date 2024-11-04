@@ -2,7 +2,6 @@
 gui:
   timeFormat: 2006-01-02
   shortTimeFormat: 15:04:05
-  nerdFontsVersion: "3"
   theme:
     activeBorderColor:
       - "#ff966c"
@@ -28,3 +27,7 @@ gui:
       - "#c53b53"
     defaultFgColor:
       - "#c8d3f5"
+
+  showRandomTip: false
+  showBottomLine: false
+  showIcons: false
