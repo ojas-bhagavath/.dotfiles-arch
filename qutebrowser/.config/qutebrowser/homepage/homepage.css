@@ -1,131 +1,129 @@
-
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Anton");
 
 body {
-    background-image:url('/home/ojas/.config/qutebrowser/homepage/background.jpg');
-    background-size: 100%,100%;
-    margin: 0px;
-    height: 100%;
-    overflow: hidden;
+  background-image: url("/home/ojas/.config/qutebrowser/homepage/background.jpg");
+  background-size: 100%, 100%;
+  margin: 0px;
+  height: 100%;
+  overflow: hidden;
 }
 
 .greet {
-    font-family: "Hack Nerd Font";
-    color: #c8d3f5;
-    font-size: 1.0rem;
-    font-weight: 600;
-    margin-top: 2rem;
-    margin-left: 1rem;
+  font-family: "Hack Nerd Font";
+  color: #c8d3f5;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-left: 1rem;
 }
 
 .container {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 #clock {
-    /* font-family: sans-serif; */
-    font-size: 4.5rem;
-    font-weight: 600;
-    font-family: "Hack Nerd Font";
-    color: #c8d3f5;
-    margin-bottom: .25em;
-    margin-top: 0em;
+  /* font-family: sans-serif; */
+  font-size: 4.5rem;
+  font-weight: 600;
+  font-family: "Hack Nerd Font";
+  color: #c8d3f5;
+  margin-bottom: 0.25em;
+  margin-top: 0em;
 }
 
 #search {
-    width: 1000px;
-    height: 100px;
-    background-color: #c8d3f5;
-    display: none;
-    position: absolute;
-    margin-left: 13.5rem;
-    margin-top: 13.5rem;
-    box-sizing: border-box;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  width: 1000px;
+  height: 100px;
+  background-color: #c8d3f5;
+  display: none;
+  position: absolute;
+  margin-left: 13.5rem;
+  margin-top: 13.5rem;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #search-field {
-    width: 100%;
-    padding: .75em 1em;
-    box-sizing: border-box;
-    background-color: #222436;
-    border: solid 0px #000000;
-    font-family: "Hack Nerd Font";
-    font-size: 2rem;
-    color: #f2f2f2;
-    outline: none;
-    border-radius: 3px;
-    margin-bottom: 0em;
-    text-align: center;
+  width: 100%;
+  padding: 0.75em 1em;
+  box-sizing: border-box;
+  background-color: #222436;
+  border: solid 0px #000000;
+  font-family: "Hack Nerd Font";
+  font-size: 2rem;
+  color: #f2f2f2;
+  outline: none;
+  border-radius: 3px;
+  margin-bottom: 0em;
+  text-align: center;
 }
 
 .inline {
-    display: inline-block;
+  display: inline-block;
 }
 
 .bookmark-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 95%;
-    margin: 1em 0em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 95%;
+  margin: 1em 0em;
 }
 
 @media only screen and (max-width: 960px) {
-    .container {
-        height: auto;
-    }
-    #clock {
-        margin-top: 0.1em;
-    }
-    .container > .bookmark-container {
-        flex-direction: column;
-        width: 60%;
-    }
-    .bookmark-container > .bookmark-set {
-        width: auto;
-        margin: 1em 0em;
-    }
+  .container {
+    height: auto;
+  }
+  #clock {
+    margin-top: 0.1em;
+  }
+  .container > .bookmark-container {
+    flex-direction: column;
+    width: 60%;
+  }
+  .bookmark-container > .bookmark-set {
+    width: auto;
+    margin: 1em 0em;
+  }
 }
 
-.bookmark-set{
-    padding: 1em;
-    background-color: #1d1d2b;
-    border-radius: 5px;
-    font-family: "Hack Nerd Font";
-    font-size: 1.0rem;
-    width: 25%;
-    height: 30em;
-    margin: 0em .5em;
+.bookmark-set {
+  padding: 1em;
+  background-color: #1d1d2b;
+  border-radius: 5px;
+  font-family: "Hack Nerd Font";
+  font-size: 1rem;
+  width: 25%;
+  height: 30em;
+  margin: 0em 0.5em;
 }
 .bookmark-inner-container {
-    overflow-y: scroll;
-    height: 95%;
-    vertical-align: top;
+  overflow-y: scroll;
+  height: 95%;
+  vertical-align: top;
 }
 .bookmark-title {
-    font-family: "Hack Nerd Font";
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: #c8d3f5;
-    margin: 0em 0em .35em 0em;
+  font-family: "Hack Nerd Font";
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #c8d3f5;
+  margin: 0em 0em 0.35em 0em;
 }
 .bookmark {
-    text-decoration: none;
-    color: #c8d3f5;
-    display:block;
-    margin: .4em 0em;
+  text-decoration: none;
+  color: #c8d3f5;
+  display: block;
+  margin: 0.4em 0em;
 }
 .bookmark:hover {
-    color: #ff757f;
+  color: #ff757f;
 }
-

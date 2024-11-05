@@ -289,15 +289,16 @@ c.downloads.prevent_mixed_content = False
 c.downloads.remove_finished = 30000
 
 # Editor
-c.editor.command = ["foot", "-e", "nvim", "{file}", "-c", "normal {line}G{column0}1"]
+# c.editor.command = ["wezterm", "-e", "nvim", "{file}", "-c", "normal {line}G{column0}lA"]
+c.editor.command = ["neovide", "{file}", "--",  "-c", "startinsert | normal {line}G{column0}A"]
 c.editor.encoding = "utf-8"
 c.editor.remove_file = True
 
 # Fileselect
 c.fileselect.handler = "external"
-c.fileselect.folder.command = ["foot", "-e", "yazi", "--chooser-file={}"]
-c.fileselect.multiple_files.command = ["foot", "-e", "yazi", "--chooser-file={}"]
-c.fileselect.single_file.command = ["foot", "-e", "yazi", "--chooser-file={}"]
+c.fileselect.folder.command = ["wezterm", "-e", "yazi", "--chooser-file={}"]
+c.fileselect.multiple_files.command = ["wezterm", "-e", "yazi", "--chooser-file={}"]
+c.fileselect.single_file.command = ["wezterm", "-e", "yazi", "--chooser-file={}"]
 
 # Fonts
 c.fonts.default_family = "Hack Nerd Font"
