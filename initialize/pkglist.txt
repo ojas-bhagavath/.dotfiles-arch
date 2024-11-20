@@ -18,13 +18,16 @@ flatpak                         # Enables installing flatpaks
 fuzzel                          # A rofi/dmenu like application launcher for wayland
 fzf                             # Fuzzy finder
 gaupol                          # A tool to manipulate srt files 
+gimp                            # GNU image manipulation program
 git                             # A neat version control system
+git-delta                       # Syntax-highlighting pager for git and diff output
 gnome-boxes                     # Virtualization service
 gnome-disk-utility              # As the name says
 gtk2                            # Gives libgtk-x11 which is needed by pinentry-gtk-2 which is needed by gnupg sometimes
 gwenview                        # Image viewing utility by KDE
 httrack                         # Download entire websites
 imagemagick                     # An image viewing/manipulation program
+inkscape                        # Professional vector graphics editor
 intel-media-driver              # As the name says...
 intel-media-sdk                 # Legacy API for hardware video acceleration on Intel GPUs (5th to 11th gen)
 intel-ucode                     # Microcode update files for Intel CPUs
