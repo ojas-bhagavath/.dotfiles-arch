@@ -31,3 +31,8 @@ gui:
   showRandomTip: false
   showBottomLine: false
   showIcons: false
+git:
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never
+    useConfig: false

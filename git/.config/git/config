@@ -1,10 +1,36 @@
 [user]
-	name = Ojas Bhagavath
-	email = ojas.bhagavath@gmail.com
-	signingkey = 39DD2253AFE24F727C22A47643C923C55C4C46D2
+    name = Ojas Bhagavath
+    email = ojas.bhagavath@gmail.com
+    signingkey = 39DD2253AFE24F727C22A47643C923C55C4C46D2
+
 [init]
-	defaultBranch = main
+    defaultBranch = main
+
 [commit]
-	gpgsign = true
+    gpgsign = true
+
 [core]
-	editor = neovide
+    editor = neovide
+    pager = delta
+
+[include]
+    path = ~/.config/git/tokyonight_moon.gitconfig
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    minus-style                   = syntax "#3a273a"
+    minus-non-emph-style          = syntax "#3a273a"
+    minus-emph-style              = syntax "#6b2e43"
+    minus-empty-line-marker-style = syntax "#3a273a"
+    line-numbers-minus-style      = "#e26a75"
+    plus-style                    = syntax "#273849"
+    plus-non-emph-style           = syntax "#273849"
+    plus-emph-style               = syntax "#305f6f"
+    plus-empty-line-marker-style  = syntax "#273849"
+    line-numbers-plus-style       = "#b8db87"
+    line-numbers-zero-style       = "#3b4261"
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+    side-by-side = false
