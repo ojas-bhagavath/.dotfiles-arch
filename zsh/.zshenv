@@ -6,11 +6,11 @@ export XDG_STATE_HOME="$HOME/.local/state"
 export DOTFILES="$HOME/.dotfiles"
 
 # terminal and editor specific variables
-export TERM="foot"
-export TERMINAL="foot"
+export TERM="wezterm"
+export TERMINAL="wezterm"
 export SHELL=/bin/zsh
-export EDITOR="neovide"
-export VISUAL="neovide"
+export EDITOR="nvim"
+export VISUAL="nvim"
 
 # zsh specific variables
 ZDOTDIR="$XDG_CONFIG_HOME/zsh"
