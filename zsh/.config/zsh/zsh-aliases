@@ -1,6 +1,5 @@
 alias :q='exit'
 
-
 # General shell commands
 alias la='exa --oneline --icons --git --group-directories-first --long --all'
 alias treee='exa --tree'
@@ -17,3 +16,9 @@ alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 
 # YouTube
 alias ytf="ytfzf -t -T wayland --features=hd,subtitles"
+
+# Neovim
+alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
+alias nvim-kick="NVIM_APPNAME=kickstart nvim"
+alias nvim-chad="NVIM_APPNAME=NvChad nvim"
+alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"

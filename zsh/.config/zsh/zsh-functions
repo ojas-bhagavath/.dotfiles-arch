@@ -37,40 +37,53 @@ function zsh_add_completion() {
         exit
     }
 
-function take {
-    mkdir -p $1
-    echo "$2"
-    cd $1
-}
+    function take {
+        mkdir -p $1
+        echo "$2"
+        cd $1
+    }
 
-function yy() {
-    unalias rm cd
-	local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
-    alias cd='z'
-    alias rm='trash -iv'
-}
+    function yy() {
+        unalias rm cd
+        local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
+        yazi "$@" --cwd-file="$tmp"
+        if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+            cd -- "$cwd"
+        fi
+        rm -f -- "$tmp"
+        alias cd='z'
+        alias rm='trash -iv'
+    }
 
-function t2p {
-    echo $1 | entr pdflatex $1
-}
+    function t2p {
+        echo $1 | entr pdflatex $1
+    }
 
-function ytv() {
-    if [[ "$1" =~ list ]]; then
-        yt-dlp --ignore-errors --yes-playlist --continue --format "bestvideo*+bestaudio/best" --format-sort="res:720" --remux-video="mkv" --embed-subs --embed-thumbnail --embed-chapters --embed-metadata --output="$HOME/Stuff/Videos/%(channel)s/%(playlist)s/%(playlist_index)s. %(title)s.%(ext)s" $1
-    else
-        yt-dlp --ignore-errors --no-playlist --continue --format="bestvideo*+bestaudio/best" --format-sort="res:720" --remux-video="mkv" --embed-subs --embed-thumbnail --embed-chapters --embed-metadata --output="$HOME/Stuff/Videos/%(channel)s/%(title)s.%(ext)s" $1
-    fi
-}
+    function ytv() {
+        if [[ "$1" =~ list ]]; then
+            yt-dlp --ignore-errors --yes-playlist --continue --format "bestvideo*+bestaudio/best" --format-sort="res:720" --remux-video="mkv" --embed-subs --embed-thumbnail --embed-chapters --embed-metadata --output="$HOME/Stuff/Videos/%(channel)s/%(playlist)s/%(playlist_index)s. %(title)s.%(ext)s" $1
+        else
+            yt-dlp --ignore-errors --no-playlist --continue --format="bestvideo*+bestaudio/best" --format-sort="res:720" --remux-video="mkv" --embed-subs --embed-thumbnail --embed-chapters --embed-metadata --output="$HOME/Stuff/Videos/%(channel)s/%(title)s.%(ext)s" $1
+        fi
+    }
 
-function yta() {
-    if [[ "$1" =~ list ]]; then
-        yt-dlp --ignore-errors --yes-playlist --continue --format "bestaudio*" --extract-audio --audio-format="mp3" --audio-quality=0 --embed-thumbnail --embed-metadata --output="$HOME/Stuff/Audios/%(channel)s/%(playlist)s/%(playlist_index)s. %(title)s.%(ext)s" $1
-    else
-        yt-dlp --ignore-errors --no-playlist --continue --format "bestaudio*" --extract-audio --audio-format="mp3" --audio-quality=0 --embed-thumbnail --embed-metadata  --output="$HOME/Stuff/Audios/%(channel)s/%(title)s.%(ext)s" $1
-    fi
-}
+    function yta() {
+        if [[ "$1" =~ list ]]; then
+            yt-dlp --ignore-errors --yes-playlist --continue --format "bestaudio*" --extract-audio --audio-format="mp3" --audio-quality=0 --embed-thumbnail --embed-metadata --output="$HOME/Stuff/Audios/%(channel)s/%(playlist)s/%(playlist_index)s. %(title)s.%(ext)s" $1
+        else
+            yt-dlp --ignore-errors --no-playlist --continue --format "bestaudio*" --extract-audio --audio-format="mp3" --audio-quality=0 --embed-thumbnail --embed-metadata  --output="$HOME/Stuff/Audios/%(channel)s/%(title)s.%(ext)s" $1
+        fi
+    }
+
+
+    function nvims() {
+        items=("default" "kickstart" "LazyVim" "NvChad" "AstroNvim")
+        config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config" --height=~50% --layout=reverse --border --exit-0)
+        if [[ -z $config ]]; then
+            echo "Nothing selected"
+            return 0
+        elif [[ $config == "default" ]]; then
+            config=""
+        fi
+        NVIM_APPNAME=$config nvim $@
+    }
