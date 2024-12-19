@@ -1,9 +1,9 @@
 [plugin]
 deps = [
   { use = "Rolv-Apneseth/starship", rev = "247f49d" },
-  { use = "yazi-rs/plugins:max-preview", rev = "62f0789" },
+  { use = "yazi-rs/plugins:max-preview", rev = "7afba3a" },
   { use = "pirafrank/what-size", rev = "f08f7f2" },
-  { use = "yazi-rs/plugins:full-border", rev = "62f0789" },
+  { use = "yazi-rs/plugins:full-border", rev = "7afba3a" },
 ]
 
 [flavor]
