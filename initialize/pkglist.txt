@@ -33,6 +33,7 @@ intel-media-sdk                 # Legacy API for hardware video acceleration on 
 intel-ucode                     # Microcode update files for Intel CPUs
 jq                              # A commandline JSON parser
 kdegraphics-thumbnailers        # Thumbnailer for various graphic formats, including PDFs in Dolphin
+keepassxc                       # Cross-platform community-driven port of Keepass password manager
 lazygit                         # A tui interface for git
 libva-intel-driver              # VA-API implementation for Intel G45 and HD Graphics family
 lua                             # A fast programming language designed for extensibility of other applications
@@ -51,8 +52,6 @@ os-prober                       # Utility to detect other OSes on a set of drive
 p7zip                           # Command-line file archiver with high compression ratio
 pandoc-bin                      # A document converter tool
 parallel                        # A GNU tool to run processes in parallel
-pass                            # A robust password management system with Unix philosophy
-pass-otp                        # OTP manager for pass
 pdfjs                           # A utility required to natively view pdfs on browsers
 pdftk                           # Command-line tool for working with PDFs
 polkit-kde-agent                # polkit agent by kde
@@ -61,6 +60,7 @@ power-profiles-daemon           # To manage power profiles of the device
 python-adblock                  # Brave's adblock library in Python
 python-pip                      # A tool for installing python packages
 python-tldextract               # A package required for qute-pass
+python-pykeepass                # A dependency for keepassxc to work with qutebrowser
 qbittorrent                     # An open source torrent client
 qpdf                            # A Content-Preserving PDF Transformation System
 qtpass                          # A GUI tool for pass
