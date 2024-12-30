@@ -288,8 +288,8 @@ c.downloads.prevent_mixed_content = False
 c.downloads.remove_finished = 30000
 
 # Editor
-# c.editor.command = ["wezterm", "-e", "nvim", "{file}", "-c", "normal {line}G{column0}lA"]
-c.editor.command = ["neovide", "{file}", "--",  "-c", "startinsert | normal {line}G{column0}A"]
+c.editor.command = ["wezterm", "-e", "nvim", "{file}", "-c", "startinsert | normal {line}G{column0}lA"]
+# c.editor.command = ["neovide", "{file}", "--",  "-c", "startinsert | normal {line}G{column0}A"]
 c.editor.encoding = "utf-8"
 c.editor.remove_file = True
 
