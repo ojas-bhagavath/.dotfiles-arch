@@ -504,6 +504,7 @@ c.url.searchengines = {
     "pac": "https://archlinux.org/packages/?sort=&q={}",
     "pw": "https://proofwiki.org/w/index.php?search={}",
     "qxr": "https://1337x.to/search/{} qxr/1/",
+    "rd": "https://www.reliancedigital.in/search?q={}:relevance",
     "ri": "https://www.reddit.com/search/?q={}",
     "syn": "https://www.thesaurus.com/browse/{}",
     "tmdb": "https://www.themoviedb.org/search?query={}",
