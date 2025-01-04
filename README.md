@@ -1,6 +1,6 @@
 # .dotfiles-arch
 
-![https://github.com/ojas-bhagavath/.dotfiles-arch/docs/machine.png]
+![machine.png](https://github.com/ojas-bhagavath/.dotfiles-arch/blob/main/docs/machine.png?raw=true)
 
 This is a repository containing my dotfiles to my [Arch Linux](https://archlinux.org/) machine with [KDE Plasma](https://kde.org/plasma-desktop/) DE.
 
