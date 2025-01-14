@@ -288,7 +288,14 @@ c.downloads.prevent_mixed_content = False
 c.downloads.remove_finished = 30000
 
 # Editor
-c.editor.command = ["wezterm", "-e", "nvim", "{file}", "-c", "startinsert | normal {line}G{column0}lA"]
+c.editor.command = [
+    "wezterm",
+    "-e",
+    "nvim",
+    "{file}",
+    "-c",
+    "startinsert | normal {line}G{column0}lA",
+]
 # c.editor.command = ["neovide", "{file}", "--",  "-c", "startinsert | normal {line}G{column0}A"]
 c.editor.encoding = "utf-8"
 c.editor.remove_file = True
@@ -458,7 +465,7 @@ c.tabs.show_switching_delay = 10000
 c.tabs.tabs_are_windows = False
 c.tabs.title.alignment = "left"
 c.tabs.title.elide = "right"
-c.tabs.title.format = "{audio}{index}{title_sep}{current_title}"
+c.tabs.title.format = "{index}|{audio}{current_title}"
 c.tabs.title.format_pinned = "{audio}"
 c.tabs.tooltips = True
 c.tabs.undo_stack_size = 100

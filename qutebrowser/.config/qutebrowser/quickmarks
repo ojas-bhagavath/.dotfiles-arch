@@ -70,7 +70,7 @@ st http://127.0.0.1:8384/
 t0 https://www.amazon.in/gp/css/order-history?ref_=nav_AccountFlyout_orders
 t1 https://www.flipkart.com/account/orders?link=home_orders
 t2 https://track.yw56.com.cn/en/querydel?nums=UJ852936607YP&cyp=f60c095000b2d5906bf2090fc97c269d
-tg https://web.telegram.org/k/
+tg https://web.telegram.org/a/
 tifr https://www.tifr.res.in/~academics/gs_advertisement.php
 toefl https://v2.ereg.ets.org/ereg/public/jump?_p=TEL
 tulane https://applygrad.tulane.edu/apply/
