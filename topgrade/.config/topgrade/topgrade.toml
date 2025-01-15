@@ -1,0 +1,4 @@
+[misc]
+disable = ["git_repos"]
+assume_yes = true
+cleanup = true

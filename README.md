@@ -52,6 +52,7 @@ This symlinks config files from .dotfiles directory to appropriate places
 ```sh
 cd ~/.dotfiles/
 
+stow eza
 stow foot
 stow fuzzel
 stow keepassxc
@@ -64,6 +65,7 @@ stow scripts
 stow sioyek
 stow starship
 stow tmux
+stow topgrade
 stow wezterm
 stow yazi
 stow zsh
