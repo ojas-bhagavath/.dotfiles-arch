@@ -83,6 +83,7 @@ thefuck                         # A tool to correct your mistakes with your reac
 tlrc                            # A tool that gives easy to understand versions of the manual with example
 tmate                           # Utility to access remote terminal
 tmsu                            # A tool to tag any file and access the tags
+topgrade                        # A tool written in rust to update packages across several package managers
 trash-cli                       # A cli trash manager
 tree-sitter-cli                 # CLI tool for developing, testing, and using Tree-sitter parsers
 ttf-font-awesome                # An awesome font
@@ -92,7 +93,6 @@ ueberzug                        # A program that allows drawing images on termin
 ueberzugpp                      # A program that allows drawing images on terminals
 unarchiver                      # Required for archive preview in yazi
 vial-appimage                   # A configurator for vial-based keyboards
-vlc                             # A simple media player
 wezterm                         # A neat terminal emulator written in rust, configured in lua
 wget                            # A file downloading utility
 wl-clipboard                    # Clipboard tool for wayland
