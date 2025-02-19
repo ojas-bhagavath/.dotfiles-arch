@@ -8,7 +8,7 @@ bms https://www.math-berlin.de/
 cal0 https://calendar.google.com/calendar/u/0/r
 cal1 https://calendar.google.com/calendar/u/1/r
 ch https://raw.githubusercontent.com/qutebrowser/qutebrowser/main/doc/img/cheatsheet-big.png
-chal https://web103.reachmee.com/ext/I003/304/apply?site=5&lang=UK&validator=a72aeedd63ec10de71e46f8d91d0d57c&job_id=13573&notrack=true
+chal https://www.chalmers.se/en/about-chalmers/work-with-us/vacancies/
 cr https://classroom.google.com/u/1/h
 csir https://csirnetdec2024.ntaonline.in/
 csu https://gradadmissions.colostate.edu/apply/
@@ -26,7 +26,7 @@ gem https://gemini.google.com/app
 gg https://www.geogebra.org/classic
 gh https://github.com/ojas-bhagavath?tab=repositories
 gl https://gitlab.com/ojas-bhagavath
-goth https://web103.reachmee.com/ext/I005/1035/apply?site=7&lang=UK&validator=9b89bead79bb7258ad55c8d75228e5b7&job_id=36169
+goth https://web103.reachmee.com/ext/I005/1035/auth?site=7&lang=UK&validator=9b89bead79bb7258ad55c8d75228e5b7
 gram https://app.grammarly.com/
 gre https://ereg.ets.org/ereg/home?_p=GRI
 gtech https://gradapp.gatech.edu/apply/
@@ -84,6 +84,8 @@ utk https://apply.gradschool.utk.edu/account/
 uu https://futureu.admissions.utah.edu/apply/
 uwm https://apply.grad.wisc.edu/Account/Login?ReturnUrl=%2F
 uwo https://student.uwo.ca/psc/grdappprd/EMPLOYEE/SA/c/WSA_AAWS_MENU.WSA_SCC_NUR_REG.GBL?Page=WSA_SCC_NUR_REG&Action=U&
-vega https://vegamovies.boo/
+vega http://ww7.vegamovies.tips/?usid=20&utid=14586191210
 wh https://web.whatsapp.com
 wustl https://gradadmit.wustl.edu/apply/
+ojas https://ojasb.xyz/
+dash https://dash.cloudflare.com/257725e02965ebd805a1eb23de7c3627/workers-and-pages

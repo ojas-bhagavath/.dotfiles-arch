@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+waydroid app launch com.foobnix.pro.pdf.reader

@@ -30,7 +30,7 @@ gui:
 
   showRandomTip: false
   showBottomLine: false
-  showIcons: false
+  showIcons: true
 git:
   paging:
     colorArg: always
