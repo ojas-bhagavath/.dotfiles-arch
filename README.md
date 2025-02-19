@@ -38,11 +38,11 @@ chmod +x *.sh
 # This installs all the packages mentioned in pkglist.txt, be sure to edit that before you  run this, and run this at your  own risk as AUR packages may break your system
 ./2.2_yayinstall.sh
 # This installs the some flatpaks.
-2.3_flatpaks.sh
+./2.3_flatpaks.sh
 # This enables certain necessary services.
-3_services.sh
+./3_services.sh
 # These are some miscellaneous commands that I like to run post initialization.
-4_misc.sh
+./4_misc.sh
 ```
 
 #### Stow
