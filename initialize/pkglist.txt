@@ -32,6 +32,7 @@ intel-media-sdk                 # Legacy API for hardware video acceleration on 
 intel-ucode                     # Microcode update files for Intel CPUs
 jq                              # A commandline JSON parser
 kdegraphics-thumbnailers        # Thumbnailer for various graphic formats, including PDFs in Dolphin
+kitty                           # A fast, feature-rich, GPU based terminal emulator
 lazygit                         # A tui interface for git
 libva-intel-driver              # VA-API implementation for Intel G45 and HD Graphics family
 lua                             # A fast programming language designed for extensibility of other applications
@@ -57,6 +58,7 @@ poppler                         # PDF rendering library based on xpdf 3.0
 power-profiles-daemon           # To manage power profiles of the device
 python-adblock                  # Brave's adblock library in Python
 python-pip                      # A tool for installing python packages
+python-sioyek                   # Python wrapper and simple addons for sioyek PDF viewer
 python-tldextract               # A package required for qute-pass
 python-pykeepass                # A dependency for keepassxc to work with qutebrowser
 qbittorrent                     # An open source torrent client
@@ -93,7 +95,6 @@ ueberzug                        # A program that allows drawing images on termin
 ueberzugpp                      # A program that allows drawing images on terminals
 unarchiver                      # Required for archive preview in yazi
 vial-appimage                   # A configurator for vial-based keyboards
-wezterm                         # A neat terminal emulator written in rust, configured in lua
 wget                            # A file downloading utility
 wl-clipboard                    # Clipboard tool for wayland
 yazi                            # A TUI file manager written in rust

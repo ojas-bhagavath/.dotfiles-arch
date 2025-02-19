@@ -6,9 +6,9 @@ export XDG_STATE_HOME="$HOME/.local/state"
 export DOTFILES="$HOME/.dotfiles"
 
 # terminal and editor specific variables
-export TERM="wezterm"
-export TERMINAL="wezterm"
-export SHELL=/bin/zsh
+export TERM="kitty"
+export TERMINAL="kitty"
+export SHELL="/bin/zsh"
 export EDITOR="nvim"
 export VISUAL="nvim"
 

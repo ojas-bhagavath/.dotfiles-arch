@@ -289,7 +289,7 @@ c.downloads.remove_finished = 30000
 
 # Editor
 c.editor.command = [
-    "wezterm",
+    "kitty",
     "-e",
     "nvim",
     "{file}",
@@ -302,9 +302,9 @@ c.editor.remove_file = True
 
 # Fileselect
 c.fileselect.handler = "external"
-c.fileselect.folder.command = ["wezterm", "-e", "yazi", "--chooser-file={}"]
-c.fileselect.multiple_files.command = ["wezterm", "-e", "yazi", "--chooser-file={}"]
-c.fileselect.single_file.command = ["wezterm", "-e", "yazi", "--chooser-file={}"]
+c.fileselect.folder.command = ["kitty", "-e", "yazi", "--chooser-file={}"]
+c.fileselect.multiple_files.command = ["kitty", "-e", "yazi", "--chooser-file={}"]
+c.fileselect.single_file.command = ["kitty", "-e", "yazi", "--chooser-file={}"]
 
 # Fonts
 c.fonts.default_family = "Hack Nerd Font"
@@ -504,6 +504,7 @@ c.url.searchengines = {
     "l2u": "https://www.unicodeit.net/?{}",
     "lg": "http://libgen.li/index.php?req={}&order=extension&ordermode=desc",
     "maps": "https://www.google.com/maps/search/{}",
+    "mdn": "https://developer.mozilla.org/en-US/search?q={}",
     "mn": "https://metanumbers.com/{}",
     "mse": "https://math.stackexchange.com/search?q={}",
     "nix": "https://search.nixos.org/packages?channel=24.05&from=0&size=50&sort=relevance&type=packages&query={}",
