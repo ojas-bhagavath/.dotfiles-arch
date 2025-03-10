@@ -10,7 +10,7 @@
     gpgsign = true
 
 [core]
-    editor = neovide
+    editor = nvim
     pager = delta
 
 [include]
