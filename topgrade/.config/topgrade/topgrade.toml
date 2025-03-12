@@ -1,4 +1,11 @@
 [misc]
+pre_sudo = true
 disable = ["git_repos"]
 assume_yes = true
 cleanup = true
+
+[commands]
+"Yazi Packages" = "ya pack -u"
+"Passwords" = "cd ~/.keepass; git pull --rebase --autostash; git add .; git commit -S -m $(date -u +%Y%m%d%H%M); git push"
+"Neovim" = "cd ~/.config/nvim; git pull --rebase --autostash; git add .; git commit -S -m $(date -u +%Y%m%d%H%M); git push"
+"Dotfiles" = "cd ~/.dotfiles; git pull --rebase --autostash; git add .; git commit -S -m $(date -u +%Y%m%d%H%M); git push"
