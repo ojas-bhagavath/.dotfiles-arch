@@ -1,7 +1,7 @@
-OCO_API_URL=http://localhost:11434/api/chat
-OCO_MODEL=mistral
-OCO_API_KEY=undefined
 OCO_AI_PROVIDER=ollama
+OCO_MODEL=llama3:8b
+OCO_API_URL=http://localhost:11434/api/chat
+OCO_API_KEY=undefined
 OCO_TOKENS_MAX_INPUT=40960
 OCO_TOKENS_MAX_OUTPUT=4096
 OCO_DESCRIPTION=false
