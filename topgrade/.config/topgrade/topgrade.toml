@@ -6,4 +6,6 @@ cleanup = true
 
 [commands]
 "Yazi Packages" = "ya pack -u"
-"Passwords" = "cd ~/.keepass; git pull --rebase --autostash; git add .; git gen-commit; git push"
+"Passwords" = "cd ~/.keepass; git pull --rebase --autostash; git add .; oco"
+"Dotfiles" = "cd ~/.dotfiles; git pull --rebase --autostash; git add .; oco"
+"Neovim Config" = "cd ~/.config/nvim; git pull --rebase --autostash; git add .; oco"
