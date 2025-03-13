@@ -6,7 +6,5 @@ cleanup = true
 ignore_failures = ["custom_commands"]
 
 [commands]
-"Yazi Packages" = "ya pack -u"
-"Passwords" = "cd ~/.keepass; git pull --rebase --autostash; git add .; oco || exit"
-"Dotfiles" = "cd ~/.dotfiles; git pull --rebase --autostash; git add .; oco || exit"
-"Neovim Config" = "cd ~/.config/nvim; git pull --rebase --autostash; git add .; oco || exit"
+"Passwords" = "cd ~/.keepass; git pull --rebase --autostash; git add .; oco"
+"Dotfiles" = "ya pack -u; cd ~/.config/nvim/; git pull --rebase --autostash; git add .; oco; cd ~/.dotfiles/; git pull --rebase --autostash; git add .; oco"
