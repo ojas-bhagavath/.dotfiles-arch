@@ -3,6 +3,7 @@ pre_sudo = true
 disable = ["git_repos"]
 assume_yes = true
 cleanup = true
+ignore_failures = ["custom_commands"]
 
 [commands]
 "Yazi Packages" = "ya pack -u"
