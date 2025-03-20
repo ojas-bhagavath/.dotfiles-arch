@@ -11,6 +11,7 @@ alias cd='z'
 # Cloudflare Warp
 alias wcc='warp-cli connect'
 alias wcd='warp-cli disconnect'
+alias wcs='warp-cli status'
 
 alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 
