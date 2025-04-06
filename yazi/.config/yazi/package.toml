@@ -20,8 +20,8 @@ hash = "5614c46d5de76623c283d415bfac8025"
 
 [[plugin.deps]]
 use = "pirafrank/what-size"
-rev = "b23e3a4"
-hash = "98e5f5af3efd3ba8bc2db0720187cc83"
+rev = "a0d03d4"
+hash = "351caec76e82a2d798eff8db33702671"
 
 [flavor]
 deps = []
