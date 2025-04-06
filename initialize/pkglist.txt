@@ -69,8 +69,6 @@ reflector                       # A Python 3 module and script to retrieve and f
 ripgrep                         # A search tool that combines the usability of ag with the raw speed of grep
 scdoc                           # A tool to generate roff man pages
 sddm                            # Display manager (login manager) by KDE
-shellcheck                      # Shell script analysis tool
-shfmt                           # Format shell programs
 sioyek                          # PDF viewer for research papers and technical books with vim keybinds.
 spectacle                       # Screen capture utility by KDE
 speedtest-cli                   # Command line interface for testing internet bandwidth using speedtest.net
