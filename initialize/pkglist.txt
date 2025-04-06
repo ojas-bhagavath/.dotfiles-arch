@@ -1,7 +1,6 @@
 ark                             # Archiving tool by KDE
 bat                             # cat, but with wings
 biber                           # A bibliography management tool for LaTeX
-checkbashisms                   # Check scripts for BASH specific syntax
 checkupdates-with-aur           # Check for available pacman and aur updates
 cloudflare-warp-bin             # Cloudflare Warp Client
 dolphin                         # A GUI file manager by KDE
