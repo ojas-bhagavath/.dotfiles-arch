@@ -15,8 +15,8 @@ hash = "a8025f2bb311e869069364fba01abffc"
 
 [[plugin.deps]]
 use = "Rolv-Apneseth/starship"
-rev = "6c639b4"
-hash = "5614c46d5de76623c283d415bfac8025"
+rev = "c070754"
+hash = "ebe49da58741aa3bf06c49ee394e0a5a"
 
 [[plugin.deps]]
 use = "pirafrank/what-size"
