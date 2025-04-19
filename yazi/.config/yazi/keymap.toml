@@ -25,6 +25,7 @@ prepend_keymap = [
 
   # Go To
   { on = ["g", "."], run = "cd ~/.dotfiles/", desc = "the dotfiles directory" },
+  { on = ["g", "C"], run = "cd '~/Stuff/Mathematics/College Stuff/OU'", desc = "the OU directory" },
   { on = ["g", "D"], run = "cd ~/Stuff/Documents/", desc = "the documents directory" },
   { on = ["g", "P"], run = "cd ~/Stuff/LaTeX/Applications/PhD 2025/", desc = "the PhD directory" },
   { on = ["g", "T"], run = "cd ~/Stuff/Documents/Tickets/", desc = "the trash directory" },
