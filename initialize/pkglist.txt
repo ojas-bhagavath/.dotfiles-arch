@@ -16,6 +16,7 @@ firefox                         # The fallback browser
 flatpak                         # Enables installing flatpaks
 fuzzel                          # A rofi/dmenu like application launcher for wayland
 fzf                             # Fuzzy finder
+gap                             # Groups, Algorithms, Programming: a system for computational discrete algebra
 gaupol                          # A tool to manipulate srt files 
 git                             # A neat version control system
 git-delta                       # Syntax-highlighting pager for git and diff output

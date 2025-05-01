@@ -19,8 +19,6 @@ HISTSIZE=10000000
 SAVEHIST=10000000
 HISTDUP=erase
 
-
-
 # FZF
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --highlight-line \
@@ -47,20 +45,21 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 "
 
 # Other Stuff
-export GPG_TTY=$(tty)
 export GNUPGHOME="$HOME"/.gnupg
+export GPG_TTY=$(tty)
 export PASSWORD_STORE_DIR="$HOME/.password-store"
 
-export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export GOPATH="$XDG_DATA_HOME/go"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
-export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME/java"
+export PARALLEL_HOME="$XDG_CONFIG_HOME"/parallel 
+export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export STACK_ROOT="$XDG_DATA_HOME"/stack
 export STACK_XDG=1
-export PARALLEL_HOME="$XDG_CONFIG_HOME"/parallel 
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME/java"
 
 # PATH
-export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$CARGO_HOME/bin"
+export PATH="$PATH:$HOME/.elan/bin/"
+export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.scripts/"
