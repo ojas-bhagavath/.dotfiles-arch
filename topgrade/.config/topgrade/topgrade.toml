@@ -1,6 +1,6 @@
 [misc]
 pre_sudo = true
-disable = ["git_repos", "uv"]
+disable = ["git_repos", "elan", "uv"]
 assume_yes = true
 cleanup = true
 ignore_failures = ["custom_commands"]
