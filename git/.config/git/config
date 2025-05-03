@@ -50,7 +50,6 @@
 [push]
     autoSetupRemote = true
     default = current
-    gpgSign = true
     
 [pull]
     default = current
