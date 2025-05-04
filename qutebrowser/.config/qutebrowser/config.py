@@ -519,6 +519,7 @@ c.url.searchengines = {
     "tpb": "https://thepiratebay.org/search.php?q={}",
     "tz2": "https://torrentz2.nz/search?q={}",
     "ud": "https://www.urbandictionary.com/define.php?term={}",
+    "udemy": "https://www.udemy.com/courses/search/?src=ukw&q={}",
     "wa": "https://www.wolframalpha.com/input?i2d=true&i={}",
     "wm": "https://mathworld.wolfram.com/search/?query={}",
     "wp": "https://www.wikiwand.com/en/{}",
