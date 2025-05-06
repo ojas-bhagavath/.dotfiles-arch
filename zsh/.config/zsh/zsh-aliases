@@ -19,7 +19,7 @@ alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'
 alias ytf="ytfzf -t -T wayland --features=hd,subtitles"
 alias ytv='yt-dlp --ignore-errors --no-playlist --continue --format="bestvideo*+bestaudio/best" --format-sort="res:720" --remux-video="mkv" --embed-subs --embed-thumbnail --embed-chapters --embed-metadata --output="$HOME/Stuff/Videos/%(channel)s/%(title)s.%(ext)s"'
 alias ytvp='yt-dlp --ignore-errors --yes-playlist --continue --format "bestvideo*+bestaudio/best" --format-sort="res:720" --remux-video="mkv" --embed-subs --embed-thumbnail --embed-chapters --embed-metadata --output="$HOME/Stuff/Videos/%(channel)s/%(playlist)s/%(playlist_index)s. %(title)s.%(ext)s"'
-alias yta='yt-dlp --ignore-errors --no-playlist --continue --format "bestaudio*" --extract-audio --audio-format="mp3" --audio-quality=0 --embed-thumbnail --embed-metadata --output="$HOME/Stuff/Audios/%(channel)s/%(title)s.%(ext)s" $1'
+alias yta='yt-dlp --ignore-errors --no-playlist --continue --format "bestaudio*" --extract-audio --audio-format="mp3" --audio-quality=0 --embed-thumbnail --embed-metadata --output="$HOME/Stuff/Audios/%(channel)s/%(title)s.%(ext)s"'
 alias ytap='yt-dlp --ignore-errors --yes-playlist --continue --format "bestaudio*" --extract-audio --audio-format="mp3" --audio-quality=0 --embed-thumbnail --embed-metadata --output="$HOME/Stuff/Audios/%(channel)s/%(playlist)s/%(playlist_index)s. %(title)s.%(ext)s"'
 
 # Neovim
