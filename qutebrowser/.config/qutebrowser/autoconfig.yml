@@ -28,6 +28,7 @@ settings:
   content.register_protocol_handler:
     https://calendar.google.com?cid=%25s: true
     https://mail.google.com?extsrc=mailto&url=%25s: true
+    https://outlook.office.com?mailtouri=%25s: false
   tabs.title.format:
     global: '{index}|{audio}{current_title}'
   tabs.title.format_pinned:
