@@ -13,10 +13,14 @@ alias wcc='warp-cli connect'
 alias wcd='warp-cli disconnect'
 alias wcs='warp-cli status'
 
-alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
+alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'
 
 # YouTube
 alias ytf="ytfzf -t -T wayland --features=hd,subtitles"
+alias ytv='yt-dlp --ignore-errors --no-playlist --continue --format="bestvideo*+bestaudio/best" --format-sort="res:720" --remux-video="mkv" --embed-subs --embed-thumbnail --embed-chapters --embed-metadata --output="$HOME/Stuff/Videos/%(channel)s/%(title)s.%(ext)s"'
+alias ytvp='yt-dlp --ignore-errors --yes-playlist --continue --format "bestvideo*+bestaudio/best" --format-sort="res:720" --remux-video="mkv" --embed-subs --embed-thumbnail --embed-chapters --embed-metadata --output="$HOME/Stuff/Videos/%(channel)s/%(playlist)s/%(playlist_index)s. %(title)s.%(ext)s"'
+alias yta='yt-dlp --ignore-errors --no-playlist --continue --format "bestaudio*" --extract-audio --audio-format="mp3" --audio-quality=0 --embed-thumbnail --embed-metadata --output="$HOME/Stuff/Audios/%(channel)s/%(title)s.%(ext)s" $1'
+alias ytap='yt-dlp --ignore-errors --yes-playlist --continue --format "bestaudio*" --extract-audio --audio-format="mp3" --audio-quality=0 --embed-thumbnail --embed-metadata --output="$HOME/Stuff/Audios/%(channel)s/%(playlist)s/%(playlist_index)s. %(title)s.%(ext)s"'
 
 # Neovim
 alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
@@ -29,7 +33,7 @@ alias gg="lazygit"
 
 # Git
 alias gs="git status --short"
-alias gd="git diff --output-indicator-new=' ' --output-indicator-old=' '"
+alias gd="git diff --output-indicator-new=' '--output-indicator-old=' '"
 alias ga="git add --patch"
 alias gA="git add ."
 alias gc="git commit"
