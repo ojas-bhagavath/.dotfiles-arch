@@ -51,9 +51,10 @@ lre https://www.rexegg.com/
 lrx https://www.regular-expressions.info/tutorial.html
 lsu https://applygrad.lsu.edu/apply/
 m0 https://mail.google.com/mail/u/0/#all
-m1 https://mail.google.com/mail/u/1/#all
-m2 https://mail.google.com/mail/u/2/#all
-m3 https://mail.google.com/mail/u/3/#all
+m1 https://outlook.office.com/mail/
+m2 https://mail.google.com/mail/u/1/#all
+m3 https://mail.google.com/mail/u/2/#all
+m4 https://mail.google.com/mail/u/3/#all
 maps maps.google.com
 matr1 https://matrixcalc.org/en
 matr2 https://matrix.reshish.com
@@ -100,3 +101,4 @@ visa https://www.usvisascheduling.com/en-US/
 wh https://web.whatsapp.com
 wustl https://gradadmit.wustl.edu/apply/
 sevis https://www.fmjfee.com/i901fee/index.html
+1 https://outlook.office.com/mail/
