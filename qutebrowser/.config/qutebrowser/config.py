@@ -490,6 +490,7 @@ c.url.searchengines = {
     "bs": "https://bitsearch.to/search?q={}",
     "cpp": "https://www.learncpp.com/gsearch/?q={}",
     "ctan": "https://ctan.org/search?phrase={}",
+    "dic": "https://www.dictionary.com/browse/{}",
     "disc": "https://www.discogs.com/search?q={}&type=all",
     "dnf": "https://packages.fedoraproject.org/search?query={}",
     "fd": "https://search.f-droid.org/?q={}&lang=en",
