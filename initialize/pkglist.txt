@@ -39,6 +39,7 @@ lua                             # A fast programming language designed for exten
 luarocks                        # Optional dependency for lazy in nvim
 man-db                          # A utility to read man pages
 mkvtoolnix-gui                  # A tool to manipulate mkv files
+mpd                             # Flexible, powerful, server-side application for playing music
 mpv                             # The OG video player
 neovide                         # A graphical interface for neovide
 neovim                          # A powerful text editor
@@ -67,6 +68,7 @@ qtpass                          # A GUI tool for pass
 qutebrowser                     # A highly customizable browser built around vim binds
 reflector                       # A Python 3 module and script to retrieve and filter the latest Pacman mirror list
 ripgrep                         # A search tool that combines the usability of ag with the raw speed of grep
+rmpc                            # A beautiful and configurable TUI client for MPD
 scdoc                           # A tool to generate roff man pages
 sddm                            # Display manager (login manager) by KDE
 sioyek                          # PDF viewer for research papers and technical books with vim keybinds.
