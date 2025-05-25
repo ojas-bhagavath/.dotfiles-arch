@@ -23,3 +23,6 @@ source "$ZDOTDIR/zsh-cursor"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 source <(fzf --zsh)
+
+# TMUX
+if [ "$TMUX" = "" ]; then tmux; fi

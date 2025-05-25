@@ -1,6 +1,7 @@
 alias :q='exit'
 
 # General shell commands
+alias cat="bat"
 alias la='eza --oneline --icons --git --group-directories-first --long --all'
 alias treee='exa --tree'
 alias mv='mv -iv'
@@ -40,3 +41,8 @@ alias gc="git commit"
 alias gp="git pull"
 alias gP="git push"
 alias gl="git log --all --graph --pretty=format:'%C(magenta)%h %C(white) %an %ar%C(auto) %D%n%s%n'"
+
+# Tmux
+alias tn="tmux new-session -s"
+alias tl="tmux list-sessions"
+alias ta="tmux attach-session"
