@@ -25,4 +25,6 @@ eval "$(zoxide init zsh)"
 source <(fzf --zsh)
 
 # TMUX
-if [ "$TMUX" = "" ]; then tmux; fi
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux new-session -As0
+fi
