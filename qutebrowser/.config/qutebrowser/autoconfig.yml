@@ -14,6 +14,7 @@ settings:
     https://www.flipkart.com: false
     https://www.olx.in: true
     https://www.speedtest.net: false
+    https://www.tanishq.co.in: false
   content.media.audio_capture:
     https://meet.google.com: true
   content.media.audio_video_capture:
