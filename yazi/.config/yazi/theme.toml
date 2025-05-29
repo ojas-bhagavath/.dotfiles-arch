@@ -1,4 +1,4 @@
-[manager]
+[mgr]
 # NOTE: can combined with tmTheme (sublime colorshceme file) for preview code highlight
 # syntect_theme = "path/to/tmTheme"
 
@@ -18,11 +18,6 @@ marker_cut = { fg = "#ff757f", bg = "#ff757f" }
 marker_marked = { fg = "#82aaff", bg = "#82aaff" }
 marker_selected = { fg = "#c099ff", bg = "#c099ff" }
 
-# Tab
-tab_active = { fg = "#c8d3f5", bg = "#2f334d" }
-tab_inactive = { fg = "#3b4261", bg = "#222436" }
-tab_width = 1
-
 # Count
 count_copied = { fg = "#c8d3f5", bg = "#41a6b5" }
 count_cut = { fg = "#c8d3f5", bg = "#c53b53" }
@@ -31,6 +26,12 @@ count_selected = { fg = "#c8d3f5", bg = "#3e68d7" }
 # Border
 border_symbol = "│"
 border_style = { fg = "#589ed7" }
+
+[tabs]
+# Tab
+tab_active = { fg = "#c8d3f5", bg = "#2f334d" }
+tab_inactive = { fg = "#3b4261", bg = "#222436" }
+
 
 [mode]
 normal_main = { fg = "#1b1d2b", bg = "#c099ff", bold = true }
