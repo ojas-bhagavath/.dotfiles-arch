@@ -29,7 +29,7 @@ prepend_keymap = [
   { on = ["g", "D"], run = "cd ~/Stuff/Documents/", desc = "the documents directory" },
   { on = ["g", "P"], run = "cd ~/Stuff/LaTeX/Applications/PhD 2025/", desc = "the PhD directory" },
   { on = ["g", "T"], run = "cd ~/Stuff/Documents/Tickets/", desc = "the trash directory" },
-  { on = ["g", "V"], run = "cd ~/Stuff/Vaults/", desc = "the Vaults directory" },
+  { on = ["g", "V"], run = "cd ~/Stuff/Notes/", desc = "the Notes directory" },
   { on = ["g", "W"], run = "cd ~/Stuff/Websites/", desc = "the websites directory" },
   { on = ["g", "b"], run = "cd ~/Stuff/Books/", desc = "the Books directory" },
   { on = ["g", "c"], run = "cd ~/.config/", desc = "the config directory" },
