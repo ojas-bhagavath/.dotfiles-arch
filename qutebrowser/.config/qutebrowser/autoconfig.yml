@@ -23,6 +23,7 @@ settings:
     https://meet.google.com: true
   content.notifications.enabled:
     https://calendar.google.com: false
+    https://jlcpcb.com: false
     https://meet.google.com: true
     https://web.telegram.org: false
     https://web.whatsapp.com: false
