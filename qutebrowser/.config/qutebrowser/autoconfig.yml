@@ -27,6 +27,7 @@ settings:
     https://meet.google.com: true
     https://web.telegram.org: false
     https://web.whatsapp.com: false
+    https://www.sapnaonline.com: false
   content.register_protocol_handler:
     https://calendar.google.com?cid=%25s: true
     https://mail.google.com?extsrc=mailto&url=%25s: true
