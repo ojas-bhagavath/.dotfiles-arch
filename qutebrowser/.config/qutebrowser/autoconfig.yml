@@ -11,6 +11,7 @@ settings:
   content.geolocation:
     https://www.airindia.com: false
     https://www.asus.com: false
+    https://www.bookmyforex.com: false
     https://www.flipkart.com: false
     https://www.olx.in: true
     https://www.speedtest.net: false
