@@ -35,7 +35,7 @@ export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export STACK_ROOT="$XDG_DATA_HOME"/stack
 export STACK_XDG=1
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME/java"
-export LEDGER_FILE="$HOME/Stuff/Finance/transactions.ledger"
+export LEDGER_FILE="$HOME/Stuff/Finance/transactions.journal"
 
 # PATH
 export PATH="$PATH:$CARGO_HOME/bin"
