@@ -28,6 +28,7 @@ settings:
     https://meet.google.com: true
     https://web.telegram.org: false
     https://web.whatsapp.com: false
+    https://www.magicbricks.com: false
     https://www.sapnaonline.com: false
   content.register_protocol_handler:
     https://calendar.google.com?cid=%25s: true
