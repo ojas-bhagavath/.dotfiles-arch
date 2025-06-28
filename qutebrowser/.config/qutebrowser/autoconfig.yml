@@ -9,6 +9,7 @@ settings:
   content.desktop_capture:
     https://meet.google.com: true
   content.geolocation:
+    https://apps.docusign.com: false
     https://www.airindia.com: false
     https://www.asus.com: false
     https://www.bookmyforex.com: false

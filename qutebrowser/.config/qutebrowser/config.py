@@ -503,6 +503,7 @@ c.url.searchengines = {
     "gr": "https://www.goodreads.com/search?q={}",
     "imdb": "https://www.imdb.com/find/?q={}",
     "jc141": "https://1337x.to/search/{} jc141/1/",
+    "lb": "https://letterboxd.com/search/{}",
     "l2u": "https://www.unicodeit.net/?{}",
     "lg": "http://libgen.li/index.php?req={}&order=extension&ordermode=desc",
     "maps": "https://www.google.com/maps/search/{}",
