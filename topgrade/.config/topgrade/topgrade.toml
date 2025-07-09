@@ -8,4 +8,4 @@ ignore_failures = ["custom_commands"]
 [commands]
 "Vault" = "cd ~/Stuff/Notes/; git pull --rebase --autostash; git add .; git commit -m \"`date +'%Y%m%d-%H:%M'`\"; git push"
 "Passwords" = "cd ~/.keepass; git pull --rebase --autostash; git add .; git commit -S -m 'chore(passwords.kdbx): update passwords file to latest version'; git push"
-"Dotfiles" = "ya pack -u; cd ~/.config/nvim/; git pull --rebase --autostash; git add .; oco; cd ~/.dotfiles/; git pull --rebase --autostash; git add .; oco"
+"Dotfiles" = "cd ~/.config/nvim/; git pull --rebase --autostash; git add .; oco; cd ~/.dotfiles/; git pull --rebase --autostash; git add .; oco"
