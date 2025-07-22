@@ -26,6 +26,7 @@ settings:
   content.media.video_capture:
     https://meet.google.com: true
   content.notifications.enabled:
+    https://apkcombo.com: false
     https://calendar.google.com: false
     https://jlcpcb.com: false
     https://meet.google.com: true
