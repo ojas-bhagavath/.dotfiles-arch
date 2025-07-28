@@ -502,6 +502,7 @@ c.url.searchengines = {
     "goo": "https://google.com/search?q={}",
     "gp": "https://groupprops.subwiki.org/w/index.php?search={}",
     "gr": "https://www.goodreads.com/search?q={}",
+    "icon": "https://simpleicons.org/?q={}",
     "imdb": "https://www.imdb.com/find/?q={}",
     "jc141": "https://1337x.to/search/{} jc141/1/",
     "lb": "https://letterboxd.com/search/{}",

@@ -33,6 +33,7 @@ settings:
     https://normanapartments.residentportal.com: false
     https://web.telegram.org: false
     https://web.whatsapp.com: false
+    https://www.goindigo.in: false
     https://www.magicbricks.com: false
     https://www.sapnaonline.com: false
   content.register_protocol_handler:
