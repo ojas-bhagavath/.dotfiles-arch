@@ -482,7 +482,7 @@ c.url.searchengines = {
     "1337x": "https://1337x.to/search/{}/1/",
     "aa": "https://annas-archive.org/search?q={}",
     "abb": "https://audiobookbay.is/?s={}&tt=1",
-    "am": "https://www.amazon.in/s?k={}",
+    "am": "https://www.amazon.com/s?k={}",
     "ar": "https://archive.org/search?query={}",
     "at": "https://academictorrents.com/browse.php?search={}",
     "aur": "https://aur.archlinux.org/packages?O=0&K={}",
