@@ -6,5 +6,8 @@ show_hidden = true
 [preview]
 tab_size = 4
 
+[tasks]
+image_bound = [10000, 10000]
+
 [input]
 cursor_blink = true
