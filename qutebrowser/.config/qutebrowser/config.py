@@ -25,6 +25,7 @@ c.bindings.commands = {
         "A": 'hint links spawn yt-dlp --prefer-ffmpeg --extract-audio --audio-format mp3 --audio-quality 0 -i --download-archive "$HOME/YouTube/downloaded-audios.txt" -o "$HOME/YouTube/%(title)s.%(ext)s" {hint-url}',
         "D": 'hint links spawn yt-dlp -i --download-archive "$HOME/YouTube/downloaded-videos.txt" -o "$HOME/YouTube/%(title)s.%(ext)s" -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best" {hint-url}',
         "V": "hint links spawn firefox {hint-url}",
+        "R": "reload -f",
         "<Ctrl-Shift-O>": "cmd-set-text -s :open -p",
         "<Ctrl-o>": "cmd-set-text -s :open -w",
         "ee": "spawn --userscript ~/.config/qutebrowser/qute-keepass -p '~/.keepass/passwords.kdbx'",

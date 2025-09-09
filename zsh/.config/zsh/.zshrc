@@ -26,5 +26,5 @@ source <(fzf --zsh)
 
 # TMUX
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux new-session -As0
+  exec tmux new-session
 fi
