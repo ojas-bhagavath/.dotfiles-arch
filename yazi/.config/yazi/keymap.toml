@@ -28,7 +28,7 @@ prepend_keymap = [
   { on = ["g", "C"], run = "cd '~/Stuff/College Stuff/OU/'", desc = "the OU directory" },
   { on = ["g", "D"], run = "cd ~/Stuff/Documents/", desc = "the documents directory" },
   { on = ["g", "P"], run = "cd ~/Stuff/Projects", desc = "the Projects" },
-  { on = ["g", "T"], run = "cd ~/Stuff/Documents/Tickets/", desc = "the trash directory" },
+  { on = ["g", "T"], run = "cd ~/.local/share/Trash/files/", desc = "the trash directory" },
   { on = ["g", "V"], run = "cd ~/Stuff/Notes/", desc = "the Notes directory" },
   { on = ["g", "W"], run = "cd ~/Stuff/Websites/", desc = "the websites directory" },
   { on = ["g", "b"], run = "cd ~/Stuff/Books/", desc = "the Books directory" },
@@ -41,7 +41,7 @@ prepend_keymap = [
   { on = ["g", "n"], run = "cd ~/.config/nvim/", desc = "the neovim config directory" },
   { on = ["g", "p"], run = "cd ~/Stuff/Pictures/", desc = "the Pictures directory" },
   { on = ["g", "s"], run = "cd ~/Stuff/", desc = "the Stuff directory" },
-  { on = ["g", "t"], run = "cd ~/.local/share/Trash/files/", desc = "the trash directory" },
+  { on = ["g", "t"], run = "cd ~/Stuff/Projects/Typst/", desc = "the Typst directory" },
   { on = ["g", "v"], run = "cd ~/Stuff/Videos/", desc = "the Videos directory" },
   { on = ["g", "w"], run = "cd ~/Stuff/Projects/WebDev/ojasb.xyz/", desc = "my website" },
 
