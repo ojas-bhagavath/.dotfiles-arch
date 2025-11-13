@@ -528,7 +528,7 @@ c.url.searchengines = {
     "udemy": "https://www.udemy.com/courses/search/?src=ukw&q={}",
     "wa": "https://www.wolframalpha.com/input?i2d=true&i={}",
     "wm": "https://mathworld.wolfram.com/search/?query={}",
-    "wp": "https://www.wikiwand.com/en/{}",
+    "wp": "https://en.wikipedia.org/wiki/{}",
     "yt": "https://www.youtube.com/results?search_query={}",
     "ytm": "https://music.youtube.com/search?q={}",
     "yts": "https://yts.mx/browse-movies/{}/all/all/0/latest/0/all",
