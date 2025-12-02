@@ -5,7 +5,7 @@
 --[[     ya.notify({ title = "Starship", content = message, timeout = 3 }) ]]
 --[[ end ]]
 
-local save = ya.sync(function(st, _cwd, output)
+local save = ya.sync(function(st, output)
     st.output = output
     -- Support for versions later than v25.5.31 (not yet a full release as of writing this comment)
     local render = ui.render or ya.render
@@ -113,6 +113,7 @@ return {
             :stdin(Command.INHERIT)
             :cwd(args[1])
             :env("STARSHIP_SHELL", "")
+            :env("PWD", args[1])
 
         -- Point to custom starship config
         local config_file = get_config_file()
@@ -122,7 +123,7 @@ return {
 
         local output = command:output()
         if output then
-            save(args[1], output.stdout:gsub("^%s+", ""))
+            save(output.stdout:gsub("^%s+", ""))
         end
     end,
 }
