@@ -10,8 +10,8 @@ hash = "3996fc74044bc44144b323686f887e1"
 
 [[plugin.deps]]
 use = "Rolv-Apneseth/starship"
-rev = "d7056e3"
-hash = "be8e1b31833e356cad14dcda9d8ad2d3"
+rev = "eca1861"
+hash = "e519d894e94ded741e06aae4d4775981"
 
 [[plugin.deps]]
 use = "pirafrank/what-size"
