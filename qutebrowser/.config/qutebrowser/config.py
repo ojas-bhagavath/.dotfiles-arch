@@ -495,6 +495,8 @@ c.url.searchengines = {
     "dic": "https://www.dictionary.com/browse/{}",
     "disc": "https://www.discogs.com/search?q={}&type=all",
     "dnf": "https://packages.fedoraproject.org/search?query={}",
+    "ebay": "https://www.ebay.com/sch/i.html?_nkw={}",
+    "etsy": "https://www.etsy.com/search?q={}",
     "fcs": "https://freecoursesite.com/?s={}",
     "fd": "https://search.f-droid.org/?q={}&lang=en",
     "fh": "https://flathub.org/apps/search?q={}",
