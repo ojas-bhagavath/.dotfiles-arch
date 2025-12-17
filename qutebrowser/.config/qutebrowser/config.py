@@ -533,7 +533,7 @@ c.url.searchengines = {
     "wp": "https://en.wikipedia.org/wiki/{}",
     "yt": "https://www.youtube.com/results?search_query={}",
     "ytm": "https://music.youtube.com/search?q={}",
-    "yts": "https://yts.mx/browse-movies/{}/all/all/0/latest/0/all",
+    "yts": "https://yts.lt/browse-movies/{}/all/all/0/latest/0/all",
 }
 c.url.start_pages = "https://monkeytype.com/"
 c.url.yank_ignored_parameters = [
