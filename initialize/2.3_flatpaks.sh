@@ -7,3 +7,4 @@ flatpak install flathub org.keepassxc.KeePassXC            # A gui frontend for 
 flatpak install flathub org.videolan.VLC                   # VLC Media Player
 flatpak install flathub org.bunkus.mkvtoolnix-gui          # Tool to work with mkv
 flatpak install flathub us.zoom.Zoom                       # Zoom videoconferencing application
+flatpak install flathub com.vscodium.codium                # telemetry-less version of Visual Studio Code
