@@ -1,6 +1,0 @@
-2025-12-29 21:53:55.997 [info] Getting Manifest... prettier.prettier-vscode
-2025-12-29 21:53:56.722 [info] Installing extension: prettier.prettier-vscode {"isMachineScoped":false,"installPreReleaseVersion":false,"pinned":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/ojas/.vscode-oss/extensions/extensions.json","path":"/home/ojas/.vscode-oss/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"productVersion":{"version":"1.107.1","date":"2025-12-19T12:27:49.310Z"}}
-2025-12-29 21:54:00.127 [info] Extension signature verification result for prettier.prettier-vscode: Success. Executed: true. Duration: 563ms.
-2025-12-29 21:54:00.324 [info] Extracted extension to file:///home/ojas/.vscode-oss/extensions/prettier.prettier-vscode-12.0.7-universal: prettier.prettier-vscode
-2025-12-29 21:54:00.333 [info] Renamed to /home/ojas/.vscode-oss/extensions/prettier.prettier-vscode-12.0.7-universal
-2025-12-29 21:54:00.383 [info] Extension installed successfully: prettier.prettier-vscode vscode-userdata:/home/ojas/.vscode-oss/extensions/extensions.json
