@@ -1,0 +1,81 @@
+{
+	"name": "language-hugo-vscode",
+	"displayName": "Hugo Language and Syntax Support",
+	"description": "Adds syntax highlighting and snippets to Hugo files in VS Code",
+	"version": "1.2.0",
+	"publisher": "budparr",
+	"engines": {
+		"vscode": "^1.24.0"
+	},
+	"galleryBanner": {
+		"color": "#0594CB",
+		"theme": "dark"
+	},
+	"icon": "images/icon.png",
+	"license": "Apache-2.0",
+	"bugs": {
+		"url": "https://github.com/budparr/language-hugo-vscode/issues",
+		"email": "info@thenewdynamic.org"
+	},
+	"homepage": "https://github.com/budparr/language-hugo-vscode",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/budparr/language-hugo-vscode.git"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"keywords": [
+		"hugo",
+		"html",
+		"template",
+		"snippets"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "html",
+				"aliases": [
+					"HTML",
+					"HTML (Hugo)"
+				],
+				"extensions": [
+					".html",
+					".htm",
+					".xhtml"
+				],
+				"configuration": "./hugo.configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "html",
+				"scopeName": "text.html.hugo",
+				"path": "./src/syntaxes/hugo.tmLanguage.json"
+			}
+		],
+		"snippets": [
+			{
+				"language": "html",
+				"path": "./src/snippets/hugo.code-snippets.json"
+			},
+			{
+				"language": "json",
+				"path": "./src/snippets/hugo.code-snippets.json"
+			},
+			{
+				"language": "markdown",
+				"path": "./src/snippets/md.snippets.json"
+			},
+			{
+				"language": "toml",
+				"path": "./src/snippets/md.snippets.json"
+			}
+		]
+	},
+	"__metadata": {
+		"installedTimestamp": 1767065551245,
+		"targetPlatform": "universal",
+		"size": 41365
+	}
+}

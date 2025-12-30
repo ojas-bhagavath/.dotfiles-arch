@@ -1,0 +1,12 @@
+2025-12-29 22:22:30.256 [info] Started local extension host with pid 81903.
+2025-12-29 22:22:30.857 [error] Cannot read properties of null (reading '$ref'): TypeError: Cannot read properties of null (reading '$ref')
+    at LRe (vscode-file://vscode-app/usr/lib/code/out/vs/workbench/workbench.desktop.main.js:3040:25963)
+    at vscode-file://vscode-app/usr/lib/code/out/vs/workbench/workbench.desktop.main.js:3040:26084
+    at Array.forEach (<anonymous>)
+    at LRe (vscode-file://vscode-app/usr/lib/code/out/vs/workbench/workbench.desktop.main.js:3040:26019)
+    at vscode-file://vscode-app/usr/lib/code/out/vs/workbench/workbench.desktop.main.js:3040:26084
+    at Array.forEach (<anonymous>)
+    at LRe (vscode-file://vscode-app/usr/lib/code/out/vs/workbench/workbench.desktop.main.js:3040:26019)
+    at vscode-file://vscode-app/usr/lib/code/out/vs/workbench/workbench.desktop.main.js:3040:26084
+    at Array.forEach (<anonymous>)
+    at LRe (vscode-file://vscode-app/usr/lib/code/out/vs/workbench/workbench.desktop.main.js:3040:26019)

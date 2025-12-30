@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/vscode-tab-header/index.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,eAAe,EAAC,MAAM,wBAAwB,CAAC","sourcesContent":["export {VscodeTabHeader} from './vscode-tab-header.js';\n"]}

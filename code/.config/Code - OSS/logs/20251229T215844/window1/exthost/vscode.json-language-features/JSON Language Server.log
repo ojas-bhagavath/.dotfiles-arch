@@ -1,0 +1,17 @@
+2025-12-29 21:58:47.585 [info] cancelled
+2025-12-29 21:58:47.626 [info] read schema from vscode: vscode://schemas/keybindings
+2025-12-29 21:58:47.627 [info] cancelled
+2025-12-29 21:58:47.728 [info] read schema from vscode: vscode://schemas/inlineCompletionProviderIdArgs
+2025-12-29 21:58:48.392 [info] read schema from vscode: vscode://schemas/keybindings
+2025-12-29 21:58:48.454 [info] read schema from vscode: vscode://schemas/keybindings
+2025-12-29 21:58:48.459 [info] read schema from vscode: vscode://schemas/inlineCompletionProviderIdArgs
+2025-12-29 21:58:48.489 [info] cancelled
+2025-12-29 21:58:48.495 [info] read schema from vscode: vscode://schemas/keybindings
+2025-12-29 21:58:48.497 [info] schema change detected vscode://schemas/keybindings
+2025-12-29 21:58:48.526 [info] schema change detected vscode://schemas/inlineCompletionProviderIdArgs
+2025-12-29 21:58:48.530 [info] schema change detected vscode://schemas/keybindings
+2025-12-29 21:58:48.535 [info] read schema from vscode: vscode://schemas/keybindings
+2025-12-29 21:58:48.536 [info] read schema from vscode: vscode://schemas/inlineCompletionProviderIdArgs
+2025-12-29 21:58:48.658 [info] read schema from vscode: vscode://schemas/keybindings
+2025-12-29 21:58:48.660 [info] read schema from vscode: vscode://schemas/inlineCompletionProviderIdArgs
+2025-12-29 21:58:48.697 [info] cancelled
