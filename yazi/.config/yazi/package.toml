@@ -1,27 +1,34 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-enter"
-rev = "80cd5b5"
+rev = "03cdd4b"
 hash = "56fdabc96fc1f4d53c96eb884b02a5be"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "80cd5b5"
+rev = "03cdd4b"
 hash = "3996fc74044bc44144b323686f887e1"
+
+[[plugin.deps]]
+use = "pirafrank/what-size"
+rev = "a1438d4"
+hash = "62251f94eb67648d42cdfcfb8be0fad2"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:toggle-pane"
+rev = "03cdd4b"
+hash = "8a7c58225816a163a6e8730c0adafbc8"
 
 [[plugin.deps]]
 use = "Rolv-Apneseth/starship"
 rev = "eca1861"
 hash = "e519d894e94ded741e06aae4d4775981"
 
-[[plugin.deps]]
-use = "pirafrank/what-size"
-rev = "a36fdaf"
-hash = "c5c38bb8cd68d4426471efe0013ca0ac"
+[[flavor.deps]]
+use = "ojas-bhagavath/tokyonight:tokyonight-moon"
+rev = "6caf9ff"
+hash = "5167cb73e94732b21a354d8ea8d96cd"
 
-[[plugin.deps]]
-use = "yazi-rs/plugins:toggle-pane"
-rev = "80cd5b5"
-hash = "8a7c58225816a163a6e8730c0adafbc8"
-
-[flavor]
-deps = []
+[[flavor.deps]]
+use = "ojas-bhagavath/tokyonight:tokyonight-day"
+rev = "6caf9ff"
+hash = "a223cb93f8c8a2cda4f397116fd0934a"
