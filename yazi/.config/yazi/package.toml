@@ -10,8 +10,8 @@ hash = "3996fc74044bc44144b323686f887e1"
 
 [[plugin.deps]]
 use = "pirafrank/what-size"
-rev = "6fd634a"
-hash = "c740548feff5d3523e4633363541fcd1"
+rev = "179ebf6"
+hash = "57056b9728006881d580ccabe8154a9c"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:toggle-pane"
