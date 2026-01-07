@@ -19,6 +19,9 @@ source "$ZDOTDIR/zsh-plugins"
 # Cursor
 source "$ZDOTDIR/zsh-cursor"
 
+# Widgets
+source "$ZDOTDIR/zsh-widgets"
+
 # Misc
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"

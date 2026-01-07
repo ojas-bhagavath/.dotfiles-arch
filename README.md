@@ -23,7 +23,7 @@ git clone --recurse-submodules https://github.com/ojas-bhagavath/.dotfiles-arch 
 
 #### Initialize:
 
-Assuming you are on a fresh install of arch, these scripts installs all the software that I generally like on my system, and run some scripts that I run on a fresh install of Arch.
+Assuming you are on a fresh install of arch, these scripts install all the software that I generally like on my system, and run some scripts that I run on a fresh install of Arch.
 
 ```sh
 cd ~/.dotfiles/initialize/
