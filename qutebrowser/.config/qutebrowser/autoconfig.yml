@@ -47,6 +47,7 @@ settings:
     https://web.whatsapp.com: false
     https://www.facebook.com: false
     https://www.goindigo.in: false
+    https://www.katebackdrop.com: false
     https://www.magicbricks.com: false
     https://www.sapnaonline.com: false
   content.register_protocol_handler:
