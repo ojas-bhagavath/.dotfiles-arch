@@ -52,15 +52,23 @@ This symlinks config files from .dotfiles directory to appropriate places
 ```sh
 cd ~/.dotfiles/
 
+stow asciinema
+stow btop
+stow code
 stow eza
 stow foot
 stow fuzzel
+stow gh
+stow git
 stow keepassxc
+stow kitty
 stow lazygit
+stow mpd
 stow mpv
 stow newsboat
 stow nvim
 stow qutebrowser
+stow rmpc
 stow scripts
 stow sioyek
 stow starship
