@@ -4,19 +4,19 @@
     "telemetry.devDeviceId": "c2f67b19-3dcd-4c11-b5fa-6b9a34df85a7",
     "backupWorkspaces": {
         "workspaces": [],
-        "folders": [],
-        "emptyWindows": [
+        "folders": [
             {
-                "backupFolder": "1767066658350"
+                "folderUri": "file:///home/ojas/Stuff/Projects/WebDev/mahak.one"
             }
-        ]
+        ],
+        "emptyWindows": []
     },
     "windowControlHeight": 50,
     "profileAssociations": {
-        "workspaces": {},
-        "emptyWindows": {
-            "1767066658350": "__default__profile__"
-        }
+        "workspaces": {
+            "file:///home/ojas/Stuff/Projects/WebDev/mahak.one": "__default__profile__"
+        },
+        "emptyWindows": {}
     },
     "theme": "vs-dark",
     "themeBackground": "#1a1b26",
@@ -51,7 +51,8 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "backupPath": "/home/ojas/.config/Code - OSS/Backups/1767066658350",
+            "folder": "file:///home/ojas/Stuff/Projects/WebDev/mahak.one",
+            "backupPath": "/home/ojas/.config/Code - OSS/Backups/b12263aefbdc39951e0bd321beb3a76b",
             "uiState": {
                 "mode": 0,
                 "x": 0,
@@ -62,5 +63,21 @@
             }
         },
         "openedWindows": []
+    },
+    "windowSplashWorkspaceOverride": {
+        "layoutInfo": {
+            "sideBarWidth": 300,
+            "auxiliaryBarWidth": 300,
+            "workspaces": {
+                "2fcf0cde949875eec17a54a90c191d86": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "b593924ab991ba67251d01b4d56aee58": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                }
+            }
+        }
     }
 }

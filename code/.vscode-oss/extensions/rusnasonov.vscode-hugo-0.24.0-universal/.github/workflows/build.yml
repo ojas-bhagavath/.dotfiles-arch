@@ -1,0 +1,51 @@
+name: Build
+
+on:
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        os: [ubuntu-16.04, ubuntu-18.04]
+        node: [10.x]
+        
+    steps:
+    - name: checkout
+      uses: actions/checkout@v1
+    - name: use Node.js ${{ matrix.node }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node }}
+    - name: npm install
+      run: |
+        npm install
+    - name: compile
+      run: |
+        npm run compile
+    - name: lint
+      run: |
+        npm run lint
+    - name: test
+      run: |
+        export DISPLAY=':99.0'
+        /usr/bin/Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+        npm test
+    - name: build package
+      run: |
+        ./node_modules/vsce/out/vsce package
+        echo "##[set-output name=version;]$(npm run package-version --silent)"
+      id: build_package
+    - name: save vsix
+      uses: actions/upload-artifact@master
+      with:
+        name: ${{ format('vscode-hugo-{0}-{1}.vsix', steps.build_package.outputs.version, github.sha) }}
+        path: ${{ format('vscode-hugo-{0}.vsix', steps.build_package.outputs.version) }}
+
+
+      

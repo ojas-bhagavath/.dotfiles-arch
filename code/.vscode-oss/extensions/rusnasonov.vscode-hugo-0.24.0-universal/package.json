@@ -1,0 +1,89 @@
+{
+	"name": "vscode-hugo",
+	"displayName": "Hugo Helper",
+	"description": "Helper for Hugo static site generator",
+	"version": "0.24.0",
+	"publisher": "rusnasonov",
+	"homepage": "https://github.com/rusnasonov/vscode-hugo/blob/master/README.md",
+	"icon": "icon.png",
+	"license": "SEE LICENSE IN LICENSE",
+	"engines": {
+		"vscode": "^1.43.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"keywords": [
+		"Hugo",
+		"Helper",
+		"Static site generator"
+	],
+	"author": "Ruslan Nasonov - rusnasonov.com",
+	"repository": "https://github.com/rusnasonov/vscode-hugo.git",
+	"bugs": {
+		"url": "https://github.com/rusnasonov/vscode-hugo/issues"
+	},
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/main",
+	"contributes": {
+		"commands": [
+			{
+				"command": "hugo.version",
+				"title": "Hugo: version"
+			},
+			{
+				"command": "hugo.createContent",
+				"title": "Hugo: create content"
+			},
+			{
+				"command": "hugo.remoteVersion",
+				"title": "Hugo: remote version"
+			},
+			{
+				"command": "hugo.fromarchetype",
+				"title": "Hugo: create content from archetype"
+			}
+		],
+		"taskDefinitions": [
+			{
+				"type": "hugo",
+				"required": [
+					"task"
+				],
+				"properties": {
+					"task": {
+						"type": "string",
+						"description": "The Hugo task"
+					}
+				}
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"lint": "tslint --project ./",
+		"package-version": "echo $npm_package_version"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.6",
+		"@types/node": "^11.13.7",
+		"@types/vscode": "^1.43.0",
+		"tslint": "^5.11.0",
+		"typescript": "^3.4.5",
+		"vsce": "^1.75.0",
+		"vscode-test": "^1.3.0"
+	},
+	"dependencies": {
+		"axios": "^0.19.2"
+	},
+	"__metadata": {
+		"installedTimestamp": 1769226209404,
+		"targetPlatform": "universal",
+		"size": 1681781
+	}
+}
