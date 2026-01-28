@@ -1,0 +1,8 @@
+{
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "terminal.integrated.fontFamily": "Hack Nerd Font",
+    "lean4.alwaysAskBeforeInstallingLeanVersions": true,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}

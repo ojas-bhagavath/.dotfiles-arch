@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {{ partial "head/meta.html" . }}
+        {{ partial "head/styles.html" . }}
+        {{ partial "head/theme-switch.html" . }}
+        {{ partial "head/title.html" . }}
+    </head>
+    <body>
+        <header>
+            {{ block "nav" . }}
+            {{ end }}
+        </header>
+        <main>
+            {{ block "main" . }}
+            {{ end }}
+        </main>
+        <footer></footer>
+    </body>
+</html>
+
+

@@ -14,29 +14,29 @@
     "windowControlHeight": 50,
     "profileAssociations": {
         "workspaces": {
-            "file:///home/ojas/Stuff/Projects/WebDev/mahak.one": "__default__profile__"
+            "file:///home/ojas/Stuff/Projects/WebDev/mahak.one": "__default__profile__",
+            "file:///home/ojas/Stuff/Projects/Lean/GlimpseOfLean": "__default__profile__"
         },
         "emptyWindows": {}
     },
     "theme": "vs-dark",
-    "themeBackground": "#1a1b26",
+    "themeBackground": "#1e1e2e",
     "windowSplash": {
         "zoomLevel": 0,
         "baseTheme": "vs-dark",
         "colorInfo": {
-            "foreground": "#787c99",
-            "background": "#1a1b26",
-            "editorBackground": "#1a1b26",
-            "titleBarBackground": "#16161e",
-            "titleBarBorder": "#101014",
-            "activityBarBackground": "#16161e",
-            "activityBarBorder": "#16161e",
-            "sideBarBackground": "#16161e",
-            "sideBarBorder": "#101014",
-            "statusBarBackground": "#16161e",
-            "statusBarBorder": "#101014",
-            "statusBarNoFolderBackground": "#16161e",
-            "windowBorder": "#0d0f17"
+            "foreground": "#cdd6f4",
+            "background": "#1e1e2e",
+            "editorBackground": "#1e1e2e",
+            "titleBarBackground": "#11111b",
+            "titleBarBorder": "rgba(0, 0, 0, 0)",
+            "activityBarBackground": "#11111b",
+            "activityBarBorder": "rgba(0, 0, 0, 0)",
+            "sideBarBackground": "#181825",
+            "sideBarBorder": "rgba(0, 0, 0, 0)",
+            "statusBarBackground": "#11111b",
+            "statusBarBorder": "rgba(0, 0, 0, 0)",
+            "statusBarNoFolderBackground": "#11111b"
         },
         "layoutInfo": {
             "sideBarSide": "left",
@@ -57,8 +57,8 @@
                 "mode": 0,
                 "x": 0,
                 "y": 0,
-                "width": 1200,
-                "height": 800,
+                "width": 960,
+                "height": 1028,
                 "zoomLevel": 2
             }
         },
@@ -75,6 +75,14 @@
                 },
                 "b593924ab991ba67251d01b4d56aee58": {
                     "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "4c2a8eb30dc25e835801f246f3490ae1": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "6554ae6c8f30d764687874db62b0a5c0": {
+                    "sideBarVisible": false,
                     "auxiliaryBarVisible": false
                 }
             }
