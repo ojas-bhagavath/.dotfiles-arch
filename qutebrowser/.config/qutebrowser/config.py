@@ -522,6 +522,7 @@ c.url.searchengines = {
     "qxr": "https://1337x.to/search/{} qxr/1/",
     "rd": "https://www.reliancedigital.in/search?q={}:relevance",
     "ri": "https://www.reddit.com/search/?q={}",
+    "stacks": "https://stacks.math.columbia.edu/search?query={}",
     "syn": "https://www.thesaurus.com/browse/{}",
     "tmdb": "https://www.themoviedb.org/search?query={}",
     "tpb": "https://thepiratebay.org/search.php?q={}",
