@@ -536,7 +536,7 @@ c.url.searchengines = {
     "ytm": "https://music.youtube.com/search?q={}",
     "yts": "https://yts.lt/browse-movies/{}/all/all/0/latest/0/all",
 }
-c.url.start_pages = "https://monkeytype.com/"
+c.url.start_pages = "https://calendar.google.com/calendar/u/0/r/day"
 c.url.yank_ignored_parameters = [
     "ref",
     "utm_source",
