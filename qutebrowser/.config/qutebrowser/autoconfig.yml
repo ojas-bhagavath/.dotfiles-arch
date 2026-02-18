@@ -6,55 +6,56 @@
 
 config_version: 2
 settings:
-  aliases:
-    global:
-      q: close
-      qa: quit
-      r: reload
-      rr: restart
-      w: session-save
-      wq: quit --save
-      wqa: quit --save
-  content.desktop_capture:
-    https://meet.google.com: true
-  content.geolocation:
-    https://apps.docusign.com: false
-    https://outlook.office.com: false
-    https://www.airindia.com: false
-    https://www.asus.com: false
-    https://www.bookmyforex.com: false
-    https://www.candere.com: false
-    https://www.flipkart.com: false
-    https://www.joyalukkas.in: false
-    https://www.olx.in: true
-    https://www.speedtest.net: false
-    https://www.tanishq.co.in: false
-    https://www.vivaaerobus.com: false
-  content.media.audio_capture:
-    https://meet.google.com: true
-  content.media.audio_video_capture:
-    https://meet.google.com: true
-  content.media.video_capture:
-    https://meet.google.com: true
-  content.notifications.enabled:
-    http://localhost:8096: true
-    https://apkcombo.com: false
-    https://calendar.google.com: false
-    https://jlcpcb.com: false
-    https://meet.google.com: true
-    https://normanapartments.residentportal.com: false
-    https://web.telegram.org: false
-    https://web.whatsapp.com: false
-    https://www.facebook.com: false
-    https://www.goindigo.in: false
-    https://www.katebackdrop.com: false
-    https://www.magicbricks.com: false
-    https://www.sapnaonline.com: false
-  content.register_protocol_handler:
-    https://calendar.google.com?cid=%25s: true
-    https://mail.google.com?extsrc=mailto&url=%25s: true
-    https://outlook.office.com?mailtouri=%25s: false
-  tabs.title.format:
-    global: '{index}|{audio}{current_title}'
-  tabs.title.format_pinned:
-    global: '{audio}'
+    aliases:
+        global:
+            q: close
+            qa: quit
+            r: reload
+            rr: restart
+            w: session-save
+            wq: quit --save
+            wqa: quit --save
+    content.desktop_capture:
+        https://meet.google.com: true
+    content.geolocation:
+        https://apps.docusign.com: false
+        https://outlook.office.com: false
+        https://www.airindia.com: false
+        https://www.asus.com: false
+        https://www.bookmyforex.com: false
+        https://www.candere.com: false
+        https://www.flipkart.com: false
+        https://www.joyalukkas.in: false
+        https://www.olx.in: false
+        https://www.speedtest.net: false
+        https://www.starbucks.com: false
+        https://www.tanishq.co.in: false
+        https://www.vivaaerobus.com: false
+    content.media.audio_capture:
+        https://meet.google.com: true
+    content.media.audio_video_capture:
+        https://meet.google.com: true
+    content.media.video_capture:
+        https://meet.google.com: true
+    content.notifications.enabled:
+        http://localhost:8096: true
+        https://apkcombo.com: false
+        https://calendar.google.com: false
+        https://jlcpcb.com: false
+        https://meet.google.com: true
+        https://normanapartments.residentportal.com: false
+        https://web.telegram.org: false
+        https://web.whatsapp.com: false
+        https://www.facebook.com: false
+        https://www.goindigo.in: false
+        https://www.katebackdrop.com: false
+        https://www.magicbricks.com: false
+        https://www.sapnaonline.com: false
+    content.register_protocol_handler:
+        https://calendar.google.com?cid=%25s: true
+        https://mail.google.com?extsrc=mailto&url=%25s: true
+        https://outlook.office.com?mailtouri=%25s: false
+    tabs.title.format:
+        global: "{index}|{audio}{current_title}"
+    tabs.title.format_pinned:
+        global: "{audio}"
