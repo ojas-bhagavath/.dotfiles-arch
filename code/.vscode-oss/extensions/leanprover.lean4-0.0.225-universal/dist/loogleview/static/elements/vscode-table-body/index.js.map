@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/vscode-table-body/index.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,eAAe,EAAC,MAAM,wBAAwB,CAAC","sourcesContent":["export {VscodeTableBody} from './vscode-table-body.js';\n"]}

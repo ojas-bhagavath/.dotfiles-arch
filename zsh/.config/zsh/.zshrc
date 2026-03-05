@@ -25,5 +25,9 @@ source "$ZDOTDIR/zsh-widgets"
 # Misc
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
-eval "$(thefuck --alias)"
 source <(fzf --zsh)
+
+# TMUX
+if [[ -z "$TMUX" ]]; then
+    exec tmux
+fi
