@@ -20,8 +20,8 @@ hash = "4c0260feb50ea2437380690ffc241da7"
 
 [[plugin.deps]]
 use = "Rolv-Apneseth/starship"
-rev = "eca1861"
-hash = "e519d894e94ded741e06aae4d4775981"
+rev = "a837101"
+hash = "635b0feb9215772d22020eb0abf0bb34"
 
 [[flavor.deps]]
 use = "ojas-bhagavath/tokyonight:tokyonight-moon"
