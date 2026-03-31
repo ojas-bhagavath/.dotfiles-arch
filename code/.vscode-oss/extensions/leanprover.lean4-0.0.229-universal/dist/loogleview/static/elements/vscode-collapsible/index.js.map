@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/vscode-collapsible/index.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,iBAAiB,EAAC,MAAM,yBAAyB,CAAC","sourcesContent":["export {VscodeCollapsible} from './vscode-collapsible.js';\n"]}
