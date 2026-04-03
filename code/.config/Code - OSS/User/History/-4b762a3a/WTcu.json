@@ -4,6 +4,5 @@
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "workbench.colorTheme": "Catppuccin Mocha"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

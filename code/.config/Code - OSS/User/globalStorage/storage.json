@@ -7,6 +7,9 @@
         "folders": [
             {
                 "folderUri": "file:///home/ojas/Stuff/Projects/WebDev/mahak.one"
+            },
+            {
+                "folderUri": "file:///home/ojas/Stuff/Projects/Lean/GlimpseOfLean"
             }
         ],
         "emptyWindows": []
@@ -51,8 +54,8 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/ojas/Stuff/Projects/WebDev/mahak.one",
-            "backupPath": "/home/ojas/.config/Code - OSS/Backups/b12263aefbdc39951e0bd321beb3a76b",
+            "folder": "file:///home/ojas/Stuff/Projects/Lean/GlimpseOfLean",
+            "backupPath": "/home/ojas/.config/Code - OSS/Backups/da78cacfb387559734e6935c8d0dc2fa",
             "uiState": {
                 "mode": 0,
                 "x": 0,
@@ -83,6 +86,10 @@
                 },
                 "6554ae6c8f30d764687874db62b0a5c0": {
                     "sideBarVisible": false,
+                    "auxiliaryBarVisible": false
+                },
+                "1aec24e4ad0f9e073ba7fb5714ddf3de": {
+                    "sideBarVisible": true,
                     "auxiliaryBarVisible": false
                 }
             }
