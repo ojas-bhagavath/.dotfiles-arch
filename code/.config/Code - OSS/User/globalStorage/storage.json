@@ -6,10 +6,7 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///home/ojas/Stuff/Projects/WebDev/mahak.one"
-            },
-            {
-                "folderUri": "file:///home/ojas/Stuff/Projects/Lean/GlimpseOfLean"
+                "folderUri": "file:///home/ojas/Stuff/Projects/zmk/zmk-config-temp"
             }
         ],
         "emptyWindows": []
@@ -18,9 +15,13 @@
     "profileAssociations": {
         "workspaces": {
             "file:///home/ojas/Stuff/Projects/WebDev/mahak.one": "__default__profile__",
-            "file:///home/ojas/Stuff/Projects/Lean/GlimpseOfLean": "__default__profile__"
+            "file:///home/ojas/Stuff/Projects/Lean/GlimpseOfLean": "__default__profile__",
+            "file:///home/ojas/Stuff/Projects/zmk/zmk-config": "__default__profile__",
+            "file:///home/ojas/Stuff/Projects/zmk/zmk-config-temp": "__default__profile__"
         },
-        "emptyWindows": {}
+        "emptyWindows": {
+            "1776031786027": "__default__profile__"
+        }
     },
     "theme": "vs-dark",
     "themeBackground": "#1e1e2e",
@@ -47,15 +48,15 @@
             "titleBarHeight": 35,
             "activityBarWidth": 48,
             "sideBarWidth": 300,
-            "auxiliaryBarWidth": 0,
+            "auxiliaryBarWidth": 300,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/ojas/Stuff/Projects/Lean/GlimpseOfLean",
-            "backupPath": "/home/ojas/.config/Code - OSS/Backups/da78cacfb387559734e6935c8d0dc2fa",
+            "folder": "file:///home/ojas/Stuff/Projects/zmk/zmk-config-temp",
+            "backupPath": "/home/ojas/.config/Code - OSS/Backups/ffed490c17bc6b2cc2d7d01d061b3105",
             "uiState": {
                 "mode": 0,
                 "x": 0,
@@ -91,6 +92,18 @@
                 "1aec24e4ad0f9e073ba7fb5714ddf3de": {
                     "sideBarVisible": true,
                     "auxiliaryBarVisible": false
+                },
+                "3549588a54e2547c3f034bd823361e79": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": true
+                },
+                "6455791b388505a5863d93fe2498a8f5": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": true
+                },
+                "d30b9fd44ceb2e0d13c40f4c2a73a457": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": true
                 }
             }
         }

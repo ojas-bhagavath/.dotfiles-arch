@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/vscode-progress-ring/index.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,kBAAkB,EAAC,MAAM,2BAA2B,CAAC","sourcesContent":["export {VscodeProgressRing} from './vscode-progress-ring.js';\n"]}
