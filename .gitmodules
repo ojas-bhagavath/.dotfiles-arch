@@ -1,3 +1,6 @@
 [submodule "nvim/.config/nvim"]
 	path = nvim/.config/nvim
 	url = git@github.com:ojas-bhagavath/nvim.git
+[submodule "zmk/.config/zmk-config"]
+	path = zmk/.config/zmk-config
+	url = git@github.com:ojas-bhagavath/zmk-config.git
