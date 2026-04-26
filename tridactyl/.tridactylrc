@@ -1,0 +1,125 @@
+set update.lastchecktime 1777006207225
+set update.nag true
+set update.nagwait 7
+set update.lastnaggedversion 1.14.0
+set update.checkintervalsecs 86400
+set configversion 2.0
+set editorcmd neovide
+
+unbind J
+unbind K
+unbind o
+unbind t
+unbind w
+unbind O
+unbind T
+unbind W
+
+bind j scrollline 3
+bind k scrollline -3
+bind J tabnext
+bind K tabprev
+bind o fillcmdline open
+bind O fillcmdline tabopen
+
+" qutebrowser style quickmarks
+set searchurls.awf https://bendodson.com/projects/itunes-artwork-finder
+set searchurls.cal0 https://calendar.google.com/calendar/u/0/r
+set searchurls.cal1 https://outlook.office.com/calendar/view/month
+set searchurls.cgpt https://chatgpt.com
+set searchurls.d0 https://drive.google.com/drive/u/0/my-drive
+set searchurls.dash https://dash.cloudflare.com/257725e02965ebd805a1eb23de7c3627/workers-and-pages
+set searchurls.dc https://discord.com/channels/@me
+set searchurls.gem https://gemini.google.com/app
+set searchurls.gg https://www.geogebra.org/classic
+set searchurls.irctc https://www.irctc.co.in/nget/train-search
+set searchurls.li https://www.linkedin.com/in/ojas-bhagavath
+set searchurls.lre https://www.rexegg.com
+set searchurls.lrx https://www.regular-expressions.info/tutorial.html
+set searchurls.m0 https://mail.google.com/mail/u/0/#all
+set searchurls.m1 https://outlook.office.com/mail
+set searchurls.m2 https://mail.google.com/mail/u/1/#all
+set searchurls.matr1 https://matrixcalc.org/en
+set searchurls.matr2 https://matrix.reshish.com
+set searchurls.mt https://monkeytype.com
+set searchurls.ojas https://ojasb.xyz
+set searchurls.rgx https://regex101.com
+set searchurls.sbi https://retail.onlinesbi.sbi/retail/login.htm
+set searchurls.st http://127.0.0.1:8384
+set searchurls.tg https://web.telegram.org/a
+set searchurls.vega https://vegamovies.uy
+set searchurls.wh https://web.whatsapp.com
+set searchurls.ig https://www.instagram.com/ojas.bhagavath
+set searchurls.cover https://bendodson.com/projects/itunes-artwork-finder
+set searchurls.ff https://ou.campuslabs.com/engage/events?perks=FreeFood
+set searchurls.gs https://www.gradescope.com
+set searchurls.canvas https://canvas.ou.edu
+set searchurls.rar https://libcal.ou.edu/reserve/graduatefocusrooms
+set searchurls.cash https://ou.academicworks.com/opportunities/19362/applications/836931
+set searchurls.mzone https://mzone.math.ou.edu
+set searchurls.pantry https://ou.campuslabs.com/engage/submitter/form/start/427662
+set searchurls.typ https://typst.app/docs/reference
+set searchurls.gr https://www.goodreads.com/user/show/165030642-ojas-bhagavath
+set searchurls.concur https://us2.concursolutions.com/nui/signin?targetURL=%2Fhome
+set searchurls.bf https://www.bookfusion.com/bookshelf
+set searchurls.task https://tasks.google.com/tasks
+set searchurls.nlm https://notebooklm.google.com
+set searchurls.ke https://nickcoutsos.github.io/keymap-editor
+
+" search engines
+set searchurls.1337x https://1337x.to/search/%s/1/
+set searchurls.aa https://annas-archive.org/search?q=%s
+set searchurls.abb https://audiobookbay.is/?s=%s&tt=1
+set searchurls.am https://www.amazon.com/s?k=%s
+set searchurls.ami https://www.amazon.in/s?k=%s
+set searchurls.ar https://archive.org/search?query=%s
+set searchurls.at https://academictorrents.com/browse.php?search=%s
+set searchurls.aur https://aur.archlinux.org/packages?O=0&K=%s
+set searchurls.aw https://wiki.archlinux.org/index.php?search=%s
+set searchurls.bb https://www.bigbasket.com/ps/?q=%s
+set searchurls.bs https://bitsearch.to/search?q=%s
+set searchurls.cpp https://www.learncpp.com/gsearch/?q=%s
+set searchurls.ctan https://ctan.org/search?phrase=%s
+set searchurls.dic https://www.dictionary.com/browse/%s
+set searchurls.disc https://www.discogs.com/search?q=%s&type=all
+set searchurls.dnf https://packages.fedoraproject.org/search?query=%s
+set searchurls.ebay https://www.ebay.com/sch/i.html?_nkw=%s
+set searchurls.etsy https://www.etsy.com/search?q=%s
+set searchurls.fcs https://freecoursesite.com/?s=%s
+set searchurls.fd https://search.f-droid.org/?q=%s&lang=en
+set searchurls.fh https://flathub.org/apps/search?q=%s
+set searchurls.fk https://www.flipkart.com/search?q=%s
+set searchurls.gh https://github.com/search?q=%s
+set searchurls.goo https://google.com/search?q=%s
+set searchurls.gp https://groupprops.subwiki.org/w/index.php?search=%s
+set searchurls.gr https://www.goodreads.com/search?q=%s
+set searchurls.icon https://simpleicons.org/?q=%s
+set searchurls.imdb https://www.imdb.com/find/?q=%s
+set searchurls.jc141 https://1337x.to/search/%s jc141/1/
+set searchurls.lb https://letterboxd.com/search/%s
+set searchurls.l2u https://www.unicodeit.net/?%s
+set searchurls.lg http://libgen.li/index.php?req=%s&order=extension&ordermode=desc
+set searchurls.maps https://www.google.com/maps/search/%s
+set searchurls.mdn https://developer.mozilla.org/en-US/search?q=%s
+set searchurls.mn https://metanumbers.com/%s
+set searchurls.mse https://math.stackexchange.com/search?q=%s
+set searchurls.nix https://search.nixos.org/packages?channel=24.05&from=0&size=50&sort=relevance&type=packages&query=%s
+set searchurls.oeis https://oeis.org/search?q=%s
+set searchurls.pac https://archlinux.org/packages/?sort=&q=%s
+set searchurls.pw https://proofwiki.org/w/index.php?search=%s
+set searchurls.qxr https://1337x.to/search/%s qxr/1/
+set searchurls.rd https://www.reliancedigital.in/search?q=%s:relevance
+set searchurls.ri https://www.reddit.com/search/?q=%s
+set searchurls.stacks https://stacks.math.columbia.edu/search?query=%s
+set searchurls.syn https://www.thesaurus.com/browse/%s
+set searchurls.tmdb https://www.themoviedb.org/search?query=%s
+set searchurls.tpb https://thepiratebay.org/search.php?q=%s
+set searchurls.tz2 https://torrentz2.nz/search?q=%s
+set searchurls.ud https://www.urbandictionary.com/define.php?term=%s
+set searchurls.udemy https://www.udemy.com/courses/search/?src=ukw&q=%s
+set searchurls.wa https://www.wolframalpha.com/input?i2d=true&i=%s
+set searchurls.wm https://mathworld.wolfram.com/search/?query=%s
+set searchurls.wp https://en.wikipedia.org/wiki/%s
+set searchurls.yt https://www.youtube.com/results?search_query=%s
+set searchurls.ytm https://music.youtube.com/search?q=%s
+set searchurls.yts https://yts.lt/browse-movies/%s/all/all/0/latest/0/all
