@@ -6,6 +6,9 @@ set update.checkintervalsecs 86400
 set configversion 2.0
 set editorcmd neovide
 
+unbind zz
+bind zz zoom 1.5
+
 unbind j
 bind j scrollline 3
 unbind k
