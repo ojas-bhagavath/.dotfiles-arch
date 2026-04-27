@@ -6,21 +6,24 @@ set update.checkintervalsecs 86400
 set configversion 2.0
 set editorcmd neovide
 
-unbind J
-unbind K
-unbind o
-unbind t
-unbind w
-unbind O
-unbind T
-unbind W
-
+unbind j
 bind j scrollline 3
+unbind k
 bind k scrollline -3
+unbind J
 bind J tabnext
+unbind K
 bind K tabprev
+unbind o
 bind o fillcmdline open
+unbind t
+unbind O
 bind O fillcmdline tabopen
+unbind w
+unbind <C-o>
+bind <C-o> fillcmdline winopen
+unbind <C-O>
+bind <C-O> fillcmdline winopen -private
 
 " qutebrowser style quickmarks
 set searchurls.awf https://bendodson.com/projects/itunes-artwork-finder
