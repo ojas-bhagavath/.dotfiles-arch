@@ -7,7 +7,7 @@ set configversion 2.0
 set editorcmd neovide
 
 unbind zz
-bind zz zoom 1.5
+bind zz zoom 1.25
 
 unbind j
 bind j scrollline 3
