@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/vscode-context-menu-item/index.ts"],"names":[],"mappings":"AAAA,OAAO,EACL,qBAAqB,GAEtB,MAAM,+BAA+B,CAAC","sourcesContent":["export {\n  VscodeContextMenuItem,\n  VscClickEventDetail,\n} from './vscode-context-menu-item.js';\n"]}

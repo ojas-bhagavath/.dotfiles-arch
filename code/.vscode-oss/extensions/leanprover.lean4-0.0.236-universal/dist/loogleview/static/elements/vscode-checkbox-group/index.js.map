@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/vscode-checkbox-group/index.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,mBAAmB,EAAC,MAAM,4BAA4B,CAAC","sourcesContent":["export {VscodeCheckboxGroup} from './vscode-checkbox-group.js';\n"]}

@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/vscode-tab-panel/index.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,cAAc,EAAC,MAAM,uBAAuB,CAAC","sourcesContent":["export {VscodeTabPanel} from './vscode-tab-panel.js';\n"]}
