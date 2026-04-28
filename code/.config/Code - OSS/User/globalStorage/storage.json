@@ -4,12 +4,12 @@
     "telemetry.devDeviceId": "c2f67b19-3dcd-4c11-b5fa-6b9a34df85a7",
     "backupWorkspaces": {
         "workspaces": [],
-        "folders": [
+        "folders": [],
+        "emptyWindows": [
             {
-                "folderUri": "file:///home/ojas/Stuff/Projects/zmk/zmk-config-temp"
+                "backupFolder": "1777392627975"
             }
-        ],
-        "emptyWindows": []
+        ]
     },
     "windowControlHeight": 50,
     "profileAssociations": {
@@ -20,7 +20,7 @@
             "file:///home/ojas/Stuff/Projects/zmk/zmk-config-temp": "__default__profile__"
         },
         "emptyWindows": {
-            "1776031786027": "__default__profile__"
+            "1777392627975": "__default__profile__"
         }
     },
     "theme": "vs-dark",
@@ -47,16 +47,15 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 35,
             "activityBarWidth": 48,
-            "sideBarWidth": 300,
-            "auxiliaryBarWidth": 300,
+            "sideBarWidth": 0,
+            "auxiliaryBarWidth": 0,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/ojas/Stuff/Projects/zmk/zmk-config-temp",
-            "backupPath": "/home/ojas/.config/Code - OSS/Backups/ffed490c17bc6b2cc2d7d01d061b3105",
+            "backupPath": "/home/ojas/.config/Code - OSS/Backups/1777392627975",
             "uiState": {
                 "mode": 0,
                 "x": 0,
