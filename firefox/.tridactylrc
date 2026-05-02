@@ -79,8 +79,7 @@ set searchurls.abb https://audiobookbay.is/?s=%s&tt=1
 set searchurls.am https://www.amazon.com/s?k=%s
 set searchurls.ami https://www.amazon.in/s?k=%s
 set searchurls.ar https://archive.org/search?query=%s
-set searchurls.at https://academictorrents.com/browse.php?search=%s
-set searchurls.aur https://aur.archlinux.org/packages?O=0&K=%s
+set searchurls.at https://academictorrents.com/browse.php?search=%s set searchurls.aur https://aur.archlinux.org/packages?O=0&K=%s
 set searchurls.aw https://wiki.archlinux.org/index.php?search=%s
 set searchurls.bb https://www.bigbasket.com/ps/?q=%s
 set searchurls.bs https://bitsearch.to/search?q=%s
@@ -105,6 +104,7 @@ set searchurls.jc141 https://1337x.to/search/%s jc141/1/
 set searchurls.lb https://letterboxd.com/search/%s
 set searchurls.l2u https://www.unicodeit.net/?%s
 set searchurls.lg http://libgen.li/index.php?req=%s&order=extension&ordermode=desc
+set searchurls.loo https://loogle.lean-lang.org/?q=%s
 set searchurls.maps https://www.google.com/maps/search/%s
 set searchurls.mdn https://developer.mozilla.org/en-US/search?q=%s
 set searchurls.mn https://metanumbers.com/%s
