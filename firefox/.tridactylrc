@@ -103,6 +103,7 @@ set searchurls.imdb https://www.imdb.com/find/?q=%s
 set searchurls.jc141 https://1337x.to/search/%s jc141/1/
 set searchurls.lb https://letterboxd.com/search/%s
 set searchurls.l2u https://www.unicodeit.net/?%s
+set searchurls.lib https://ou-primo.hosted.exlibrisgroup.com/primo-explore/search?query=any,contains,%s&tab=default_tab&search_scope=default_scope&vid=OUNEW&lang=en_US&offset=10
 set searchurls.lg http://libgen.li/index.php?req=%s&order=extension&ordermode=desc
 set searchurls.loo https://loogle.lean-lang.org/?q=%s
 set searchurls.maps https://www.google.com/maps/search/%s
