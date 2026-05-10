@@ -25,10 +25,10 @@ hash = "635b0feb9215772d22020eb0abf0bb34"
 
 [[flavor.deps]]
 use = "ojas-bhagavath/tokyonight:tokyonight-moon"
-rev = "5c04c86"
-hash = "af8fc352950008c76fbb37091abb776c"
+rev = "a375da8"
+hash = "547f06f641f926199bc7105a1cfbd742"
 
 [[flavor.deps]]
 use = "ojas-bhagavath/tokyonight:tokyonight-day"
-rev = "5c04c86"
-hash = "d3ef55b6b6034a4b5aa214eff63ddd88"
+rev = "a375da8"
+hash = "ab0fa3d7b1519e76f08dfe9d98d9bf87"

@@ -1,4 +1,4 @@
-schema = "https://yazi-rs.github.io/schemas/theme.json"
+#:schema = "https://yazi-rs.github.io/schemas/theme.json"
 [app]
 overall = { bg = "#1e2030" }
 
@@ -169,4 +169,3 @@ rules = [
   { url = "*/", fg = "#c099ff" },
   { url = "*", fg = "#c8d3f5" },
 ]
-
