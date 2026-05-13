@@ -30,15 +30,25 @@ bind <C-O> fillcmdline winopen -private
 
 " qutebrowser style quickmarks
 set searchurls.awf https://bendodson.com/projects/itunes-artwork-finder
+set searchurls.bf https://www.bookfusion.com/bookshelf
 set searchurls.cal0 https://calendar.google.com/calendar/u/0/r
 set searchurls.cal1 https://outlook.office.com/calendar/view/month
+set searchurls.canvas https://canvas.ou.edu
+set searchurls.cash https://ou.academicworks.com/opportunities/19362/applications/836931
 set searchurls.cgpt https://chatgpt.com
+set searchurls.concur https://us2.concursolutions.com/nui/signin?targetURL=%2Fhome
+set searchurls.cover https://bendodson.com/projects/itunes-artwork-finder
 set searchurls.d0 https://drive.google.com/drive/u/0/my-drive
 set searchurls.dash https://dash.cloudflare.com/257725e02965ebd805a1eb23de7c3627/workers-and-pages
 set searchurls.dc https://discord.com/channels/@me
+set searchurls.ff https://ou.campuslabs.com/engage/events?perks=FreeFood
 set searchurls.gem https://gemini.google.com/app
 set searchurls.gg https://www.geogebra.org/classic
+set searchurls.gr https://www.goodreads.com/user/show/165030642-ojas-bhagavath
+set searchurls.gs https://www.gradescope.com
+set searchurls.ig https://www.instagram.com/ojas.bhagavath
 set searchurls.irctc https://www.irctc.co.in/nget/train-search
+set searchurls.ke https://nickcoutsos.github.io/keymap-editor
 set searchurls.li https://www.linkedin.com/in/ojas-bhagavath
 set searchurls.lre https://www.rexegg.com
 set searchurls.lrx https://www.regular-expressions.info/tutorial.html
@@ -48,29 +58,20 @@ set searchurls.m2 https://mail.google.com/mail/u/1/#all
 set searchurls.matr1 https://matrixcalc.org/en
 set searchurls.matr2 https://matrix.reshish.com
 set searchurls.mt https://monkeytype.com
+set searchurls.mzone https://mzone.math.ou.edu
+set searchurls.nlm https://notebooklm.google.com
 set searchurls.ojas https://ojasb.xyz
+set searchurls.pantry https://ou.campuslabs.com/engage/submitter/form/start/427662
+set searchurls.rar https://libcal.ou.edu/reserve/graduatefocusrooms
 set searchurls.rgx https://regex101.com
 set searchurls.sbi https://retail.onlinesbi.sbi/retail/login.htm
 set searchurls.st http://127.0.0.1:8384
+set searchurls.task https://tasks.google.com/tasks
 set searchurls.tg https://web.telegram.org/a
+set searchurls.typ https://typst.app/docs/reference
 set searchurls.vega https://vegamovies.uy
 set searchurls.wh https://web.whatsapp.com
-set searchurls.ig https://www.instagram.com/ojas.bhagavath
-set searchurls.cover https://bendodson.com/projects/itunes-artwork-finder
-set searchurls.ff https://ou.campuslabs.com/engage/events?perks=FreeFood
-set searchurls.gs https://www.gradescope.com
-set searchurls.canvas https://canvas.ou.edu
-set searchurls.rar https://libcal.ou.edu/reserve/graduatefocusrooms
-set searchurls.cash https://ou.academicworks.com/opportunities/19362/applications/836931
-set searchurls.mzone https://mzone.math.ou.edu
-set searchurls.pantry https://ou.campuslabs.com/engage/submitter/form/start/427662
-set searchurls.typ https://typst.app/docs/reference
-set searchurls.gr https://www.goodreads.com/user/show/165030642-ojas-bhagavath
-set searchurls.concur https://us2.concursolutions.com/nui/signin?targetURL=%2Fhome
-set searchurls.bf https://www.bookfusion.com/bookshelf
-set searchurls.task https://tasks.google.com/tasks
-set searchurls.nlm https://notebooklm.google.com
-set searchurls.ke https://nickcoutsos.github.io/keymap-editor
+set searchurls.zmk https://v0-3-branch.zmk.dev/docs
 
 " search engines
 set searchurls.1337x https://1337x.to/search/%s/1/
@@ -101,10 +102,10 @@ set searchurls.gr https://www.goodreads.com/search?q=%s
 set searchurls.icon https://simpleicons.org/?q=%s
 set searchurls.imdb https://www.imdb.com/find/?q=%s
 set searchurls.jc141 https://1337x.to/search/%s jc141/1/
-set searchurls.lb https://letterboxd.com/search/%s
 set searchurls.l2u https://www.unicodeit.net/?%s
-set searchurls.lib https://ou-primo.hosted.exlibrisgroup.com/primo-explore/search?query=any,contains,%s&tab=default_tab&search_scope=default_scope&vid=OUNEW&lang=en_US&offset=10
+set searchurls.lb https://letterboxd.com/search/%s
 set searchurls.lg http://libgen.li/index.php?req=%s&order=extension&ordermode=desc
+set searchurls.lib https://ou-primo.hosted.exlibrisgroup.com/primo-explore/search?query=any,contains,%s&tab=default_tab&search_scope=default_scope&vid=OUNEW&lang=en_US&offset=10
 set searchurls.loo https://loogle.lean-lang.org/?q=%s
 set searchurls.maps https://www.google.com/maps/search/%s
 set searchurls.mdn https://developer.mozilla.org/en-US/search?q=%s
