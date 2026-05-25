@@ -1,0 +1,7 @@
+{
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "editor.fontSize": 16,
+    "window.zoomLevel": 2,
+    "editor.fontFamily": "\"Hack Nerd Font\"",
+    "workbench.secondarySideBar.defaultVisibility": "hidden"
+}

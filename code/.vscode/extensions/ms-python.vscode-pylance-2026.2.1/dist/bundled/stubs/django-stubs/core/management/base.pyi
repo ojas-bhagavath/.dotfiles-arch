@@ -1,0 +1,103 @@
+from argparse import ArgumentParser, HelpFormatter, Namespace
+from collections.abc import Callable, Sequence
+from typing import Any, NoReturn, TextIO
+
+from django.apps.config import AppConfig
+from django.core.management.color import Style
+
+class CommandError(Exception):
+    returncode: int
+    def __init__(self, *args: Any, returncode: int = ..., **kwargs: Any) -> None: ...
+
+class SystemCheckError(CommandError): ...
+
+class CommandParser(ArgumentParser):
+    missing_args_message: str | None
+    called_from_command_line: bool | None
+    def __init__(
+        self,
+        *,
+        missing_args_message: str | None = None,
+        called_from_command_line: bool | None = ...,
+        **kwargs: Any,
+    ) -> None: ...
+    def error(self, message: str) -> NoReturn: ...
+
+def handle_default_options(options: Namespace) -> None: ...
+def no_translations(handle_func: Callable[..., Any]) -> Callable[..., Any]: ...
+
+class DjangoHelpFormatter(HelpFormatter): ...
+
+class OutputWrapper:
+    @property
+    def style_func(self) -> Callable[[str], str]: ...
+    @style_func.setter
+    def style_func(self, style_func: Callable[[str], str]) -> None: ...
+    ending: str = ...
+    def __init__(
+        self,
+        out: TextIO,
+        ending: str = ...,
+    ) -> None: ...
+    def __getattr__(self, name: str) -> Any: ...
+    def flush(self) -> None: ...
+    def isatty(self) -> bool: ...
+    def write(
+        self,
+        msg: str = ...,
+        style_func: Callable[[str], str] | None = ...,
+        ending: str | None = ...,
+    ) -> None: ...
+
+class BaseCommand:
+    help: str
+    output_transaction: bool
+    requires_migrations_checks: bool
+    requires_system_checks: str
+    base_stealth_options: tuple[str, ...]
+    stealth_options: tuple[str, ...]
+    suppressed_base_arguments: set[str]
+    stdout: OutputWrapper
+    stderr: OutputWrapper
+    style: Style
+    def __init__(
+        self,
+        stdout: TextIO | None = ...,
+        stderr: TextIO | None = ...,
+        no_color: bool = ...,
+        force_color: bool = ...,
+    ) -> None: ...
+    def get_version(self) -> str: ...
+    def create_parser(
+        self, prog_name: str, subcommand: str, **kwargs: Any
+    ) -> CommandParser: ...
+    def add_arguments(self, parser: CommandParser) -> None: ...
+    def add_base_argument(
+        self, parser: CommandParser, *args: Any, **kwargs: Any
+    ) -> None: ...
+    def print_help(self, prog_name: str, subcommand: str) -> None: ...
+    def run_from_argv(self, argv: Sequence[str]) -> None: ...
+    def execute(self, *args: Any, **options: Any) -> Any: ...
+    def get_check_kwargs(self, options: dict[str, Any]) -> dict[str, Any]: ...
+    def check(
+        self,
+        app_configs: list[AppConfig] | None = ...,
+        tags: list[str] | None = ...,
+        display_num_errors: bool = ...,
+        include_deployment_checks: bool = ...,
+        fail_level: int = ...,
+        databases: list[str] | None = None,
+    ) -> None: ...
+    def check_migrations(self) -> None: ...
+    def handle(self, *args: Any, **options: Any) -> str | None: ...
+
+class AppCommand(BaseCommand):
+    missing_args_message: str
+    def handle(self, *app_labels: str, **options: Any) -> str: ...
+    def handle_app_config(self, app_config: AppConfig, **options: Any) -> str: ...
+
+class LabelCommand(BaseCommand):
+    label: str
+    missing_args_message: str
+    def handle(self, *labels: str, **options: Any) -> str: ...
+    def handle_label(self, label: str, **options: Any) -> str: ...
