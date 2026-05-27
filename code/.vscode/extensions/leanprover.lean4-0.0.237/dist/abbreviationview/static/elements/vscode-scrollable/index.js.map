@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/vscode-scrollable/index.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,gBAAgB,EAAC,MAAM,wBAAwB,CAAC","sourcesContent":["export {VscodeScrollable} from './vscode-scrollable.js';\n"]}

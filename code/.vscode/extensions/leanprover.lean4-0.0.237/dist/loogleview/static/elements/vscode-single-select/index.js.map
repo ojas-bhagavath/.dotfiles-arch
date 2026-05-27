@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/vscode-single-select/index.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,kBAAkB,EAAC,MAAM,2BAA2B,CAAC","sourcesContent":["export {VscodeSingleSelect} from './vscode-single-select.js';\n"]}

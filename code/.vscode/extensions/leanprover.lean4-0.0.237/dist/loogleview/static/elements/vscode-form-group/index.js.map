@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/vscode-form-group/index.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,eAAe,EAAmB,MAAM,wBAAwB,CAAC","sourcesContent":["export {VscodeFormGroup, FormGroupVariant} from './vscode-form-group.js';\n"]}

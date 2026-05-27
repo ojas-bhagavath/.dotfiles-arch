@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/vscode-table-header-cell/index.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,qBAAqB,EAAC,MAAM,+BAA+B,CAAC","sourcesContent":["export {VscodeTableHeaderCell} from './vscode-table-header-cell.js';\n"]}

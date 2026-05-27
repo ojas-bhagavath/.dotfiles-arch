@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/vscode-badge/index.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,WAAW,EAAC,MAAM,mBAAmB,CAAC","sourcesContent":["export {VscodeBadge} from './vscode-badge.js';\n"]}

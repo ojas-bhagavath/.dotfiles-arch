@@ -1,0 +1,1 @@
+{"version":3,"file":"vscode-single-select.styles.js","sourceRoot":"","sources":["../../src/vscode-single-select/vscode-single-select.styles.ts"],"names":[],"mappings":"AAAA,OAAO,MAAM,MAAM,qCAAqC,CAAA;AAExD,eAAe,MAAM,CAAC","sourcesContent":["import styles from '../includes/vscode-select/styles.js'\n\nexport default styles;\n"]}

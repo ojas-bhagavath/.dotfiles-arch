@@ -1,0 +1,1 @@
+let counter=0;const uniqueId=(e="")=>(counter++,`${e}${counter}`);export default uniqueId;

@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/vscode-button/index.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,YAAY,EAAC,MAAM,oBAAoB,CAAC","sourcesContent":["export {VscodeButton} from './vscode-button.js';\n"]}

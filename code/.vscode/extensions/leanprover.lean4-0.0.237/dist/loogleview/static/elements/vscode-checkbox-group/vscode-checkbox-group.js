@@ -1,0 +1,5 @@
+var __decorate=this&&this.__decorate||function(e,o,t,r){var c,s=arguments.length,p=s<3?o:null===r?r=Object.getOwnPropertyDescriptor(o,t):r;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)p=Reflect.decorate(e,o,t,r);else for(var l=e.length-1;l>=0;l--)(c=e[l])&&(p=(s<3?c(p):s>3?c(o,t,p):c(o,t))||p);return s>3&&p&&Object.defineProperty(o,t,p),p};import{html}from"lit";import{customElement,property}from"lit/decorators.js";import{VscElement}from"../includes/VscElement.js";import styles from"./vscode-checkbox-group.styles.js";let VscodeCheckboxGroup=class extends VscElement{constructor(){super(...arguments),this.role="group",this.variant="horizontal"}render(){return html`
+      <div class="wrapper">
+        <slot></slot>
+      </div>
+    `}};VscodeCheckboxGroup.styles=styles,__decorate([property({reflect:!0})],VscodeCheckboxGroup.prototype,"role",void 0),__decorate([property({reflect:!0})],VscodeCheckboxGroup.prototype,"variant",void 0),VscodeCheckboxGroup=__decorate([customElement("vscode-checkbox-group")],VscodeCheckboxGroup);export{VscodeCheckboxGroup};

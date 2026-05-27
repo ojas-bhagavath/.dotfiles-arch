@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/vscode-divider/index.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,aAAa,EAAC,MAAM,qBAAqB,CAAC","sourcesContent":["export {VscodeDivider} from './vscode-divider.js';\n"]}
