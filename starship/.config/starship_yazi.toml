@@ -1,3 +1,4 @@
+
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
@@ -10,11 +11,7 @@ $git_branch\
 $git_state\
 $git_status\
 $git_metrics\
-$python\
-$fill\
-$cmd_duration\
-$line_break\
-$character"""
+$python"""
 
 [username]
 style_user = 'red bold'
@@ -28,19 +25,11 @@ ssh_only = false
 format = '[$hostname](bold blue)[\]](bold purple) '
 disabled = false
 
-[fill]
-symbol = " "
-
 [directory]
 style = "bold yellow"
 read_only = " "
 truncation_length = 4
 truncate_to_repo = false
-
-[character]
-success_symbol = "[❯](bold green)"
-error_symbol = "[❯](bold red)"
-vicmd_symbol = "[❮](bold green)"
 
 [git_branch]
 symbol = ""
@@ -60,14 +49,3 @@ disabled = false
 added_style = 'bold green'
 deleted_style = 'bold red'
 format = '([+$added]($added_style))([-$deleted]($deleted_style) )'
-
-[cmd_duration]
-disabled = false
-style = 'bold yellow'
-format = '[$duration]($style)'
-
-[custom.yazi]
-description = "Indicate the shell was launched by `yazi`"
-symbol = "󰇥 "
-style = 'bold yellow'
-when = """ test -n "$YAZI_LEVEL" """
