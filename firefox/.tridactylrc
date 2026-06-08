@@ -115,12 +115,15 @@ set searchurls.mse https://math.stackexchange.com/search?q=%s
 set searchurls.nix https://search.nixos.org/packages?channel=24.05&from=0&size=50&sort=relevance&type=packages&query=%s
 set searchurls.oeis https://oeis.org/search?q=%s
 set searchurls.pac https://archlinux.org/packages/?sort=&q=%s
+set searchurls.print https://www.printables.com/search/models?q=%s
 set searchurls.pw https://proofwiki.org/w/index.php?search=%s
 set searchurls.qxr https://1337x.to/search/%s qxr/1/
 set searchurls.rd https://www.reliancedigital.in/search?q=%s:relevance
 set searchurls.ri https://www.reddit.com/search/?q=%s
 set searchurls.stacks https://stacks.math.columbia.edu/search?query=%s
 set searchurls.syn https://www.thesaurus.com/browse/%s
+set searchurls.thang https://thangs.com/search/%s?
+set searchurls.thing https://www.thingiverse.com/search?q=%s
 set searchurls.tmdb https://www.themoviedb.org/search?query=%s
 set searchurls.tpb https://thepiratebay.org/search.php?q=%s
 set searchurls.tz2 https://torrentz2.nz/search?q=%s
