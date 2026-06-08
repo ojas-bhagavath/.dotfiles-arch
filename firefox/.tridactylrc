@@ -109,6 +109,7 @@ set searchurls.lg http://libgen.li/index.php?req=%s&order=extension&ordermode=de
 set searchurls.lib https://ou-primo.hosted.exlibrisgroup.com/primo-explore/search?query=any,contains,%s&tab=default_tab&search_scope=default_scope&vid=OUNEW&lang=en_US&offset=10
 set searchurls.loo https://loogle.lean-lang.org/?q=%s
 set searchurls.maps https://www.google.com/maps/search/%s
+set searchurls.make https://makerworld.com/en/search/models?keyword=%s
 set searchurls.mdn https://developer.mozilla.org/en-US/search?q=%s
 set searchurls.mn https://metanumbers.com/%s
 set searchurls.mse https://math.stackexchange.com/search?q=%s
