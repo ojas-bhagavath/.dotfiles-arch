@@ -1,0 +1,13 @@
+[Bookmarks]
+[Recent]
+/home/ojas/Stuff/Projects/3d/multiboard/laptop_raiser/
+/home/ojas/Stuff/Projects/3d/multiboard/rails/
+/home/ojas/Stuff/Projects/3dprinting/models/multiboard/laptop_raiser/
+/home/ojas/Stuff/Projects/3dprinting/models/multiboard/rails/
+!Home
+/home/ojas/
+/home/ojas/Stuff/Projects/3dprinting/models/multiboard/laptop_holder/
+/home/ojas/donut_1.blend/
+/home/ojas/Stuff/Projects/3dprinting/models/multiboard/
+/home/ojas/Stuff/Projects/3dprinting/models/multiboard/vertical_mount/
+/home/ojas/Stuff/Projects/3dprinting/models/my_stuff/

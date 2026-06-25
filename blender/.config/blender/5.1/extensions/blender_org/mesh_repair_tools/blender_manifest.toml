@@ -1,0 +1,16 @@
+schema_version = "1.0.0"
+id = "mesh_repair_tools"
+name = "Mesh Repair Tools"
+version = "4.0.2"
+tagline = "An integrated toolbox for mesh repair"
+maintainer = "SineWave"
+type = "add-on"
+tags = ["Modeling", "Mesh", "User Interface"]
+blender_version_min = "4.2.0"
+license = ["SPDX:GPL-3.0-or-later"]
+# website = "https://extensions.blender.org/approval-queue/mesh-repair-tools/"
+copyright = ["2024 Jiawei Ma"]
+
+# The extension is available in all operating systems.
+# platforms = ["windows-x64", "macos-arm64", "linux-x64", "windows-arm64", "macos-x64"]
+
