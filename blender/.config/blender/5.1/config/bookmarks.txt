@@ -1,5 +1,7 @@
 [Bookmarks]
 [Recent]
+/home/ojas/Stuff/Projects/3d/multibuild/multiboard/boards/
+/home/ojas/Stuff/Projects/3d/keyboard/sofle/case/
 !Home
 /home/ojas/
 /home/ojas/Stuff/Projects/3d/scratch/
@@ -9,5 +11,3 @@
 /home/ojas/Stuff/Projects/3d/multiboard/rails/
 /home/ojas/Stuff/Projects/3dprinting/models/multiboard/laptop_raiser/
 /home/ojas/Stuff/Projects/3dprinting/models/multiboard/rails/
-/home/ojas/Stuff/Projects/3dprinting/models/multiboard/laptop_holder/
-/home/ojas/donut_1.blend/
