@@ -3,3 +3,4 @@
    obj_1_Stand 2 (Rounded).001
 
    Cube
+   Multipoint Rail Slot - Negative
