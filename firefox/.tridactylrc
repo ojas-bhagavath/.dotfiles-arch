@@ -67,6 +67,7 @@ set searchurls.rgx https://regex101.com
 set searchurls.sbi https://retail.onlinesbi.sbi/retail/login.htm
 set searchurls.st http://127.0.0.1:8384
 set searchurls.task https://tasks.google.com/tasks
+set searchurls.tinker https://www.tinkercad.com
 set searchurls.tg https://web.telegram.org/a
 set searchurls.typ https://typst.app/docs/reference
 set searchurls.vega https://vegamovies.uy
