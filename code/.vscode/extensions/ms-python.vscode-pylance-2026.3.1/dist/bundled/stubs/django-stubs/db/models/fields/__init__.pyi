@@ -1,0 +1,1655 @@
+import decimal
+import ipaddress
+import uuid
+from collections.abc import Callable, Iterable, Mapping, Sequence
+from datetime import date, datetime, time, timedelta
+from typing import Any, ClassVar, Generic, Literal, TypeAlias, TypeVar, overload
+
+from django.core.checks import CheckMessage
+from django.core.exceptions import FieldDoesNotExist as FieldDoesNotExist
+from django.core.validators import _ValidatorCallable
+from django.db.models import IntegerChoices, Model, TextChoices
+from django.db.models.expressions import Col, Combinable, Func
+from django.db.models.query_utils import Q, RegisterLookupMixin
+from django.forms import Widget
+from django.utils.choices import _Choice, _ChoiceNamedGroup, _ChoicesCallable
+from django.utils.functional import _StrOrPromise, cached_property
+from typing_extensions import Self
+
+BLANK_CHOICE_DASH: list[tuple[str, str]] = ...
+
+_ChoicesMapping: TypeAlias = Mapping[Any, _StrOrPromise | Mapping[Any, _StrOrPromise]]
+_LiteralFieldChoices: TypeAlias = Iterable[_Choice | _ChoiceNamedGroup] | _ChoicesMapping
+_FieldChoices: TypeAlias = _LiteralFieldChoices | Callable[[], _LiteralFieldChoices]
+
+_LimitChoicesTo: TypeAlias = Q | dict[str, Any]
+_LimitChoicesToCallable: TypeAlias = Callable[[], _LimitChoicesTo]
+_AllLimitChoicesTo: TypeAlias = _LimitChoicesTo | _LimitChoicesToCallable | _ChoicesCallable  # noqa: PYI047
+_ErrorMessagesMapping: TypeAlias = Mapping[str, _StrOrPromise]
+_ErrorMessagesDict: TypeAlias = dict[str, _StrOrPromise]
+
+# __set__ value type
+_ST = TypeVar("_ST")
+# __get__ return type
+_GT = TypeVar("_GT")
+
+class Empty: ...
+class NOT_PROVIDED: ...
+
+class Field(RegisterLookupMixin, Generic[_ST, _GT]):
+    widget: Widget
+    help_text: _StrOrPromise
+    db_table: str
+    attname: str
+    auto_created: bool
+    primary_key: bool
+    remote_field: Field[_ST, _GT]
+    is_relation: bool
+    hidden: bool
+    related_model: Any | None = ...
+    one_to_many: bool | None = ...
+    one_to_one: bool | None = ...
+    many_to_many: bool | None = ...
+    many_to_one: bool | None = ...
+    max_length: int
+    model: type[Model]
+    name: str
+    verbose_name: _StrOrPromise
+    description: str
+    blank: bool = ...
+    null: bool = ...
+    editable: bool = ...
+    empty_strings_allowed: bool = ...
+    choices: _FieldChoices = ...
+    db_column: str | None
+    db_comment: str | None
+    column: str
+    default: Any
+    db_default: Any
+    default_error_messages: ClassVar[_ErrorMessagesDict]
+    def __set__(self, instance: Any, value: _ST) -> None: ...
+    # class access
+    @overload
+    def __get__(self, instance: None, owner: Any) -> Self: ...
+    # Model instance access
+    @overload
+    def __get__(self, instance: Model, owner: Any) -> _GT: ...
+    # non-Model instances
+    @overload
+    def __get__(self, instance: Any, owner: Any) -> Self: ...
+    def deconstruct(self) -> Any: ...
+    def set_attributes_from_name(self, name: str) -> None: ...
+    def db_type(self, connection: Any) -> str: ...
+    def db_parameters(self, connection: Any) -> dict[str, str]: ...
+    def pre_save(self, model_instance: Model, add: bool) -> Any: ...
+    def get_prep_value(self, value: Any) -> Any: ...
+    def get_db_prep_value(self, value: Any, connection: Any, prepared: bool) -> Any: ...
+    def get_db_prep_save(self, value: Any, connection: Any) -> Any: ...
+    def get_internal_type(self) -> str: ...
+    # TODO: plugin support
+    def formfield(self, **kwargs: Any) -> Any: ...
+    def save_form_data(self, instance: Model, data: Any) -> None: ...
+    def contribute_to_class(self, cls: type[Model], name: str, private_only: bool = ...) -> None: ...
+    def to_python(self, value: Any) -> Any: ...
+    def clean(self, value: Any, model_instance: Model | None) -> Any: ...
+    def get_choices(
+        self,
+        include_blank: bool = ...,
+        blank_choice: _Choice = ...,
+        limit_choices_to: Any | None = ...,
+        ordering: Sequence[str] = ...,
+    ) -> Sequence[_Choice | _ChoiceNamedGroup]: ...
+    def has_default(self) -> bool: ...
+    def get_default(self) -> Any: ...
+    def check(self, **kwargs: Any) -> list[CheckMessage]: ...
+    @cached_property
+    def error_messages(self) -> _ErrorMessagesDict: ...
+    @cached_property
+    def validators(self) -> list[_ValidatorCallable]: ...
+    def validate(self, value: Any, model_instance: Model) -> None: ...
+    def run_validators(self, value: Any) -> None: ...
+    def get_col(self, alias: str, output_field: Field[Any, Any] | None = ...) -> Col: ...
+    @property
+    def cached_col(self) -> Col: ...
+    def value_from_object(self, obj: Model) -> _GT: ...
+    def get_attname(self) -> str: ...
+    def __init__(self, *args: Any, **kwargs: Any) -> None: ...
+
+_I = TypeVar("_I", bound=int | None)
+
+class IntegerField(Field[_I | Combinable, _I], Generic[_I]):
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[False] = False,
+        db_index: bool = ...,
+        default: _I | Callable[[], _I] | None = ...,
+        db_default: _I | Func | None = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_I, _StrOrPromise] | tuple[str, Iterable[tuple[_I, _StrOrPromise]]]]
+        | type[IntegerChoices] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> IntegerField[int]: ...
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[True],
+        db_index: bool = ...,
+        default: _I | Callable[[], _I] = ...,
+        db_default: _I | Func = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_I, _StrOrPromise] | tuple[str, Iterable[tuple[_I, _StrOrPromise]]]]
+        | type[IntegerChoices] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> IntegerField[int | None]: ...
+
+class PositiveIntegerRelDbTypeMixin:
+    def rel_db_type(self, connection: Any) -> Any: ...
+
+class PositiveIntegerField(PositiveIntegerRelDbTypeMixin, IntegerField[_I]):
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[False] = False,
+        db_index: bool = ...,
+        default: _I | Callable[[], _I] | None = ...,
+        db_default: _I | Func | None = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_I, _StrOrPromise] | tuple[str, Iterable[tuple[_I, _StrOrPromise]]]]
+        | type[IntegerChoices] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> PositiveIntegerField[int]: ...
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[True],
+        db_index: bool = ...,
+        default: _I | Callable[[], _I] = ...,
+        db_default: _I | Func = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_I, _StrOrPromise] | tuple[str, Iterable[tuple[_I, _StrOrPromise]]]]
+        | type[IntegerChoices] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> PositiveIntegerField[int | None]: ...
+
+class PositiveSmallIntegerField(PositiveIntegerRelDbTypeMixin, IntegerField[_I]):
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[False] = False,
+        db_index: bool = ...,
+        default: _I | Callable[[], _I] | None = ...,
+        db_default: _I | Func | None = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_I, _StrOrPromise] | tuple[str, Iterable[tuple[_I, _StrOrPromise]]]]
+        | type[IntegerChoices] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> PositiveSmallIntegerField[int]: ...
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[True],
+        db_index: bool = ...,
+        default: _I | Callable[[], _I] = ...,
+        db_default: _I | Func = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_I, _StrOrPromise] | tuple[str, Iterable[tuple[_I, _StrOrPromise]]]]
+        | type[IntegerChoices] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> PositiveSmallIntegerField[int | None]: ...
+
+class SmallIntegerField(IntegerField[_I]):
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[False] = False,
+        db_index: bool = ...,
+        default: _I | Callable[[], _I] | None = ...,
+        db_default: _I | Func | None = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_I, _StrOrPromise] | tuple[str, Iterable[tuple[_I, _StrOrPromise]]]]
+        | type[IntegerChoices] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> SmallIntegerField[int]: ...
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[True],
+        db_index: bool = ...,
+        default: _I | Callable[[], _I] = ...,
+        db_default: _I | Func = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_I, _StrOrPromise] | tuple[str, Iterable[tuple[_I, _StrOrPromise]]]]
+        | type[IntegerChoices] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> SmallIntegerField[int | None]: ...
+
+class BigIntegerField(IntegerField[_I]):
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[False] = False,
+        db_index: bool = ...,
+        default: _I | Callable[[], _I] | None = ...,
+        db_default: _I | Func | None = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_I, _StrOrPromise] | tuple[str, Iterable[tuple[_I, _StrOrPromise]]]]
+        | type[IntegerChoices] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> BigIntegerField[int]: ...
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[True],
+        db_index: bool = ...,
+        default: _I | Callable[[], _I] = ...,
+        db_default: _I | Func = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_I, _StrOrPromise] | tuple[str, Iterable[tuple[_I, _StrOrPromise]]]]
+        | type[IntegerChoices] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> BigIntegerField[int | None]: ...
+
+class PositiveBigIntegerField(IntegerField[_I]):
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[False] = False,
+        db_index: bool = ...,
+        default: _I | Callable[[], _I] | None = ...,
+        db_default: _I | Func | None = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_I, _StrOrPromise] | tuple[str, Iterable[tuple[_I, _StrOrPromise]]]]
+        | type[IntegerChoices] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> PositiveBigIntegerField[int]: ...
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[True],
+        db_index: bool = ...,
+        default: _I | Callable[[], _I] = ...,
+        db_default: _I | Func = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_I, _StrOrPromise] | tuple[str, Iterable[tuple[_I, _StrOrPromise]]]]
+        | type[IntegerChoices] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> PositiveBigIntegerField[int | None]: ...
+
+_F = TypeVar("_F", bound=float | None)
+
+class FloatField(Field[_F | Combinable, _F], Generic[_F]):
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[False] = False,
+        db_index: bool = ...,
+        default: _F | Callable[[], _F] | None = ...,
+        db_default: _F | Func | None = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_F, _StrOrPromise] | tuple[str, Iterable[tuple[_F, _StrOrPromise]]]] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> FloatField[float]: ...
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[True],
+        db_index: bool = ...,
+        default: _F | Callable[[], _F] = ...,
+        db_default: _F | Func = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_F, _StrOrPromise] | tuple[str, Iterable[tuple[_F, _StrOrPromise]]]] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> FloatField[float | None]: ...
+
+_DEC = TypeVar("_DEC", bound=decimal.Decimal | None)
+
+class DecimalField(Field[_DEC | Combinable, _DEC], Generic[_DEC]):
+    # attributes
+    max_digits: int = ...
+    decimal_places: int = ...
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        max_digits: int = ...,
+        decimal_places: int = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[False] = False,
+        db_index: bool = ...,
+        default: _DEC | Callable[[], _DEC] | None = ...,
+        db_default: _DEC | Func | None = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_DEC, _StrOrPromise] | tuple[str, Iterable[tuple[_DEC, _StrOrPromise]]]] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> DecimalField[decimal.Decimal]: ...
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        max_digits: int = ...,
+        decimal_places: int = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[True],
+        db_index: bool = ...,
+        default: _DEC | Callable[[], _DEC] = ...,
+        db_default: _DEC | Func = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_DEC, _StrOrPromise] | tuple[str, Iterable[tuple[_DEC, _StrOrPromise]]]] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> DecimalField[decimal.Decimal | None]: ...
+
+class AutoFieldMeta(type): ...
+class AutoFieldMixin: ...
+
+class AutoField(AutoFieldMixin, IntegerField[int], metaclass=AutoFieldMeta):
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        name: str | None = ...,
+        max_digits: int = ...,
+        decimal_places: int = ...,
+        primary_key: Literal[True] = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: Literal[True] = ...,
+        null: bool = ...,
+        db_index: bool = ...,
+        default: int | Callable[[], int] | None = ...,
+        db_default: int | Func | None = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[int, _StrOrPromise] | tuple[str, Iterable[tuple[int, _StrOrPromise]]]]
+        | type[IntegerChoices] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> Self: ...
+
+class BigAutoField(AutoFieldMixin, BigIntegerField[int]):
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        name: str | None = ...,
+        max_digits: int = ...,
+        decimal_places: int = ...,
+        primary_key: Literal[True] = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: Literal[True] = ...,
+        null: bool = ...,
+        db_index: bool = ...,
+        default: int | Callable[[], int] | None = ...,
+        db_default: int | Func | None = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[int, _StrOrPromise] | tuple[str, Iterable[tuple[int, _StrOrPromise]]]]
+        | type[IntegerChoices] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> Self: ...
+
+class SmallAutoField(AutoFieldMixin, SmallIntegerField[int]):
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        name: str | None = ...,
+        max_digits: int = ...,
+        decimal_places: int = ...,
+        primary_key: Literal[True] = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: Literal[True] = ...,
+        null: bool = ...,
+        db_index: bool = ...,
+        default: int | Callable[[], int] | None = ...,
+        db_default: int | Func | None = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[int, _StrOrPromise] | tuple[str, Iterable[tuple[int, _StrOrPromise]]]]
+        | type[IntegerChoices] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> Self: ...
+
+_C = TypeVar("_C", bound=str | None)
+
+class CharField(Field[_C | Combinable, _C], Generic[_C]):
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int = ...,
+        db_collation: str | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[False] = False,
+        db_index: bool = ...,
+        default: _C | Callable[[], _C] | None = ...,
+        db_default: _C | Func | None = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_C, _StrOrPromise] | tuple[str, Iterable[tuple[_C, _StrOrPromise]]]]
+        | type[TextChoices] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> CharField[str]: ...
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int = ...,
+        db_collation: str | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[True],
+        db_index: bool = ...,
+        default: _C | Callable[[], _C] = ...,
+        db_default: _C | Func = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_C, _StrOrPromise] | tuple[str, Iterable[tuple[_C, _StrOrPromise]]]]
+        | type[TextChoices] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> CharField[str | None]: ...
+
+class CommaSeparatedIntegerField(CharField[_C]): ...
+
+class SlugField(CharField[_C]):
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int = ...,
+        db_collation: str | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[False] = False,
+        db_index: bool = ...,
+        default: _C | Callable[[], _C] | None = ...,
+        db_default: _C | Func | None = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_C, _StrOrPromise] | tuple[str, Iterable[tuple[_C, _StrOrPromise]]]] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+        allow_unicode: bool = ...,
+    ) -> SlugField[str]: ...
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int = ...,
+        db_collation: str | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[True],
+        db_index: bool = ...,
+        default: _C | Callable[[], _C] = ...,
+        db_default: _C | Func = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_C, _StrOrPromise] | tuple[str, Iterable[tuple[_C, _StrOrPromise]]]] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+        allow_unicode: bool = ...,
+    ) -> SlugField[str | None]: ...
+
+class EmailField(CharField[_C]):
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int = ...,
+        db_collation: str | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[False] = False,
+        db_index: bool = ...,
+        default: _C | Callable[[], _C] | None = ...,
+        db_default: _C | Func | None = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_C, _StrOrPromise] | tuple[str, Iterable[tuple[_C, _StrOrPromise]]]] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> EmailField[str]: ...
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int = ...,
+        db_collation: str | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[True],
+        db_index: bool = ...,
+        default: _C | Callable[[], _C] = ...,
+        db_default: _C | Func = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_C, _StrOrPromise] | tuple[str, Iterable[tuple[_C, _StrOrPromise]]]] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> EmailField[str | None]: ...
+
+class URLField(CharField[_C]):
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int = ...,
+        db_collation: str | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[False] = False,
+        db_index: bool = ...,
+        default: _C | Callable[[], _C] | None = ...,
+        db_default: _C | Func | None = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_C, _StrOrPromise] | tuple[str, Iterable[tuple[_C, _StrOrPromise]]]] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> URLField[str]: ...
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int = ...,
+        db_collation: str | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[True],
+        db_index: bool = ...,
+        default: _C | Callable[[], _C] = ...,
+        db_default: _C | Func = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_C, _StrOrPromise] | tuple[str, Iterable[tuple[_C, _StrOrPromise]]]] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> URLField[str | None]: ...
+
+class TextField(Field[_C | Combinable, _C], Generic[_C]):
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        db_collation: str | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[False] = False,
+        db_index: bool = ...,
+        default: _C | Callable[[], _C] | None = ...,
+        db_default: _C | Func | None = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_C, _StrOrPromise] | tuple[str, Iterable[tuple[_C, _StrOrPromise]]]] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> TextField[str]: ...
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        db_collation: str | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[True],
+        db_index: bool = ...,
+        default: _C | Callable[[], _C] = ...,
+        db_default: _C | Func = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_C, _StrOrPromise] | tuple[str, Iterable[tuple[_C, _StrOrPromise]]]] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> TextField[str | None]: ...
+
+_B = TypeVar("_B", bound=bool | None)
+
+class BooleanField(Field[_B | Combinable, _B], Generic[_B]):
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        db_collation: str | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[False] = False,
+        db_index: bool = ...,
+        default: _B | Callable[[], _B] | None = ...,
+        db_default: _B | Func | None = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_B, _StrOrPromise] | tuple[str, Iterable[tuple[_B, _StrOrPromise]]]] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> BooleanField[bool]: ...
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        db_collation: str | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[True],
+        db_index: bool = ...,
+        default: _B | Callable[[], _B] = ...,
+        db_default: _B | Func = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_B, _StrOrPromise] | tuple[str, Iterable[tuple[_B, _StrOrPromise]]]] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> BooleanField[bool | None]: ...
+
+NullBooleanField: TypeAlias = BooleanField[bool | None]
+
+class IPAddressField(Field[_C | Combinable, _C], Generic[_C]):
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[False] = False,
+        db_index: bool = ...,
+        default: _C | Callable[[], _C] | None = ...,
+        db_default: _C | Func | None = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_C, _StrOrPromise] | tuple[str, Iterable[tuple[_C, _StrOrPromise]]]] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> IPAddressField[str]: ...
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[True],
+        db_index: bool = ...,
+        default: _C | Callable[[], _C] = ...,
+        db_default: _C | Func = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_C, _StrOrPromise] | tuple[str, Iterable[tuple[_C, _StrOrPromise]]]] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> IPAddressField[str | None]: ...
+
+class GenericIPAddressField(
+    Field[_C | ipaddress.IPv4Address | ipaddress.IPv6Address | Combinable, _C],
+    Generic[_C],
+):
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        protocol: str = ...,
+        unpack_ipv4: bool = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[False] = False,
+        db_index: bool = ...,
+        default: _C | Callable[[], _C] | None = ...,
+        db_default: _C | Func | None = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_C, _StrOrPromise] | tuple[str, Iterable[tuple[_C, _StrOrPromise]]]] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> GenericIPAddressField[str]: ...
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        protocol: str = ...,
+        unpack_ipv4: bool = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[True],
+        db_index: bool = ...,
+        default: _C | Callable[[], _C] = ...,
+        db_default: _C | Func = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_C, _StrOrPromise] | tuple[str, Iterable[tuple[_C, _StrOrPromise]]]] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> GenericIPAddressField[str | None]: ...
+
+_DD = TypeVar("_DD", bound=date | None)
+
+class DateTimeCheckMixin: ...
+
+class DateField(DateTimeCheckMixin, Field[_DD | Combinable, _DD]):
+    # attributes
+    auto_now: bool = ...
+    auto_now_add: bool = ...
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        auto_now: bool = ...,
+        auto_now_add: bool = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[False] = False,
+        db_index: bool = ...,
+        default: _DD | Callable[[], _DD] | None = ...,
+        db_default: _DD | Func | None = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_DD, _StrOrPromise] | tuple[str, Iterable[tuple[_DD, _StrOrPromise]]]] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> DateField[date]: ...
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        auto_now: bool = ...,
+        auto_now_add: bool = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[True],
+        db_index: bool = ...,
+        default: _DD | Callable[[], _DD] = ...,
+        db_default: _DD | Func = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_DD, _StrOrPromise] | tuple[str, Iterable[tuple[_DD, _StrOrPromise]]]] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> DateField[date | None]: ...
+
+_TM = TypeVar("_TM", bound=time | None)
+
+class TimeField(DateTimeCheckMixin, Field[_TM | Combinable, _TM], Generic[_TM]):
+    # attributes
+    auto_now: bool = ...
+    auto_now_add: bool = ...
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        auto_now: bool = ...,
+        auto_now_add: bool = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[False] = False,
+        db_index: bool = ...,
+        default: _TM | Callable[[], _TM] | None = ...,
+        db_default: _TM | Func | None = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_TM, _StrOrPromise] | tuple[str, Iterable[tuple[_TM, _StrOrPromise]]]] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> TimeField[time]: ...
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        auto_now: bool = ...,
+        auto_now_add: bool = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[True],
+        db_index: bool = ...,
+        default: _TM | Callable[[], _TM] = ...,
+        db_default: _TM | Func = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_TM, _StrOrPromise] | tuple[str, Iterable[tuple[_TM, _StrOrPromise]]]] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> TimeField[time | None]: ...
+
+_DT = TypeVar("_DT", bound=datetime | None)
+
+class DateTimeField(DateField[_DT]):
+    # attributes
+    auto_now: bool = ...
+    auto_now_add: bool = ...
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        auto_now: bool = ...,
+        auto_now_add: bool = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[False] = False,
+        db_index: bool = ...,
+        default: _DT | Callable[[], _DT] | None = ...,
+        db_default: _DT | Func | None = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_DT, _StrOrPromise] | tuple[str, Iterable[tuple[_DT, _StrOrPromise]]]] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> DateTimeField[datetime]: ...
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        auto_now: bool = ...,
+        auto_now_add: bool = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[True],
+        db_index: bool = ...,
+        default: _DT | Callable[[], _DT] = ...,
+        db_default: _DT | Func = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_DT, _StrOrPromise] | tuple[str, Iterable[tuple[_DT, _StrOrPromise]]]] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> DateTimeField[datetime | None]: ...
+
+_U = TypeVar("_U", bound=uuid.UUID | None)
+
+class UUIDField(Field[str | _U, _U], Generic[_U]):
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[False] = False,
+        db_index: bool = ...,
+        default: _U | Callable[[], _U] | None = ...,
+        db_default: _U | Func | None = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_U, _StrOrPromise] | tuple[str, Iterable[tuple[_U, _StrOrPromise]]]] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> UUIDField[uuid.UUID]: ...
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[True],
+        db_index: bool = ...,
+        default: _U | Callable[[], _U] = ...,
+        db_default: _U | Func = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_U, _StrOrPromise] | tuple[str, Iterable[tuple[_U, _StrOrPromise]]]] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> UUIDField[uuid.UUID | None]: ...
+
+class FilePathField(Field[_C, _C], Generic[_C]):
+    path: str | Callable[..., str] = ...
+    match: str | None = ...
+    recursive: bool = ...
+    allow_files: bool = ...
+    allow_folders: bool = ...
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        path: str | Callable[..., str] = ...,
+        match: str | None = ...,
+        recursive: bool = ...,
+        allow_filters: bool = ...,
+        allow_folders: bool = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[False] = False,
+        db_index: bool = ...,
+        default: _C | Callable[[], _C] | None = ...,
+        db_default: _C | Func | None = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_C, _StrOrPromise] | tuple[str, Iterable[tuple[_C, _StrOrPromise]]]] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> FilePathField[str]: ...
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        path: str | Callable[..., str] = ...,
+        match: str | None = ...,
+        recursive: bool = ...,
+        allow_filters: bool = ...,
+        allow_folders: bool = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[True],
+        db_index: bool = ...,
+        default: _C | Callable[[], _C] = ...,
+        db_default: _C | Func = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_C, _StrOrPromise] | tuple[str, Iterable[tuple[_C, _StrOrPromise]]]] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> FilePathField[str | None]: ...
+
+_BIN = TypeVar("_BIN", bound=bytes | None)
+
+class BinaryField(Field[_BIN | bytearray | memoryview, _BIN], Generic[_BIN]):
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[False] = False,
+        db_index: bool = ...,
+        default: _BIN | Callable[[], _BIN] | None = ...,
+        db_default: _BIN | Func | None = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_BIN, _StrOrPromise] | tuple[str, Iterable[tuple[_BIN, _StrOrPromise]]]] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> BinaryField[bytes]: ...
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[True],
+        db_index: bool = ...,
+        default: _BIN | Callable[[], _BIN] = ...,
+        db_default: _BIN | Func = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_BIN, _StrOrPromise] | tuple[str, Iterable[tuple[_BIN, _StrOrPromise]]]] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> BinaryField[bytes | None]: ...
+
+_TD = TypeVar("_TD", bound=timedelta | None)
+
+class DurationField(Field[_TD, _TD], Generic[_TD]):
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[False] = False,
+        db_index: bool = ...,
+        default: _TD | Callable[[], _TD] | None = ...,
+        db_default: _TD | Func | None = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_TD, _StrOrPromise] | tuple[str, Iterable[tuple[_TD, _StrOrPromise]]]] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> DurationField[timedelta]: ...
+    @overload
+    def __new__(
+        cls,
+        verbose_name: _StrOrPromise | None = ...,
+        *,
+        name: str | None = ...,
+        primary_key: bool = ...,
+        max_length: int | None = ...,
+        unique: bool = ...,
+        blank: bool = ...,
+        null: Literal[True],
+        db_index: bool = ...,
+        default: _TD | Callable[[], _TD] = ...,
+        db_default: _TD | Func = ...,
+        editable: bool = ...,
+        auto_created: bool = ...,
+        serialize: bool = ...,
+        unique_for_date: str | None = ...,
+        unique_for_month: str | None = ...,
+        unique_for_year: str | None = ...,
+        choices: Iterable[tuple[_TD, _StrOrPromise] | tuple[str, Iterable[tuple[_TD, _StrOrPromise]]]] = ...,
+        help_text: _StrOrPromise = ...,
+        db_column: str | None = ...,
+        db_comment: str | None = ...,
+        db_tablespace: str | None = ...,
+        validators: Iterable[_ValidatorCallable] = ...,
+        error_messages: _ErrorMessagesMapping | None = ...,
+    ) -> DurationField[timedelta | None]: ...

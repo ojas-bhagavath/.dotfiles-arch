@@ -1,0 +1,33 @@
+import enum
+from collections.abc import Sequence
+from typing import Any, TypeAlias, TypeVar
+
+from django.utils.functional import _StrOrPromise
+
+_EnumMemberT = TypeVar("_EnumMemberT")
+
+class ChoicesMeta(enum.EnumMeta):
+    names: list[str] = ...
+    labels: list[_StrOrPromise] = ...
+    def __contains__(self, item: Any) -> bool: ...
+    @property
+    def values(self: type[_EnumMemberT]) -> Sequence[_EnumMemberT]: ...
+    @property
+    def choices(self: type[_EnumMemberT]) -> Sequence[tuple[_EnumMemberT, _StrOrPromise]]: ...
+
+ChoicesType: TypeAlias = ChoicesMeta
+
+class Choices(enum.Enum, metaclass=ChoicesMeta):  # type: ignore[misc]
+    def __str__(self) -> Any: ...
+    @property
+    def label(self) -> _StrOrPromise: ...
+    @property
+    def value(self) -> Any: ...
+
+class IntegerChoices(int, Choices):  # type: ignore[misc]
+    @property
+    def value(self) -> int: ...
+
+class TextChoices(str, Choices):  # type: ignore[misc]
+    @property
+    def value(self) -> str: ...
