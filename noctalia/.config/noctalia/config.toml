@@ -1,12 +1,12 @@
 [accessibility]
-ui_scale = 1.25
+ui_scale = 1.2500000111758709
 
 [bar.default]
 capsule = true
 center = ["active_window"]
 end = [
   "media",
-  "clipboard",
+  "tray",
   "network",
   "bluetooth",
   "volume",
@@ -18,8 +18,8 @@ end = [
 font_family = "Source Sans Pro"
 font_weight = 700
 margin_ends = 0
-scale = 1.5
-start = ["workspaces", "tray"]
+scale = 1.5000000149011612
+start = ["workspaces"]
 thickness = 45
 
 [bar.default.dead_zone.actions]
@@ -34,6 +34,24 @@ enabled = true
 
 [calendar.account.ojas]
 type = "google"
+
+[[control_center.shortcuts]]
+type = "wifi"
+
+[[control_center.shortcuts]]
+type = "bluetooth"
+
+[[control_center.shortcuts]]
+type = "audio"
+
+[[control_center.shortcuts]]
+type = "mic_mute"
+
+[[control_center.shortcuts]]
+type = "nightlight"
+
+[[control_center.shortcuts]]
+type = "notification"
 
 [location]
 address = "Norman, United States"

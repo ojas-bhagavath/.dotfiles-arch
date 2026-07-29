@@ -22,12 +22,13 @@ hl.bind(mod .. " + B", hl.dsp.exec_cmd(browser), { description = "launch web bro
 hl.bind(mod .. " + S", hl.dsp.exec_cmd(pdfviewer), { description = "launch pdf viewer" })
 hl.bind(mod .. " + Comma", hl.dsp.exec_cmd(ipc .. "settings-toggle"), { description = "launch noctalia settings" })
 hl.bind(mod .. " + Space", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"), { description = "launch noctalia menu" })
+hl.bind(mod .. " + V", hl.dsp.exec_cmd(ipc .. "panel-toggle clipboard"), { description = "launch noctalia clipboard" })
 
-hl.bind("Print", hl.dsp.exec_cmd(ipc .. "screenshot-region"), { description = "launch screenshot a region" })
+hl.bind("Print", hl.dsp.exec_cmd(ipc .. "screenshot-region"), { description = "screenshot a region" })
 hl.bind(
 	"SHIFT + Print",
 	hl.dsp.exec_cmd(ipc .. "screenshot-fullscreen pick"),
-	{ description = "launch screenshot a region" }
+	{ description = "screenshot the whole screen" }
 )
 
 hl.bind(mod .. " + X", hl.dsp.exec_cmd(ipc .. "session lock"))
