@@ -23,7 +23,7 @@ thickness = 45
 
 [bar.default.dead_zone.actions]
 left = "panel-toggle control-center"
-middle = "settings-toggle"
+middle = "settings-toggle bar"
 
 [battery]
 warning_threshold = 15
@@ -154,6 +154,7 @@ capsule_foreground = "on_secondary"
 [widget.media]
 hide_when_no_media = true
 max_length = 100
+title_scroll = "on_hover"
 
 [widget.network]
 show_label = false
