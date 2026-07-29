@@ -1,0 +1,149 @@
+[accessibility]
+ui_scale = 1.25
+
+[bar.default]
+capsule = true
+center = ["active_window"]
+end = [
+  "media",
+  "clipboard",
+  "network",
+  "bluetooth",
+  "volume",
+  "brightness",
+  "battery",
+  "clock",
+  "session",
+]
+font_family = "Source Sans Pro"
+font_weight = 700
+margin_ends = 0
+scale = 1.5
+start = ["workspaces", "tray"]
+thickness = 45
+
+[bar.default.dead_zone.actions]
+left = "panel-toggle control-center"
+middle = "settings-toggle"
+
+[battery]
+warning_threshold = 15
+
+[calendar]
+enabled = true
+
+[calendar.account.ojas]
+type = "google"
+
+[location]
+address = "Norman, United States"
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [
+  "lockscreen-login-box@eDP-1",
+  "lockscreen-widget-0000000000000001",
+]
+
+[lockscreen_widgets.grid]
+cell_size = 16
+major_interval = 4
+visible = true
+
+[lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+box_height = 229.0
+box_width = 810.0
+cx = 960.0
+cy = 540.0
+output = "eDP-1"
+rotation = 0.0
+type = "login_box"
+
+[lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+background_color = "surface_variant"
+background_opacity = 0.88
+background_radius = 12.0
+center_password_text = false
+input_opacity = 1.0
+input_radius = 6.0
+layout = "regular"
+show_caps_lock = true
+show_keyboard_layout = true
+show_login_button = true
+show_media = true
+show_session_buttons = true
+show_weather = true
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
+box_height = 128.0
+box_width = 816.0
+cx = 960.0
+cy = 361.5
+output = "eDP-1"
+rotation = 0.0
+type = "clock"
+
+[nightlight]
+enabled = true
+temperature_night = 5000
+
+[shell]
+app_icon_color = "primary"
+clipboard_history_max_entries = 10000
+font_family = "Source Sans Pro"
+password_style = "random"
+
+[shell.screenshot]
+directory = "/home/ojas/Stuff/Pictures/Screenshots"
+
+[theme]
+builtin = "Tokyo-Night"
+mode = "dark"
+source = "builtin"
+wallpaper_scheme = "m3-content"
+
+[wallpaper]
+directory = "/home/ojas/Stuff/Pictures/wallpapers/philosophy"
+
+[wallpaper.default]
+path = "/home/ojas/Stuff/Pictures/wallpapers/philosophy/the_death_of_socrates.png"
+
+[wallpaper.last]
+path = "/home/ojas/Stuff/Pictures/wallpapers/philosophy/the_death_of_socrates.png"
+
+[wallpaper.monitors.eDP-1]
+path = "/home/ojas/Stuff/Pictures/wallpapers/philosophy/the_death_of_socrates.png"
+
+[[wallpaper.favorite]]
+builtin_palette = "Tokyo-Night"
+palette_source = "builtin"
+path = "/home/ojas/Stuff/Pictures/wallpapers/philosophy/the_death_of_socrates.png"
+theme_mode = "dark"
+
+[widget.active_window]
+display = "text_only"
+min_length = 0
+
+[widget.active_window.actions]
+left = "window-switcher"
+
+[widget.clock]
+capsule = true
+capsule_fill = "secondary"
+capsule_foreground = "on_secondary"
+
+[widget.media]
+hide_when_no_media = true
+max_length = 180
+
+[widget.network]
+show_label = false
+
+[widget.notifications]
+hide_when_no_unread = true
+
+[widget.session]
+capsule = true
+capsule_fill = "error"
+capsule_foreground = "on_error"
