@@ -153,7 +153,7 @@ capsule_foreground = "on_secondary"
 
 [widget.media]
 hide_when_no_media = true
-max_length = 150
+max_length = 100
 
 [widget.network]
 show_label = false
@@ -168,6 +168,8 @@ capsule_foreground = "on_error"
 
 [widget.tray]
 drawer = true
+drawer_item_size = 18.0
+match_adjacent_spacing = true
 
 [widget.workspaces]
 font_family = "Source Sans Pro"
