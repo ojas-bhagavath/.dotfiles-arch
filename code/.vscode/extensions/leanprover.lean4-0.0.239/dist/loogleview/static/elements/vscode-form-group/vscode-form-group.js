@@ -1,0 +1,5 @@
+var __decorate=this&&this.__decorate||function(e,o,r,t){var s,c=arguments.length,l=c<3?o:null===t?t=Object.getOwnPropertyDescriptor(o,r):t;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)l=Reflect.decorate(e,o,r,t);else for(var p=e.length-1;p>=0;p--)(s=e[p])&&(l=(c<3?s(l):c>3?s(o,r,l):s(o,r))||l);return c>3&&l&&Object.defineProperty(o,r,l),l};import{html}from"lit";import{customElement,property}from"lit/decorators.js";import{VscElement}from"../includes/VscElement.js";import styles from"./vscode-form-group.styles.js";let VscodeFormGroup=class extends VscElement{constructor(){super(...arguments),this.variant="horizontal"}render(){return html`
+      <div class="wrapper">
+        <slot></slot>
+      </div>
+    `}};VscodeFormGroup.styles=styles,__decorate([property({reflect:!0})],VscodeFormGroup.prototype,"variant",void 0),VscodeFormGroup=__decorate([customElement("vscode-form-group")],VscodeFormGroup);export{VscodeFormGroup};

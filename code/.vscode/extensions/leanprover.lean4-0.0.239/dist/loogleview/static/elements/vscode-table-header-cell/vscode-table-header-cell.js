@@ -1,0 +1,5 @@
+var __decorate=this&&this.__decorate||function(e,t,l,r){var o,s=arguments.length,c=s<3?t:null===r?r=Object.getOwnPropertyDescriptor(t,l):r;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)c=Reflect.decorate(e,t,l,r);else for(var d=e.length-1;d>=0;d--)(o=e[d])&&(c=(s<3?o(c):s>3?o(t,l,c):o(t,l))||c);return s>3&&c&&Object.defineProperty(t,l,c),c};import{html}from"lit";import{customElement,property}from"lit/decorators.js";import{VscElement}from"../includes/VscElement.js";import styles from"./vscode-table-header-cell.styles.js";let VscodeTableHeaderCell=class extends VscElement{constructor(){super(...arguments),this.role="columnheader"}render(){return html`
+      <div class="wrapper">
+        <slot></slot>
+      </div>
+    `}};VscodeTableHeaderCell.styles=styles,__decorate([property({reflect:!0})],VscodeTableHeaderCell.prototype,"role",void 0),VscodeTableHeaderCell=__decorate([customElement("vscode-table-header-cell")],VscodeTableHeaderCell);export{VscodeTableHeaderCell};

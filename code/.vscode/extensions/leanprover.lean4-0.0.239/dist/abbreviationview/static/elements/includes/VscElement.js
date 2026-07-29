@@ -1,0 +1,1 @@
+import{LitElement}from"lit";export class VscElement extends LitElement{constructor(){super(...arguments),this._version="1.7.1"}get version(){return this._version}}

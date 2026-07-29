@@ -1,0 +1,1 @@
+{"version":3,"file":"vscode-multi-select.styles.js","sourceRoot":"","sources":["../../src/vscode-multi-select/vscode-multi-select.styles.ts"],"names":[],"mappings":"AAAA,OAAO,MAAM,MAAM,qCAAqC,CAAC;AAEzD,eAAe,MAAM,CAAC","sourcesContent":["import styles from '../includes/vscode-select/styles.js';\n\nexport default styles;\n"]}

@@ -1,0 +1,1 @@
+export const rawValueToPercentage=(t,e)=>"number"!=typeof t||Number.isNaN(t)?"string"==typeof t&&/^[0-9.]+$/.test(t)?Number(t)/e*100:"string"==typeof t&&/^[0-9.]+%$/.test(t)?Number(t.substring(0,t.length-1)):"string"==typeof t&&/^[0-9.]+px$/.test(t)?Number(t.substring(0,t.length-2))/e*100:null:t/e*100;

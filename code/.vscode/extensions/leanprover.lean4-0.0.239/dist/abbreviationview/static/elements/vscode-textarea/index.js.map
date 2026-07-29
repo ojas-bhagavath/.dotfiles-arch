@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/vscode-textarea/index.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,cAAc,EAAC,MAAM,sBAAsB,CAAC","sourcesContent":["export {VscodeTextarea} from './vscode-textarea.js';\n"]}

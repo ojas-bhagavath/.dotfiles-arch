@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/vscode-option/index.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,YAAY,EAAC,MAAM,oBAAoB,CAAC","sourcesContent":["export {VscodeOption} from './vscode-option.js';\n"]}

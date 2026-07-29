@@ -21,6 +21,11 @@ hl.bind(mod .. " + SHIFT + E", hl.dsp.exec_cmd(filemanager2), { description = "l
 hl.bind(mod .. " + B", hl.dsp.exec_cmd(browser), { description = "launch web browser" })
 hl.bind(mod .. " + S", hl.dsp.exec_cmd(pdfviewer), { description = "launch pdf viewer" })
 hl.bind(mod .. " + Comma", hl.dsp.exec_cmd(ipc .. "settings-toggle"), { description = "launch noctalia settings" })
+hl.bind(
+	"SUPER + SUPER_L",
+	hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"),
+	{ release = true, description = "launch noctalia menu" }
+)
 hl.bind(mod .. " + Space", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"), { description = "launch noctalia menu" })
 hl.bind(mod .. " + V", hl.dsp.exec_cmd(ipc .. "panel-toggle clipboard"), { description = "launch noctalia clipboard" })
 
