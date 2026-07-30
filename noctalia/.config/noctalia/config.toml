@@ -16,7 +16,7 @@ end = [
 ]
 font_family = "Source Sans Pro"
 font_weight = 700
-margin_ends = 0
+margin_ends = 2
 scale = 1.5000000149011612
 start = ["workspaces", "media"]
 thickness = 45
