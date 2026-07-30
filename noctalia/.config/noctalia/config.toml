@@ -110,6 +110,11 @@ clipboard_history_max_entries = 10000
 font_family = "Source Sans Pro"
 password_style = "random"
 
+[shell.panel]
+clipboard_placement = "attached"
+launcher_placement = "attached"
+polkit_placement = "attached"
+
 [shell.screenshot]
 directory = "/home/ojas/Stuff/Pictures/Screenshots"
 

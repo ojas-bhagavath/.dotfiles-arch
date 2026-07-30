@@ -3,3 +3,9 @@ hl.window_rule({
 	float = true,
 	size = { 1080, 920 },
 })
+
+hl.window_rule({
+	match = { initial_class = "org.keepassxc.KeePassXC" },
+	float = true,
+	size = { 1080, 920 },
+})
