@@ -1,104 +1,108 @@
+7zip                              # File archiver with a high compression ratio
 ark                               # Archiving tool by KDE
+asciinema                         # Records and shares terminal sessions
+base                              # Minimal package set for a base Arch installation
+base-devel                        # Tools needed to build Arch packages (makepkg, etc.)
 bat                               # cat, but with wings
 biber                             # A bibliography management tool for LaTeX
-checkupdates-with-aur             # Check for available pacman and aur updates
+btop                              # Resource monitor (fancy top/htop alternative)
+calibre-bin                       # E-book management application (precompiled binary)
+cliphist                          # Wayland clipboard history manager
 cloudflare-warp-bin               # Cloudflare Warp Client
+diff-so-fancy                     # Makes git/diff output more human friendly
 dolphin                           # A GUI file manager by KDE
-downgrade                         # Bash script to downgrade packages 
+dosfstools                        # Utilities for creating and checking FAT/VFAT filesystems
+downgrade                         # Bash script to downgrade packages
+efibootmgr                        # Utility to modify the UEFI Boot Manager
 entr                              # A utility that runs arbitrary commands when files change
+exfat-utils                       # exFAT utilities (deprecated, superseded by exfatprogs)
 exfatprogs                        # exFAT filesystem userspace utilities for the Linux Kernel exfat drive
 eza                               # ls replacement on fire
+fastfetch                         # Fast, highly customizable system info tool
 fd                                # A fast find replacement
 ffmpeg                            # Complete solution to record, convert and stream audio and video
 ffmpegthumbnailer                 # A utility to produce video thumbnails for yazi
 ffmpegthumbs                      # FFmpeg-based thumbnail creator for video files in Dolphin
-firefox                           # The fallback browser 
+firefox                           # The main browser
 flatpak                           # Enables installing flatpaks
+freecad                           # Parametric 3D CAD modeler
 fuzzel                            # A rofi/dmenu like application launcher for wayland
 fzf                               # Fuzzy finder
 gap                               # Groups, Algorithms, Programming: a system for computational discrete algebra
-gaupol                            # A tool to manipulate srt files 
+gaupol                            # A tool to manipulate srt files
 git                               # A neat version control system
 git-delta                         # Syntax-highlighting pager for git and diff output
+github-cli                        # GitHub's official command-line tool
 gnome-boxes                       # Virtualization service
 gnome-disk-utility                # As the name says
-gtk2                              # Gives libgtk-x11 which is needed by pinentry-gtk-2 which is needed by gnupg sometimes
+gnome-keyring                     # Stores passwords, keys, and certificates securely
 gwenview                          # Image viewing utility by KDE
+handlr-regex                      # Powerful alternative to xdg-utils written in Rust
 httrack                           # Download entire websites
+hugo                              # Fast and modern static site generator
+hyprland                          # A dynamic tiling Wayland compositor
 imagemagick                       # An image viewing/manipulation program
-inkscape                          # Professional vector graphics editor
 intel-media-driver                # As the name says...
-intel-media-sdk                   # Legacy API for hardware video acceleration on Intel GPUs (5th to 11th gen)
+intel-media-sdk                   # Legacy API for hardware video acceleration on Intel GPUs (Broadwell to Rocket Lake)
 intel-ucode                       # Microcode update files for Intel CPUs
 jq                                # A commandline JSON parser
 kdegraphics-thumbnailers          # Thumbnailer for various graphic formats, including PDFs in Dolphin
+keepassxc                         # Cross-platform password manager
 kitty                             # A fast, feature-rich, GPU based terminal emulator
 lazygit                           # A tui interface for git
 libva-intel-driver                # VA-API implementation for Intel G45 and HD Graphics family
 lua                               # A fast programming language designed for extensibility of other applications
 luarocks                          # Optional dependency for lazy in nvim
 man-db                            # A utility to read man pages
+mediainfo                         # Displays technical info about media files
 mkvtoolnix-gui                    # A tool to manipulate mkv files
 mpd                               # Flexible, powerful, server-side application for playing music
 mpv                               # The OG video player
-neovide                           # A graphical interface for neovide
+neovide                           # A graphical interface for neovim
 neovim                            # A powerful text editor
 nerd-fonts                        # All the nerd fonts
-newsboat                          # An OP TUI RSS feed reader
-nodejs                            # I/O for javascript, is needed for certain neovim package builds
-ntfs-3g                           # NTFS filesystem driver and utilities	
+network-manager-applet            # System tray applet for NetworkManager
+networkmanager                    # Network connection manager and user applications
+noctalia-git                      # Minimal Wayland desktop shell built on Quickshell (git version)
+npm                               # Package manager for Node.js
+ntfs-3g                           # NTFS filesystem driver and utilities
 obsidian                          # A neat markdown utility
-os-prober                         # Utility to detect other OSes on a set of drives
 p7zip                             # Command-line file archiver with high compression ratio
 pandoc-bin                        # A document converter tool
-parallel                          # A GNU tool to run processes in parallel
 pdfjs                             # A utility required to natively view pdfs on browsers
 pdftk                             # Command-line tool for working with PDFs
-polkit-kde-agent                  # polkit agent by kde
 poppler                           # PDF rendering library based on xpdf 3.0
-power-profiles-daemon             # To manage power profiles of the device
-python-adblock                    # Brave's adblock library in Python
 python-pip                        # A tool for installing python packages
-python-sioyek                     # Python wrapper and simple addons for sioyek PDF viewer
-python-tldextract                 # A package required for qute-pass
-python-pykeepass                  # A dependency for keepassxc to work with qutebrowser
 qbittorrent                       # An open source torrent client
 qpdf                              # A Content-Preserving PDF Transformation System
-qtpass                            # A GUI tool for pass
-qutebrowser                       # A highly customizable browser built around vim binds
+qpwgraph                          # Graphical patchbay for PipeWire
 reflector                         # A Python 3 module and script to retrieve and filter the latest Pacman mirror list
 ripgrep                           # A search tool that combines the usability of ag with the raw speed of grep
 rmpc                              # A beautiful and configurable TUI client for MPD
-scdoc                             # A tool to generate roff man pages
-sddm                              # Display manager (login manager) by KDE
-sioyek                            # PDF viewer for research papers and technical books with vim keybinds.
-spectacle                         # Screen capture utility by KDE
-speedtest-cli                     # Command line interface for testing internet bandwidth using speedtest.net
+sioyek-dev                        # PDF viewer for research papers and technical books with vim keybinds.
 starship                          # A cross platform prompt for various shells
+steam                             # Valve's digital distribution platform for games
 stow                              # A powerful symlink utility
 syncthing                         # Sync files across devices
-syncthingtray-qt6                 # A tray application for syncthing
-termdown                          # A terminal timer
 texlive                           # LaTeX fundamental packages
 texlive-langenglish               # Texlive tools for non-Latin languages
-thefuck                           # A tool to correct your mistakes with your reaction
 tlrc                              # A tool that gives easy to understand versions of the manual with example
 tmate                             # Utility to access remote terminal
-tmsu                              # A tool to tag any file and access the tags
+tmux                              # Terminal multiplexer
 topgrade                          # A tool written in rust to update packages across several package managers
 trash-cli                         # A cli trash manager
 tree-sitter-cli                   # CLI tool for developing, testing, and using Tree-sitter parsers
 ttf-font-awesome                  # An awesome font
 ttf-kannada-font                  # Kannada font
 tumbler                           # A utility to generate thumbnails
-ueberzug                          # A program that allows drawing images on terminals
-ueberzugpp                        # A program that allows drawing images on terminals
+typst                             # Markup-based typesetting system, a modern LaTeX alternative
+udiskie                           # Automounter for removable media using udisks
 unarchiver                        # Required for archive preview in yazi
-vial-appimage                     # A configurator for vial-based keyboards
+visual-studio-code-bin            # Microsoft's code editor (official binary build)
 wget                              # A file downloading utility
+wl-clip-persist                   # Keeps Wayland clipboard content after the source app closes
 wl-clipboard                      # Clipboard tool for wayland
 yazi                              # A TUI file manager written in rust
 yt-dlp                            # A youtube-dl fork with additional features and fixes
-ytfzf                             # Play youtube videos from terminal
 zoxide                            # A smarter cd replacement
 zsh                               # An advanced and programmable command interpreter for UNIX
