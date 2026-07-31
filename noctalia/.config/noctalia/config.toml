@@ -109,6 +109,10 @@ temperature_night = 5000
 clipboard_history_max_entries = 10000
 font_family = "Source Sans Pro"
 password_style = "random"
+polkit_agent = true
+
+[shell.greeter_sync]
+auto_sync = true
 
 [shell.panel]
 clipboard_placement = "attached"
