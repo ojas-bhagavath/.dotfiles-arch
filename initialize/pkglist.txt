@@ -33,7 +33,6 @@ gaupol                            # A tool to manipulate srt files
 git                               # A neat version control system
 git-delta                         # Syntax-highlighting pager for git and diff output
 github-cli                        # GitHub's official command-line tool
-gnome-boxes                       # Virtualization service
 gnome-disk-utility                # As the name says
 gnome-keyring                     # Stores passwords, keys, and certificates securely
 greetd                            # A simple customizable login manager
@@ -56,7 +55,7 @@ lua                               # A fast programming language designed for ext
 luarocks                          # Optional dependency for lazy in nvim
 man-db                            # A utility to read man pages
 mediainfo                         # Displays technical info about media files
-mkvtoolnix-gui                    # A tool to manipulate mkv files
+mkvtoolnix-cli                    # A tool to manipulate mkv files
 mpd                               # Flexible, powerful, server-side application for playing music
 mpv                               # The OG video player
 neovide                           # A graphical interface for neovim
