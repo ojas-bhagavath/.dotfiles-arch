@@ -36,6 +36,7 @@ github-cli                        # GitHub's official command-line tool
 gnome-boxes                       # Virtualization service
 gnome-disk-utility                # As the name says
 gnome-keyring                     # Stores passwords, keys, and certificates securely
+greetd                            # A simple customizable login manager
 gwenview                          # Image viewing utility by KDE
 handlr-regex                      # Powerful alternative to xdg-utils written in Rust
 httrack                           # Download entire websites
@@ -64,6 +65,7 @@ nerd-fonts                        # All the nerd fonts
 network-manager-applet            # System tray applet for NetworkManager
 networkmanager                    # Network connection manager and user applications
 noctalia-git                      # Minimal Wayland desktop shell built on Quickshell (git version)
+noctalia-greeter                  # noctalia theme for greetd
 npm                               # Package manager for Node.js
 ntfs-3g                           # NTFS filesystem driver and utilities
 obsidian                          # A neat markdown utility
