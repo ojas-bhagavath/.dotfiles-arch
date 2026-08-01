@@ -11,5 +11,4 @@ hide_logo = true
 font_family = "Source Sans Pro"
 
 [output]
-scale = 1
-
+scale = 1.25
