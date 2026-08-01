@@ -27,6 +27,7 @@ hl.env("GNUPGHOME", os.getenv("HOME") .. "/.gnupg")
 hl.env("CARGO_HOME", os.getenv("HOME") .. "/.local/share/cargo")
 hl.env("GOPATH", os.getenv("HOME") .. "/.local/share/go")
 hl.env("RUSTUP_HOME", os.getenv("HOME") .. "/.local/share/rustup")
+hl.env("PNPM_HOME", os.getenv("HOME") .. "/.local/share/pnpm")
 
 -- PATH Construction
 hl.env(
