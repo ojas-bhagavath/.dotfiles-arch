@@ -6,9 +6,9 @@ export XDG_STATE_HOME="$HOME/.local/state"
 export DOTFILES="$HOME/.dotfiles"
 
 # terminal and editor specific variables
+export SHELL="/bin/zsh"
 export TERM="kitty"
 export TERMINAL="kitty"
-export SHELL="/bin/zsh"
 export EDITOR="neovide"
 export VISUAL="neovide"
 
@@ -26,25 +26,22 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --highlight-line --info=inline-right 
 # Other Stuff
 export GNUPGHOME="$HOME"/.gnupg
 export GPG_TTY=$(tty)
-export PASSWORD_STORE_DIR="$HOME/.password-store"
 
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export GOPATH="$XDG_DATA_HOME/go"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
-export PARALLEL_HOME="$XDG_CONFIG_HOME"/parallel 
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export STACK_ROOT="$XDG_DATA_HOME"/stack
 export STACK_XDG=1
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME/java"
 export LEDGER_FILE="$HOME/Stuff/Finance/transactions.journal"
-export PNPM_HOME="/home/ojas/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
 
-# PATH
-export PATH="$PATH:$CARGO_HOME/bin"
-export PATH="$PATH:$HOME/.elan/bin/"
-export PATH="$PATH:$HOME/.local/bin"
-export PATH="$PATH:$HOME/.scripts/"
+typeset -U path PATH
+path=(
+  "$HOME/.local/bin"
+  "$HOME/.scripts"
+  "$PNPM_HOME"
+  "$CARGO_HOME/bin"
+  "$HOME/.elan/bin"
+  $path
+)
