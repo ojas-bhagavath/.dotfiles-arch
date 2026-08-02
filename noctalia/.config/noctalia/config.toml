@@ -106,6 +106,8 @@ enabled = true
 temperature_night = 5000
 
 [shell]
+avatar_path = "/home/ojas/Stuff/Pictures/wallpapers/philosophy/marcus-aurelius-1.png"
+clipboard_auto_paste = "off"
 clipboard_history_max_entries = 10000
 font_family = "Source Sans Pro"
 password_style = "random"
@@ -128,17 +130,20 @@ mode = "dark"
 source = "builtin"
 wallpaper_scheme = "m3-content"
 
+[theme.templates]
+builtin_ids = ["gtk3", "gtk4", "kcolorscheme", "qt"]
+
 [wallpaper]
-directory = "/home/ojas/Stuff/Pictures/wallpapers/philosophy"
+directory = "/home/ojas/Stuff/Pictures/wallpapers/colorful"
 
 [wallpaper.default]
-path = "/home/ojas/Stuff/Pictures/wallpapers/philosophy/the_death_of_socrates.png"
+path = "/home/ojas/Stuff/Pictures/wallpapers/colorful/cloudsday.jpg"
 
 [wallpaper.last]
-path = "/home/ojas/Stuff/Pictures/wallpapers/philosophy/the_death_of_socrates.png"
+path = "/home/ojas/Stuff/Pictures/wallpapers/colorful/cloudsday.jpg"
 
 [wallpaper.monitors.eDP-1]
-path = "/home/ojas/Stuff/Pictures/wallpapers/philosophy/the_death_of_socrates.png"
+path = "/home/ojas/Stuff/Pictures/wallpapers/colorful/cloudsday.jpg"
 
 [[wallpaper.favorite]]
 builtin_palette = "Tokyo-Night"

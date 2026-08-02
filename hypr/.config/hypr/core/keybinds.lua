@@ -4,7 +4,7 @@ local ipc = "noctalia msg "
 local terminal = "kitty"
 local editor = "neovide"
 local filemanager1 = "kitty -e yazi"
-local filemanager2 = "thunar"
+local filemanager2 = "pcmanfm"
 local browser = "firefox"
 local pdfviewer = "sioyek --new-window"
 
