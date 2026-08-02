@@ -8,4 +8,4 @@ sudo pacman -Syu
 sudo pacman -S --needed reflector
 sudo systemctl enable reflector.timer
 sudo systemctl start reflector.timer
-sudo reflector --latest 10 --country India,Srilanka --age 24 --protocol http,https --sort rate --download-timeout 60 --save /etc/pacman.d/mirrorlist
+sudo reflector --latest 10 --country US --age 24 --protocol http,https --sort rate --download-timeout 60 --save /etc/pacman.d/mirrorlist

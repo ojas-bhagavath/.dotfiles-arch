@@ -27,8 +27,7 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --highlight-line --info=inline-right 
 export GNUPGHOME="$HOME"/.gnupg
 export GPG_TTY=$(tty)
 
-export CARGO_HOME="$XDG_DATA_HOME/cargo"
-export GOPATH="$XDG_DATA_HOME/go"
+export CARGO_HOME="$XDG_DATA_HOME/cargo" export GOPATH="$XDG_DATA_HOME/go"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export STACK_ROOT="$XDG_DATA_HOME"/stack
@@ -36,12 +35,8 @@ export STACK_XDG=1
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME/java"
 export LEDGER_FILE="$HOME/Stuff/Finance/transactions.journal"
 
-typeset -U path PATH
-path=(
-  "$HOME/.local/bin"
-  "$HOME/.scripts"
-  "$PNPM_HOME"
-  "$CARGO_HOME/bin"
-  "$HOME/.elan/bin"
-  $path
-)
+# Paths
+export PATH="$PATH:$CARGO_HOME/bin"
+export PATH="$PATH:$HOME/.elan/bin/"
+export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.scripts/"

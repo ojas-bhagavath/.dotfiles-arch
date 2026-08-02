@@ -15,7 +15,6 @@ dosfstools                        # Utilities for creating and checking FAT/VFAT
 downgrade                         # Bash script to downgrade packages
 efibootmgr                        # Utility to modify the UEFI Boot Manager
 entr                              # A utility that runs arbitrary commands when files change
-exfat-utils                       # exFAT utilities (deprecated, superseded by exfatprogs)
 exfatprogs                        # exFAT filesystem userspace utilities for the Linux Kernel exfat drive
 eza                               # ls replacement on fire
 fastfetch                         # Fast, highly customizable system info tool
