@@ -4,6 +4,7 @@ ui_scale = 1.2500000111758709
 [bar.default]
 capsule = true
 center = ["active_window"]
+concave_edge_corners = false
 end = [
   "tray",
   "network",
@@ -16,7 +17,8 @@ end = [
 ]
 font_family = "Source Sans Pro"
 font_weight = 700
-margin_ends = 1
+margin_ends = 0
+radius = 0
 scale = 1.5000000149011612
 start = ["workspaces", "media"]
 thickness = 45
@@ -52,6 +54,9 @@ type = "nightlight"
 [[control_center.shortcuts]]
 type = "notification"
 
+[hooks]
+started = "noctalia msg volume-set 0; noctalia msg brightness-set 5"
+
 [idle]
 behavior_order = ["lock", "screen-off", "lock-and-suspend"]
 pre_action_fade_seconds = 15
@@ -77,10 +82,7 @@ address = "Norman, United States"
 [lockscreen_widgets]
 enabled = true
 schema_version = 2
-widget_order = [
-  "lockscreen-login-box@eDP-1",
-  "lockscreen-widget-0000000000000001",
-]
+widget_order = ["lockscreen-login-box@eDP-1"]
 
 [lockscreen_widgets.grid]
 cell_size = 16
@@ -88,7 +90,7 @@ major_interval = 4
 visible = true
 
 [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
-box_height = 229.0
+box_height = 196.0
 box_width = 810.0
 cx = 960.0
 cy = 540.0
@@ -100,7 +102,7 @@ type = "login_box"
 background_color = "surface_variant"
 background_opacity = 0.88
 background_radius = 12.0
-center_password_text = false
+center_password_text = true
 input_opacity = 1.0
 input_radius = 6.0
 layout = "regular"

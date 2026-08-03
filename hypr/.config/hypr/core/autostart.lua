@@ -5,5 +5,4 @@ hl.on("hyprland.start", function()
 		"dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP && noctalia --daemon && sleep 2 && keepassxc --minimized"
 	)
 	hl.exec_cmd("udiskie --tray --no-automount")
-	hl.exec_cmd("systemctl --user start hyprpolkitagent")
 end)

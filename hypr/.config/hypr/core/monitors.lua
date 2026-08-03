@@ -7,7 +7,7 @@ hl.monitor({
 })
 hl.monitor({
 	output = "",
-	mode = "preferred",
-	position = "auto",
+	mode = "highres",
 	scale = 1,
+	mirror = "eDP-1",
 })
