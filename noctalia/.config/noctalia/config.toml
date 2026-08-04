@@ -52,7 +52,7 @@ type = "mic_mute"
 type = "nightlight"
 
 [[control_center.shortcuts]]
-type = "notification"
+type = "caffeine"
 
 [hooks]
 started = "noctalia msg volume-set 0; noctalia msg brightness-set 5"
@@ -111,6 +111,7 @@ show_keyboard_layout = true
 show_login_button = true
 show_media = true
 show_session_buttons = true
+show_unlock_hint = false
 show_weather = true
 
 [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
